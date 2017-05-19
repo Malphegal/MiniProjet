@@ -157,6 +157,7 @@
             this.btnAjouter.TabIndex = 12;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // frmAjoutTransac
             // 

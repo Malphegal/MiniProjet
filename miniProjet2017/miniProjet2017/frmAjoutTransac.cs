@@ -19,6 +19,11 @@ namespace miniProjet2017
 
         private void frmAjoutTransac_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
 
         }
     }
