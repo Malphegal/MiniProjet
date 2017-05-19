@@ -23,6 +23,7 @@ namespace miniProjet2017
         private void DémarrageDeAjoutTransac(object sender, EventArgs e)
         {
                 // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
+                //
         }
 
         private void AjouterUneTransaction(object sender, EventArgs e)
