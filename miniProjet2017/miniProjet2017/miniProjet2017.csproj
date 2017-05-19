@@ -105,6 +105,9 @@
     <EmbeddedResource Include="frmModiTransac.resx">
       <DependentUpon>frmModiTransac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRecap.resx">
+      <DependentUpon>frmRecap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

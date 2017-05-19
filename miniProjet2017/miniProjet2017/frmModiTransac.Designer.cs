@@ -43,9 +43,9 @@
             this.lblTransac = new System.Windows.Forms.Label();
             this.calTransac = new System.Windows.Forms.MonthCalendar();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grb1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -176,33 +176,33 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quitterToolStripMenuItem});
+            this.fichierToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(770, 24);
             this.menuStrip.TabIndex = 31;
             this.menuStrip.Text = "menuStrip1";
             // 
-            // quitterToolStripMenuItem
+            // fichierToolStripMenuItem
             // 
-            this.quitterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quitterToolStripMenuItem1,
-            this.aideToolStripMenuItem});
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.quitterToolStripMenuItem.Text = "Fichier";
-            // 
-            // quitterToolStripMenuItem1
-            // 
-            this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.quitterToolStripMenuItem1.Text = "Aide...";
+            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aideToolStripMenuItem,
+            this.quitterToolStripMenuItem});
+            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aideToolStripMenuItem.Text = "Quitter...";
+            this.aideToolStripMenuItem.Text = "Aide...";
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter...";
             // 
             // frmModiTransac
             // 
@@ -251,8 +251,8 @@
         private System.Windows.Forms.Label lblTransac;
         private System.Windows.Forms.MonthCalendar calTransac;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
     }
 }

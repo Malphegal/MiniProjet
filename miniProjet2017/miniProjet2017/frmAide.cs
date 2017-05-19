@@ -16,5 +16,10 @@ namespace miniProjet2017
         {
             InitializeComponent();
         }
+
+        private void frmAide_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
