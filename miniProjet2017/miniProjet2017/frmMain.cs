@@ -16,5 +16,32 @@ namespace miniProjet2017
         {
             InitializeComponent();
         }
+
+        /* Les boutons pour afficher les autres fenêtres */
+
+        private void nouveauFrmAjoutTransac(object sender, EventArgs e)
+        {
+            new frmAjoutTransac().ShowDialog();
+        }
+
+        private void nouveauFrmAffichage(object sender, EventArgs e)
+        {
+            new frmAffichage().ShowDialog();
+        }
+
+        private void nouveauFrmModiTransac(object sender, EventArgs e)
+        {
+            new frmModiTransac().ShowDialog();
+        }
+
+        private void nouveauFrmRecap(object sender, EventArgs e)
+        {
+            new frmRecap().ShowDialog();
+        }
+
+        private void nouveauFrmSupprTransac(object sender, EventArgs e)
+        {
+            new frmSupprTransac().ShowDialog();
+        }
     }
 }
