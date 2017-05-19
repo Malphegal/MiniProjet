@@ -165,7 +165,7 @@
             this.btnAjouter.TabIndex = 12;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = false;
-            this.btnAjouter.Click += new System.EventHandler(this.ajouterUneTransaction);
+            this.btnAjouter.Click += new System.EventHandler(this.AjouterUneTransaction);
             // 
             // errorProvider
             // 
@@ -201,7 +201,7 @@
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitterToolStripMenuItem.Text = "Quitter...";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterAjoutTransac);
             // 
             // frmAjoutTransac
             // 
