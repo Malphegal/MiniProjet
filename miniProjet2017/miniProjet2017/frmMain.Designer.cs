@@ -37,7 +37,7 @@
             // 
             // btnAffichage
             // 
-            this.btnAffichage.Location = new System.Drawing.Point(217, 190);
+            this.btnAffichage.Location = new System.Drawing.Point(12, 64);
             this.btnAffichage.Name = "btnAffichage";
             this.btnAffichage.Size = new System.Drawing.Size(130, 41);
             this.btnAffichage.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // btnAjoutTransac
             // 
-            this.btnAjoutTransac.Location = new System.Drawing.Point(217, 143);
+            this.btnAjoutTransac.Location = new System.Drawing.Point(12, 17);
             this.btnAjoutTransac.Name = "btnAjoutTransac";
             this.btnAjoutTransac.Size = new System.Drawing.Size(130, 41);
             this.btnAjoutTransac.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // btnModiTransac
             // 
-            this.btnModiTransac.Location = new System.Drawing.Point(217, 237);
+            this.btnModiTransac.Location = new System.Drawing.Point(12, 111);
             this.btnModiTransac.Name = "btnModiTransac";
             this.btnModiTransac.Size = new System.Drawing.Size(130, 41);
             this.btnModiTransac.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // btnRecap
             // 
-            this.btnRecap.Location = new System.Drawing.Point(217, 286);
+            this.btnRecap.Location = new System.Drawing.Point(12, 160);
             this.btnRecap.Name = "btnRecap";
             this.btnRecap.Size = new System.Drawing.Size(130, 41);
             this.btnRecap.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             // btnSupprTransac
             // 
-            this.btnSupprTransac.Location = new System.Drawing.Point(217, 333);
+            this.btnSupprTransac.Location = new System.Drawing.Point(12, 207);
             this.btnSupprTransac.Name = "btnSupprTransac";
             this.btnSupprTransac.Size = new System.Drawing.Size(130, 41);
             this.btnSupprTransac.TabIndex = 4;
