@@ -8,8 +8,14 @@ Maître du design
 
 
 Gaëtan : 
-
+formMain
 
 Nicolas :
 PDF
 SMS
+
+Conventions de nommage :
+Commit : nomdufichierV(n°version)
+Variable : adversaireDuGladiateur
+Mettre des commentaires (au moins un par fonction) /*Au dessus de la fonction*/ et à coté des lignes compliquées
+// au dessus d'un bloc d'une fonction
