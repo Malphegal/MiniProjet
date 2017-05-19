@@ -1,12 +1,13 @@
 Voici le fichier plan
 
-Général :
+Général : SQL 
 
 
-Izaya :
+Izaya : Chef de l'équipe
+Maître du design
 
 
-Gaëtan :
+Gaëtan : 
 
 
 Nicolas :
