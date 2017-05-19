@@ -197,6 +197,7 @@
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aideToolStripMenuItem.Text = "Aide...";
+            this.aideToolStripMenuItem.Click += new System.EventHandler(this.CliquerSurAideModif);
             // 
             // quitterToolStripMenuItem
             // 

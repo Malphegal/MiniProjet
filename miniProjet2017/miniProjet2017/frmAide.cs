@@ -12,9 +12,18 @@ namespace miniProjet2017
 {
     public partial class frmAide : Form
     {
-        public frmAide()
+        public frmAide(string val)
         {
             InitializeComponent();
+            switch (val)
+            {
+                case "modif":
+                    Classes.Aide.AideModiTransac();
+                    break;
+                case "ajout":
+                    Classes.Aide.AideAjoutTransac();
+                    break;
+            }
         }
 
         private void frmAide_Load(object sender, EventArgs e)
@@ -22,4 +31,5 @@ namespace miniProjet2017
 
         }
     }
+
 }
