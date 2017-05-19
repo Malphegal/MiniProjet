@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CON = System.Data.OleDb.OleDbConnection;
+using CMD = System.Data.OleDb.OleDbCommand;
 
 namespace miniProjet2017
 {
@@ -19,17 +22,23 @@ namespace miniProjet2017
 
         private void frmAjoutTransac_Load(object sender, EventArgs e)
         {
-            
+                // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
         }
 
-        private void btnAjouter_Click(object sender, EventArgs e)
+        private void ajouterUneTransaction(object sender, EventArgs e)
         {
             {
+                    // Sera 'false' si au moins une erreur se produit
+
                 bool toutEstOk = true;
 
-                errorProvider.SetIconPadding(cboType, 15);
-                errorProvider.SetIconPadding(txtDescTran, 15);
-                errorProvider.SetIconPadding(txtMontant, 15);
+                    // Position des erreurs
+
+                errorProvider.SetIconPadding(cboType, 11);
+                errorProvider.SetIconPadding(txtDescTran, 11);
+                errorProvider.SetIconPadding(txtMontant, 11);
+
+                    // Les vérifications au cas par cas
 
                 if (cboType.SelectedIndex == -1)
                 {
@@ -40,17 +49,28 @@ namespace miniProjet2017
 
                 if (txtMontant.Text == "")
                 {
-                    errorProvider.SetError(cboType, "Il faut indiquer un montant pour cette transaction !");
+                    errorProvider.SetError(txtMontant, "Il faut indiquer un montant pour cette transaction !");
                     toutEstOk = false;
                 }
-                else errorProvider.SetError(cboType, "");
+                else errorProvider.SetError(txtMontant, "");
 
                 if (txtDescTran.Text == "")
                 {
-                    errorProvider.SetError(cboType, "Il faut décrire cette transaction !");
+                    errorProvider.SetError(txtDescTran, "Il faut décrire cette transaction !");
                     toutEstOk = false;
                 }
-                else errorProvider.SetError(cboType, "");
+                else errorProvider.SetError(txtDescTran, "");
+
+                    // Si aucune erreur est présente, on peut ajouter la transaction
+
+                if (toutEstOk)
+                    MessageBox.Show("Ajout de la transaction terminée !");
             }
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
