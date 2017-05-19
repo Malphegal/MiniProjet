@@ -16,10 +16,5 @@ namespace miniProjet2017
         {
             InitializeComponent();
         }
-
-        private void frmAjoutTransac_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

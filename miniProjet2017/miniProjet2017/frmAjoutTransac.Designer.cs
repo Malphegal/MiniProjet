@@ -176,7 +176,6 @@
             this.Controls.Add(this.lblTransac);
             this.Name = "frmAjoutTransac";
             this.Text = "frmAjoutTransac";
-            this.Load += new System.EventHandler(this.frmAjoutTransac_Load);
             this.grb1.ResumeLayout(false);
             this.grb1.PerformLayout();
             this.ResumeLayout(false);
