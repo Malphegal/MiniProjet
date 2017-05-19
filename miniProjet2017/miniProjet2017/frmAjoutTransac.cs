@@ -20,12 +20,12 @@ namespace miniProjet2017
             InitializeComponent();
         }
 
-        private void frmAjoutTransac_Load(object sender, EventArgs e)
+        private void DémarrageDeAjoutTransac(object sender, EventArgs e)
         {
                 // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
         }
 
-        private void ajouterUneTransaction(object sender, EventArgs e)
+        private void AjouterUneTransaction(object sender, EventArgs e)
         {
             {
                     // Sera 'false' si au moins une erreur se produit
@@ -68,7 +68,7 @@ namespace miniProjet2017
             }
         }
 
-        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void QuitterAjoutTransac(object sender, EventArgs e)
         {
             Close();
         }
