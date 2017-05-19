@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTransac = new System.Windows.Forms.Label();
             this.lblDescTransac = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
@@ -41,7 +42,9 @@
             this.grb1 = new System.Windows.Forms.GroupBox();
             this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.grb1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTransac
@@ -159,6 +162,10 @@
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmAjoutTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,9 +184,9 @@
             this.Controls.Add(this.lblTransac);
             this.Name = "frmAjoutTransac";
             this.Text = "frmAjoutTransac";
-            this.Load += new System.EventHandler(this.frmAjoutTransac_Load);
             this.grb1.ResumeLayout(false);
             this.grb1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +207,6 @@
         private System.Windows.Forms.GroupBox grb1;
         private System.Windows.Forms.Button btnAjouterPersonne;
         private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

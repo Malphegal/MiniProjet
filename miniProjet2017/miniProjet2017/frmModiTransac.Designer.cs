@@ -28,11 +28,187 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.calTransac = new System.Windows.Forms.MonthCalendar();
+            this.lblTransac = new System.Windows.Forms.Label();
+            this.txtDescTran = new System.Windows.Forms.TextBox();
+            this.lblDescTransac = new System.Windows.Forms.Label();
+            this.txtMontant = new System.Windows.Forms.TextBox();
+            this.lblMontant = new System.Windows.Forms.Label();
+            this.btnModifier = new System.Windows.Forms.Button();
+            this.grb1 = new System.Windows.Forms.GroupBox();
+            this.chkPerçu = new System.Windows.Forms.CheckBox();
+            this.chkRecette = new System.Windows.Forms.CheckBox();
+            this.cboType = new System.Windows.Forms.ComboBox();
+            this.lblType = new System.Windows.Forms.Label();
+            this.btnAjouterPersonne = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.grb1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // calTransac
+            // 
+            this.calTransac.Location = new System.Drawing.Point(180, 18);
+            this.calTransac.Name = "calTransac";
+            this.calTransac.TabIndex = 5;
+            // 
+            // lblTransac
+            // 
+            this.lblTransac.AutoSize = true;
+            this.lblTransac.Location = new System.Drawing.Point(12, 18);
+            this.lblTransac.Name = "lblTransac";
+            this.lblTransac.Size = new System.Drawing.Size(111, 13);
+            this.lblTransac.TabIndex = 6;
+            this.lblTransac.Text = "Date de la transaction";
+            // 
+            // txtDescTran
+            // 
+            this.txtDescTran.Location = new System.Drawing.Point(180, 208);
+            this.txtDescTran.Name = "txtDescTran";
+            this.txtDescTran.Size = new System.Drawing.Size(100, 20);
+            this.txtDescTran.TabIndex = 7;
+            // 
+            // lblDescTransac
+            // 
+            this.lblDescTransac.AutoSize = true;
+            this.lblDescTransac.Location = new System.Drawing.Point(12, 211);
+            this.lblDescTransac.Name = "lblDescTransac";
+            this.lblDescTransac.Size = new System.Drawing.Size(141, 13);
+            this.lblDescTransac.TabIndex = 8;
+            this.lblDescTransac.Text = "Description de la transaction";
+            // 
+            // txtMontant
+            // 
+            this.txtMontant.Location = new System.Drawing.Point(180, 263);
+            this.txtMontant.Name = "txtMontant";
+            this.txtMontant.Size = new System.Drawing.Size(100, 20);
+            this.txtMontant.TabIndex = 9;
+            // 
+            // lblMontant
+            // 
+            this.lblMontant.AutoSize = true;
+            this.lblMontant.Location = new System.Drawing.Point(12, 270);
+            this.lblMontant.Name = "lblMontant";
+            this.lblMontant.Size = new System.Drawing.Size(46, 13);
+            this.lblMontant.TabIndex = 10;
+            this.lblMontant.Text = "Montant";
+            // 
+            // btnModifier
+            // 
+            this.btnModifier.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnModifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnModifier.Location = new System.Drawing.Point(7, 435);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(103, 66);
+            this.btnModifier.TabIndex = 16;
+            this.btnModifier.Text = "Modifier";
+            this.btnModifier.UseVisualStyleBackColor = false;
+            // 
+            // grb1
+            // 
+            this.grb1.Controls.Add(this.chkPerçu);
+            this.grb1.Controls.Add(this.chkRecette);
+            this.grb1.Location = new System.Drawing.Point(7, 299);
+            this.grb1.Name = "grb1";
+            this.grb1.Size = new System.Drawing.Size(281, 43);
+            this.grb1.TabIndex = 15;
+            this.grb1.TabStop = false;
+            // 
+            // chkPerçu
+            // 
+            this.chkPerçu.AutoSize = true;
+            this.chkPerçu.Location = new System.Drawing.Point(150, 12);
+            this.chkPerçu.Name = "chkPerçu";
+            this.chkPerçu.Size = new System.Drawing.Size(54, 17);
+            this.chkPerçu.TabIndex = 9;
+            this.chkPerçu.Text = "Perçu";
+            this.chkPerçu.UseVisualStyleBackColor = true;
+            // 
+            // chkRecette
+            // 
+            this.chkRecette.AutoSize = true;
+            this.chkRecette.Location = new System.Drawing.Point(6, 12);
+            this.chkRecette.Name = "chkRecette";
+            this.chkRecette.Size = new System.Drawing.Size(64, 17);
+            this.chkRecette.TabIndex = 8;
+            this.chkRecette.Text = "Recette";
+            this.chkRecette.UseVisualStyleBackColor = true;
+            // 
+            // cboType
+            // 
+            this.cboType.FormattingEnabled = true;
+            this.cboType.Location = new System.Drawing.Point(157, 355);
+            this.cboType.Name = "cboType";
+            this.cboType.Size = new System.Drawing.Size(121, 21);
+            this.cboType.TabIndex = 14;
+            // 
+            // lblType
+            // 
+            this.lblType.AutoSize = true;
+            this.lblType.Location = new System.Drawing.Point(10, 355);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(31, 13);
+            this.lblType.TabIndex = 13;
+            this.lblType.Text = "Type";
+            // 
+            // btnAjouterPersonne
+            // 
+            this.btnAjouterPersonne.Location = new System.Drawing.Point(641, 12);
+            this.btnAjouterPersonne.Name = "btnAjouterPersonne";
+            this.btnAjouterPersonne.Size = new System.Drawing.Size(76, 69);
+            this.btnAjouterPersonne.TabIndex = 17;
+            this.btnAjouterPersonne.Text = "Ajouter une personne";
+            this.btnAjouterPersonne.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(606, 442);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 53);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Retour à la page principal";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // frmModiTransac
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(729, 500);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAjouterPersonne);
+            this.Controls.Add(this.btnModifier);
+            this.Controls.Add(this.grb1);
+            this.Controls.Add(this.cboType);
+            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.lblMontant);
+            this.Controls.Add(this.txtMontant);
+            this.Controls.Add(this.lblDescTransac);
+            this.Controls.Add(this.txtDescTran);
+            this.Controls.Add(this.lblTransac);
+            this.Controls.Add(this.calTransac);
+            this.Name = "frmModiTransac";
             this.Text = "frmModiTransac";
+            this.grb1.ResumeLayout(false);
+            this.grb1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MonthCalendar calTransac;
+        private System.Windows.Forms.Label lblTransac;
+        private System.Windows.Forms.TextBox txtDescTran;
+        private System.Windows.Forms.Label lblDescTransac;
+        private System.Windows.Forms.TextBox txtMontant;
+        private System.Windows.Forms.Label lblMontant;
+        private System.Windows.Forms.Button btnModifier;
+        private System.Windows.Forms.GroupBox grb1;
+        private System.Windows.Forms.CheckBox chkPerçu;
+        private System.Windows.Forms.CheckBox chkRecette;
+        private System.Windows.Forms.ComboBox cboType;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.Button btnAjouterPersonne;
+        private System.Windows.Forms.Button button1;
     }
 }
