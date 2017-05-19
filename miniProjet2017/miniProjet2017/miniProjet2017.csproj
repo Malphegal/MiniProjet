@@ -87,6 +87,9 @@
     <EmbeddedResource Include="frmAffichage.resx">
       <DependentUpon>frmAffichage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAjoutTransac.resx">
+      <DependentUpon>frmAjoutTransac.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
