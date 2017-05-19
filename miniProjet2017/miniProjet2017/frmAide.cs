@@ -18,7 +18,7 @@ namespace miniProjet2017
             switch (val)
             {
                 case "modif":
-                    Classes.Aide.AideModiTransac();
+                    Classes.Aide.AideModiTransac(this);
                     break;
                 case "ajout":
                     Classes.Aide.AideAjoutTransac();
