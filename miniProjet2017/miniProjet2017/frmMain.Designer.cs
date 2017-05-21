@@ -40,7 +40,7 @@
             this.btnAffichage.Location = new System.Drawing.Point(12, 64);
             this.btnAffichage.Name = "btnAffichage";
             this.btnAffichage.Size = new System.Drawing.Size(130, 41);
-            this.btnAffichage.TabIndex = 0;
+            this.btnAffichage.TabIndex = 1;
             this.btnAffichage.Text = "frmAffichage";
             this.btnAffichage.UseVisualStyleBackColor = true;
             this.btnAffichage.Click += new System.EventHandler(this.nouveauFrmAffichage);
@@ -50,7 +50,7 @@
             this.btnAjoutTransac.Location = new System.Drawing.Point(12, 17);
             this.btnAjoutTransac.Name = "btnAjoutTransac";
             this.btnAjoutTransac.Size = new System.Drawing.Size(130, 41);
-            this.btnAjoutTransac.TabIndex = 1;
+            this.btnAjoutTransac.TabIndex = 0;
             this.btnAjoutTransac.Text = "frmAjoutTransac";
             this.btnAjoutTransac.UseVisualStyleBackColor = true;
             this.btnAjoutTransac.Click += new System.EventHandler(this.nouveauFrmAjoutTransac);
