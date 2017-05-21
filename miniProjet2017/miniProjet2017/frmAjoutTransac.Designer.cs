@@ -73,7 +73,7 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(12, 262);
+            this.lblMontant.Location = new System.Drawing.Point(12, 282);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(46, 13);
             this.lblMontant.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             this.calTransac.Location = new System.Drawing.Point(130, 39);
             this.calTransac.Name = "calTransac";
-            this.calTransac.TabIndex = 4;
+            this.calTransac.TabIndex = 0;
             // 
             // cboType
             // 
@@ -100,21 +100,22 @@
             this.cboType.Location = new System.Drawing.Point(159, 354);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(121, 21);
-            this.cboType.TabIndex = 5;
+            this.cboType.TabIndex = 6;
             // 
             // txtDescTran
             // 
             this.txtDescTran.Location = new System.Drawing.Point(159, 210);
             this.txtDescTran.Name = "txtDescTran";
             this.txtDescTran.Size = new System.Drawing.Size(100, 20);
-            this.txtDescTran.TabIndex = 6;
+            this.txtDescTran.TabIndex = 1;
             // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(159, 255);
+            this.txtMontant.Location = new System.Drawing.Point(159, 275);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
-            this.txtMontant.TabIndex = 7;
+            this.txtMontant.TabIndex = 2;
+            this.txtMontant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnMontant);
             // 
             // chkRecette
             // 
@@ -122,9 +123,10 @@
             this.chkRecette.Location = new System.Drawing.Point(6, 12);
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.Size = new System.Drawing.Size(64, 17);
-            this.chkRecette.TabIndex = 8;
+            this.chkRecette.TabIndex = 4;
             this.chkRecette.Text = "Recette";
             this.chkRecette.UseVisualStyleBackColor = true;
+            this.chkRecette.CheckedChanged += new System.EventHandler(this.CliquerSurChkRecette);
             // 
             // chkPerçu
             // 
@@ -132,7 +134,7 @@
             this.chkPerçu.Location = new System.Drawing.Point(150, 12);
             this.chkPerçu.Name = "chkPerçu";
             this.chkPerçu.Size = new System.Drawing.Size(54, 17);
-            this.chkPerçu.TabIndex = 9;
+            this.chkPerçu.TabIndex = 5;
             this.chkPerçu.Text = "Perçu";
             this.chkPerçu.UseVisualStyleBackColor = true;
             // 
@@ -143,7 +145,7 @@
             this.grb1.Location = new System.Drawing.Point(9, 298);
             this.grb1.Name = "grb1";
             this.grb1.Size = new System.Drawing.Size(281, 43);
-            this.grb1.TabIndex = 10;
+            this.grb1.TabIndex = 3;
             this.grb1.TabStop = false;
             // 
             // btnAjouterPersonne
@@ -151,7 +153,7 @@
             this.btnAjouterPersonne.Location = new System.Drawing.Point(635, 39);
             this.btnAjouterPersonne.Name = "btnAjouterPersonne";
             this.btnAjouterPersonne.Size = new System.Drawing.Size(76, 69);
-            this.btnAjouterPersonne.TabIndex = 11;
+            this.btnAjouterPersonne.TabIndex = 8;
             this.btnAjouterPersonne.Text = "Ajouter une personne";
             this.btnAjouterPersonne.UseVisualStyleBackColor = true;
             // 
@@ -159,11 +161,11 @@
             // 
             this.btnAjouter.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAjouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAjouter.Location = new System.Drawing.Point(130, 429);
+            this.btnAjouter.Location = new System.Drawing.Point(63, 405);
             this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(103, 66);
-            this.btnAjouter.TabIndex = 12;
-            this.btnAjouter.Text = "Ajouter";
+            this.btnAjouter.Size = new System.Drawing.Size(150, 41);
+            this.btnAjouter.TabIndex = 7;
+            this.btnAjouter.Text = "Ajouter la transaction";
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.AjouterUneTransaction);
             // 
@@ -193,13 +195,13 @@
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.aideToolStripMenuItem.Text = "Aide...";
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.quitterToolStripMenuItem.Text = "Quitter...";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterAjoutTransac);
             // 
