@@ -55,7 +55,7 @@ namespace miniProjet2017
             if (txtNumero.Text.Length != 0)
                 if (txtNumero.Text.Length != 10)
                 {
-                    errorProvider1.SetError(txtNumero, "Le numéro est optionnel, ou doit contenir 10 chiffre !");
+                    errorProvider1.SetError(txtNumero, "Le numéro est optionnel, ou doit contenir 10 chiffres !");
                     toutEstOK = false;
                 }
             else
@@ -64,9 +64,24 @@ namespace miniProjet2017
                 // Si aucune erreur est présente, on peut ajouter la transaction
 
             if (toutEstOK)
-            {
+                if (DialogResult.OK == MessageBox.Show("Voulez-vous ajouter cette personne ?", "Ajouter une personne", MessageBoxButtons.OKCancel))
+                    MessageBox.Show("Personne ajoutée !");
+                else
+                    MessageBox.Show("Aucune modification n'a été effectée !");
+        }
 
-            }
+        private void SaisieDuNumeroTelephone(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if (char.IsNumber(e.KeyChar) && txtNumero.Text.Length < 10 || e.KeyChar == 8)
+                e.Handled = false;
+        }
+
+        private void SaisiePrenomNom(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == '-' || e.KeyChar == ' ')
+                e.Handled = false;
         }
     }
 }

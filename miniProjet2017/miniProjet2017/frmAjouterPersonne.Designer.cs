@@ -74,20 +74,23 @@
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(166, 20);
             this.txtPrenom.TabIndex = 3;
+            this.txtPrenom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisiePrenomNom);
             // 
-            // textBox2
+            // txtNom
             // 
             this.txtNom.Location = new System.Drawing.Point(185, 51);
-            this.txtNom.Name = "textBox2";
+            this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(167, 20);
             this.txtNom.TabIndex = 4;
+            this.txtNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisiePrenomNom);
             // 
-            // textBox3
+            // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(185, 94);
-            this.txtNumero.Name = "textBox3";
+            this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(167, 20);
             this.txtNumero.TabIndex = 5;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDuNumeroTelephone);
             // 
             // btnValider
             // 
@@ -117,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 196);
+            this.ClientSize = new System.Drawing.Size(395, 196);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.txtNumero);
