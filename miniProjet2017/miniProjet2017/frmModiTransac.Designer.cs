@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.grb1 = new System.Windows.Forms.GroupBox();
             this.chkPerçu = new System.Windows.Forms.CheckBox();
@@ -73,15 +72,6 @@
             this.button1.TabIndex = 30;
             this.button1.Text = "Retour à la page principal";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnAjouterPersonne
-            // 
-            this.btnAjouterPersonne.Location = new System.Drawing.Point(658, 46);
-            this.btnAjouterPersonne.Name = "btnAjouterPersonne";
-            this.btnAjouterPersonne.Size = new System.Drawing.Size(76, 69);
-            this.btnAjouterPersonne.TabIndex = 29;
-            this.btnAjouterPersonne.Text = "Ajouter une personne";
-            this.btnAjouterPersonne.UseVisualStyleBackColor = true;
             // 
             // btnModifier
             // 
@@ -336,7 +326,6 @@
             this.Controls.Add(this.pic2);
             this.Controls.Add(this.pic1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAjouterPersonne);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.grb1);
             this.Controls.Add(this.cboType);
@@ -369,7 +358,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnAjouterPersonne;
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.GroupBox grb1;
         private System.Windows.Forms.CheckBox chkPerçu;
