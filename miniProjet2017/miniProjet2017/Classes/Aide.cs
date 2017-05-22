@@ -11,10 +11,10 @@ namespace miniProjet2017.Classes
     public static class Aide
     {
         public static void AideModiTransac(Form form)
-        {
+        {         
             Label lblAide = new System.Windows.Forms.Label();
             lblAide.Text = "Voici l'aide pour le formulaire de modification de transaction.";
-
+            lblAide.Top = ;
             form.Controls.Add(lblAide);
         }
         public static void AideAjoutTransac()

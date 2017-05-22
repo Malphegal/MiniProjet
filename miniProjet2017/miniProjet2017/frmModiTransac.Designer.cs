@@ -195,14 +195,14 @@
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.aideToolStripMenuItem.Text = "Aide...";
             this.aideToolStripMenuItem.Click += new System.EventHandler(this.CliquerSurAideModif);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.quitterToolStripMenuItem.Text = "Quitter...";
             // 
             // frmModiTransac

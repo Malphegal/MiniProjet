@@ -53,12 +53,6 @@
     <Compile Include="frmAffichage.Designer.cs">
       <DependentUpon>frmAffichage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAide.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAide.Designer.cs">
-      <DependentUpon>frmAide.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAjoutTransac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +87,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAffichage.resx">
       <DependentUpon>frmAffichage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAide.resx">
-      <DependentUpon>frmAide.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAjoutTransac.resx">
       <DependentUpon>frmAjoutTransac.cs</DependentUpon>
