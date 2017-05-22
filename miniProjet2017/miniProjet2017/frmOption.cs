@@ -33,7 +33,8 @@ namespace miniProjet2017
         }
         private void MiseAJourDeLaValeurPourcentSMS(object sender, EventArgs e)
         {
-            pourcentageSMS = Convert.ToByte(txtPourcentageSMS.Text);
+            // TODO : Check if NULL
+            pourcentageSMS = Convert.ToByte(txtPourcentageSMS.Text); 
         }
     }
 }
