@@ -247,6 +247,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAjoutTransac";
+            this.Tag = "0";
             this.Text = "frmAjoutTransac";
             this.grb1.ResumeLayout(false);
             this.grb1.PerformLayout();

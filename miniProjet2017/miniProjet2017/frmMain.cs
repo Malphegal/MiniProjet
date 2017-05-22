@@ -60,5 +60,10 @@ namespace miniProjet2017
         {
             new frmOption().ShowDialog();
         }
+
+        private void btnAjouterPersonne_Click(object sender, EventArgs e)
+        {
+            new frmAjouterPersonne().ShowDialog();
+        }
     }
 }

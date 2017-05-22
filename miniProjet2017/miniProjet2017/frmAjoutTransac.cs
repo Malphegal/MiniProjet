@@ -100,7 +100,7 @@ namespace miniProjet2017
 
                 // Si aucune erreur est présente, on peut ajouter la transaction
 
-            if (toutEstOk) { // TODO: mise en forme du montant, s'il est supérieur à 999€
+            if (toutEstOk) {
                 if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
                     txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
                 short nbPersonne = 0;

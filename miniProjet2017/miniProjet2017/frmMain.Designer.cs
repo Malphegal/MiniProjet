@@ -38,6 +38,7 @@
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,7 +114,7 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.quitterToolStripMenuItem.Text = "Quitter...";
             // 
             // editerToolStripMenuItem
@@ -127,15 +128,26 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.optionsToolStripMenuItem.Text = "Options...";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.NouveauFrmOption);
+            // 
+            // btnAjouterPersonne
+            // 
+            this.btnAjouterPersonne.Location = new System.Drawing.Point(12, 278);
+            this.btnAjouterPersonne.Name = "btnAjouterPersonne";
+            this.btnAjouterPersonne.Size = new System.Drawing.Size(130, 41);
+            this.btnAjouterPersonne.TabIndex = 6;
+            this.btnAjouterPersonne.Text = "frmAjouterPersonne";
+            this.btnAjouterPersonne.UseVisualStyleBackColor = true;
+            this.btnAjouterPersonne.Click += new System.EventHandler(this.btnAjouterPersonne_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 584);
+            this.Controls.Add(this.btnAjouterPersonne);
             this.Controls.Add(this.btnSupprTransac);
             this.Controls.Add(this.btnRecap);
             this.Controls.Add(this.btnModiTransac);
@@ -164,6 +176,7 @@
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.Button btnAjouterPersonne;
     }
 }
 
