@@ -120,20 +120,18 @@ namespace miniProjet2017
         }
 
         /* Change le texte de chkRecette en fonction de son état checked ou non.*/
-        private void CliquerSurChkRecette(object sender, EventArgs e)
+        private void CliquerSurChkRecette(CheckBox sender, EventArgs e)
         {
-            CheckBox _sender = (CheckBox)sender;
-            if (_sender.Checked) {
-                _sender.Text = "Dépense";
+            if (sender.Checked) {
+                sender.Text = "Dépense";
                 chkPerçu.Checked = true;
                 chkPerçu.Enabled = false;
             }
             else {
-                _sender.Text = "Recette";
+                sender.Text = "Recette";
                 chkPerçu.Checked = false;
                 chkPerçu.Enabled = true;
             }
-
         }
 
         /* Contrôle de saisie pour le montant */
