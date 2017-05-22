@@ -35,7 +35,6 @@
             this.lblType = new System.Windows.Forms.Label();
             this.calTransac = new System.Windows.Forms.MonthCalendar();
             this.cboType = new System.Windows.Forms.ComboBox();
-            this.txtDescTran = new System.Windows.Forms.TextBox();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.chkRecette = new System.Windows.Forms.CheckBox();
             this.chkPerçu = new System.Windows.Forms.CheckBox();
@@ -48,6 +47,8 @@
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnQuitter = new System.Windows.Forms.Button();
+            this.txtDescTran = new System.Windows.Forms.RichTextBox();
+            this.lblEuro = new System.Windows.Forms.Label();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -65,7 +66,7 @@
             // lblDescTransac
             // 
             this.lblDescTransac.AutoSize = true;
-            this.lblDescTransac.Location = new System.Drawing.Point(12, 213);
+            this.lblDescTransac.Location = new System.Drawing.Point(12, 246);
             this.lblDescTransac.Name = "lblDescTransac";
             this.lblDescTransac.Size = new System.Drawing.Size(141, 13);
             this.lblDescTransac.TabIndex = 1;
@@ -74,7 +75,7 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(12, 282);
+            this.lblMontant.Location = new System.Drawing.Point(12, 315);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(46, 13);
             this.lblMontant.TabIndex = 2;
@@ -83,7 +84,7 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(12, 354);
+            this.lblType.Location = new System.Drawing.Point(15, 387);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(31, 13);
             this.lblType.TabIndex = 3;
@@ -98,23 +99,16 @@
             // cboType
             // 
             this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(159, 354);
+            this.cboType.Location = new System.Drawing.Point(162, 387);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(121, 21);
             this.cboType.TabIndex = 6;
             // 
-            // txtDescTran
-            // 
-            this.txtDescTran.Location = new System.Drawing.Point(159, 210);
-            this.txtDescTran.Name = "txtDescTran";
-            this.txtDescTran.Size = new System.Drawing.Size(100, 20);
-            this.txtDescTran.TabIndex = 1;
-            // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(159, 275);
+            this.txtMontant.Location = new System.Drawing.Point(162, 308);
             this.txtMontant.Name = "txtMontant";
-            this.txtMontant.Size = new System.Drawing.Size(100, 20);
+            this.txtMontant.Size = new System.Drawing.Size(107, 20);
             this.txtMontant.TabIndex = 2;
             this.txtMontant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnMontant);
             // 
@@ -143,7 +137,7 @@
             // 
             this.grb1.Controls.Add(this.chkPerçu);
             this.grb1.Controls.Add(this.chkRecette);
-            this.grb1.Location = new System.Drawing.Point(9, 298);
+            this.grb1.Location = new System.Drawing.Point(12, 331);
             this.grb1.Name = "grb1";
             this.grb1.Size = new System.Drawing.Size(281, 43);
             this.grb1.TabIndex = 3;
@@ -162,7 +156,7 @@
             // 
             this.btnAjouter.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAjouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAjouter.Location = new System.Drawing.Point(63, 405);
+            this.btnAjouter.Location = new System.Drawing.Point(66, 438);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(150, 41);
             this.btnAjouter.TabIndex = 7;
@@ -215,17 +209,35 @@
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
+            // txtDescTran
+            // 
+            this.txtDescTran.Location = new System.Drawing.Point(162, 210);
+            this.txtDescTran.Name = "txtDescTran";
+            this.txtDescTran.Size = new System.Drawing.Size(195, 92);
+            this.txtDescTran.TabIndex = 1;
+            this.txtDescTran.Text = "";
+            // 
+            // lblEuro
+            // 
+            this.lblEuro.AutoSize = true;
+            this.lblEuro.Location = new System.Drawing.Point(270, 311);
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Size = new System.Drawing.Size(13, 13);
+            this.lblEuro.TabIndex = 16;
+            this.lblEuro.Text = "€";
+            // 
             // frmAjoutTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 508);
+            this.Controls.Add(this.lblEuro);
+            this.Controls.Add(this.txtDescTran);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.btnAjouterPersonne);
             this.Controls.Add(this.grb1);
             this.Controls.Add(this.txtMontant);
-            this.Controls.Add(this.txtDescTran);
             this.Controls.Add(this.cboType);
             this.Controls.Add(this.calTransac);
             this.Controls.Add(this.lblType);
@@ -254,7 +266,6 @@
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.MonthCalendar calTransac;
         private System.Windows.Forms.ComboBox cboType;
-        private System.Windows.Forms.TextBox txtDescTran;
         private System.Windows.Forms.TextBox txtMontant;
         private System.Windows.Forms.CheckBox chkRecette;
         private System.Windows.Forms.CheckBox chkPerçu;
@@ -267,5 +278,7 @@
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.RichTextBox txtDescTran;
+        private System.Windows.Forms.Label lblEuro;
     }
 }

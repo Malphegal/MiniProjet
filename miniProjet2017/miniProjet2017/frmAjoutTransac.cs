@@ -100,16 +100,17 @@ namespace miniProjet2017
 
                 // Si aucune erreur est présente, on peut ajouter la transaction
 
-            if (toutEstOk) {
+            if (toutEstOk) { // TODO: mise en forme du montant, s'il est supérieur à 999€
                 if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
                     txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
                 short nbPersonne = 0;
                 foreach (CheckBox chk in Controls.OfType<CheckBox>())
                     if (chk.Checked)
                         nbPersonne++;
-                MessageBox.Show("Ajout de la transaction :\n • " + txtDescTran + "\n • " + txtMontant
-                    + " €\nElle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : "."));
-                if (DialogResult.OK == MessageBox.Show("Voulez-vous ajouter cette transaction ?", "Ajout", MessageBoxButtons.OKCancel))
+                if (DialogResult.OK == MessageBox.Show("Ajout de la transaction :\n\n • " + txtDescTran.Text + "\n\n • " + txtMontant.Text
+                    + " €\n\n • Type : " + cboType.SelectedItem
+                    + "\n\n • Elle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : ".")
+                    + "\n\n • Voulez-vous ajouter cette transaction ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
                     MessageBox.Show("Transaction ajoutée !");
                 else
                     MessageBox.Show("Aucune modification n'a été effectuée !");
