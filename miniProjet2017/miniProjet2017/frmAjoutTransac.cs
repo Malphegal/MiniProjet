@@ -42,7 +42,7 @@ namespace miniProjet2017
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "_TypeTransaction");
 
-                // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
+            // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
 
             short top = 0;
             foreach (DataRow row in ds.Tables["_Personne"].Rows)
@@ -152,6 +152,12 @@ namespace miniProjet2017
                 e.KeyChar = ',';
                 e.Handled = false;
             }
+        }
+
+        /* Ferme le formulaire */
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

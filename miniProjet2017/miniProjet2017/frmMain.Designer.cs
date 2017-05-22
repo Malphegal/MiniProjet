@@ -49,7 +49,7 @@
             this.btnAffichage.TabIndex = 1;
             this.btnAffichage.Text = "frmAffichage";
             this.btnAffichage.UseVisualStyleBackColor = true;
-            this.btnAffichage.Click += new System.EventHandler(this.nouveauFrmAffichage);
+            this.btnAffichage.Click += new System.EventHandler(this.NouveauFrmAffichage);
             // 
             // btnAjoutTransac
             // 
@@ -59,7 +59,7 @@
             this.btnAjoutTransac.TabIndex = 0;
             this.btnAjoutTransac.Text = "frmAjoutTransac";
             this.btnAjoutTransac.UseVisualStyleBackColor = true;
-            this.btnAjoutTransac.Click += new System.EventHandler(this.nouveauFrmAjoutTransac);
+            this.btnAjoutTransac.Click += new System.EventHandler(this.NouveauFrmAjoutTransac);
             // 
             // btnModiTransac
             // 
@@ -69,7 +69,7 @@
             this.btnModiTransac.TabIndex = 2;
             this.btnModiTransac.Text = "frmModiTransac";
             this.btnModiTransac.UseVisualStyleBackColor = true;
-            this.btnModiTransac.Click += new System.EventHandler(this.nouveauFrmModiTransac);
+            this.btnModiTransac.Click += new System.EventHandler(this.NouveauFrmModiTransac);
             // 
             // btnRecap
             // 
@@ -79,7 +79,7 @@
             this.btnRecap.TabIndex = 3;
             this.btnRecap.Text = "frmRecap";
             this.btnRecap.UseVisualStyleBackColor = true;
-            this.btnRecap.Click += new System.EventHandler(this.nouveauFrmRecap);
+            this.btnRecap.Click += new System.EventHandler(this.NouveauFrmRecap);
             // 
             // btnSupprTransac
             // 
@@ -89,7 +89,7 @@
             this.btnSupprTransac.TabIndex = 4;
             this.btnSupprTransac.Text = "frmSupprTransac";
             this.btnSupprTransac.UseVisualStyleBackColor = true;
-            this.btnSupprTransac.Click += new System.EventHandler(this.nouveauFrmSupprTransac);
+            this.btnSupprTransac.Click += new System.EventHandler(this.NouveauFrmSupprTransac);
             // 
             // menuStrip1
             // 
