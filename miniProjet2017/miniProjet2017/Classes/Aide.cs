@@ -16,10 +16,13 @@ namespace miniProjet2017.Classes
         static bool test = false;
         static string[][] texte = new string[][]
         {
-            new string[] {},
             new string[] {"Veuillez-choisir la date à laquelle la transaction a été faite.",
-            "Veuillez-choisir une description pour la transaction.","Veuillez-choisir un montant en chiffre.",
+            "Veuillez-choisir une description pour la transaction.", "Veuillez-choisir un montant en chiffre.",
             "Pour selectionner une dépense, selectionner perçu puis recette.","Veuillez-choisir un type parmis le menu déroulant."},
+
+            new string[] {"Veuillez-modifier la date à laquelle la transaction a été faite.",
+            "Veuillez-modifier une description pour la transaction.","Veuillez-modifier un montant en chiffre.",
+            "Pour selectionner une dépense, selectionner perçu puis recette.","Veuillez-modifier un type parmis le menu déroulant."},
             new string[] {},
             new string[] {},
             new string[] {},

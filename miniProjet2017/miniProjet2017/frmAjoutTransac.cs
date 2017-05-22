@@ -170,5 +170,10 @@ namespace miniProjet2017
         {
             Close();
         }
+
+        private void CliquerAideAjout(object sender, EventArgs e)
+        {
+            new Classes.Aide().AideTransac(this);
+        }
     }
 }

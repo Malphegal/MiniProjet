@@ -39,7 +39,6 @@
             this.chkRecette = new System.Windows.Forms.CheckBox();
             this.chkPerçu = new System.Windows.Forms.CheckBox();
             this.grb1 = new System.Windows.Forms.GroupBox();
-            this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -49,9 +48,24 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.txtDescTran = new System.Windows.Forms.RichTextBox();
             this.lblEuro = new System.Windows.Forms.Label();
+            this.lblAideType = new System.Windows.Forms.Label();
+            this.lblAideRecette = new System.Windows.Forms.Label();
+            this.lblAideMontant = new System.Windows.Forms.Label();
+            this.lblAideDescri = new System.Windows.Forms.Label();
+            this.lblAideDate = new System.Windows.Forms.Label();
+            this.pic5 = new System.Windows.Forms.PictureBox();
+            this.pic4 = new System.Windows.Forms.PictureBox();
+            this.pic3 = new System.Windows.Forms.PictureBox();
+            this.pic2 = new System.Windows.Forms.PictureBox();
+            this.pic1 = new System.Windows.Forms.PictureBox();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTransac
@@ -143,15 +157,6 @@
             this.grb1.TabIndex = 3;
             this.grb1.TabStop = false;
             // 
-            // btnAjouterPersonne
-            // 
-            this.btnAjouterPersonne.Location = new System.Drawing.Point(635, 39);
-            this.btnAjouterPersonne.Name = "btnAjouterPersonne";
-            this.btnAjouterPersonne.Size = new System.Drawing.Size(76, 69);
-            this.btnAjouterPersonne.TabIndex = 8;
-            this.btnAjouterPersonne.Text = "Ajouter une personne";
-            this.btnAjouterPersonne.UseVisualStyleBackColor = true;
-            // 
             // btnAjouter
             // 
             this.btnAjouter.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -192,6 +197,7 @@
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.aideToolStripMenuItem.Text = "Aide...";
+            this.aideToolStripMenuItem.Click += new System.EventHandler(this.CliquerAideAjout);
             // 
             // quitterToolStripMenuItem
             // 
@@ -226,16 +232,125 @@
             this.lblEuro.TabIndex = 16;
             this.lblEuro.Text = "€";
             // 
+            // lblAideType
+            // 
+            this.lblAideType.AutoSize = true;
+            this.lblAideType.Location = new System.Drawing.Point(395, 395);
+            this.lblAideType.Name = "lblAideType";
+            this.lblAideType.Size = new System.Drawing.Size(35, 13);
+            this.lblAideType.TabIndex = 51;
+            this.lblAideType.Tag = "Aidelbl5";
+            this.lblAideType.Text = "label1";
+            this.lblAideType.Visible = false;
+            // 
+            // lblAideRecette
+            // 
+            this.lblAideRecette.AutoSize = true;
+            this.lblAideRecette.Location = new System.Drawing.Point(395, 347);
+            this.lblAideRecette.Name = "lblAideRecette";
+            this.lblAideRecette.Size = new System.Drawing.Size(35, 13);
+            this.lblAideRecette.TabIndex = 50;
+            this.lblAideRecette.Tag = "Aidelbl4";
+            this.lblAideRecette.Text = "label1";
+            this.lblAideRecette.Visible = false;
+            // 
+            // lblAideMontant
+            // 
+            this.lblAideMontant.AutoSize = true;
+            this.lblAideMontant.Location = new System.Drawing.Point(395, 311);
+            this.lblAideMontant.Name = "lblAideMontant";
+            this.lblAideMontant.Size = new System.Drawing.Size(35, 13);
+            this.lblAideMontant.TabIndex = 49;
+            this.lblAideMontant.Tag = "Aidelbl3";
+            this.lblAideMontant.Text = "label1";
+            this.lblAideMontant.Visible = false;
+            // 
+            // lblAideDescri
+            // 
+            this.lblAideDescri.AutoSize = true;
+            this.lblAideDescri.Location = new System.Drawing.Point(469, 249);
+            this.lblAideDescri.Name = "lblAideDescri";
+            this.lblAideDescri.Size = new System.Drawing.Size(35, 13);
+            this.lblAideDescri.TabIndex = 48;
+            this.lblAideDescri.Tag = "Aidelbl2";
+            this.lblAideDescri.Text = "label1";
+            this.lblAideDescri.Visible = false;
+            // 
+            // lblAideDate
+            // 
+            this.lblAideDate.AutoSize = true;
+            this.lblAideDate.Location = new System.Drawing.Point(396, 92);
+            this.lblAideDate.Name = "lblAideDate";
+            this.lblAideDate.Size = new System.Drawing.Size(35, 13);
+            this.lblAideDate.TabIndex = 47;
+            this.lblAideDate.Tag = "Aidelbl1";
+            this.lblAideDate.Text = "label1";
+            this.lblAideDate.Visible = false;
+            // 
+            // pic5
+            // 
+            this.pic5.Location = new System.Drawing.Point(289, 387);
+            this.pic5.Name = "pic5";
+            this.pic5.Size = new System.Drawing.Size(100, 21);
+            this.pic5.TabIndex = 46;
+            this.pic5.TabStop = false;
+            this.pic5.Tag = "Aide2";
+            // 
+            // pic4
+            // 
+            this.pic4.Location = new System.Drawing.Point(289, 343);
+            this.pic4.Name = "pic4";
+            this.pic4.Size = new System.Drawing.Size(100, 21);
+            this.pic4.TabIndex = 45;
+            this.pic4.TabStop = false;
+            this.pic4.Tag = "Aide2";
+            // 
+            // pic3
+            // 
+            this.pic3.Location = new System.Drawing.Point(289, 308);
+            this.pic3.Name = "pic3";
+            this.pic3.Size = new System.Drawing.Size(100, 20);
+            this.pic3.TabIndex = 44;
+            this.pic3.TabStop = false;
+            this.pic3.Tag = "Aide2";
+            // 
+            // pic2
+            // 
+            this.pic2.Location = new System.Drawing.Point(363, 246);
+            this.pic2.Name = "pic2";
+            this.pic2.Size = new System.Drawing.Size(100, 20);
+            this.pic2.TabIndex = 43;
+            this.pic2.TabStop = false;
+            this.pic2.Tag = "Aide2";
+            // 
+            // pic1
+            // 
+            this.pic1.Location = new System.Drawing.Point(363, 39);
+            this.pic1.Name = "pic1";
+            this.pic1.Size = new System.Drawing.Size(100, 50);
+            this.pic1.TabIndex = 42;
+            this.pic1.TabStop = false;
+            this.pic1.Tag = "Aide";
+            // 
             // frmAjoutTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 508);
+            this.Controls.Add(this.lblAideType);
+            this.Controls.Add(this.lblAideRecette);
+            this.Controls.Add(this.lblAideMontant);
+            this.Controls.Add(this.lblAideDescri);
+            this.Controls.Add(this.lblAideDate);
+            this.Controls.Add(this.pic5);
+            this.Controls.Add(this.pic4);
+            this.Controls.Add(this.pic3);
+            this.Controls.Add(this.pic2);
+            this.Controls.Add(this.pic1);
             this.Controls.Add(this.lblEuro);
             this.Controls.Add(this.txtDescTran);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnAjouter);
-            this.Controls.Add(this.btnAjouterPersonne);
             this.Controls.Add(this.grb1);
             this.Controls.Add(this.txtMontant);
             this.Controls.Add(this.cboType);
@@ -254,6 +369,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +391,6 @@
         private System.Windows.Forms.CheckBox chkRecette;
         private System.Windows.Forms.CheckBox chkPerçu;
         private System.Windows.Forms.GroupBox grb1;
-        private System.Windows.Forms.Button btnAjouterPersonne;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -281,5 +400,15 @@
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.RichTextBox txtDescTran;
         private System.Windows.Forms.Label lblEuro;
+        private System.Windows.Forms.Label lblAideType;
+        private System.Windows.Forms.Label lblAideRecette;
+        private System.Windows.Forms.Label lblAideMontant;
+        private System.Windows.Forms.Label lblAideDescri;
+        private System.Windows.Forms.Label lblAideDate;
+        private System.Windows.Forms.PictureBox pic5;
+        private System.Windows.Forms.PictureBox pic4;
+        private System.Windows.Forms.PictureBox pic3;
+        private System.Windows.Forms.PictureBox pic2;
+        private System.Windows.Forms.PictureBox pic1;
     }
 }
