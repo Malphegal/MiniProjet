@@ -30,22 +30,35 @@ namespace miniProjet2017
 
         private void NouveauFrmAffichage(object sender, EventArgs e)
         {
+            Hide();
             new frmAffichage().ShowDialog();
+            Show();
         }
 
         private void NouveauFrmModiTransac(object sender, EventArgs e)
         {
+            Hide();
             new frmModiTransac().ShowDialog();
+            Show();
         }
 
         private void NouveauFrmRecap(object sender, EventArgs e)
         {
+            Hide();
             new frmRecap().ShowDialog();
+            Show();
         }
 
         private void NouveauFrmSupprTransac(object sender, EventArgs e)
         {
+            Hide();
             new frmSupprTransac().ShowDialog();
+            Show();
+        }
+
+        private void NouveauFrmOption(object sender, EventArgs e)
+        {
+            new frmOption().ShowDialog();
         }
     }
 }

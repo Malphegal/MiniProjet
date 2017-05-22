@@ -15,6 +15,25 @@ namespace miniProjet2017
         public frmOption()
         {
             InitializeComponent();
+            InitToutesLesValeurs();
+        }
+
+        void InitToutesLesValeurs()
+        {
+            txtPourcentageSMS.Text = pourcentageSMS.ToString();
+        }
+
+        /* Valeur pour le pourcentage */
+        static byte pourcentageSMS = 10;
+        private void EntrerUneValeurPourcentageSMS(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if (char.IsNumber(e.KeyChar) && txtPourcentageSMS.Text.Length < 3 || e.KeyChar == 8)
+                e.Handled = false;
+        }
+        private void MiseAJourDeLaValeurPourcentSMS(object sender, EventArgs e)
+        {
+            pourcentageSMS = Convert.ToByte(txtPourcentageSMS.Text);
         }
     }
 }
