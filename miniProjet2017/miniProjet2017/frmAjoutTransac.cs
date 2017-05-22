@@ -101,11 +101,14 @@ namespace miniProjet2017
                 // Si aucune erreur est présente, on peut ajouter la transaction
 
             if (toutEstOk) {
+                if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
+                    txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
                 short nbPersonne = 0;
                 foreach (CheckBox chk in Controls.OfType<CheckBox>())
                     if (chk.Checked)
                         nbPersonne++;
-                MessageBox.Show("Ajout de la transaction :\nElle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : "."));
+                MessageBox.Show("Ajout de la transaction :\n • " + txtDescTran + "\n • " + txtMontant
+                    + " €\nElle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : "."));
                 if (DialogResult.OK == MessageBox.Show("Voulez-vous ajouter cette transaction ?", "Ajout", MessageBoxButtons.OKCancel))
                     MessageBox.Show("Transaction ajoutée !");
                 else
@@ -119,7 +122,7 @@ namespace miniProjet2017
             Close();
         }
 
-        /* Change le texte de chkRecette en fonction de son état checked ou non.*/
+        /* Change le texte de chkRecette en fonction de son état checked ou non */
         private void CliquerSurChkRecette(object sender, EventArgs e)
         {
             CheckBox _sender = (CheckBox)sender;
@@ -142,6 +145,13 @@ namespace miniProjet2017
             e.Handled = true;
             if (char.IsDigit(e.KeyChar) || e.KeyChar == 8)
                 e.Handled = false;
+            else if (e.KeyChar == ',' && !txtMontant.Text.Contains(","))
+                    e.Handled = false;
+            else if (e.KeyChar == '.' && !txtMontant.Text.Contains(","))
+            {
+                e.KeyChar = ',';
+                e.Handled = false;
+            }
         }
     }
 }

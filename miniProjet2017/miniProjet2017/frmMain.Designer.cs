@@ -33,11 +33,17 @@
             this.btnModiTransac = new System.Windows.Forms.Button();
             this.btnRecap = new System.Windows.Forms.Button();
             this.btnSupprTransac = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAffichage
             // 
-            this.btnAffichage.Location = new System.Drawing.Point(12, 64);
+            this.btnAffichage.Location = new System.Drawing.Point(12, 88);
             this.btnAffichage.Name = "btnAffichage";
             this.btnAffichage.Size = new System.Drawing.Size(130, 41);
             this.btnAffichage.TabIndex = 1;
@@ -47,7 +53,7 @@
             // 
             // btnAjoutTransac
             // 
-            this.btnAjoutTransac.Location = new System.Drawing.Point(12, 17);
+            this.btnAjoutTransac.Location = new System.Drawing.Point(12, 41);
             this.btnAjoutTransac.Name = "btnAjoutTransac";
             this.btnAjoutTransac.Size = new System.Drawing.Size(130, 41);
             this.btnAjoutTransac.TabIndex = 0;
@@ -57,7 +63,7 @@
             // 
             // btnModiTransac
             // 
-            this.btnModiTransac.Location = new System.Drawing.Point(12, 111);
+            this.btnModiTransac.Location = new System.Drawing.Point(12, 135);
             this.btnModiTransac.Name = "btnModiTransac";
             this.btnModiTransac.Size = new System.Drawing.Size(130, 41);
             this.btnModiTransac.TabIndex = 2;
@@ -67,7 +73,7 @@
             // 
             // btnRecap
             // 
-            this.btnRecap.Location = new System.Drawing.Point(12, 160);
+            this.btnRecap.Location = new System.Drawing.Point(12, 184);
             this.btnRecap.Name = "btnRecap";
             this.btnRecap.Size = new System.Drawing.Size(130, 41);
             this.btnRecap.TabIndex = 3;
@@ -77,13 +83,52 @@
             // 
             // btnSupprTransac
             // 
-            this.btnSupprTransac.Location = new System.Drawing.Point(12, 207);
+            this.btnSupprTransac.Location = new System.Drawing.Point(12, 231);
             this.btnSupprTransac.Name = "btnSupprTransac";
             this.btnSupprTransac.Size = new System.Drawing.Size(130, 41);
             this.btnSupprTransac.TabIndex = 4;
             this.btnSupprTransac.Text = "frmSupprTransac";
             this.btnSupprTransac.UseVisualStyleBackColor = true;
             this.btnSupprTransac.Click += new System.EventHandler(this.nouveauFrmSupprTransac);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fichierToolStripMenuItem,
+            this.editerToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(970, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fichierToolStripMenuItem
+            // 
+            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quitterToolStripMenuItem});
+            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter...";
+            // 
+            // editerToolStripMenuItem
+            // 
+            this.editerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionsToolStripMenuItem});
+            this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
+            this.editerToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.editerToolStripMenuItem.Text = "Editer";
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.optionsToolStripMenuItem.Text = "Options...";
             // 
             // frmMain
             // 
@@ -95,9 +140,14 @@
             this.Controls.Add(this.btnModiTransac);
             this.Controls.Add(this.btnAjoutTransac);
             this.Controls.Add(this.btnAffichage);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "frmMain";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,6 +158,11 @@
         private System.Windows.Forms.Button btnModiTransac;
         private System.Windows.Forms.Button btnRecap;
         private System.Windows.Forms.Button btnSupprTransac;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
     }
 }
 
