@@ -46,8 +46,23 @@
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pic1 = new System.Windows.Forms.PictureBox();
+            this.pic2 = new System.Windows.Forms.PictureBox();
+            this.pic3 = new System.Windows.Forms.PictureBox();
+            this.pic4 = new System.Windows.Forms.PictureBox();
+            this.pic5 = new System.Windows.Forms.PictureBox();
+            this.lblAideDate = new System.Windows.Forms.Label();
+            this.lblAideDescri = new System.Windows.Forms.Label();
+            this.lblAideMontant = new System.Windows.Forms.Label();
+            this.lblAideRecette = new System.Windows.Forms.Label();
+            this.lblAideType = new System.Windows.Forms.Label();
             this.grb1.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic5)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -205,11 +220,121 @@
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.quitterToolStripMenuItem.Text = "Quitter...";
             // 
+            // pic1
+            // 
+            this.pic1.Location = new System.Drawing.Point(436, 65);
+            this.pic1.Name = "pic1";
+            this.pic1.Size = new System.Drawing.Size(100, 50);
+            this.pic1.TabIndex = 32;
+            this.pic1.TabStop = false;
+            this.pic1.Tag = "Aide";
+            // 
+            // pic2
+            // 
+            this.pic2.Location = new System.Drawing.Point(304, 242);
+            this.pic2.Name = "pic2";
+            this.pic2.Size = new System.Drawing.Size(100, 20);
+            this.pic2.TabIndex = 33;
+            this.pic2.TabStop = false;
+            this.pic2.Tag = "Aide2";
+            // 
+            // pic3
+            // 
+            this.pic3.Location = new System.Drawing.Point(304, 297);
+            this.pic3.Name = "pic3";
+            this.pic3.Size = new System.Drawing.Size(100, 20);
+            this.pic3.TabIndex = 34;
+            this.pic3.TabStop = false;
+            this.pic3.Tag = "Aide2";
+            // 
+            // pic4
+            // 
+            this.pic4.Location = new System.Drawing.Point(304, 341);
+            this.pic4.Name = "pic4";
+            this.pic4.Size = new System.Drawing.Size(100, 21);
+            this.pic4.TabIndex = 35;
+            this.pic4.TabStop = false;
+            this.pic4.Tag = "Aide2";
+            // 
+            // pic5
+            // 
+            this.pic5.Location = new System.Drawing.Point(304, 389);
+            this.pic5.Name = "pic5";
+            this.pic5.Size = new System.Drawing.Size(100, 21);
+            this.pic5.TabIndex = 36;
+            this.pic5.TabStop = false;
+            this.pic5.Tag = "Aide2";
+            // 
+            // lblAideDate
+            // 
+            this.lblAideDate.AutoSize = true;
+            this.lblAideDate.Location = new System.Drawing.Point(501, 129);
+            this.lblAideDate.Name = "lblAideDate";
+            this.lblAideDate.Size = new System.Drawing.Size(35, 13);
+            this.lblAideDate.TabIndex = 37;
+            this.lblAideDate.Tag = "Aidelbl1";
+            this.lblAideDate.Text = "label1";
+            this.lblAideDate.Visible = false;
+            // 
+            // lblAideDescri
+            // 
+            this.lblAideDescri.AutoSize = true;
+            this.lblAideDescri.Location = new System.Drawing.Point(410, 245);
+            this.lblAideDescri.Name = "lblAideDescri";
+            this.lblAideDescri.Size = new System.Drawing.Size(35, 13);
+            this.lblAideDescri.TabIndex = 38;
+            this.lblAideDescri.Tag = "Aidelbl2";
+            this.lblAideDescri.Text = "label1";
+            this.lblAideDescri.Visible = false;
+            // 
+            // lblAideMontant
+            // 
+            this.lblAideMontant.AutoSize = true;
+            this.lblAideMontant.Location = new System.Drawing.Point(410, 300);
+            this.lblAideMontant.Name = "lblAideMontant";
+            this.lblAideMontant.Size = new System.Drawing.Size(35, 13);
+            this.lblAideMontant.TabIndex = 39;
+            this.lblAideMontant.Tag = "Aidelbl3";
+            this.lblAideMontant.Text = "label1";
+            this.lblAideMontant.Visible = false;
+            // 
+            // lblAideRecette
+            // 
+            this.lblAideRecette.AutoSize = true;
+            this.lblAideRecette.Location = new System.Drawing.Point(410, 345);
+            this.lblAideRecette.Name = "lblAideRecette";
+            this.lblAideRecette.Size = new System.Drawing.Size(35, 13);
+            this.lblAideRecette.TabIndex = 40;
+            this.lblAideRecette.Tag = "Aidelbl4";
+            this.lblAideRecette.Text = "label1";
+            this.lblAideRecette.Visible = false;
+            // 
+            // lblAideType
+            // 
+            this.lblAideType.AutoSize = true;
+            this.lblAideType.Location = new System.Drawing.Point(410, 397);
+            this.lblAideType.Name = "lblAideType";
+            this.lblAideType.Size = new System.Drawing.Size(35, 13);
+            this.lblAideType.TabIndex = 41;
+            this.lblAideType.Tag = "Aidelbl5";
+            this.lblAideType.Text = "label1";
+            this.lblAideType.Visible = false;
+            // 
             // frmModiTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 536);
+            this.Controls.Add(this.lblAideType);
+            this.Controls.Add(this.lblAideRecette);
+            this.Controls.Add(this.lblAideMontant);
+            this.Controls.Add(this.lblAideDescri);
+            this.Controls.Add(this.lblAideDate);
+            this.Controls.Add(this.pic5);
+            this.Controls.Add(this.pic4);
+            this.Controls.Add(this.pic3);
+            this.Controls.Add(this.pic2);
+            this.Controls.Add(this.pic1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAjouterPersonne);
             this.Controls.Add(this.btnModifier);
@@ -230,6 +355,11 @@
             this.grb1.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +385,15 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pic1;
+        private System.Windows.Forms.PictureBox pic2;
+        private System.Windows.Forms.PictureBox pic3;
+        private System.Windows.Forms.PictureBox pic4;
+        private System.Windows.Forms.PictureBox pic5;
+        private System.Windows.Forms.Label lblAideDate;
+        private System.Windows.Forms.Label lblAideDescri;
+        private System.Windows.Forms.Label lblAideMontant;
+        private System.Windows.Forms.Label lblAideRecette;
+        private System.Windows.Forms.Label lblAideType;
     }
 }
