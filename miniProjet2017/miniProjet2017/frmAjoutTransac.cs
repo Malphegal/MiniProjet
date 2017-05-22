@@ -107,7 +107,8 @@ namespace miniProjet2017
                 foreach (CheckBox chk in Controls.OfType<CheckBox>())
                     if (chk.Checked)
                         nbPersonne++;
-                if (DialogResult.OK == MessageBox.Show("Ajout de la transaction :\n\n • " + txtDescTran.Text + "\n\n • " + txtMontant.Text
+                if (DialogResult.OK == MessageBox.Show("Ajout de la transaction :\n\n • " + txtDescTran.Text
+                    + "\n\n • " + FormatDuMontant(txtMontant.Text)
                     + " €\n\n • Type : " + cboType.SelectedItem
                     + "\n\n • Elle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : ".")
                     + "\n\n • Voulez-vous ajouter cette transaction ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
@@ -115,6 +116,15 @@ namespace miniProjet2017
                 else
                     MessageBox.Show("Aucune modification n'a été effectuée !");
             }
+        }
+
+        /* Affichage du prix formatté */
+        private string FormatDuMontant(string montant)
+        {
+            double d = Math.Round(Convert.ToDouble(montant), 2);
+            return d.ToString().IndexOf(",") != 1 ?
+                string.Format("{0:0,0}", d) + "," + d.ToString().Remove(0, d.ToString().IndexOf(",") + 1) :
+                string.Format("{0:0,0}", d);
         }
 
         /* Ferme ce formulaire */
