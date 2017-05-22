@@ -22,7 +22,7 @@ namespace miniProjet2017
 
         private void CliquerSurAideModif(object sender, EventArgs e)
         {
-            new Classes.Aide().AideModiTransac(this);
+            new Classes.Aide().AideTransac(this);
         }
     }
 }

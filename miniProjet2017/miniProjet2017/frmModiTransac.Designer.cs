@@ -268,7 +268,7 @@
             // lblAideDate
             // 
             this.lblAideDate.AutoSize = true;
-            this.lblAideDate.Location = new System.Drawing.Point(501, 129);
+            this.lblAideDate.Location = new System.Drawing.Point(469, 118);
             this.lblAideDate.Name = "lblAideDate";
             this.lblAideDate.Size = new System.Drawing.Size(35, 13);
             this.lblAideDate.TabIndex = 37;
@@ -350,6 +350,7 @@
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmModiTransac";
+            this.Tag = "1";
             this.Text = "frmModiTransac";
             this.grb1.ResumeLayout(false);
             this.grb1.PerformLayout();
