@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CON = System.Data.OleDb.OleDbConnection;
+using CMD = System.Data.OleDb.OleDbCommand;
 
 namespace miniProjet2017
 {
@@ -24,6 +26,7 @@ namespace miniProjet2017
             Close();
         }
 
+        /* Vérification avant d'ajouter une personne */
         private void CliquerSurValider(object sender, EventArgs e)
         {
                 // Sera 'false' si au moins une erreur se produit
@@ -64,12 +67,27 @@ namespace miniProjet2017
                 // Si aucune erreur est présente, on peut ajouter la transaction
 
             if (toutEstOK)
-                if (DialogResult.OK == MessageBox.Show("Voulez-vous ajouter cette personne ?", "Ajouter une personne", MessageBoxButtons.OKCancel))
-                    MessageBox.Show("Personne ajoutée !");
+                if (DialogResult.OK == MessageBox.Show("Voulez-vous ajouter cette personne ?", "Ajouter une personne", MessageBoxButtons.OKCancel)) {
+                    try {
+                        CON con = new CON(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+                        con.Open();
+                        new CMD(@"INSERT INTO Personne VALUES (" + new CMD(@"SELECT max(codePersonne) + 1 FROM Personne", con).ExecuteScalar() + ", '"
+                                                                + txtNom.Text + "', '"
+                                                                + txtPrenom.Text + "', "
+                                                                + (txtNumero.Text.Length == 0 ? "NULL" : txtNumero.Text)
+                                                                + ")", con).ExecuteNonQuery();
+                        MessageBox.Show("Personne ajoutée !");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Une erreur s'est produite :\n" + ex);
+                    }
+                }
                 else
                     MessageBox.Show("Aucune modification n'a été effectée !");
         }
 
+        /* Controle de saisie du numéro */
         private void SaisieDuNumeroTelephone(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -77,6 +95,7 @@ namespace miniProjet2017
                 e.Handled = false;
         }
 
+        /* Controle de saisie du prénom/nom */
         private void SaisiePrenomNom(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
