@@ -339,8 +339,10 @@
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmModiTransac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Tag = "1";
-            this.Text = "frmModiTransac";
+            this.Text = "Modification d\'une transaction";
+            this.Load += new System.EventHandler(this.LancementDuFormulaire);
             this.grb1.ResumeLayout(false);
             this.grb1.PerformLayout();
             this.menuStrip.ResumeLayout(false);

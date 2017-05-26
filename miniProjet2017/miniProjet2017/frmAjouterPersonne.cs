@@ -77,6 +77,7 @@ namespace miniProjet2017
                                                                 + (txtNumero.Text.Length == 0 ? "NULL" : txtNumero.Text)
                                                                 + ")", con).ExecuteNonQuery();
                         MessageBox.Show("Personne ajoutée !");
+                        con.Close();
                     }
                     catch (Exception ex)
                     {

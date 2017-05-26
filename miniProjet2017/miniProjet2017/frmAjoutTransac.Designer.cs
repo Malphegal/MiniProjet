@@ -213,7 +213,7 @@
             this.btnQuitter.Size = new System.Drawing.Size(111, 36);
             this.btnQuitter.TabIndex = 14;
             this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            this.btnQuitter.Click += new System.EventHandler(this.QuitterAjoutTransac);
             // 
             // txtDescTran
             // 

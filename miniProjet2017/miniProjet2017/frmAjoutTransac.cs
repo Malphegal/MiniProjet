@@ -42,7 +42,7 @@ namespace miniProjet2017
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "_TypeTransaction");
 
-            // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
+                // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
 
             short top = 0;
             foreach (DataRow row in ds.Tables["_Personne"].Rows)
@@ -62,6 +62,7 @@ namespace miniProjet2017
                 cboType.Items.Add(row["libType"]);
         }
 
+        // TODO: Check comment ajouter l'heure dans la table Transaction, ajout du TRY CATCH, ajout dans d'autre table (Beneficiaire ?)
         /* Bouton valider, vérification des valeurs avant l'ajout*/
         private void AjouterUneTransaction(object sender, EventArgs e)
         {
@@ -111,8 +112,26 @@ namespace miniProjet2017
                     + "\n\n • " + FormatDuMontant(txtMontant.Text)
                     + " €\n\n • Type : " + cboType.SelectedItem
                     + "\n\n • Elle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : ".")
-                    + "\n\n • Voulez-vous ajouter cette transaction ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
+                    + "\n\n     Voulez-vous ajouter cette transaction ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
+                {
+                        // Remplir la table locale
+
+                    CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+                    con.Open();
+                    new CMD(@"INSERT INTO [Transaction] VALUES (" + new CMD(@"SELECT IIF(max(codeTransaction) IS NULL, 0, max(codeTransaction) + 1) FROM [Transaction]", con).ExecuteScalar() + ", "
+                                                            + "#" + (calTransac.SelectionStart.Day > 9
+                                                            ? calTransac.SelectionStart.Day.ToString()
+                                                            : "0" + calTransac.SelectionStart.Day.ToString()) + '/' + (calTransac.SelectionStart.Month > 9
+                                                            ? calTransac.SelectionStart.Month.ToString()
+                                                            : "0" + calTransac.SelectionStart.Month.ToString()) + '/' + calTransac.SelectionStart.Year + "#, '"
+                                                            + txtDescTran.Text + "', "
+                                                            + FormatDuMontant(txtMontant.Text).Replace(',', '.') + ", "
+                                                            + (chkRecette.Checked ? "True" : "False") + ", "
+                                                            + (chkPerçu.Checked ? "True" : "False") + ", "
+                                                            + (cboType.SelectedIndex + 1) + ")", con).ExecuteNonQuery();
                     MessageBox.Show("Transaction ajoutée !");
+                    con.Close();
+                }
                 else
                     MessageBox.Show("Aucune modification n'a été effectuée !");
             }
@@ -122,9 +141,10 @@ namespace miniProjet2017
         private string FormatDuMontant(string montant)
         {
             double d = Math.Round(Convert.ToDouble(montant), 2);
+            MessageBox.Show(d.ToString());
             return d.ToString().IndexOf(",") != 1 ?
-                string.Format("{0:0,0}", d) + "," + d.ToString().Remove(0, d.ToString().IndexOf(",") + 1) :
-                string.Format("{0:0,0}", d);
+                string.Format("{0:0,0}", d) :
+                string.Format("{0:0,0}", d) + "," + d.ToString().Remove(0, d.ToString().IndexOf(",") + 1);
         }
 
         /* Ferme ce formulaire */
@@ -165,12 +185,7 @@ namespace miniProjet2017
             }
         }
 
-        /* Ferme le formulaire */
-        private void btnQuitter_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        /* Ajout ou retire l'aide de ce formulaire */
         private void CliquerAideAjout(object sender, EventArgs e)
         {
             new Classes.Aide().AideTransac(this);
