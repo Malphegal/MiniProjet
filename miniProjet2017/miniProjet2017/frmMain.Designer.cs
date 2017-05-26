@@ -28,183 +28,145 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnAffichage = new System.Windows.Forms.Button();
-            this.btnAjoutTransac = new System.Windows.Forms.Button();
-            this.btnModiTransac = new System.Windows.Forms.Button();
             this.btnRecap = new System.Windows.Forms.Button();
-            this.btnSupprTransac = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripFichier = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripEditer = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.lblTitre = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlGauche = new System.Windows.Forms.Panel();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btnDeroulerTransaction = new System.Windows.Forms.Button();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pnlHaut = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlGauche.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAffichage
             // 
-            this.btnAffichage.Location = new System.Drawing.Point(791, 211);
+            resources.ApplyResources(this.btnAffichage, "btnAffichage");
             this.btnAffichage.Name = "btnAffichage";
-            this.btnAffichage.Size = new System.Drawing.Size(140, 41);
-            this.btnAffichage.TabIndex = 1;
-            this.btnAffichage.Text = "frmAffichage";
             this.btnAffichage.UseVisualStyleBackColor = true;
             this.btnAffichage.Click += new System.EventHandler(this.NouveauFrmAffichage);
             // 
-            // btnAjoutTransac
-            // 
-            this.btnAjoutTransac.Location = new System.Drawing.Point(298, 134);
-            this.btnAjoutTransac.Name = "btnAjoutTransac";
-            this.btnAjoutTransac.Size = new System.Drawing.Size(140, 41);
-            this.btnAjoutTransac.TabIndex = 0;
-            this.btnAjoutTransac.Text = "Ajouter une transaction";
-            this.btnAjoutTransac.UseVisualStyleBackColor = true;
-            this.btnAjoutTransac.Click += new System.EventHandler(this.NouveauFrmAjoutTransac);
-            // 
-            // btnModiTransac
-            // 
-            this.btnModiTransac.Location = new System.Drawing.Point(298, 192);
-            this.btnModiTransac.Name = "btnModiTransac";
-            this.btnModiTransac.Size = new System.Drawing.Size(140, 41);
-            this.btnModiTransac.TabIndex = 2;
-            this.btnModiTransac.Text = "Modifier une transaction";
-            this.btnModiTransac.UseVisualStyleBackColor = true;
-            this.btnModiTransac.Click += new System.EventHandler(this.NouveauFrmModiTransac);
-            // 
             // btnRecap
             // 
-            this.btnRecap.Location = new System.Drawing.Point(791, 258);
+            resources.ApplyResources(this.btnRecap, "btnRecap");
             this.btnRecap.Name = "btnRecap";
-            this.btnRecap.Size = new System.Drawing.Size(140, 41);
-            this.btnRecap.TabIndex = 3;
-            this.btnRecap.Text = "frmRecap";
             this.btnRecap.UseVisualStyleBackColor = true;
             this.btnRecap.Click += new System.EventHandler(this.NouveauFrmRecap);
             // 
-            // btnSupprTransac
-            // 
-            this.btnSupprTransac.Location = new System.Drawing.Point(298, 253);
-            this.btnSupprTransac.Name = "btnSupprTransac";
-            this.btnSupprTransac.Size = new System.Drawing.Size(140, 41);
-            this.btnSupprTransac.TabIndex = 4;
-            this.btnSupprTransac.Text = "Supprimer une transaction";
-            this.btnSupprTransac.UseVisualStyleBackColor = true;
-            this.btnSupprTransac.Click += new System.EventHandler(this.NouveauFrmSupprTransac);
-            // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichierToolStripMenuItem,
-            this.editerToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStripFichier,
+            this.menuStripEditer});
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(970, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
             // 
-            // fichierToolStripMenuItem
+            // menuStripFichier
             // 
-            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            resources.ApplyResources(this.menuStripFichier, "menuStripFichier");
+            this.menuStripFichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitterToolStripMenuItem});
-            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.fichierToolStripMenuItem.Text = "Fichier";
+            this.menuStripFichier.Name = "menuStripFichier";
             // 
             // quitterToolStripMenuItem
             // 
+            resources.ApplyResources(this.quitterToolStripMenuItem, "quitterToolStripMenuItem");
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter...";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.CliquerApplication);
             // 
-            // editerToolStripMenuItem
+            // menuStripEditer
             // 
-            this.editerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            resources.ApplyResources(this.menuStripEditer, "menuStripEditer");
+            this.menuStripEditer.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem});
-            this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
-            this.editerToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.editerToolStripMenuItem.Text = "Editer";
+            this.menuStripEditer.Name = "menuStripEditer";
             // 
             // optionsToolStripMenuItem
             // 
+            resources.ApplyResources(this.optionsToolStripMenuItem, "optionsToolStripMenuItem");
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.optionsToolStripMenuItem.Text = "Options...";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.NouveauFrmOption);
             // 
             // btnAjouterPersonne
             // 
-            this.btnAjouterPersonne.Location = new System.Drawing.Point(791, 112);
+            resources.ApplyResources(this.btnAjouterPersonne, "btnAjouterPersonne");
             this.btnAjouterPersonne.Name = "btnAjouterPersonne";
-            this.btnAjouterPersonne.Size = new System.Drawing.Size(140, 41);
-            this.btnAjouterPersonne.TabIndex = 6;
-            this.btnAjouterPersonne.Text = "Ajouter une personne";
             this.btnAjouterPersonne.UseVisualStyleBackColor = true;
             this.btnAjouterPersonne.Click += new System.EventHandler(this.NouveauFrmAjouterPersonne);
             // 
             // lblTitre
             // 
-            this.lblTitre.AutoSize = true;
-            this.lblTitre.Location = new System.Drawing.Point(435, 49);
+            resources.ApplyResources(this.lblTitre, "lblTitre");
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(35, 13);
-            this.lblTitre.TabIndex = 8;
-            this.lblTitre.Text = "label1";
             // 
-            // panel1
+            // pnlGauche
             // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 560);
-            this.panel1.TabIndex = 9;
+            resources.ApplyResources(this.pnlGauche, "pnlGauche");
+            this.pnlGauche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.pnlGauche.Controls.Add(this.btn2);
+            this.pnlGauche.Controls.Add(this.btnDeroulerTransaction);
+            this.pnlGauche.Controls.Add(this.pnlLogo);
+            this.pnlGauche.Name = "pnlGauche";
             // 
-            // panel2
+            // btn2
             // 
-            this.panel2.BackgroundImage = global::miniProjet2017.Properties.Resources.logo;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 81);
-            this.panel2.TabIndex = 0;
+            resources.ApplyResources(this.btn2, "btn2");
+            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn2.ForeColor = System.Drawing.Color.White;
+            this.btn2.Name = "btn2";
+            this.btn2.Tag = "";
+            this.btn2.UseVisualStyleBackColor = false;
             // 
-            // panel3
+            // btnDeroulerTransaction
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(220, 24);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(750, 82);
-            this.panel3.TabIndex = 10;
+            resources.ApplyResources(this.btnDeroulerTransaction, "btnDeroulerTransaction");
+            this.btnDeroulerTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnDeroulerTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeroulerTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDeroulerTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnDeroulerTransaction.Name = "btnDeroulerTransaction";
+            this.btnDeroulerTransaction.Tag = "";
+            this.btnDeroulerTransaction.UseVisualStyleBackColor = false;
+            this.btnDeroulerTransaction.Click += new System.EventHandler(this.CliquerSurDeroulerTransaction);
+            // 
+            // pnlLogo
+            // 
+            resources.ApplyResources(this.pnlLogo, "pnlLogo");
+            this.pnlLogo.BackgroundImage = global::miniProjet2017.Properties.Resources.logo;
+            this.pnlLogo.Name = "pnlLogo";
+            // 
+            // pnlHaut
+            // 
+            resources.ApplyResources(this.pnlHaut, "pnlHaut");
+            this.pnlHaut.Name = "pnlHaut";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 584);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnSupprTransac);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnModiTransac);
+            this.Controls.Add(this.pnlHaut);
+            this.Controls.Add(this.pnlGauche);
             this.Controls.Add(this.lblTitre);
-            this.Controls.Add(this.btnAjoutTransac);
             this.Controls.Add(this.btnAjouterPersonne);
             this.Controls.Add(this.btnRecap);
             this.Controls.Add(this.btnAffichage);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Load += new System.EventHandler(this.PremierChargementDeApplication);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pnlGauche.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,20 +175,19 @@
         #endregion
 
         private System.Windows.Forms.Button btnAffichage;
-        private System.Windows.Forms.Button btnAjoutTransac;
-        private System.Windows.Forms.Button btnModiTransac;
         private System.Windows.Forms.Button btnRecap;
-        private System.Windows.Forms.Button btnSupprTransac;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuStripFichier;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuStripEditer;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.Button btnAjouterPersonne;
         private System.Windows.Forms.Label lblTitre;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlGauche;
+        private System.Windows.Forms.Panel pnlLogo;
+        private System.Windows.Forms.Panel pnlHaut;
+        private System.Windows.Forms.Button btnDeroulerTransaction;
+        private System.Windows.Forms.Button btn2;
     }
 }
 
