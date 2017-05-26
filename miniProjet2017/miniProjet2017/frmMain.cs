@@ -61,9 +61,15 @@ namespace miniProjet2017
             new frmOption().ShowDialog();
         }
 
-        private void btnAjouterPersonne_Click(object sender, EventArgs e)
+        private void NouveauFrmAjouterPersonne(object sender, EventArgs e)
         {
             new frmAjouterPersonne().ShowDialog();
+        }
+
+        /* Ferme l'application */
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

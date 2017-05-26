@@ -18,6 +18,7 @@ namespace miniProjet2017
             InitToutesLesValeurs();
         }
 
+        /* Met sur les TextBox et autres composents les valeurs par défaut */
         void InitToutesLesValeurs()
         {
             txtPourcentageSMS.Text = pourcentageSMS.ToString();
@@ -28,13 +29,13 @@ namespace miniProjet2017
         private void EntrerUneValeurPourcentageSMS(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
-            if (char.IsNumber(e.KeyChar) && txtPourcentageSMS.Text.Length < 3 || e.KeyChar == 8)
+            if (char.IsNumber(e.KeyChar) && txtPourcentageSMS.Text.Length < 2 || e.KeyChar == 8 || e.KeyChar == 13)
                 e.Handled = false;
         }
         private void MiseAJourDeLaValeurPourcentSMS(object sender, EventArgs e)
         {
-            // TODO : Check if NULL
-            pourcentageSMS = Convert.ToByte(txtPourcentageSMS.Text); 
+            if (txtPourcentageSMS.Text.Length != 0)
+                pourcentageSMS = Convert.ToByte(txtPourcentageSMS.Text); 
         }
     }
 }
