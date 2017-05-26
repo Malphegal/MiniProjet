@@ -85,9 +85,9 @@ namespace miniProjet2017
             }
             else errorProvider.SetError(cboType, "");
 
-            if (txtMontant.Text == "")
+            if (txtMontant.Text == "" || double.Parse(txtMontant.Text) < 0.01D)
             {
-                errorProvider.SetError(txtMontant, "Il faut indiquer un montant pour cette transaction !");
+                errorProvider.SetError(txtMontant, "Il faut indiquer un montant non nul (ou inférieur à 1 centime) pour cette transaction !");
                 toutEstOk = false;
             }
             else errorProvider.SetError(txtMontant, "");
@@ -141,10 +141,9 @@ namespace miniProjet2017
         private string FormatDuMontant(string montant)
         {
             double d = Math.Round(Convert.ToDouble(montant), 2);
-            MessageBox.Show(d.ToString());
-            return d.ToString().IndexOf(",") != 1 ?
-                string.Format("{0:0,0}", d) :
-                string.Format("{0:0,0}", d) + "," + d.ToString().Remove(0, d.ToString().IndexOf(",") + 1);
+            return d.ToString().Contains(',') /* IndexOf(",") != 1*/ ?
+                string.Format("{0:0,0}", Math.Floor(d)) + "," + d.ToString().Remove(0, d.ToString().IndexOf(",") + 1) :
+                string.Format("{0:0,0}", d);
         }
 
         /* Ferme ce formulaire */
