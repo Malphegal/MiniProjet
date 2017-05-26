@@ -1,18 +1,14 @@
-Voici le fichier plan
-
-Général : SQL 
-
 
 Izaya : Chef de l'équipe
-Maître du design
-
+- Maître du design
 
 Gaëtan : 
-formMain
+- Fonctions événementiels
+- début du SQL
 
 Nicolas :
-PDF
-SMS
+- PDF
+- SMS
 
 Conventions de nommage :
 Commit : nomdufichierV(n°version)
