@@ -175,6 +175,7 @@
             // calTransac
             // 
             this.calTransac.Location = new System.Drawing.Point(197, 52);
+            this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
             this.calTransac.TabIndex = 19;
             // 

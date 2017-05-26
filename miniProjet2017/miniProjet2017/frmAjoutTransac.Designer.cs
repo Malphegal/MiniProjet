@@ -39,6 +39,7 @@
             this.chkRecette = new System.Windows.Forms.CheckBox();
             this.chkPerçu = new System.Windows.Forms.CheckBox();
             this.grb1 = new System.Windows.Forms.GroupBox();
+            this.lblRecette = new System.Windows.Forms.Label();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -107,6 +108,7 @@
             // calTransac
             // 
             this.calTransac.Location = new System.Drawing.Point(130, 39);
+            this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
             this.calTransac.TabIndex = 0;
             // 
@@ -129,7 +131,7 @@
             // chkRecette
             // 
             this.chkRecette.AutoSize = true;
-            this.chkRecette.Location = new System.Drawing.Point(6, 12);
+            this.chkRecette.Location = new System.Drawing.Point(77, 12);
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.Size = new System.Drawing.Size(64, 17);
             this.chkRecette.TabIndex = 4;
@@ -149,6 +151,7 @@
             // 
             // grb1
             // 
+            this.grb1.Controls.Add(this.lblRecette);
             this.grb1.Controls.Add(this.chkPerçu);
             this.grb1.Controls.Add(this.chkRecette);
             this.grb1.Location = new System.Drawing.Point(12, 331);
@@ -156,6 +159,16 @@
             this.grb1.Size = new System.Drawing.Size(281, 43);
             this.grb1.TabIndex = 3;
             this.grb1.TabStop = false;
+            // 
+            // lblRecette
+            // 
+            this.lblRecette.AutoSize = true;
+            this.lblRecette.ForeColor = System.Drawing.Color.Gray;
+            this.lblRecette.Location = new System.Drawing.Point(19, 13);
+            this.lblRecette.Name = "lblRecette";
+            this.lblRecette.Size = new System.Drawing.Size(50, 13);
+            this.lblRecette.TabIndex = 6;
+            this.lblRecette.Text = "Dépense";
             // 
             // btnAjouter
             // 
@@ -410,5 +423,6 @@
         private System.Windows.Forms.PictureBox pic3;
         private System.Windows.Forms.PictureBox pic2;
         private System.Windows.Forms.PictureBox pic1;
+        private System.Windows.Forms.Label lblRecette;
     }
 }

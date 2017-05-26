@@ -157,12 +157,14 @@ namespace miniProjet2017
         {
             CheckBox _sender = (CheckBox)sender;
             if (_sender.Checked) {
-                _sender.Text = "Dépense";
+                _sender.ForeColor = Color.Gray;
+                lblRecette.ForeColor = Color.Black;
                 chkPerçu.Checked = true;
                 chkPerçu.Enabled = false;
             }
             else {
-                _sender.Text = "Recette";
+                _sender.ForeColor = Color.Black;
+                lblRecette.ForeColor = Color.Gray;
                 chkPerçu.Checked = false;
                 chkPerçu.Enabled = true;
             }

@@ -41,13 +41,26 @@ namespace miniProjet2017
             
             if (ds.Tables["_Transaction"].Rows.Count > 0)
             {
-                txtMontant.Text = ds.Tables["_Transaction"].Rows[0][3].ToString();
+                string[] date = ds.Tables["_Transaction"].Rows[0][1].ToString().Split('/');
+                calTransac.SelectionStart = new DateTime(int.Parse(date[2].Substring(0, 4)), int.Parse(date[1]), int.Parse(date[0]));
+
                 txtDescTran.Text = ds.Tables["_Transaction"].Rows[0][2].ToString();
+                txtMontant.Text = ds.Tables["_Transaction"].Rows[0][3].ToString();
                 chkRecette.Checked = Convert.ToBoolean(ds.Tables["_Transaction"].Rows[0][4]);
                 chkPerçu.Checked = Convert.ToBoolean(ds.Tables["_Transaction"].Rows[0][5]);
+
+                da = new OleDbDataAdapter(new CMD("SELECT * FROM TypeTransaction", con));
+                da.Fill(ds, "_TypeTransaction");
+
+                foreach (var row in ds.Tables["_TypeTransaction"].Rows.Cast<DataRow>().Select((row, i) => new { Row = row, Index = i }))
+                {
+                    cboType.Items.Add(row.Row["libType"]);
+                    if (Convert.ToInt32(row.Row[0]) == Convert.ToInt32(ds.Tables["_Transaction"].Rows[0][6]))
+                        cboType.SelectedIndex = row.Index;
+                }
             }
 
-                // TODO: Si il n'y a pas de transaction dans la table, MBS ?
+            // TODO: Si il n'y a pas de transaction dans la table, MessageBox.Show ?
         }
     }
 }
