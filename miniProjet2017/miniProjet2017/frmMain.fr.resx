@@ -124,12 +124,6 @@
   <data name="btnRecap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="menuStripFichier.Text" xml:space="preserve">
-    <value>Fichier</value>
-  </data>
-  <data name="menuStripEditer.Text" xml:space="preserve">
-    <value>Editer</value>
-  </data>
   <data name="btnAjouterPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -153,6 +147,12 @@
   </data>
   <data name="btnDeroulerTransaction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="menuStripFichier.Text" xml:space="preserve">
+    <value>Fichier</value>
+  </data>
+  <data name="menuStripEditer.Text" xml:space="preserve">
+    <value>Editer</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

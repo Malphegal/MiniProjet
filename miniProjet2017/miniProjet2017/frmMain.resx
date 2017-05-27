@@ -117,427 +117,373 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;lblTitre.Name" xml:space="preserve">
-    <value>lblTitre</value>
-  </data>
-  <data name="btnAjouterPersonne.Text" xml:space="preserve">
-    <value>Ajouter une personne</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnAffichage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
-  </data>
-  <data name="&gt;&gt;btnRecap.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnModiTransac.Name" xml:space="preserve">
-    <value>btnModiTransac</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnModiTransac.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnAjouterPersonne.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="btnDeroulerTransaction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 81</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlHaut.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pnlHaut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="&gt;&gt;btnAjoutTransac.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;quitterToolStripMenuItem.Name" xml:space="preserve">
-    <value>quitterToolStripMenuItem</value>
-  </data>
-  <data name="btnAffichage.Text" xml:space="preserve">
-    <value>frmAffichage</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmMain</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Name" xml:space="preserve">
-    <value>pnlLogo</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;menuStripFichier.Name" xml:space="preserve">
-    <value>menuStripFichier</value>
-  </data>
-  <data name="pnlGauche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 560</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.Name" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Parent" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="quitterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
-  </data>
-  <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="menuStripFichier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="btnAjoutTransac.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 41</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Parent" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="pnlHaut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>750, 82</value>
-  </data>
-  <data name="btnDeroulerTransaction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
-  </data>
-  <data name="btn2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
-  </data>
-  <data name="btnSupprTransac.Text" xml:space="preserve">
-    <value>Supprimer une transaction</value>
-  </data>
-  <data name="&gt;&gt;menuStripFichier.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fichierToolStripMenuItem.Name" xml:space="preserve">
-    <value>fichierToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;btnAffichage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAjoutTransac.Name" xml:space="preserve">
-    <value>btnAjoutTransac</value>
-  </data>
   <data name="btnAffichage.Location" type="System.Drawing.Point, System.Drawing">
     <value>791, 211</value>
-  </data>
-  <data name="lblTitre.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="btnAjouterPersonne.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 112</value>
-  </data>
-  <data name="btnModiTransac.Text" xml:space="preserve">
-    <value>Modifier une transaction</value>
-  </data>
-  <data name="lblTitre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 49</value>
-  </data>
-  <data name="btnRecap.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnAffichage.Name" xml:space="preserve">
-    <value>btnAffichage</value>
-  </data>
-  <data name="&gt;&gt;btnSupprTransac.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;btnAjoutTransac.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Name" xml:space="preserve">
-    <value>btnDeroulerTransaction</value>
-  </data>
-  <data name="btnSupprTransac.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
   </data>
   <data name="btnAffichage.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 41</value>
   </data>
-  <data name="&gt;&gt;btnSupprTransac.Name" xml:space="preserve">
-    <value>btnSupprTransac</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnAffichage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;pnlGauche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnAffichage.Text" xml:space="preserve">
+    <value>frmAffichage</value>
   </data>
-  <data name="&gt;&gt;btnSupprTransac.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnAffichage.Name" xml:space="preserve">
+    <value>btnAffichage</value>
+  </data>
+  <data name="&gt;&gt;btnAffichage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAffichage.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnSupprTransac.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnAffichage.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnRecap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRecap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 258</value>
+  </data>
+  <data name="btnRecap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 41</value>
+  </data>
+  <data name="btnRecap.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnRecap.Text" xml:space="preserve">
+    <value>frmRecap</value>
+  </data>
+  <data name="&gt;&gt;btnRecap.Name" xml:space="preserve">
+    <value>btnRecap</value>
+  </data>
+  <data name="&gt;&gt;btnRecap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecap.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnRecap.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnAjouterPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAjouterPersonne.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 112</value>
+  </data>
+  <data name="btnAjouterPersonne.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 41</value>
+  </data>
+  <data name="btnAjouterPersonne.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnAjouterPersonne.Text" xml:space="preserve">
+    <value>Ajouter une personne</value>
+  </data>
+  <data name="&gt;&gt;btnAjouterPersonne.Name" xml:space="preserve">
+    <value>btnAjouterPersonne</value>
+  </data>
+  <data name="&gt;&gt;btnAjouterPersonne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAjouterPersonne.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn2.Name" xml:space="preserve">
+    <value>btn2</value>
+  </data>
+  <data name="&gt;&gt;btn2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btn2.Parent" xml:space="preserve">
     <value>pnlGauche</value>
   </data>
-  <data name="btnSupprTransac.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 41</value>
-  </data>
-  <data name="btnAjoutTransac.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnAjoutTransac.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 134</value>
-  </data>
-  <data name="&gt;&gt;btnAjouterPersonne.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>970, 24</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="quitterToolStripMenuItem.Text" xml:space="preserve">
-    <value>Quitter...</value>
-  </data>
-  <data name="btnDeroulerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblTitre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="&gt;&gt;btnRecap.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="fichierToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fichier</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fichierToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRecap.Name" xml:space="preserve">
-    <value>btnRecap</value>
-  </data>
-  <data name="lblTitre.Text" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="&gt;&gt;btnRecap.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAffichage.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btnModiTransac.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 41</value>
-  </data>
-  <data name="&gt;&gt;optionsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pnlGauche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="btn2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;menuStripEditer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnAjouterPersonne.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 41</value>
-  </data>
-  <data name="&gt;&gt;btnAjouterPersonne.Name" xml:space="preserve">
-    <value>btnAjouterPersonne</value>
-  </data>
-  <data name="&gt;&gt;btn2.Name" xml:space="preserve">
-    <value>btn2</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btn2.Text" xml:space="preserve">
-    <value>btn2</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="pnlLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="editerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="&gt;&gt;btnModiTransac.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnAffichage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Options...</value>
-  </data>
-  <data name="&gt;&gt;btn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;btn2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnSupprTransac.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 253</value>
-  </data>
-  <data name="&gt;&gt;menuStripEditer.Name" xml:space="preserve">
-    <value>menuStripEditer</value>
-  </data>
-  <data name="btnRecap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 41</value>
-  </data>
-  <data name="pnlLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 81</value>
-  </data>
-  <data name="pnlLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>frmMain</value>
-  </data>
-  <data name="btn2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="btnRecap.Text" xml:space="preserve">
-    <value>frmRecap</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;optionsToolStripMenuItem.Name" xml:space="preserve">
-    <value>optionsToolStripMenuItem</value>
-  </data>
-  <data name="pnlHaut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;btnAffichage.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnAjouterPersonne.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnDeroulerTransaction.Text" xml:space="preserve">
-    <value>Les transactions</value>
-  </data>
-  <data name="menuStripEditer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Name" xml:space="preserve">
-    <value>pnlHaut</value>
-  </data>
-  <data name="btnRecap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 258</value>
-  </data>
-  <data name="&gt;&gt;btnModiTransac.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pnlGauche.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btnModiTransac.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 192</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnDeroulerTransaction.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;btnDeroulerTransaction.Name" xml:space="preserve">
+    <value>btnDeroulerTransaction</value>
   </data>
   <data name="&gt;&gt;btnDeroulerTransaction.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;editerToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnDeroulerTransaction.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>970, 584</value>
+  <data name="&gt;&gt;btnDeroulerTransaction.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.Name" xml:space="preserve">
+    <value>pnlLogo</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlGauche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlGauche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 584</value>
+  </data>
+  <data name="pnlGauche.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Name" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btn2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btn2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btn2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 141</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btn2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 60</value>
   </data>
-  <data name="&gt;&gt;btnAjoutTransac.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="btn2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;quitterToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btn2.Text" xml:space="preserve">
+    <value>btn2</value>
+  </data>
+  <data name="&gt;&gt;btn2.Name" xml:space="preserve">
+    <value>btn2</value>
+  </data>
+  <data name="&gt;&gt;btn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn2.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btn2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnDeroulerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="btnDeroulerTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="&gt;&gt;btnModiTransac.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btnDeroulerTransaction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="btnAjoutTransac.Text" xml:space="preserve">
-    <value>Ajouter une transaction</value>
+  <data name="btnDeroulerTransaction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 81</value>
   </data>
-  <data name="&gt;&gt;fichierToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnDeroulerTransaction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 60</value>
   </data>
-  <data name="editerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Editer</value>
+  <data name="btnDeroulerTransaction.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnDeroulerTransaction.Text" xml:space="preserve">
+    <value>Les transactions</value>
+  </data>
+  <data name="&gt;&gt;btnDeroulerTransaction.Name" xml:space="preserve">
+    <value>btnDeroulerTransaction</value>
+  </data>
+  <data name="&gt;&gt;btnDeroulerTransaction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeroulerTransaction.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnDeroulerTransaction.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="pnlLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 81</value>
   </data>
   <data name="pnlLogo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;editerToolStripMenuItem.Name" xml:space="preserve">
-    <value>editerToolStripMenuItem</value>
+  <data name="&gt;&gt;pnlLogo.Name" xml:space="preserve">
+    <value>pnlLogo</value>
   </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>fr</value>
-  </metadata>
+  <data name="&gt;&gt;pnlLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTitre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 27.75pt</value>
+  </data>
+  <data name="lblTitre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTitre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 18</value>
+  </data>
+  <data name="lblTitre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>461, 44</value>
+  </data>
+  <data name="lblTitre.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblTitre.Text" xml:space="preserve">
+    <value>Miudget Manager - 2017</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Name" xml:space="preserve">
+    <value>lblTitre</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picQuitter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picQuitter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>714, 12</value>
+  </data>
+  <data name="picQuitter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 29</value>
+  </data>
+  <data name="picQuitter.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="picQuitter.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;picQuitter.Name" xml:space="preserve">
+    <value>picQuitter</value>
+  </data>
+  <data name="&gt;&gt;picQuitter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picQuitter.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;picQuitter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="picOption.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picOption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>679, 12</value>
+  </data>
+  <data name="picOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 29</value>
+  </data>
+  <data name="picOption.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="picOption.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picOption.Name" xml:space="preserve">
+    <value>picOption</value>
+  </data>
+  <data name="&gt;&gt;picOption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picOption.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;picOption.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlHaut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlHaut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="pnlHaut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 82</value>
+  </data>
+  <data name="pnlHaut.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Name" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>970, 584</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frmMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

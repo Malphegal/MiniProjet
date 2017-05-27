@@ -26,6 +26,7 @@ namespace miniProjet2017
             new Classes.Aide().AideTransac(this);
         }
 
+        // TODO: Si il n'y a pas de transaction dans la table, MessageBox.Show ?
         /* Création de la table Transaction en local */
         private void LancementDuFormulaire(object sender, EventArgs e)
         {
@@ -59,8 +60,6 @@ namespace miniProjet2017
                         cboType.SelectedIndex = row.Index;
                 }
             }
-
-            // TODO: Si il n'y a pas de transaction dans la table, MessageBox.Show ?
         }
     }
 }

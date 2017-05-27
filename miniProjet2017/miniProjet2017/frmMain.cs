@@ -15,6 +15,7 @@ namespace miniProjet2017
         public frmMain()
         {
             InitializeComponent();
+            InitValeurOption();
         }
 
         // ---------------------------------------------
@@ -58,7 +59,11 @@ namespace miniProjet2017
 
         private void NouveauFrmOption(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmOption().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         private void NouveauFrmAjouterPersonne(object sender, EventArgs e)
@@ -69,7 +74,9 @@ namespace miniProjet2017
         /* Ferme l'application */
         private void CliquerApplication(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Quitter ?", MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly) == DialogResult.OK)
+                Application.Exit();
         }
 
         /* Cliquer sur le bouton des transaction dans le panel de gauche */
@@ -151,7 +158,15 @@ namespace miniProjet2017
             b.Click += new EventHandler(NouveauFrmSupprTransac);
         }
 
-        /* MOVABLE
+        /* Initialise les valeurs par défaut du formulaire des options */
+        void InitValeurOption()
+        {
+            string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
+
+            frmOption.pourcentageSMS = Convert.ToByte(fichier[1]);
+        }
+
+        #region MOVABLE
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -162,6 +177,6 @@ namespace miniProjet2017
         private const int WM_NCHITTEST = 0x84;
         private const int HT_CLIENT = 0x1;
         private const int HT_CAPTION = 0x2;
-        */
+        #endregion
     }
 }

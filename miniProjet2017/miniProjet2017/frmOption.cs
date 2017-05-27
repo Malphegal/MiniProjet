@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace miniProjet2017
         }
 
         /* Valeur pour le pourcentage */
-        static byte pourcentageSMS = 10;
+        public static byte pourcentageSMS = 10;
         private void EntrerUneValeurPourcentageSMS(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -36,6 +37,21 @@ namespace miniProjet2017
         {
             if (txtPourcentageSMS.Text.Length != 0)
                 pourcentageSMS = Convert.ToByte(txtPourcentageSMS.Text); 
+        }
+
+        private void FermerFrmOption(object sender, EventArgs e)
+        {
+            MettreValeurAJour();
+            Close();
+        }
+
+        private void MettreValeurAJour()
+        {
+            string[] fichier = File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
+
+            fichier[1] = pourcentageSMS.ToString();
+
+            File.WriteAllLines(@"..\..\Resources\ValeurParDefaut.txt", fichier);
         }
     }
 }
