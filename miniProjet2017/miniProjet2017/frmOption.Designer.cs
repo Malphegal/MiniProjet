@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOption));
             this.lblNombreSMSTransaction = new System.Windows.Forms.Label();
             this.txtPourcentageSMS = new System.Windows.Forms.TextBox();
             this.lblPourcent = new System.Windows.Forms.Label();
@@ -91,7 +90,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(443, 365);

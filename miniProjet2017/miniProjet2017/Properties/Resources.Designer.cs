@@ -63,6 +63,16 @@ namespace miniProjet2017.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bordureOption {
+            get {
+                object obj = ResourceManager.GetObject("bordureOption", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap croixQuitter {
             get {
                 object obj = ResourceManager.GetObject("croixQuitter", resourceCulture);
