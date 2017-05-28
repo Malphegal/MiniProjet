@@ -81,6 +81,13 @@ namespace miniProjet2017
             if (MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Quitter ?", MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly) == DialogResult.OK)
                 Application.Exit();
+            else
+            {
+                // TODO: Amélioration ?
+                WindowState = FormWindowState.Minimized;
+                WindowState = FormWindowState.Maximized;
+                WindowState = FormWindowState.Normal;
+            }
         }
 
         /* Cliquer sur le bouton des transaction dans le panel de gauche */
@@ -92,8 +99,10 @@ namespace miniProjet2017
                 for (int i = 0; i < pnlGauche.Controls.Count; i++)
                     if (pnlGauche.Controls[i].Name == "btnAjouterTransaction"
                         || pnlGauche.Controls[i].Name == "btnModifierTransaction"
-                        || pnlGauche.Controls[i].Name == "btnSupprimerTransaction")
+                        || pnlGauche.Controls[i].Name == "btnSupprimerTransaction") {
                         pnlGauche.Controls[i].Left += 220;
+                        pnlGauche.Controls[i].TabStop = true;
+                    }
                 btnAjouterPersonne.Top += 177;
             }
             else
@@ -101,8 +110,10 @@ namespace miniProjet2017
                 for (int i = 0; i < pnlGauche.Controls.Count; i++)
                     if (pnlGauche.Controls[i].Name == "btnAjouterTransaction"
                         || pnlGauche.Controls[i].Name == "btnModifierTransaction"
-                        || pnlGauche.Controls[i].Name == "btnSupprimerTransaction")
+                        || pnlGauche.Controls[i].Name == "btnSupprimerTransaction") {
                         pnlGauche.Controls[i].Left -= 220;
+                        pnlGauche.Controls[i].TabStop = false;
+                    }
                 btnAjouterPersonne.Top -= 177;
             }            
         }
@@ -110,7 +121,7 @@ namespace miniProjet2017
         /* Création des boutons du menu déroulant */
         private void PremierChargementDeApplication(object sender, EventArgs e)
         {
-            Button b = 
+            Button b =
             new Button()
             {
                 Name = "btnAjouterTransaction",
@@ -121,13 +132,15 @@ namespace miniProjet2017
                 Parent = pnlGauche,
                 FlatStyle = FlatStyle.Flat,
                 Cursor = Cursors.Hand,
-                ForeColor = Color.White
+                ForeColor = Color.White,
+                TabStop = false,
+                TabIndex = 1
             };
             b.FlatAppearance.BorderColor = Color.Black;
             b.FlatAppearance.BorderSize = 2;
             b.Click += new EventHandler(NouveauFrmAjoutTransac);
 
-            b = 
+            b =
             new Button()
             {
                 Name = "btnModifierTransaction",
@@ -138,7 +151,9 @@ namespace miniProjet2017
                 Parent = pnlGauche,
                 FlatStyle = FlatStyle.Flat,
                 Cursor = Cursors.Hand,
-                ForeColor = Color.White
+                ForeColor = Color.White,
+                TabStop = false,
+                TabIndex = 2
             };
             b.FlatAppearance.BorderColor = Color.Black;
             b.FlatAppearance.BorderSize = 2;
@@ -155,11 +170,19 @@ namespace miniProjet2017
                 Parent = pnlGauche,
                 FlatStyle = FlatStyle.Flat,
                 Cursor = Cursors.Hand,
-                ForeColor = Color.White
+                ForeColor = Color.White,
+                TabStop = false,
+                TabIndex = 3
             };
             b.FlatAppearance.BorderColor = Color.Black;
             b.FlatAppearance.BorderSize = 2;
             b.Click += new EventHandler(NouveauFrmSupprTransac);
+
+                // Pour focus le premier bouton
+
+            // TODO: pouquoi focus() ne fonctionne pas ?
+            ProcessTabKey(false);
+            ProcessTabKey(false);
         }
 
         /* Initialise les valeurs par défaut du formulaire des options */
@@ -170,17 +193,32 @@ namespace miniProjet2017
             frmOption.pourcentageSMS = Convert.ToByte(fichier[1]);
         }
 
-        #region MOVABLE
-        protected override void WndProc(ref Message m)
+        #region Drag&Drop
+        public bool EnClique = false;
+        public int SourisX,
+            SourisY;
+
+        private void DeplacementSouris(object sender, MouseEventArgs e)
         {
-            base.WndProc(ref m);
-            if (m.Msg == WM_NCHITTEST)
-                m.Result = (IntPtr)(HT_CAPTION);
+            if (EnClique)
+                Location = new Point(Location.X + (e.X - SourisX), Location.Y + (e.Y - SourisY));
         }
 
-        private const int WM_NCHITTEST = 0x84;
-        private const int HT_CLIENT = 0x1;
-        private const int HT_CAPTION = 0x2;
+        private void LacherCliqueSouris(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                EnClique = false;
+        }
+
+        private void CliqueSouris(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                EnClique = true;
+                SourisX = e.X;
+                SourisY = e.Y;
+            }
+        }
         #endregion
     }
 }

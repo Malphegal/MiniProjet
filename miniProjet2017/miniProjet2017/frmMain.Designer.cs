@@ -67,6 +67,9 @@
             this.pnlGauche.Controls.Add(this.pnlLogo);
             resources.ApplyResources(this.pnlGauche, "pnlGauche");
             this.pnlGauche.Name = "pnlGauche";
+            this.pnlGauche.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
+            this.pnlGauche.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
+            this.pnlGauche.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
             // 
             // btnAjouterPersonne
             // 
@@ -97,6 +100,9 @@
             this.pnlLogo.BackgroundImage = global::miniProjet2017.Properties.Resources.logo;
             resources.ApplyResources(this.pnlLogo, "pnlLogo");
             this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
+            this.pnlLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
+            this.pnlLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
             // 
             // pnlHaut
             // 
@@ -106,12 +112,18 @@
             this.pnlHaut.Controls.Add(this.picOption);
             resources.ApplyResources(this.pnlHaut, "pnlHaut");
             this.pnlHaut.Name = "pnlHaut";
+            this.pnlHaut.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
+            this.pnlHaut.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
+            this.pnlHaut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
             // 
             // lblTitre
             // 
             resources.ApplyResources(this.lblTitre, "lblTitre");
             this.lblTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblTitre.Name = "lblTitre";
+            this.lblTitre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
+            this.lblTitre.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
+            this.lblTitre.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
             // 
             // picQuitter
             // 
@@ -141,6 +153,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
             this.Load += new System.EventHandler(this.PremierChargementDeApplication);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
             this.pnlGauche.ResumeLayout(false);
             this.pnlHaut.ResumeLayout(false);
             this.pnlHaut.PerformLayout();

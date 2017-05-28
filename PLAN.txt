@@ -19,6 +19,11 @@ Mettre des commentaires (au moins un par fonction) /*Au dessus de la fonction*/ 
 troubleshooting :
 • MessageBox.Show pour quitter le formulaire frmMain
 	-> Si on annule, le formulaire passe en arrière plan
+	-> DONE (TODO: Améliorer ?)
 
 • On peut resize les formulaire avec WIN + UP
 	-> Ajouter max/min de la taille des formulaires
+	-> DONE
+	
+• TabIndex pas cohérent
+	-> frmMain - DONE

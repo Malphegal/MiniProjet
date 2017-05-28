@@ -130,7 +130,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnAffichage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="btnAffichage.Text" xml:space="preserve">
     <value>frmAffichage</value>
@@ -157,7 +157,7 @@
     <value>140, 41</value>
   </data>
   <data name="btnRecap.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="btnRecap.Text" xml:space="preserve">
     <value>frmRecap</value>
@@ -187,7 +187,7 @@
     <value>220, 60</value>
   </data>
   <data name="btnAjouterPersonne.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btnAjouterPersonne.Text" xml:space="preserve">
     <value>Ajouter une personne</value>
@@ -217,7 +217,7 @@
     <value>220, 60</value>
   </data>
   <data name="btnDeroulerTransaction.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="btnDeroulerTransaction.Text" xml:space="preserve">
     <value>Les transactions</value>
