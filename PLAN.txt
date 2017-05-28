@@ -27,3 +27,5 @@ troubleshooting :
 	
 • TabIndex pas cohérent
 	-> frmMain - DONE
+	
+• frmOption - valeurSMS : on ne peut pas mettre 100%

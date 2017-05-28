@@ -64,6 +64,9 @@ namespace miniProjet2017
             new frmOption().ShowDialog();
             foreach (Control c in Controls)
                 c.Enabled = true;
+            resolutionScale = (0.4F + 0.3F * frmOption.valeurResolution);
+            Scale(new SizeF(resolutionScale, resolutionScale));
+            RedimensionnerLesControls(this);
         }
 
         private void NouveauFrmAjouterPersonne(object sender, EventArgs e)
@@ -180,17 +183,37 @@ namespace miniProjet2017
 
                 // Pour focus le premier bouton
 
-            // TODO: pouquoi focus() ne fonctionne pas ?
-            ProcessTabKey(false);
-            ProcessTabKey(false);
+            ActiveControl = btnDeroulerTransaction;
         }
 
         /* Initialise les valeurs par défaut du formulaire des options */
         void InitValeurOption()
         {
+                // Fichier de stockage
+
             string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
             
-            frmOption.pourcentageSMS = Convert.ToByte(fichier[1]);
+            // [1] == BDD
+
+            frmOption.pourcentageSMS = Convert.ToByte(fichier[3]);
+
+            frmOption.valeurResolution = Convert.ToByte(fichier[5]);
+
+                // Mise à jour de la résolution
+
+            resolutionScale = (0.4F + 0.3F * frmOption.valeurResolution);
+            Scale(new SizeF(resolutionScale, resolutionScale));
+            RedimensionnerLesControls(this);
+        }
+        public static float resolutionScale;
+        // TODO: changer les valeurs
+        public static void RedimensionnerLesControls(Control parent)
+        {
+            foreach (Control c in parent.Controls)
+                if (c.GetType() == typeof(Button) || c.GetType() == typeof(Label) || c.GetType() == typeof(TextBox))
+                    c.Font = new Font(c.Font.FontFamily, c.Font.Size * (0.4F + 0.3F * frmOption.valeurResolution));
+                else
+                    RedimensionnerLesControls(c);
         }
 
         #region Drag&Drop

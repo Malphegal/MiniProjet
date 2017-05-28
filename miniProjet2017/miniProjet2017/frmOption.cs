@@ -17,16 +17,19 @@ namespace miniProjet2017
         {
             InitializeComponent();
             InitToutesLesValeurs();
+            Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
+            frmMain.RedimensionnerLesControls(this);
         }
 
         /* Met sur les TextBox et autres composents les valeurs par défaut */
         void InitToutesLesValeurs()
         {
             txtPourcentageSMS.Text = pourcentageSMS.ToString();
+            txtResolution.Text = valeurResolution.ToString();
         }
 
         /* Valeur pour le pourcentage */
-        public static byte pourcentageSMS = 10;
+        public static byte pourcentageSMS; // 10
         private void EntrerUneValeurPourcentageSMS(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -37,6 +40,20 @@ namespace miniProjet2017
         {
             if (txtPourcentageSMS.Text.Length != 0)
                 pourcentageSMS = Convert.ToByte(txtPourcentageSMS.Text); 
+        }
+
+        /* Valeur résolution */
+        public static byte valeurResolution; // 2
+        private void EntrerUneValeurResolution(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar == '1' || e.KeyChar == '2' || e.KeyChar == '3' || e.KeyChar == 8)
+                || !(txtResolution.Text.Length == 0 || (txtResolution.Text.Length == 1 && (e.KeyChar == 8 || txtResolution.SelectionLength == 1))))
+                e.Handled = true;
+        }
+        private void MiseAJourDeLaResolution(object sender, EventArgs e)
+        {
+            if (txtResolution.Text.Length != 0)
+                valeurResolution = Convert.ToByte(txtResolution.Text);
         }
 
         /* Ferme les options et met à jour toutes les valeurs */
@@ -51,7 +68,9 @@ namespace miniProjet2017
         {
             string[] fichier = File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
 
-            fichier[1] = pourcentageSMS.ToString();
+            fichier[3] = pourcentageSMS.ToString();
+
+            fichier[5] = valeurResolution.ToString();
 
             File.WriteAllLines(@"..\..\Resources\ValeurParDefaut.txt", fichier);
         }
