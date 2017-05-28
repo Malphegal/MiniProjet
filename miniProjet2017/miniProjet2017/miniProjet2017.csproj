@@ -121,6 +121,9 @@
     <EmbeddedResource Include="frmRecap.resx">
       <DependentUpon>frmRecap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSupprTransac.resx">
+      <DependentUpon>frmSupprTransac.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -154,7 +157,7 @@
     <None Include="Resources\croixQuitter.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bordureOption.jpg" />
+    <None Include="Resources\bordureOption.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

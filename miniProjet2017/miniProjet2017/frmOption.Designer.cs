@@ -34,6 +34,11 @@
             this.btnRetour = new System.Windows.Forms.Button();
             this.picQuitter = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBaseDonnee = new System.Windows.Forms.Label();
+            this.openFD = new System.Windows.Forms.OpenFileDialog();
+            this.lblSourceBaseDonnee = new System.Windows.Forms.Label();
+            this.btnBaseDonnee = new System.Windows.Forms.Button();
+            this.lblTitre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -41,15 +46,17 @@
             // lblNombreSMSTransaction
             // 
             this.lblNombreSMSTransaction.AutoSize = true;
-            this.lblNombreSMSTransaction.Location = new System.Drawing.Point(24, 49);
+            this.lblNombreSMSTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreSMSTransaction.ForeColor = System.Drawing.Color.Maroon;
+            this.lblNombreSMSTransaction.Location = new System.Drawing.Point(26, 118);
             this.lblNombreSMSTransaction.Name = "lblNombreSMSTransaction";
-            this.lblNombreSMSTransaction.Size = new System.Drawing.Size(186, 13);
+            this.lblNombreSMSTransaction.Size = new System.Drawing.Size(246, 15);
             this.lblNombreSMSTransaction.TabIndex = 0;
             this.lblNombreSMSTransaction.Text = "Valeur du reçu SMS en pourcentage :";
             // 
             // txtPourcentageSMS
             // 
-            this.txtPourcentageSMS.Location = new System.Drawing.Point(216, 46);
+            this.txtPourcentageSMS.Location = new System.Drawing.Point(277, 117);
             this.txtPourcentageSMS.Name = "txtPourcentageSMS";
             this.txtPourcentageSMS.Size = new System.Drawing.Size(43, 20);
             this.txtPourcentageSMS.TabIndex = 1;
@@ -59,7 +66,7 @@
             // lblPourcent
             // 
             this.lblPourcent.AutoSize = true;
-            this.lblPourcent.Location = new System.Drawing.Point(265, 49);
+            this.lblPourcent.Location = new System.Drawing.Point(326, 120);
             this.lblPourcent.Name = "lblPourcent";
             this.lblPourcent.Size = new System.Drawing.Size(15, 13);
             this.lblPourcent.TabIndex = 2;
@@ -98,11 +105,61 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // lblBaseDonnee
+            // 
+            this.lblBaseDonnee.AutoSize = true;
+            this.lblBaseDonnee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaseDonnee.ForeColor = System.Drawing.Color.Maroon;
+            this.lblBaseDonnee.Location = new System.Drawing.Point(153, 64);
+            this.lblBaseDonnee.Name = "lblBaseDonnee";
+            this.lblBaseDonnee.Size = new System.Drawing.Size(119, 15);
+            this.lblBaseDonnee.TabIndex = 6;
+            this.lblBaseDonnee.Text = "Base de donnée :";
+            // 
+            // openFD
+            // 
+            this.openFD.FileName = "openFileDialog1";
+            // 
+            // lblSourceBaseDonnee
+            // 
+            this.lblSourceBaseDonnee.AutoSize = true;
+            this.lblSourceBaseDonnee.Location = new System.Drawing.Point(155, 90);
+            this.lblSourceBaseDonnee.Name = "lblSourceBaseDonnee";
+            this.lblSourceBaseDonnee.Size = new System.Drawing.Size(121, 13);
+            this.lblSourceBaseDonnee.TabIndex = 7;
+            this.lblSourceBaseDonnee.Text = "DÉFAUT (budget1.mdb)";
+            // 
+            // btnBaseDonnee
+            // 
+            this.btnBaseDonnee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaseDonnee.Location = new System.Drawing.Point(277, 62);
+            this.btnBaseDonnee.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBaseDonnee.Name = "btnBaseDonnee";
+            this.btnBaseDonnee.Size = new System.Drawing.Size(40, 20);
+            this.btnBaseDonnee.TabIndex = 8;
+            this.btnBaseDonnee.Text = "•••";
+            this.btnBaseDonnee.UseVisualStyleBackColor = true;
+            this.btnBaseDonnee.Click += new System.EventHandler(this.ChangerBaseDeDonnee);
+            // 
+            // lblTitre
+            // 
+            this.lblTitre.AutoSize = true;
+            this.lblTitre.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.Location = new System.Drawing.Point(163, 16);
+            this.lblTitre.Name = "lblTitre";
+            this.lblTitre.Size = new System.Drawing.Size(102, 25);
+            this.lblTitre.TabIndex = 9;
+            this.lblTitre.Text = "OPTIONS";
+            // 
             // frmOption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 364);
+            this.Controls.Add(this.lblTitre);
+            this.Controls.Add(this.btnBaseDonnee);
+            this.Controls.Add(this.lblSourceBaseDonnee);
+            this.Controls.Add(this.lblBaseDonnee);
             this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.lblPourcent);
@@ -128,5 +185,10 @@
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.PictureBox picQuitter;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblBaseDonnee;
+        private System.Windows.Forms.OpenFileDialog openFD;
+        private System.Windows.Forms.Label lblSourceBaseDonnee;
+        private System.Windows.Forms.Button btnBaseDonnee;
+        private System.Windows.Forms.Label lblTitre;
     }
 }

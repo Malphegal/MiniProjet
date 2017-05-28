@@ -225,6 +225,7 @@
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(111, 36);
             this.btnQuitter.TabIndex = 14;
+            this.btnQuitter.Text = "QUI-QUI-QUITTER";
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.QuitterAjoutTransac);
             // 
@@ -235,6 +236,7 @@
             this.txtDescTran.Size = new System.Drawing.Size(195, 92);
             this.txtDescTran.TabIndex = 1;
             this.txtDescTran.Text = "";
+            this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
             // 
             // lblEuro
             // 
@@ -375,6 +377,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAjoutTransac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Tag = "0";
             this.Text = "frmAjoutTransac";
             this.grb1.ResumeLayout(false);

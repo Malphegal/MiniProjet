@@ -201,66 +201,6 @@
   <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btn2.Name" xml:space="preserve">
-    <value>btn2</value>
-  </data>
-  <data name="&gt;&gt;btn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn2.Parent" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="&gt;&gt;btn2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Name" xml:space="preserve">
-    <value>btnDeroulerTransaction</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Parent" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Name" xml:space="preserve">
-    <value>pnlLogo</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Parent" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="pnlGauche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlGauche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 584</value>
-  </data>
-  <data name="pnlGauche.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.Name" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="btn2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -354,20 +294,44 @@
   <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlGauche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlGauche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 584</value>
+  </data>
+  <data name="pnlGauche.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Name" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblTitre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 27.75pt</value>
+    <value>Century Gothic, 32.25pt, style=Italic</value>
   </data>
   <data name="lblTitre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblTitre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 18</value>
+    <value>100, 12</value>
   </data>
   <data name="lblTitre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>461, 44</value>
+    <value>539, 52</value>
   </data>
   <data name="lblTitre.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -473,9 +437,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>970, 584</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmMain</value>

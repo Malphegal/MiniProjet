@@ -162,7 +162,7 @@ namespace miniProjet2017
         void InitValeurOption()
         {
             string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
-
+            
             frmOption.pourcentageSMS = Convert.ToByte(fichier[1]);
         }
 

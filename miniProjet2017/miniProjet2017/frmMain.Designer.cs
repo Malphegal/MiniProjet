@@ -107,7 +107,7 @@
             // 
             // pnlHaut
             // 
-            this.pnlHaut.BackColor = System.Drawing.Color.White;
+            this.pnlHaut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.pnlHaut.Controls.Add(this.lblTitre);
             this.pnlHaut.Controls.Add(this.picQuitter);
             this.pnlHaut.Controls.Add(this.picOption);
@@ -117,6 +117,7 @@
             // lblTitre
             // 
             resources.ApplyResources(this.lblTitre, "lblTitre");
+            this.lblTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblTitre.Name = "lblTitre";
             // 
             // picQuitter

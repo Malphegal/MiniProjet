@@ -18,11 +18,12 @@ namespace miniProjet2017
         public frmAjoutTransac()
         {
             InitializeComponent();
-            DémarrageDeAjoutTransac();
+            DemarrageDeAjoutTransac();
         }
 
+        // TODO: comment afficher la liste de personne en rapport avec cette transaction ?
         /* Affiche toutes les personne de la table Personne et rempli la combobox pour les type de transaction */
-        private void DémarrageDeAjoutTransac()
+        private void DemarrageDeAjoutTransac()
         {
                 // Initialisation des variables de connection
 
@@ -190,6 +191,18 @@ namespace miniProjet2017
         private void CliquerAideAjout(object sender, EventArgs e)
         {
             new Classes.Aide().AideTransac(this);
+        }
+
+        /* Saisie de la description, ne doit pas dépasser 30 caractères */
+        private void SaisieDescription(object sender, KeyPressEventArgs e)
+        {
+            if (txtDescTran.Text.Length == 30)
+            {
+                e.Handled = true;
+                errorProvider.SetError(txtDescTran, "La description ne doit pas dépasser 30 caractères !");
+            }
+            else
+                errorProvider.SetError(txtDescTran, "");
         }
     }
 }
