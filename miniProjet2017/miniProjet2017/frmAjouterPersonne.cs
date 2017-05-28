@@ -71,7 +71,7 @@ namespace miniProjet2017
                     try {
                         CON con = new CON(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
                         con.Open();
-                        new CMD(@"INSERT INTO Personne VALUES (" + new CMD(@"SELECT max(codePersonne) + 1 FROM Personne", con).ExecuteScalar() + ", '"
+                        new CMD(@"INSERT INTO Personne VALUES (" + new CMD(@"SELECT IIF(max(codePersonne) IS NULL, 0, max(codePersonne) + 1) FROM Personne", con).ExecuteScalar() + ", '"
                                                                 + txtNom.Text + "', '"
                                                                 + txtPrenom.Text + "', "
                                                                 + (txtNumero.Text.Length == 0 ? "NULL" : txtNumero.Text)

@@ -31,9 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnAffichage = new System.Windows.Forms.Button();
             this.btnRecap = new System.Windows.Forms.Button();
-            this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.pnlGauche = new System.Windows.Forms.Panel();
-            this.btn2 = new System.Windows.Forms.Button();
+            this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.btnDeroulerTransaction = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlHaut = new System.Windows.Forms.Panel();
@@ -60,39 +59,33 @@
             this.btnRecap.UseVisualStyleBackColor = true;
             this.btnRecap.Click += new System.EventHandler(this.NouveauFrmRecap);
             // 
-            // btnAjouterPersonne
-            // 
-            resources.ApplyResources(this.btnAjouterPersonne, "btnAjouterPersonne");
-            this.btnAjouterPersonne.Name = "btnAjouterPersonne";
-            this.btnAjouterPersonne.UseVisualStyleBackColor = true;
-            this.btnAjouterPersonne.Click += new System.EventHandler(this.NouveauFrmAjouterPersonne);
-            // 
             // pnlGauche
             // 
             this.pnlGauche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.pnlGauche.Controls.Add(this.btn2);
+            this.pnlGauche.Controls.Add(this.btnAjouterPersonne);
             this.pnlGauche.Controls.Add(this.btnDeroulerTransaction);
             this.pnlGauche.Controls.Add(this.pnlLogo);
             resources.ApplyResources(this.pnlGauche, "pnlGauche");
             this.pnlGauche.Name = "pnlGauche";
             // 
-            // btn2
+            // btnAjouterPersonne
             // 
-            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btn2, "btn2");
-            this.btn2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn2.ForeColor = System.Drawing.Color.White;
-            this.btn2.Name = "btn2";
-            this.btn2.Tag = "";
-            this.btn2.UseVisualStyleBackColor = false;
+            this.btnAjouterPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnAjouterPersonne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAjouterPersonne.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnAjouterPersonne, "btnAjouterPersonne");
+            this.btnAjouterPersonne.ForeColor = System.Drawing.Color.White;
+            this.btnAjouterPersonne.Name = "btnAjouterPersonne";
+            this.btnAjouterPersonne.Tag = "";
+            this.btnAjouterPersonne.UseVisualStyleBackColor = false;
+            this.btnAjouterPersonne.Click += new System.EventHandler(this.NouveauFrmAjouterPersonne);
             // 
             // btnDeroulerTransaction
             // 
             this.btnDeroulerTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btnDeroulerTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnDeroulerTransaction, "btnDeroulerTransaction");
             this.btnDeroulerTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnDeroulerTransaction, "btnDeroulerTransaction");
             this.btnDeroulerTransaction.ForeColor = System.Drawing.Color.White;
             this.btnDeroulerTransaction.Name = "btnDeroulerTransaction";
             this.btnDeroulerTransaction.Tag = "";
@@ -143,7 +136,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.pnlHaut);
             this.Controls.Add(this.pnlGauche);
-            this.Controls.Add(this.btnAjouterPersonne);
             this.Controls.Add(this.btnRecap);
             this.Controls.Add(this.btnAffichage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -162,12 +154,11 @@
 
         private System.Windows.Forms.Button btnAffichage;
         private System.Windows.Forms.Button btnRecap;
-        private System.Windows.Forms.Button btnAjouterPersonne;
         private System.Windows.Forms.Panel pnlGauche;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Panel pnlHaut;
         private System.Windows.Forms.Button btnDeroulerTransaction;
-        private System.Windows.Forms.Button btn2;
+        private System.Windows.Forms.Button btnAjouterPersonne;
         private System.Windows.Forms.PictureBox picOption;
         private System.Windows.Forms.PictureBox picQuitter;
         private System.Windows.Forms.Label lblTitre;

@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAffichage.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnRecap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -172,19 +172,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnRecap.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
+  </data>
+  <data name="btnAjouterPersonne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
   </data>
   <data name="btnAjouterPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnAjouterPersonne.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 112</value>
+    <value>0, 141</value>
   </data>
   <data name="btnAjouterPersonne.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 41</value>
+    <value>220, 60</value>
   </data>
   <data name="btnAjouterPersonne.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>2</value>
   </data>
   <data name="btnAjouterPersonne.Text" xml:space="preserve">
     <value>Ajouter une personne</value>
@@ -196,46 +199,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnAjouterPersonne.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btn2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btn2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="btn2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 141</value>
-  </data>
-  <data name="btn2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
-  </data>
-  <data name="btn2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btn2.Text" xml:space="preserve">
-    <value>btn2</value>
-  </data>
-  <data name="&gt;&gt;btn2.Name" xml:space="preserve">
-    <value>btn2</value>
-  </data>
-  <data name="&gt;&gt;btn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn2.Parent" xml:space="preserve">
     <value>pnlGauche</value>
   </data>
-  <data name="&gt;&gt;btn2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="btnDeroulerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
   </data>
   <data name="btnDeroulerTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -436,6 +403,12 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>970, 584</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>970, 584</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>970, 584</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

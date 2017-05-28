@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.grb1 = new System.Windows.Forms.GroupBox();
@@ -55,6 +56,8 @@
             this.lblAideMontant = new System.Windows.Forms.Label();
             this.lblAideRecette = new System.Windows.Forms.Label();
             this.lblAideType = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblRecette = new System.Windows.Forms.Label();
             this.grb1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -62,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -83,9 +87,11 @@
             this.btnModifier.TabIndex = 28;
             this.btnModifier.Text = "Modifier";
             this.btnModifier.UseVisualStyleBackColor = false;
+            this.btnModifier.Click += new System.EventHandler(this.ModifierLaTransaction);
             // 
             // grb1
             // 
+            this.grb1.Controls.Add(this.lblRecette);
             this.grb1.Controls.Add(this.chkPerçu);
             this.grb1.Controls.Add(this.chkRecette);
             this.grb1.Location = new System.Drawing.Point(24, 333);
@@ -107,12 +113,13 @@
             // chkRecette
             // 
             this.chkRecette.AutoSize = true;
-            this.chkRecette.Location = new System.Drawing.Point(6, 12);
+            this.chkRecette.Location = new System.Drawing.Point(80, 12);
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.Size = new System.Drawing.Size(64, 17);
             this.chkRecette.TabIndex = 8;
             this.chkRecette.Text = "Recette";
             this.chkRecette.UseVisualStyleBackColor = true;
+            this.chkRecette.Click += new System.EventHandler(this.CliquerSurChkRecette);
             // 
             // cboType
             // 
@@ -146,6 +153,7 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
             this.txtMontant.TabIndex = 23;
+            this.txtMontant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnMontant);
             // 
             // lblDescTransac
             // 
@@ -162,6 +170,7 @@
             this.txtDescTran.Name = "txtDescTran";
             this.txtDescTran.Size = new System.Drawing.Size(100, 20);
             this.txtDescTran.TabIndex = 21;
+            this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
             // 
             // lblTransac
             // 
@@ -311,6 +320,20 @@
             this.lblAideType.Text = "label1";
             this.lblAideType.Visible = false;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // lblRecette
+            // 
+            this.lblRecette.AutoSize = true;
+            this.lblRecette.ForeColor = System.Drawing.Color.Gray;
+            this.lblRecette.Location = new System.Drawing.Point(24, 13);
+            this.lblRecette.Name = "lblRecette";
+            this.lblRecette.Size = new System.Drawing.Size(50, 13);
+            this.lblRecette.TabIndex = 10;
+            this.lblRecette.Text = "Dépense";
+            // 
             // frmModiTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +411,7 @@
         private System.Windows.Forms.Label lblAideMontant;
         private System.Windows.Forms.Label lblAideRecette;
         private System.Windows.Forms.Label lblAideType;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label lblRecette;
     }
 }

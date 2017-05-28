@@ -73,6 +73,16 @@ namespace miniProjet2017.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel {
+            get {
+                object obj = ResourceManager.GetObject("cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap croixQuitter {
             get {
                 object obj = ResourceManager.GetObject("croixQuitter", resourceCulture);
@@ -96,6 +106,16 @@ namespace miniProjet2017.Properties {
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap validate {
+            get {
+                object obj = ResourceManager.GetObject("validate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

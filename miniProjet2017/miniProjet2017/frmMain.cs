@@ -68,7 +68,11 @@ namespace miniProjet2017
 
         private void NouveauFrmAjouterPersonne(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmAjouterPersonne().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         /* Ferme l'application */
@@ -90,7 +94,7 @@ namespace miniProjet2017
                         || pnlGauche.Controls[i].Name == "btnModifierTransaction"
                         || pnlGauche.Controls[i].Name == "btnSupprimerTransaction")
                         pnlGauche.Controls[i].Left += 220;
-                btn2.Top += 177;
+                btnAjouterPersonne.Top += 177;
             }
             else
             {
@@ -99,7 +103,7 @@ namespace miniProjet2017
                         || pnlGauche.Controls[i].Name == "btnModifierTransaction"
                         || pnlGauche.Controls[i].Name == "btnSupprimerTransaction")
                         pnlGauche.Controls[i].Left -= 220;
-                btn2.Top -= 177;
+                btnAjouterPersonne.Top -= 177;
             }            
         }
 

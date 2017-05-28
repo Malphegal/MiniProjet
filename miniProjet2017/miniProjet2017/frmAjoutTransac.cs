@@ -64,7 +64,7 @@ namespace miniProjet2017
         }
 
         // TODO: Check comment ajouter l'heure dans la table Transaction, ajout du TRY CATCH, ajout dans d'autre table (Beneficiaire ?)
-        /* Bouton valider, vérification des valeurs avant l'ajout*/
+        /* Bouton valider, vérification des valeurs avant l'ajout */
         private void AjouterUneTransaction(object sender, EventArgs e)
         {
                 // Sera 'false' si au moins une erreur se produit
@@ -169,7 +169,6 @@ namespace miniProjet2017
                 chkPerçu.Checked = false;
                 chkPerçu.Enabled = true;
             }
-
         }
 
         /* Contrôle de saisie pour le montant */
@@ -187,12 +186,6 @@ namespace miniProjet2017
             }
         }
 
-        /* Ajout ou retire l'aide de ce formulaire */
-        private void CliquerAideAjout(object sender, EventArgs e)
-        {
-            new Classes.Aide().AideTransac(this);
-        }
-
         /* Saisie de la description, ne doit pas dépasser 30 caractères */
         private void SaisieDescription(object sender, KeyPressEventArgs e)
         {
@@ -203,6 +196,12 @@ namespace miniProjet2017
             }
             else
                 errorProvider.SetError(txtDescTran, "");
+        }
+
+        /* Ajout ou retire l'aide de ce formulaire */
+        private void CliquerAideAjout(object sender, EventArgs e)
+        {
+            new Classes.Aide().AideTransac(this);
         }
     }
 }

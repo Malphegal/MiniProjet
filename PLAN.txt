@@ -15,3 +15,10 @@ Commit : nomdufichierV(n°version)
 Variable : adversaireDuGladiateur
 Mettre des commentaires (au moins un par fonction) /*Au dessus de la fonction*/ et à coté des lignes compliquées
 // au dessus d'un bloc d'une fonction
+
+troubleshooting :
+• MessageBox.Show pour quitter le formulaire frmMain
+	-> Si on annule, le formulaire passe en arrière plan
+
+• On peut resize les formulaire avec WIN + UP
+	-> Ajouter max/min de la taille des formulaires
