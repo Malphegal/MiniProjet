@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.grb1 = new System.Windows.Forms.GroupBox();
+            this.lblRecette = new System.Windows.Forms.Label();
             this.chkPerçu = new System.Windows.Forms.CheckBox();
             this.chkRecette = new System.Windows.Forms.CheckBox();
             this.cboType = new System.Windows.Forms.ComboBox();
@@ -57,7 +58,6 @@
             this.lblAideRecette = new System.Windows.Forms.Label();
             this.lblAideType = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblRecette = new System.Windows.Forms.Label();
             this.grb1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -99,6 +99,16 @@
             this.grb1.Size = new System.Drawing.Size(281, 43);
             this.grb1.TabIndex = 27;
             this.grb1.TabStop = false;
+            // 
+            // lblRecette
+            // 
+            this.lblRecette.AutoSize = true;
+            this.lblRecette.ForeColor = System.Drawing.Color.Gray;
+            this.lblRecette.Location = new System.Drawing.Point(24, 13);
+            this.lblRecette.Name = "lblRecette";
+            this.lblRecette.Size = new System.Drawing.Size(50, 13);
+            this.lblRecette.TabIndex = 10;
+            this.lblRecette.Text = "Dépense";
             // 
             // chkPerçu
             // 
@@ -324,16 +334,6 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // lblRecette
-            // 
-            this.lblRecette.AutoSize = true;
-            this.lblRecette.ForeColor = System.Drawing.Color.Gray;
-            this.lblRecette.Location = new System.Drawing.Point(24, 13);
-            this.lblRecette.Name = "lblRecette";
-            this.lblRecette.Size = new System.Drawing.Size(50, 13);
-            this.lblRecette.TabIndex = 10;
-            this.lblRecette.Text = "Dépense";
-            // 
             // frmModiTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,6 +362,8 @@
             this.Controls.Add(this.calTransac);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
+            this.MaximumSize = new System.Drawing.Size(786, 575);
+            this.MinimumSize = new System.Drawing.Size(786, 575);
             this.Name = "frmModiTransac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Tag = "1";

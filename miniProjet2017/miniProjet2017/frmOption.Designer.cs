@@ -167,6 +167,8 @@
             this.Controls.Add(this.lblNombreSMSTransaction);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(441, 364);
+            this.MinimumSize = new System.Drawing.Size(441, 364);
             this.Name = "frmOption";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmOption";

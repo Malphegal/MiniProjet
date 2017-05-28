@@ -376,6 +376,8 @@
             this.Controls.Add(this.lblTransac);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(768, 547);
+            this.MinimumSize = new System.Drawing.Size(768, 547);
             this.Name = "frmAjoutTransac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Tag = "0";
