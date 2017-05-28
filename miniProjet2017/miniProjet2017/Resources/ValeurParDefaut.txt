@@ -1,6 +1,6 @@
 #Base de donnée
 budget1.mdb
 #SMS
-92
+10
 #Résolution
 2

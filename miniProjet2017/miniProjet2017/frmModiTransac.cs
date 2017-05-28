@@ -18,6 +18,8 @@ namespace miniProjet2017
         public frmModiTransac()
         {
             InitializeComponent();
+            Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
+            frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
         /* Affiche ou retire l'aide du formulaire */

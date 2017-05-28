@@ -64,19 +64,22 @@
             this._lblNom = new System.Windows.Forms.Label();
             this.lblPrenom = new System.Windows.Forms.Label();
             this._lblPrenom = new System.Windows.Forms.Label();
-            this.lblTitre = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblRecapitulatif = new System.Windows.Forms.Label();
+            this.picFond = new System.Windows.Forms.PictureBox();
             this.picQuitter = new System.Windows.Forms.PictureBox();
+            this.pnlHaut = new System.Windows.Forms.Panel();
+            this.lblTitre = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabTransaction.SuspendLayout();
             this.tabPersonne.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFond)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
+            this.pnlHaut.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPersonne
             // 
-            this.btnPersonne.Location = new System.Drawing.Point(54, 12);
+            this.btnPersonne.Location = new System.Drawing.Point(27, 94);
             this.btnPersonne.Name = "btnPersonne";
             this.btnPersonne.Size = new System.Drawing.Size(119, 48);
             this.btnPersonne.TabIndex = 0;
@@ -86,7 +89,7 @@
             // 
             // btnTransaction
             // 
-            this.btnTransaction.Location = new System.Drawing.Point(420, 12);
+            this.btnTransaction.Location = new System.Drawing.Point(451, 94);
             this.btnTransaction.Name = "btnTransaction";
             this.btnTransaction.Size = new System.Drawing.Size(119, 48);
             this.btnTransaction.TabIndex = 1;
@@ -141,7 +144,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(131, 20);
+            this.lblId.Location = new System.Drawing.Point(138, 20);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(16, 13);
             this.lblId.TabIndex = 6;
@@ -150,7 +153,7 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(131, 81);
+            this.lblType.Location = new System.Drawing.Point(138, 81);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(31, 13);
             this.lblType.TabIndex = 7;
@@ -159,7 +162,7 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(131, 48);
+            this.lblDescription.Location = new System.Drawing.Point(138, 48);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(60, 13);
             this.lblDescription.TabIndex = 8;
@@ -168,7 +171,7 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(131, 111);
+            this.lblMontant.Location = new System.Drawing.Point(138, 111);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(46, 13);
             this.lblMontant.TabIndex = 9;
@@ -231,7 +234,7 @@
             this.tabControl1.Controls.Add(this.tabPersonne);
             this.tabControl1.HotTrack = true;
             this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabControl1.Location = new System.Drawing.Point(22, 74);
+            this.tabControl1.Location = new System.Drawing.Point(23, 150);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -461,30 +464,30 @@
             this._lblPrenom.TabIndex = 0;
             this._lblPrenom.Text = "Prénom :";
             // 
-            // lblTitre
+            // lblRecapitulatif
             // 
-            this.lblTitre.AutoSize = true;
-            this.lblTitre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitre.Location = new System.Drawing.Point(224, 24);
-            this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(111, 21);
-            this.lblTitre.TabIndex = 17;
-            this.lblTitre.Text = "Récapitulatif";
+            this.lblRecapitulatif.AutoSize = true;
+            this.lblRecapitulatif.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecapitulatif.Location = new System.Drawing.Point(255, 106);
+            this.lblRecapitulatif.Name = "lblRecapitulatif";
+            this.lblRecapitulatif.Size = new System.Drawing.Size(111, 21);
+            this.lblRecapitulatif.TabIndex = 17;
+            this.lblRecapitulatif.Text = "Récapitulatif";
             // 
-            // pictureBox1
+            // picFond
             // 
-            this.pictureBox1.Image = global::miniProjet2017.Properties.Resources.bordureOption;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, -5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(603, 487);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.picFond.Image = global::miniProjet2017.Properties.Resources.bordureOption;
+            this.picFond.Location = new System.Drawing.Point(-5, 82);
+            this.picFond.Name = "picFond";
+            this.picFond.Size = new System.Drawing.Size(610, 474);
+            this.picFond.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFond.TabIndex = 18;
+            this.picFond.TabStop = false;
             // 
             // picQuitter
             // 
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.croixQuitter;
-            this.picQuitter.Location = new System.Drawing.Point(550, 12);
+            this.picQuitter.Location = new System.Drawing.Point(559, 12);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(29, 29);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -492,20 +495,43 @@
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.picQuitter_Click);
             // 
+            // pnlHaut
+            // 
+            this.pnlHaut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.pnlHaut.Controls.Add(this.picQuitter);
+            this.pnlHaut.Controls.Add(this.lblTitre);
+            this.pnlHaut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHaut.Location = new System.Drawing.Point(0, 0);
+            this.pnlHaut.Name = "pnlHaut";
+            this.pnlHaut.Size = new System.Drawing.Size(600, 82);
+            this.pnlHaut.TabIndex = 20;
+            // 
+            // lblTitre
+            // 
+            this.lblTitre.AutoSize = true;
+            this.lblTitre.Font = new System.Drawing.Font("Century Gothic", 32.25F, System.Drawing.FontStyle.Italic);
+            this.lblTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTitre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTitre.Location = new System.Drawing.Point(14, 9);
+            this.lblTitre.Name = "lblTitre";
+            this.lblTitre.Size = new System.Drawing.Size(539, 52);
+            this.lblTitre.TabIndex = 2;
+            this.lblTitre.Text = "Miudget Manager - 2017";
+            // 
             // frmRecap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 477);
-            this.Controls.Add(this.picQuitter);
-            this.Controls.Add(this.lblTitre);
+            this.ClientSize = new System.Drawing.Size(600, 550);
+            this.Controls.Add(this.lblRecapitulatif);
             this.Controls.Add(this.btnTransaction);
             this.Controls.Add(this.btnPersonne);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picFond);
+            this.Controls.Add(this.pnlHaut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(591, 477);
-            this.MinimumSize = new System.Drawing.Size(591, 477);
+            this.MaximumSize = new System.Drawing.Size(600, 550);
+            this.MinimumSize = new System.Drawing.Size(600, 550);
             this.Name = "frmRecap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Récapitulatif";
@@ -514,8 +540,10 @@
             this.tabTransaction.PerformLayout();
             this.tabPersonne.ResumeLayout(false);
             this.tabPersonne.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFond)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
+            this.pnlHaut.ResumeLayout(false);
+            this.pnlHaut.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,8 +587,10 @@
         private System.Windows.Forms.Button _btnRR;
         private System.Windows.Forms.Label lblIdPersonne;
         private System.Windows.Forms.Label _lblIdPersonne;
-        private System.Windows.Forms.Label lblTitre;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblRecapitulatif;
+        private System.Windows.Forms.PictureBox picFond;
         private System.Windows.Forms.PictureBox picQuitter;
+        private System.Windows.Forms.Panel pnlHaut;
+        private System.Windows.Forms.Label lblTitre;
     }
 }

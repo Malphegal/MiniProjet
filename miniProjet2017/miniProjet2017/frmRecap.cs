@@ -27,6 +27,8 @@ namespace miniProjet2017
         public frmRecap()
         {
             InitializeComponent();
+            Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
+            frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
         private void picQuitter_Click(object sender, EventArgs e)
@@ -39,8 +41,8 @@ namespace miniProjet2017
         {
                 // Changer le titre de la fenêtre, et changer le tab (a suppr ? si y'a plus de titre ?)
 
-            lblTitre.Text = "Récapitulatif : Transactions";
-            lblTitre.Left = Width / 2 - lblTitre.Width / 2;
+            lblRecapitulatif.Text = "Récapitulatif : Transactions";
+            lblRecapitulatif.Left = Width / 2 - lblRecapitulatif.Width / 2;
             tabControl1.SelectedTab = tabTransaction;
 
                 // Retirer les autres liaisons en cours
@@ -94,8 +96,8 @@ namespace miniProjet2017
         {
                 // Changer le titre de la fenêtre, et changer le tab (a suppr ? si y'a plus de titre ?)
 
-            lblTitre.Text = "Récapitulatif : Personnes";
-            lblTitre.Left = Width / 2 - lblTitre.Width / 2;
+            lblRecapitulatif.Text = "Récapitulatif : Personnes";
+            lblRecapitulatif.Left = Width / 2 - lblRecapitulatif.Width / 2;
             tabControl1.SelectedTab = tabPersonne;
 
                 // Retirer les autres liaisons en cours

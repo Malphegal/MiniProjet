@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnAffichage = new System.Windows.Forms.Button();
             this.btnRecap = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.lblTitre = new System.Windows.Forms.Label();
             this.picQuitter = new System.Windows.Forms.PictureBox();
             this.picOption = new System.Windows.Forms.PictureBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pnlGauche.SuspendLayout();
             this.pnlHaut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
@@ -132,6 +134,8 @@
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.CliquerApplication);
+            this.picQuitter.MouseLeave += new System.EventHandler(this._HoverQuitter);
+            this.picQuitter.MouseHover += new System.EventHandler(this.HoverQuitter);
             // 
             // picOption
             // 
@@ -140,6 +144,8 @@
             this.picOption.Name = "picOption";
             this.picOption.TabStop = false;
             this.picOption.Click += new System.EventHandler(this.NouveauFrmOption);
+            this.picOption.MouseLeave += new System.EventHandler(this._HoverOption);
+            this.picOption.MouseHover += new System.EventHandler(this.HoverOption);
             // 
             // frmMain
             // 
@@ -177,6 +183,7 @@
         private System.Windows.Forms.PictureBox picOption;
         private System.Windows.Forms.PictureBox picQuitter;
         private System.Windows.Forms.Label lblTitre;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

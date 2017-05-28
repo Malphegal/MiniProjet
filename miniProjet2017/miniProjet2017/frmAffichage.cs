@@ -15,6 +15,8 @@ namespace miniProjet2017
         public frmAffichage()
         {
             InitializeComponent();
+            Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
+            frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
     }
 }

@@ -19,6 +19,8 @@ namespace miniProjet2017
         {
             InitializeComponent();
             DemarrageDeAjoutTransac();
+            Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
+            frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
         // TODO: comment afficher la liste de personne en rapport avec cette transaction ?

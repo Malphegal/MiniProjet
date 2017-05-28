@@ -64,9 +64,8 @@ namespace miniProjet2017
             new frmOption().ShowDialog();
             foreach (Control c in Controls)
                 c.Enabled = true;
-            resolutionScale = (0.4F + 0.3F * frmOption.valeurResolution);
-            Scale(new SizeF(resolutionScale, resolutionScale));
-            RedimensionnerLesControls(this);
+            resolutionScale = (0.6F + 0.2F * frmOption.valeurResolution);
+            RedimensionnerFrmMain();
         }
 
         private void NouveauFrmAjouterPersonne(object sender, EventArgs e)
@@ -201,19 +200,52 @@ namespace miniProjet2017
 
                 // Mise à jour de la résolution
 
-            resolutionScale = (0.4F + 0.3F * frmOption.valeurResolution);
+            resolutionScale = (0.6F + 0.2F * frmOption.valeurResolution);
+            privateResolutionScale = resolutionScale;
             Scale(new SizeF(resolutionScale, resolutionScale));
-            RedimensionnerLesControls(this);
+            RedimensionnerLesControls(this, resolutionScale);
         }
         public static float resolutionScale;
+        static float privateResolutionScale;
         // TODO: changer les valeurs
-        public static void RedimensionnerLesControls(Control parent)
+        public static void RedimensionnerLesControls(Control parent, float coeff)
         {
             foreach (Control c in parent.Controls)
                 if (c.GetType() == typeof(Button) || c.GetType() == typeof(Label) || c.GetType() == typeof(TextBox))
-                    c.Font = new Font(c.Font.FontFamily, c.Font.Size * (0.4F + 0.3F * frmOption.valeurResolution));
+                    c.Font = new Font(c.Font.FontFamily, c.Font.Size * coeff);
                 else
-                    RedimensionnerLesControls(c);
+                    RedimensionnerLesControls(c, coeff);
+        }
+        void RedimensionnerFrmMain()
+        {
+            if (resolutionScale == privateResolutionScale)
+                return;
+            if (privateResolutionScale == 1F)
+            {
+                RedimensionnerLesControls(this, resolutionScale);
+                Scale(new SizeF(resolutionScale, resolutionScale));
+            }
+            else if (privateResolutionScale == 0.8F)
+            {
+                RedimensionnerLesControls(this, 1.25F);
+                Scale(new SizeF(1.25F, 1.25F));
+                if (resolutionScale == 1.2F)
+                {
+                    RedimensionnerLesControls(this, resolutionScale);
+                    Scale(new SizeF(resolutionScale, resolutionScale));
+                }
+            }
+            else
+            {
+                RedimensionnerLesControls(this, 5/6F);
+                Scale(new SizeF(5/6F, 5/6F));
+                if (resolutionScale == 0.8F)
+                {
+                    RedimensionnerLesControls(this, resolutionScale);
+                    Scale(new SizeF(resolutionScale, resolutionScale));
+                }
+            }
+            privateResolutionScale = resolutionScale;
         }
 
         #region Drag&Drop
@@ -242,6 +274,32 @@ namespace miniProjet2017
                 SourisY = e.Y;
             }
         }
+
+
         #endregion
+
+        // ---------------------------------------------
+        // ---------------- Event hover ----------------
+        // ---------------------------------------------
+
+        private void HoverQuitter(object sender, EventArgs e)
+        {
+            toolTip.Show("Quitte l'application.", picQuitter, 20, 5);
+        }
+
+        private void _HoverQuitter(object sender, EventArgs e)
+        {
+            toolTip.Show("", picQuitter);
+        }
+
+        private void HoverOption(object sender, EventArgs e)
+        {
+            toolTip.Show("Affiche les options.", picOption, 20, 5);
+        }
+
+        private void _HoverOption(object sender, EventArgs e)
+        {
+            toolTip.Show("", picOption);
+        }
     }
 }

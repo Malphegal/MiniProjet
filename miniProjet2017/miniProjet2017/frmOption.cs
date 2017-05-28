@@ -18,7 +18,7 @@ namespace miniProjet2017
             InitializeComponent();
             InitToutesLesValeurs();
             Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
-            frmMain.RedimensionnerLesControls(this);
+            frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
         /* Met sur les TextBox et autres composents les valeurs par défaut */

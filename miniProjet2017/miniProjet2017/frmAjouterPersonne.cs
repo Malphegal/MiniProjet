@@ -18,6 +18,8 @@ namespace miniProjet2017
         public frmAjouterPersonne()
         {
             InitializeComponent();
+            Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
+            frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
         /* Ferme ce formulaire */

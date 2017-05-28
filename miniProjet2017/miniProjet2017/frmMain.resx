@@ -174,66 +174,6 @@
   <data name="&gt;&gt;btnRecap.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnAjouterPersonne.Name" xml:space="preserve">
-    <value>btnAjouterPersonne</value>
-  </data>
-  <data name="&gt;&gt;btnAjouterPersonne.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAjouterPersonne.Parent" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Name" xml:space="preserve">
-    <value>btnDeroulerTransaction</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Parent" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Name" xml:space="preserve">
-    <value>pnlLogo</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.Parent" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="pnlGauche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlGauche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 584</value>
-  </data>
-  <data name="pnlGauche.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.Name" xml:space="preserve">
-    <value>pnlGauche</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="btnAjouterPersonne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -320,6 +260,30 @@
   </data>
   <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlGauche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlGauche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 584</value>
+  </data>
+  <data name="pnlGauche.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Name" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -432,6 +396,9 @@
   <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -446,6 +413,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmMain</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>
