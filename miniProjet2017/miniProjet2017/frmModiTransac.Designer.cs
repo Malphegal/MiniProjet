@@ -356,6 +356,7 @@
             this.cboListeTransaction.Name = "cboListeTransaction";
             this.cboListeTransaction.Size = new System.Drawing.Size(269, 21);
             this.cboListeTransaction.TabIndex = 42;
+            this.cboListeTransaction.SelectedIndexChanged += new System.EventHandler(this.ChangerIndexCboListeTransaction);
             // 
             // lblListeTransaction
             // 

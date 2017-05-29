@@ -22,6 +22,10 @@ namespace miniProjet2017
             frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
+        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+        OleDbDataAdapter da;
+        DataSet ds = new DataSet();
+
         /* Affiche ou retire l'aide du formulaire */
         private void CliquerSurAideModif(object sender, EventArgs e)
         {
@@ -34,16 +38,16 @@ namespace miniProjet2017
         {
                 // Remplir la table locale
 
-            CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", con));
-            DataSet ds = new DataSet();
+            new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", con));
             da.Fill(ds, "_Transaction");
 
                 // Affichage de la première transaction, si il y en a une
-            
+
             if (ds.Tables["_Transaction"].Rows.Count > 0)
             {
+                ModifierLeTuple();
+                
                     // Activation des composants
 
                 foreach (Control c in Controls)
@@ -52,43 +56,50 @@ namespace miniProjet2017
                             _c.Enabled = true;
                     else
                         c.Enabled = true;
-                
+
                     // Remplissage de la CBO
 
                 foreach (DataRow row in ds.Tables["_Transaction"].Rows)
                     cboListeTransaction.Items.Add(row[2] + " " + row[1]);
                 cboListeTransaction.SelectedIndex = 0;
+            }
+            else
+                MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
+        }
 
-                    // Tuple pour savoir si quelque chose à changé ou non
-                    calTransac.SelectionStart.ToString();
-                Tuple<string, string, float, bool, bool, string> tuple = new Tuple<string, string, float, bool, bool, string>
-                    (calTransac.SelectionStart.ToString(), "", 1F, true, true, "");
+        /* Relance toutes les modification pour remplir les composants */
+        private void ModifierLeTuple()
+        {
+                // Tuple pour savoir si quelque chose à changé ou non
 
-                    // Remplissage des composants
+            Tuple<string, string, float, bool, bool, string> tuple = new Tuple<string, string, float, bool, bool, string>
+                (calTransac.SelectionStart.ToString(), txtDescTran.Text, float.Parse(txtMontant.Text),
+                chkRecette.Checked, chkPerçu.Checked, cboType.SelectedText);
 
-                string[] date = ds.Tables["_Transaction"].Rows[0][1].ToString().Split('/');
-                calTransac.SelectionStart = new DateTime(int.Parse(date[2].Substring(0, 4)), int.Parse(date[1]), int.Parse(date[0]));
+                // Remplissage des composants
 
-                txtDescTran.Text = ds.Tables["_Transaction"].Rows[0][2].ToString();
-                txtMontant.Text = ds.Tables["_Transaction"].Rows[0][3].ToString();
+            string[] date = ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][1].ToString().Split('/');
+            calTransac.SelectionStart = new DateTime(int.Parse(date[2].Substring(0, 4)), int.Parse(date[1]), int.Parse(date[0]));
 
-                if (Convert.ToBoolean(ds.Tables["_Transaction"].Rows[0][4]))
-                {
-                    chkRecette.Checked = true;
-                    CliquerSurChkRecette(chkRecette, e);
-                }
-                else
-                    chkPerçu.Checked = Convert.ToBoolean(ds.Tables["_Transaction"].Rows[0][5]);
+            txtDescTran.Text = ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][2].ToString();
+            txtMontant.Text = ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][3].ToString();
 
-                da = new OleDbDataAdapter(new CMD("SELECT * FROM TypeTransaction", con));
-                da.Fill(ds, "_TypeTransaction");
+            if (Convert.ToBoolean(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][4]))
+            {
+                chkRecette.Checked = true;
+                CliquerSurChkRecette(chkRecette, e);
+            }
+            else
+                chkPerçu.Checked = Convert.ToBoolean(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][5]);
 
-                foreach (var row in ds.Tables["_TypeTransaction"].Rows.Cast<DataRow>().Select((row, i) => new { Row = row, Index = i }))
-                {
-                    cboType.Items.Add(row.Row["libType"]);
-                    if (Convert.ToInt32(row.Row[0]) == Convert.ToInt32(ds.Tables["_Transaction"].Rows[0][6]))
-                        cboType.SelectedIndex = row.Index;
-                }
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM TypeTransaction", con));
+            da.Fill(ds, "_TypeTransaction");
+
+            foreach (var row in ds.Tables["_TypeTransaction"].Rows.Cast<DataRow>().Select((row, i) => new { Row = row, Index = i }))
+            {
+                cboType.Items.Add(row.Row["libType"]);
+                if (Convert.ToInt32(row.Row[0]) == Convert.ToInt32(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][6]))
+                    cboType.SelectedIndex = row.Index;
             }
         }
 
@@ -219,6 +230,12 @@ namespace miniProjet2017
         private void QuitterCeFormulaire(object sender, EventArgs e)
         {
             Close();
+        }
+
+        /* Modifier une autre transaction */
+        private void ChangerIndexCboListeTransaction(object sender, EventArgs e)
+        {
+
         }
     }
 }
