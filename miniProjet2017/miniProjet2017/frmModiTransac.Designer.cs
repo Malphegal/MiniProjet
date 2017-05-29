@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnQuitter = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.grb1 = new System.Windows.Forms.GroupBox();
             this.lblRecette = new System.Windows.Forms.Label();
@@ -58,6 +58,8 @@
             this.lblAideRecette = new System.Windows.Forms.Label();
             this.lblAideType = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cboListeTransaction = new System.Windows.Forms.ComboBox();
+            this.lblListeTransaction = new System.Windows.Forms.Label();
             this.grb1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -68,19 +70,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnQuitter
             // 
-            this.button1.Location = new System.Drawing.Point(623, 476);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 53);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Retour à la page principal";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnQuitter.Location = new System.Drawing.Point(623, 476);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(110, 53);
+            this.btnQuitter.TabIndex = 30;
+            this.btnQuitter.Text = "Retour à la page principal";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.QuitterCeFormulaire);
             // 
             // btnModifier
             // 
             this.btnModifier.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnModifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnModifier.Enabled = false;
             this.btnModifier.Location = new System.Drawing.Point(24, 469);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(103, 66);
@@ -103,6 +107,7 @@
             // lblRecette
             // 
             this.lblRecette.AutoSize = true;
+            this.lblRecette.Enabled = false;
             this.lblRecette.ForeColor = System.Drawing.Color.Gray;
             this.lblRecette.Location = new System.Drawing.Point(24, 13);
             this.lblRecette.Name = "lblRecette";
@@ -113,6 +118,7 @@
             // chkPerçu
             // 
             this.chkPerçu.AutoSize = true;
+            this.chkPerçu.Enabled = false;
             this.chkPerçu.Location = new System.Drawing.Point(150, 12);
             this.chkPerçu.Name = "chkPerçu";
             this.chkPerçu.Size = new System.Drawing.Size(54, 17);
@@ -123,6 +129,7 @@
             // chkRecette
             // 
             this.chkRecette.AutoSize = true;
+            this.chkRecette.Enabled = false;
             this.chkRecette.Location = new System.Drawing.Point(80, 12);
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.Size = new System.Drawing.Size(64, 17);
@@ -133,6 +140,7 @@
             // 
             // cboType
             // 
+            this.cboType.Enabled = false;
             this.cboType.FormattingEnabled = true;
             this.cboType.Location = new System.Drawing.Point(174, 389);
             this.cboType.Name = "cboType";
@@ -142,6 +150,7 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
+            this.lblType.Enabled = false;
             this.lblType.Location = new System.Drawing.Point(27, 389);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(31, 13);
@@ -151,6 +160,7 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
+            this.lblMontant.Enabled = false;
             this.lblMontant.Location = new System.Drawing.Point(29, 304);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(46, 13);
@@ -159,6 +169,7 @@
             // 
             // txtMontant
             // 
+            this.txtMontant.Enabled = false;
             this.txtMontant.Location = new System.Drawing.Point(197, 297);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
@@ -168,6 +179,7 @@
             // lblDescTransac
             // 
             this.lblDescTransac.AutoSize = true;
+            this.lblDescTransac.Enabled = false;
             this.lblDescTransac.Location = new System.Drawing.Point(29, 245);
             this.lblDescTransac.Name = "lblDescTransac";
             this.lblDescTransac.Size = new System.Drawing.Size(141, 13);
@@ -176,6 +188,7 @@
             // 
             // txtDescTran
             // 
+            this.txtDescTran.Enabled = false;
             this.txtDescTran.Location = new System.Drawing.Point(197, 242);
             this.txtDescTran.Name = "txtDescTran";
             this.txtDescTran.Size = new System.Drawing.Size(100, 20);
@@ -185,6 +198,7 @@
             // lblTransac
             // 
             this.lblTransac.AutoSize = true;
+            this.lblTransac.Enabled = false;
             this.lblTransac.Location = new System.Drawing.Point(29, 52);
             this.lblTransac.Name = "lblTransac";
             this.lblTransac.Size = new System.Drawing.Size(111, 13);
@@ -193,6 +207,7 @@
             // 
             // calTransac
             // 
+            this.calTransac.Enabled = false;
             this.calTransac.Location = new System.Drawing.Point(197, 52);
             this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
@@ -334,11 +349,30 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // cboListeTransaction
+            // 
+            this.cboListeTransaction.FormattingEnabled = true;
+            this.cboListeTransaction.Location = new System.Drawing.Point(281, 476);
+            this.cboListeTransaction.Name = "cboListeTransaction";
+            this.cboListeTransaction.Size = new System.Drawing.Size(269, 21);
+            this.cboListeTransaction.TabIndex = 42;
+            // 
+            // lblListeTransaction
+            // 
+            this.lblListeTransaction.AutoSize = true;
+            this.lblListeTransaction.Location = new System.Drawing.Point(160, 479);
+            this.lblListeTransaction.Name = "lblListeTransaction";
+            this.lblListeTransaction.Size = new System.Drawing.Size(115, 13);
+            this.lblListeTransaction.TabIndex = 43;
+            this.lblListeTransaction.Text = "Liste des transactions :";
+            // 
             // frmModiTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 536);
+            this.Controls.Add(this.lblListeTransaction);
+            this.Controls.Add(this.cboListeTransaction);
             this.Controls.Add(this.lblAideType);
             this.Controls.Add(this.lblAideRecette);
             this.Controls.Add(this.lblAideMontant);
@@ -349,7 +383,7 @@
             this.Controls.Add(this.pic3);
             this.Controls.Add(this.pic2);
             this.Controls.Add(this.pic1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.grb1);
             this.Controls.Add(this.cboType);
@@ -386,7 +420,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.GroupBox grb1;
         private System.Windows.Forms.CheckBox chkPerçu;
@@ -415,5 +449,7 @@
         private System.Windows.Forms.Label lblAideType;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label lblRecette;
+        private System.Windows.Forms.Label lblListeTransaction;
+        private System.Windows.Forms.ComboBox cboListeTransaction;
     }
 }

@@ -44,6 +44,28 @@ namespace miniProjet2017
             
             if (ds.Tables["_Transaction"].Rows.Count > 0)
             {
+                    // Activation des composants
+
+                foreach (Control c in Controls)
+                    if (c.Controls.Count > 0)
+                        foreach (Control _c in c.Controls)
+                            _c.Enabled = true;
+                    else
+                        c.Enabled = true;
+                
+                    // Remplissage de la CBO
+
+                foreach (DataRow row in ds.Tables["_Transaction"].Rows)
+                    cboListeTransaction.Items.Add(row[2] + " " + row[1]);
+                cboListeTransaction.SelectedIndex = 0;
+
+                    // Tuple pour savoir si quelque chose à changé ou non
+                    calTransac.SelectionStart.ToString();
+                Tuple<string, string, float, bool, bool, string> tuple = new Tuple<string, string, float, bool, bool, string>
+                    (calTransac.SelectionStart.ToString(), "", 1F, true, true, "");
+
+                    // Remplissage des composants
+
                 string[] date = ds.Tables["_Transaction"].Rows[0][1].ToString().Split('/');
                 calTransac.SelectionStart = new DateTime(int.Parse(date[2].Substring(0, 4)), int.Parse(date[1]), int.Parse(date[0]));
 
@@ -112,6 +134,7 @@ namespace miniProjet2017
 
             if (toutEstOk)
             {
+                    // Récapitulatif avant de valider la modification
                 if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
                     txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
                 short nbPersonne = 0;
@@ -190,6 +213,12 @@ namespace miniProjet2017
                 chkPerçu.Checked = false;
                 chkPerçu.Enabled = true;
             }
+        }
+
+        /* Ferme ce formulaire */
+        private void QuitterCeFormulaire(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -219,7 +219,7 @@ namespace miniProjet2017
         {
             foreach (Control c in parent.Controls)
                 if (c.GetType() == typeof(Button) || c.GetType() == typeof(Label) || c.GetType() == typeof(TextBox))
-                    c.Font = new Font(c.Font.FontFamily, c.Font.Size * coeff);
+                    c.Font = new System.Drawing.Font(c.Font.FontFamily, c.Font.Size * coeff);
                 else
                     RedimensionnerLesControls(c, coeff);
         }
@@ -311,7 +311,7 @@ namespace miniProjet2017
     }
 
 
-    class PDF_TEST
+    /*class PDF_TEST
     {
         private void button1_Click(object sender, EventArgs e)
         {
@@ -446,5 +446,5 @@ namespace miniProjet2017
 
             doc.Close(); //ferme le document
         }
-    }
+    }*/
 }
