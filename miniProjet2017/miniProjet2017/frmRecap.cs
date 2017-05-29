@@ -44,6 +44,10 @@ namespace miniProjet2017
             lblRecapitulatif.Text = "Récapitulatif : Transactions";
             lblRecapitulatif.Left = Width / 2 - lblRecapitulatif.Width / 2;
             tabControl1.SelectedTab = tabTransaction;
+            btnTransaction.BackColor = Color.Red;
+            btnTransaction.Font = new Font(btnTransaction.Font, FontStyle.Bold);
+            btnPersonne.BackColor = Color.White;
+            btnPersonne.Font = new Font(btnPersonne.Font, FontStyle.Regular);
 
                 // Retirer les autres liaisons en cours
 
@@ -99,6 +103,10 @@ namespace miniProjet2017
             lblRecapitulatif.Text = "Récapitulatif : Personnes";
             lblRecapitulatif.Left = Width / 2 - lblRecapitulatif.Width / 2;
             tabControl1.SelectedTab = tabPersonne;
+            btnPersonne.BackColor = Color.Red;
+            btnPersonne.Font = new Font(btnPersonne.Font, FontStyle.Bold);
+            btnTransaction.BackColor = Color.White;
+            btnTransaction.Font = new Font(btnTransaction.Font, FontStyle.Regular);
 
                 // Retirer les autres liaisons en cours
 
@@ -151,7 +159,7 @@ namespace miniProjet2017
         {
             bs.MoveFirst();
             lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[0][6]];
-            lblMontant.Text += " €";
+            lblMontant.Text += !lblMontant.Text.Contains('€') ? " €" : "";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
         }
 
@@ -175,7 +183,7 @@ namespace miniProjet2017
         {
             bs.MoveLast();
             lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
-            lblMontant.Text += " €";
+            lblMontant.Text += !lblMontant.Text.Contains('€') ? " €" : "";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
         }
 

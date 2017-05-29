@@ -71,20 +71,21 @@ namespace miniProjet2017
         }
 
         // TODO: Check comment ajouter l'heure dans la table Transaction, ajout du TRY CATCH, ajout dans d'autre table (Beneficiaire ?)
+        // TODO: valeur qui ont changé, changé de couleur ?
         /* Bouton valider, vérification des valeurs avant la modification */
         private void ModifierLaTransaction(object sender, EventArgs e)
         {
-                // Sera 'false' si au moins une erreur se produit
+            // Sera 'false' si au moins une erreur se produit
 
             bool toutEstOk = true;
 
-                // Position des erreurs
+            // Position des erreurs
 
             errorProvider.SetIconPadding(cboType, 11);
             errorProvider.SetIconPadding(txtDescTran, 11);
             errorProvider.SetIconPadding(txtMontant, 11);
 
-                // Les vérifications au cas par cas
+            // Les vérifications au cas par cas
 
             if (cboType.SelectedIndex == -1)
             {
@@ -107,7 +108,42 @@ namespace miniProjet2017
             }
             else errorProvider.SetError(txtDescTran, "");
 
-                // Si aucune erreur est présente, on peut modifier la transaction
+            // Si aucune erreur est présente, on peut modifier la transaction
+
+            if (toutEstOk)
+            {
+                if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
+                    txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
+                short nbPersonne = 0;
+                foreach (CheckBox chk in Controls.OfType<CheckBox>())
+                    if (chk.Checked)
+                        nbPersonne++;
+                if (DialogResult.OK == MessageBox.Show("Modification de la transaction :\n\n • " + txtDescTran.Text
+                    + "\n\n • " + frmAjoutTransac.FormatDuMontant(txtMontant.Text)
+                    + " €\n\n • Type : " + cboType.SelectedItem
+                    + "\n\n • Elle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : ".")
+                    + "\n\n     Voulez-vous valider cette modification ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
+                {
+                    CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+                    con.Open();
+                    new CMD(@"UPDATE [Transaction] set dateTransaction = "
+                                                            + "#" + (calTransac.SelectionStart.Day > 9
+                                                            ? calTransac.SelectionStart.Day.ToString()
+                                                            : "0" + calTransac.SelectionStart.Day.ToString()) + '/' + (calTransac.SelectionStart.Month > 9
+                                                            ? calTransac.SelectionStart.Month.ToString()
+                                                            : "0" + calTransac.SelectionStart.Month.ToString()) + '/' + calTransac.SelectionStart.Year + "#, "
+                                                            + "description = '" + txtDescTran.Text + "', "
+                                                            + "montant = " + frmAjoutTransac.FormatDuMontant(txtMontant.Text).Replace(',', '.') + ", "
+                                                            + "recetteON = " +(chkRecette.Checked ? "True" : "False") + ", "
+                                                            + "percuON = " + (chkPerçu.Checked ? "True" : "False") + ", "
+                                                            + "type = " + (cboType.SelectedIndex + 1)
+                                                            + " WHERE codeTransaction = ", con).ExecuteNonQuery();
+                    MessageBox.Show("Transaction modifiée !");
+                    con.Close();
+                }
+                else
+                    MessageBox.Show("Aucune modification n'a été effectuée !");
+            }
         }
 
         /* Saisie de la description, ne doit pas dépasser 30 caractères */

@@ -141,7 +141,7 @@ namespace miniProjet2017
         }
 
         /* Affichage du prix formatté */
-        private string FormatDuMontant(string montant)
+        public static string FormatDuMontant(string montant)
         {
             double d = Math.Round(Convert.ToDouble(montant), 2);
             return d.ToString().Contains(',') /* IndexOf(",") != 1*/ ?
