@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp">
-      <HintPath>..\..\..\Desktop\iText\itextsharp.dll</HintPath>
+      <HintPath>..\..\..\..\itextsharp-all-5.5.10\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="frmAjoutTransac.Designer.cs">
       <DependentUpon>frmAjoutTransac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChoisirPersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChoisirPersonne.Designer.cs">
+      <DependentUpon>frmChoisirPersonne.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAjoutTransac.resx">
       <DependentUpon>frmAjoutTransac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChoisirPersonne.resx">
+      <DependentUpon>frmChoisirPersonne.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.fr.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using iTextSharp.text.pdf;
-using System.IO;
-using iTextSharp;
-using iTextSharp.text;
 
 namespace miniProjet2017
 {
@@ -20,7 +20,7 @@ namespace miniProjet2017
         public frmMain()
         {
             InitializeComponent();
-            InitValeurOption();
+            InitValeurOption();new frmChoisirPersonne().ShowDialog();
         }
 
         // ---------------------------------------------

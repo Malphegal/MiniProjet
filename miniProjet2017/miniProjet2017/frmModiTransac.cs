@@ -23,7 +23,7 @@ namespace miniProjet2017
         }
 
         CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
-        OleDbDataAdapter da;
+        OleDbDataAdapter da = new OleDbDataAdapter();
         DataSet ds = new DataSet();
 
         /* Affiche ou retire l'aide du formulaire */
@@ -39,7 +39,7 @@ namespace miniProjet2017
                 // Remplir la table locale
 
             con.Open();
-            new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", con));
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", con));
             da.Fill(ds, "_Transaction");
 
                 // Affichage de la première transaction, si il y en a une
@@ -87,7 +87,7 @@ namespace miniProjet2017
             if (Convert.ToBoolean(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][4]))
             {
                 chkRecette.Checked = true;
-                CliquerSurChkRecette(chkRecette, e);
+//CliquerSurChkRecette(chkRecette, e);
             }
             else
                 chkPerçu.Checked = Convert.ToBoolean(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][5]);

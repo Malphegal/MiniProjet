@@ -49,7 +49,6 @@ namespace miniProjet2017
 
             short top = 0;
             foreach (DataRow row in ds.Tables["_Personne"].Rows)
-            {
                 new CheckBox()
                 {
                     Parent = this,
@@ -57,7 +56,6 @@ namespace miniProjet2017
                     Location = new Point(480, top += 40),
                     AutoSize = true
                 };
-            }
 
                 // Remplissage de la combobox pour les types de transaction
 
@@ -114,7 +112,7 @@ namespace miniProjet2017
                 if (DialogResult.OK == MessageBox.Show("Ajout de la transaction :\n\n • " + txtDescTran.Text
                     + "\n\n • " + FormatDuMontant(txtMontant.Text)
                     + " €\n\n • Type : " + cboType.SelectedItem
-                    + "\n\n • Elle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : ".")
+                    + "\n\n • Elle concerne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : ".")
                     + "\n\n     Voulez-vous ajouter cette transaction ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
                 {
                         // Remplir la table locale
