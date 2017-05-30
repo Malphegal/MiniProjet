@@ -15,6 +15,7 @@ namespace miniProjet2017
 {
     public partial class frmAjoutTransac : Form
     {
+        // TODO: s'il n'y a pas de typeTransaction, on ne peut pas ajouter !
         public frmAjoutTransac()
         {
             InitializeComponent();
@@ -45,8 +46,13 @@ namespace miniProjet2017
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "_TypeTransaction");
 
+                // Initialisaton de la liste des participants
+
+            listeParticipant = new List<uint>(ds.Tables["_Personne"].Rows.Count);
+
                 // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
 
+            /*
             short top = 0;
             foreach (DataRow row in ds.Tables["_Personne"].Rows)
                 new CheckBox()
@@ -56,6 +62,7 @@ namespace miniProjet2017
                     Location = new Point(480, top += 40),
                     AutoSize = true
                 };
+            */
 
                 // Remplissage de la combobox pour les types de transaction
 
@@ -105,21 +112,21 @@ namespace miniProjet2017
             if (toutEstOk) {
                 if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
                     txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
-                short nbPersonne = 0;
-                foreach (CheckBox chk in Controls.OfType<CheckBox>())
-                    if (chk.Checked)
-                        nbPersonne++;
                 if (DialogResult.OK == MessageBox.Show("Ajout de la transaction :\n\n • " + txtDescTran.Text
                     + "\n\n • " + FormatDuMontant(txtMontant.Text)
                     + " €\n\n • Type : " + cboType.SelectedItem
-                    + "\n\n • Elle concerne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : ".")
+                    + "\n\n • Elle concerne " + listeParticipant.Count + " personne" + (listeParticipant.Count > 1 ? "s." : ".")
                     + "\n\n     Voulez-vous ajouter cette transaction ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
                 {
                         // Remplir la table locale
 
                     CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
                     con.Open();
-                    new CMD(@"INSERT INTO [Transaction] VALUES (" + new CMD(@"SELECT IIF(max(codeTransaction) IS NULL, 0, max(codeTransaction) + 1) FROM [Transaction]", con).ExecuteScalar() + ", "
+
+                        // Table Transaction
+
+                    object idCetteTransaction = new CMD(@"SELECT IIF(max(codeTransaction) IS NULL, 1, max(codeTransaction) + 1) FROM [Transaction]", con).ExecuteScalar();
+                    new CMD(@"INSERT INTO [Transaction] VALUES (" + idCetteTransaction + ", "
                                                             + "#" + (calTransac.SelectionStart.Day > 9
                                                             ? calTransac.SelectionStart.Day.ToString()
                                                             : "0" + calTransac.SelectionStart.Day.ToString()) + '/' + (calTransac.SelectionStart.Month > 9
@@ -130,6 +137,12 @@ namespace miniProjet2017
                                                             + (chkRecette.Checked ? "True" : "False") + ", "
                                                             + (chkPerçu.Checked ? "True" : "False") + ", "
                                                             + (cboType.SelectedIndex + 1) + ")", con).ExecuteNonQuery();
+
+                        // Ajout des personnes dans table Beneficiaire
+
+                    foreach (uint i in listeParticipant)
+                        new CMD(@"INSERT INTO Beneficiaires VALUES (" + idCetteTransaction + ", " + i + ")", con).ExecuteNonQuery();
+
                     MessageBox.Show("Transaction ajoutée !");
                     con.Close();
                 }
@@ -202,6 +215,15 @@ namespace miniProjet2017
         private void CliquerAideAjout(object sender, EventArgs e)
         {
             new Classes.Aide().AideTransac(this);
+        }
+
+        /* Ouvre le frmChoixPersonne pour ajouter les gens à la transaction que l'on veut ajouter */
+        List<uint> listeParticipant;
+        private void AjouterPersonneATransaction(object sender, EventArgs e)
+        {
+            frmChoisirPersonne frm = new frmChoisirPersonne(listeParticipant);
+            if (DialogResult.OK == frm.ShowDialog())
+                lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s :" : " :") + (listeParticipant = frm.listeParticipant).Count.ToString();
         }
     }
 }

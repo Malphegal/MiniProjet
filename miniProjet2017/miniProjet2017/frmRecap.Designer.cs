@@ -487,9 +487,9 @@
             // picQuitter
             // 
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.croixQuitter;
-            this.picQuitter.Location = new System.Drawing.Point(559, 12);
+            this.picQuitter.Location = new System.Drawing.Point(553, 12);
             this.picQuitter.Name = "picQuitter";
-            this.picQuitter.Size = new System.Drawing.Size(29, 29);
+            this.picQuitter.Size = new System.Drawing.Size(37, 37);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picQuitter.TabIndex = 19;
             this.picQuitter.TabStop = false;

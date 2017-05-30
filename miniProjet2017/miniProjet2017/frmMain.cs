@@ -20,7 +20,7 @@ namespace miniProjet2017
         public frmMain()
         {
             InitializeComponent();
-            InitValeurOption();new frmChoisirPersonne().ShowDialog();
+            InitValeurOption();
         }
 
         // ---------------------------------------------

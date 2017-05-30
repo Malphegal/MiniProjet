@@ -59,6 +59,8 @@
             this.pic3 = new System.Windows.Forms.PictureBox();
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
+            this.btnChoixPersonne = new System.Windows.Forms.Button();
+            this.lblChoixPersonne = new System.Windows.Forms.Label();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -225,7 +227,7 @@
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(111, 36);
             this.btnQuitter.TabIndex = 14;
-            this.btnQuitter.Text = "QUI-QUI-QUITTER";
+            this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.QuitterAjoutTransac);
             // 
@@ -347,11 +349,32 @@
             this.pic1.TabStop = false;
             this.pic1.Tag = "Aide";
             // 
+            // btnChoixPersonne
+            // 
+            this.btnChoixPersonne.Location = new System.Drawing.Point(572, 131);
+            this.btnChoixPersonne.Name = "btnChoixPersonne";
+            this.btnChoixPersonne.Size = new System.Drawing.Size(88, 39);
+            this.btnChoixPersonne.TabIndex = 52;
+            this.btnChoixPersonne.Text = "Choisir les participants...";
+            this.btnChoixPersonne.UseVisualStyleBackColor = true;
+            this.btnChoixPersonne.Click += new System.EventHandler(this.AjouterPersonneATransaction);
+            // 
+            // lblChoixPersonne
+            // 
+            this.lblChoixPersonne.AutoSize = true;
+            this.lblChoixPersonne.Location = new System.Drawing.Point(589, 186);
+            this.lblChoixPersonne.Name = "lblChoixPersonne";
+            this.lblChoixPersonne.Size = new System.Drawing.Size(71, 13);
+            this.lblChoixPersonne.TabIndex = 53;
+            this.lblChoixPersonne.Text = "participant : 0";
+            // 
             // frmAjoutTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 508);
+            this.Controls.Add(this.lblChoixPersonne);
+            this.Controls.Add(this.btnChoixPersonne);
             this.Controls.Add(this.lblAideType);
             this.Controls.Add(this.lblAideRecette);
             this.Controls.Add(this.lblAideMontant);
@@ -429,5 +452,7 @@
         private System.Windows.Forms.PictureBox pic2;
         private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.Label lblRecette;
+        private System.Windows.Forms.Button btnChoixPersonne;
+        private System.Windows.Forms.Label lblChoixPersonne;
     }
 }

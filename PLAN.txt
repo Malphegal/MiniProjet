@@ -19,15 +19,20 @@ Mettre des commentaires (au moins un par fonction) /*Au dessus de la fonction*/ 
 troubleshooting :
 	• MessageBox.Show pour quitter le formulaire frmMain
 		-> Si on annule, le formulaire passe en arrière plan
-		-> DONE (TODO: Améliorer ?)
+			-> DONE (TODO: Améliorer le code ?)
 
 	• On peut resize les formulaire avec WIN + UP
 		-> Ajouter max/min de la taille des formulaires
-		-> DONE
+			-> DONE
+		-> Bloquer WIN + UP
 		
 	• TabIndex pas cohérent
-		-> frmMain - DONE
+		-> frmMain
+			-> DONE
+		-> les autres
 		
 	• frmOption - valeurSMS : on ne peut pas mettre 100%
 
 	• frmMain - résolution autre que 1.0F : mauvaise position du menu déroulant
+	
+	• frmModiTransac - Crash avec le tuple

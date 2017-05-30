@@ -63,6 +63,7 @@
             this.btnQuitter.Size = new System.Drawing.Size(46, 46);
             this.btnQuitter.TabIndex = 6;
             this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.QuitterFrmChoisirPersonne);
             // 
             // btnValider
             // 
@@ -73,6 +74,7 @@
             this.btnValider.Size = new System.Drawing.Size(46, 46);
             this.btnValider.TabIndex = 5;
             this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.CliquerSurValider);
             // 
             // picBordure
             // 
