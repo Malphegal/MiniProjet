@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAffichage.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnRecap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -174,38 +174,44 @@
   <data name="&gt;&gt;btnRecap.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnBudget.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnDeroulerBudget.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="btnBudget.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnDeroulerBudget.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
+  </data>
+  <data name="btnDeroulerBudget.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnBudget.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 262</value>
+  <data name="btnDeroulerBudget.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 201</value>
   </data>
-  <data name="btnBudget.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnDeroulerBudget.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 60</value>
   </data>
-  <data name="btnBudget.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="btnDeroulerBudget.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="btnBudget.Text" xml:space="preserve">
-    <value>Les budget(OFF-2)</value>
+  <data name="btnDeroulerBudget.Text" xml:space="preserve">
+    <value>Les budgets ↓</value>
   </data>
-  <data name="&gt;&gt;btnBudget.Name" xml:space="preserve">
-    <value>btnBudget</value>
+  <data name="&gt;&gt;btnDeroulerBudget.Name" xml:space="preserve">
+    <value>btnDeroulerBudget</value>
   </data>
-  <data name="&gt;&gt;btnBudget.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnDeroulerBudget.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnBudget.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnDeroulerBudget.Parent" xml:space="preserve">
     <value>pnlGauche</value>
   </data>
-  <data name="&gt;&gt;btnBudget.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnDeroulerBudget.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btnAjouterPersonne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
+  </data>
+  <data name="btnAjouterPersonne.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
   </data>
   <data name="btnAjouterPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -237,6 +243,9 @@
   <data name="btnDeroulerTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
+  <data name="btnDeroulerTransaction.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
+  </data>
   <data name="btnDeroulerTransaction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -250,7 +259,7 @@
     <value>0</value>
   </data>
   <data name="btnDeroulerTransaction.Text" xml:space="preserve">
-    <value>Les transactions</value>
+    <value>Les transactions ↓</value>
   </data>
   <data name="&gt;&gt;btnDeroulerTransaction.Name" xml:space="preserve">
     <value>btnDeroulerTransaction</value>
@@ -313,7 +322,100 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnPostFixe_old.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnPostFixe_old.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
+  </data>
+  <data name="btnPostFixe_old.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPostFixe_old.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 281</value>
+  </data>
+  <data name="btnPostFixe_old.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 60</value>
+  </data>
+  <data name="btnPostFixe_old.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnPostFixe_old.Text" xml:space="preserve">
+    <value>frmPostFixe</value>
+  </data>
+  <data name="&gt;&gt;btnPostFixe_old.Name" xml:space="preserve">
+    <value>btnPostFixe_old</value>
+  </data>
+  <data name="&gt;&gt;btnPostFixe_old.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPostFixe_old.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnPostFixe_old.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Name" xml:space="preserve">
+    <value>lblTitre</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picQuitter.Name" xml:space="preserve">
+    <value>picQuitter</value>
+  </data>
+  <data name="&gt;&gt;picQuitter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picQuitter.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;picQuitter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;picOption.Name" xml:space="preserve">
+    <value>picOption</value>
+  </data>
+  <data name="&gt;&gt;picOption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picOption.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;picOption.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlHaut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlHaut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="pnlHaut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 82</value>
+  </data>
+  <data name="pnlHaut.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Name" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -402,92 +504,74 @@
   <data name="&gt;&gt;picOption.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pnlHaut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlHaut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 0</value>
-  </data>
-  <data name="pnlHaut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>750, 82</value>
-  </data>
-  <data name="pnlHaut.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Name" xml:space="preserve">
-    <value>pnlHaut</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="btnBudget2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnPostePonctuel_old.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="btnBudget2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnPostePonctuel_old.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
+  </data>
+  <data name="btnPostePonctuel_old.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnBudget2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 340</value>
+  <data name="btnPostePonctuel_old.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 341</value>
   </data>
-  <data name="btnBudget2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnPostePonctuel_old.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 60</value>
   </data>
-  <data name="btnBudget2.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnPostePonctuel_old.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="btnBudget2.Text" xml:space="preserve">
-    <value>Les budget(OFF-2)</value>
+  <data name="btnPostePonctuel_old.Text" xml:space="preserve">
+    <value>frmPostePonctuel</value>
   </data>
-  <data name="&gt;&gt;btnBudget2.Name" xml:space="preserve">
-    <value>btnBudget2</value>
+  <data name="&gt;&gt;btnPostePonctuel_old.Name" xml:space="preserve">
+    <value>btnPostePonctuel_old</value>
   </data>
-  <data name="&gt;&gt;btnBudget2.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnPostePonctuel_old.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnBudget2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnPostePonctuel_old.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnBudget2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;btnPostePonctuel_old.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="btnBudget3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnFrm_3_old.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="btnBudget3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnFrm_3_old.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
+  </data>
+  <data name="btnFrm_3_old.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnBudget3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 424</value>
+  <data name="btnFrm_3_old.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 401</value>
   </data>
-  <data name="btnBudget3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnFrm_3_old.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 60</value>
   </data>
-  <data name="btnBudget3.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnFrm_3_old.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="btnBudget3.Text" xml:space="preserve">
-    <value>Les budget(OFF-2)</value>
+  <data name="btnFrm_3_old.Text" xml:space="preserve">
+    <value>frm_3</value>
   </data>
-  <data name="&gt;&gt;btnBudget3.Name" xml:space="preserve">
-    <value>btnBudget3</value>
+  <data name="&gt;&gt;btnFrm_3_old.Name" xml:space="preserve">
+    <value>btnFrm_3_old</value>
   </data>
-  <data name="&gt;&gt;btnBudget3.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnFrm_3_old.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnBudget3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnFrm_3_old.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnBudget3.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;btnFrm_3_old.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

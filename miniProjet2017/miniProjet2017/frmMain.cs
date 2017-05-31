@@ -29,37 +29,27 @@ namespace miniProjet2017
 
         private void NouveauFrmAjoutTransac(object sender, EventArgs e)
         {
-            Hide();
             new frmAjoutTransac().ShowDialog();
-            Show();
         }
 
         private void NouveauFrmAffichage(object sender, EventArgs e)
         {
-            Hide();
             new frmAffichage().ShowDialog();
-            Show();
         }
 
         private void NouveauFrmModiTransac(object sender, EventArgs e)
         {
-            Hide();
             new frmModiTransac().ShowDialog();
-            Show();
         }
 
         private void NouveauFrmRecap(object sender, EventArgs e)
         {
-            Hide();
             new frmRecap().ShowDialog();
-            Show();
         }
 
         private void NouveauFrmSupprTransac(object sender, EventArgs e)
         {
-            Hide();
             new frmSupprTransac().ShowDialog();
-            Show();
         }
 
         private void NouveauFrmOption(object sender, EventArgs e)
@@ -82,8 +72,23 @@ namespace miniProjet2017
                 c.Enabled = true;
         }
 
+        private void NouveauFrmPostFixe(object sender, EventArgs e)
+        {
+            new frmPostFixe().ShowDialog();
+        }
+
+        private void NouveauFrmPostePonctuel(object sender, EventArgs e)
+        {
+            new frmPostePonctuel().ShowDialog();
+        }
+
+        private void NouveauFrm3(object sender, EventArgs e)
+        {
+            new frm_3().ShowDialog();
+        }
+
         /* Ferme l'application */
-        private void CliquerApplication(object sender, EventArgs e)
+        private void QuitterApplication(object sender, EventArgs e)
         {
             if (MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Quitter ?", MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly) == DialogResult.OK)
@@ -97,39 +102,66 @@ namespace miniProjet2017
             }
         }
 
-        /* Cliquer sur le bouton des transaction dans le panel de gauche */
-        static bool derouler = false;
+        /* Cliquer sur le bouton des transactions dans le panel de gauche */
+        static bool deroulerTransaction = false;
         private void CliquerSurDeroulerTransaction(object sender, EventArgs e)
         {
-            if (derouler = !derouler)
+            if (deroulerTransaction = !deroulerTransaction)
             {
-                for (int i = 0; i < pnlGauche.Controls.Count; i++)
-                    if (pnlGauche.Controls[i].Name == "btnAjouterTransaction"
-                        || pnlGauche.Controls[i].Name == "btnModifierTransaction"
-                        || pnlGauche.Controls[i].Name == "btnSupprimerTransaction")
-                    {
-                        pnlGauche.Controls[i].Left += 220;
-                        pnlGauche.Controls[i].TabStop = true;
-                    }
-                btnAjouterPersonne.Top += 177;
+                foreach (Button b in pnlGauche.Controls.OfType<Button>())
+                {
+                    b.Top += Convert.ToInt32(b.Tag.ToString().Split(';')[1]) * 59;
+                    if (b.Name == "btnAjouterTransaction"
+                        || b.Name == "btnModifierTransaction"
+                        || b.Name == "btnSupprimerTransaction")
+                        b.Left += 220;
+                }
+                btnDeroulerTransaction.Text = btnDeroulerTransaction.Text.Replace('↓', '↑');
             }
-            else
-            {
-                for (int i = 0; i < pnlGauche.Controls.Count; i++)
-                    if (pnlGauche.Controls[i].Name == "btnAjouterTransaction"
-                        || pnlGauche.Controls[i].Name == "btnModifierTransaction"
-                        || pnlGauche.Controls[i].Name == "btnSupprimerTransaction")
-                    {
-                        pnlGauche.Controls[i].Left -= 220;
-                        pnlGauche.Controls[i].TabStop = false;
-                    }
-                btnAjouterPersonne.Top -= 177;
+            else {
+                foreach (Button b in pnlGauche.Controls.OfType<Button>())
+                {
+                    b.Top -= Convert.ToInt32(b.Tag.ToString().Split(';')[1]) * 59;
+                    if (b.Name == "btnAjouterTransaction"
+                        || b.Name == "btnModifierTransaction"
+                        || b.Name == "btnSupprimerTransaction")
+                        b.Left -= 220;
+                }
+                btnDeroulerTransaction.Text = btnDeroulerTransaction.Text.Replace('↑', '↓');
+            }
+        }
+
+        /* Cliquer sur le bouton des budgets dans le panel de gauche */
+        static bool deroulerBudget = false;
+        private void CliquerSurDeroulerBudget(object sender, EventArgs e)
+        {
+            if (deroulerBudget = !deroulerBudget) {
+                foreach (Button b in pnlGauche.Controls.OfType<Button>())
+                {
+                    if (b.Name == "btnPostFixe"
+                        || b.Name == "btnPostePonctuel"
+                        || b.Name == "btnFrm_3")
+                        b.Left += 220;
+                }
+                btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↓', '↑');
+            }
+            else {
+                foreach (Button b in pnlGauche.Controls.OfType<Button>())
+                {
+                    if (b.Name == "btnPostFixe"
+                        || b.Name == "btnPostePonctuel"
+                        || b.Name == "btnFrm_3")
+                        b.Left -= 220;
+                }
+                btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↑', '↓');
             }
         }
 
         /* Création des boutons du menu déroulant */
         private void PremierChargementDeApplication(object sender, EventArgs e)
         {
+                // Dérouler transaction
+
             Button b =
             new Button()
             {
@@ -140,9 +172,11 @@ namespace miniProjet2017
                 Size = new Size(160, 60),
                 Parent = pnlGauche,
                 FlatStyle = FlatStyle.Flat,
+                Font = btnDeroulerTransaction.Font,
                 Cursor = Cursors.Hand,
                 ForeColor = Color.White,
                 TabStop = false,
+                Tag = "derouler;0",
                 TabIndex = 1
             };
             b.FlatAppearance.BorderColor = Color.Black;
@@ -159,9 +193,11 @@ namespace miniProjet2017
                 Size = new Size(160, 60),
                 Parent = pnlGauche,
                 FlatStyle = FlatStyle.Flat,
+                Font = btnDeroulerTransaction.Font,
                 Cursor = Cursors.Hand,
                 ForeColor = Color.White,
                 TabStop = false,
+                Tag = "derouler;0",
                 TabIndex = 2
             };
             b.FlatAppearance.BorderColor = Color.Black;
@@ -178,14 +214,81 @@ namespace miniProjet2017
                 Size = new Size(160, 60),
                 Parent = pnlGauche,
                 FlatStyle = FlatStyle.Flat,
+                Font = btnDeroulerTransaction.Font,
                 Cursor = Cursors.Hand,
                 ForeColor = Color.White,
                 TabStop = false,
+                Tag = "derouler;0",
                 TabIndex = 3
             };
             b.FlatAppearance.BorderColor = Color.Black;
             b.FlatAppearance.BorderSize = 2;
             b.Click += new EventHandler(NouveauFrmSupprTransac);
+
+                // Dérouler budget
+
+            b =
+            new Button()
+            {
+                Name = "btnPostFixe",
+                Text = "frmPostFixe",
+                Top = 258,
+                Left = -160,
+                Size = new Size(160, 60),
+                Parent = pnlGauche,
+                FlatStyle = FlatStyle.Flat,
+                Font = btnDeroulerTransaction.Font,
+                Cursor = Cursors.Hand,
+                ForeColor = Color.White,
+                TabStop = false,
+                Tag = "derouler;3",
+                TabIndex = 2
+            };
+            b.FlatAppearance.BorderColor = Color.Black;
+            b.FlatAppearance.BorderSize = 2;
+            b.Click += new EventHandler(NouveauFrmPostFixe);
+
+            b =
+            new Button()
+            {
+                Name = "btnPostePonctuel",
+                Text = "frmPostePonctuel",
+                Top = 317,
+                Left = -160,
+                Size = new Size(160, 60),
+                Parent = pnlGauche,
+                FlatStyle = FlatStyle.Flat,
+                Font = btnDeroulerTransaction.Font,
+                Cursor = Cursors.Hand,
+                ForeColor = Color.White,
+                TabStop = false,
+                Tag = "derouler;3",
+                TabIndex = 2
+            };
+            b.FlatAppearance.BorderColor = Color.Black;
+            b.FlatAppearance.BorderSize = 2;
+            b.Click += new EventHandler(NouveauFrmPostePonctuel);
+
+            b =
+            new Button()
+            {
+                Name = "btnFrm_3",
+                Text = "frmFrm_3",
+                Top = 376,
+                Left = -160,
+                Size = new Size(160, 60),
+                Parent = pnlGauche,
+                FlatStyle = FlatStyle.Flat,
+                Font = btnDeroulerTransaction.Font,
+                Cursor = Cursors.Hand,
+                ForeColor = Color.White,
+                TabStop = false,
+                Tag = "derouler;3",
+                TabIndex = 2
+            };
+            b.FlatAppearance.BorderColor = Color.Black;
+            b.FlatAppearance.BorderSize = 2;
+            b.Click += new EventHandler(NouveauFrm3);
 
             // Pour focus le premier bouton
 
@@ -302,21 +405,6 @@ namespace miniProjet2017
         private void HoverOption(object sender, EventArgs e)
         {
             toolTip.Show("Affiche les options.", picOption, 20, 5);
-        }
-
-        private void HOLDHOVER_AND_BTN_BUDGET(object sender, EventArgs e)
-        {
-            new frmPostFixe().ShowDialog();
-        }
-
-        private void HOLDHOVER_AND_BTN_BUDGET_2(object sender, EventArgs e)
-        {
-            new frmPostePonctuel().ShowDialog();
-        }
-
-        private void HOLDHOVER_AND_BTN_BUDGET_3(object sender, EventArgs e)
-        {
-            new frm_3().ShowDialog();
         }
 
         private void _HoverOption(object sender, EventArgs e)

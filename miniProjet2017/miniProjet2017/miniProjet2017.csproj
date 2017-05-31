@@ -104,17 +104,17 @@
     <Compile Include="frmSupprTransac.Designer.cs">
       <DependentUpon>frmSupprTransac.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_1.cs">
+    <Compile Include="frmPostFixe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_1.Designer.cs">
-      <DependentUpon>frm_1.cs</DependentUpon>
+    <Compile Include="frmPostFixe.Designer.cs">
+      <DependentUpon>frmPostFixe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_2.cs">
+    <Compile Include="frmPostePonctuel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_2.Designer.cs">
-      <DependentUpon>frm_2.cs</DependentUpon>
+    <Compile Include="frmPostePonctuel.Designer.cs">
+      <DependentUpon>frmPostePonctuel.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_3.cs">
       <SubType>Form</SubType>
@@ -154,11 +154,11 @@
     <EmbeddedResource Include="frmSupprTransac.resx">
       <DependentUpon>frmSupprTransac.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_1.resx">
-      <DependentUpon>frm_1.cs</DependentUpon>
+    <EmbeddedResource Include="frmPostFixe.resx">
+      <DependentUpon>frmPostFixe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_2.resx">
-      <DependentUpon>frm_2.cs</DependentUpon>
+    <EmbeddedResource Include="frmPostePonctuel.resx">
+      <DependentUpon>frmPostePonctuel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_3.resx">
       <DependentUpon>frm_3.cs</DependentUpon>
