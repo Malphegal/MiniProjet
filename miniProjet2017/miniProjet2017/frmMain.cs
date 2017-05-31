@@ -306,12 +306,12 @@ namespace miniProjet2017
 
         private void HOLDHOVER_AND_BTN_BUDGET(object sender, EventArgs e)
         {
-            new frm_1().ShowDialog();
+            new frmPostFixe().ShowDialog();
         }
 
         private void HOLDHOVER_AND_BTN_BUDGET_2(object sender, EventArgs e)
         {
-            new frm_2().ShowDialog();
+            new frmPostePonctuel().ShowDialog();
         }
 
         private void HOLDHOVER_AND_BTN_BUDGET_3(object sender, EventArgs e)

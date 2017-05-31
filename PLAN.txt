@@ -1,40 +1,40 @@
 
-Izaya : Chef de l'Èquipe
-- MaÓtre du design
+Izaya : Chef de l'√©quipe
+- Ma√Ætre du design
 
-GaÎtan : 
-- Fonctions ÈvÈnementiels
-- dÈbut du SQL
+Ga√´tan : 
+- Fonctions √©v√©nementiels
+- d√©but du SQL
 
 Nicolas :
 - PDF
 - SMS
 
 Conventions de nommage :
-Commit : nomdufichierV(n∞version)
+Commit : nomdufichierV(n¬∞version)
 Variable : adversaireDuGladiateur
-Mettre des commentaires (au moins un par fonction) /*Au dessus de la fonction*/ et ‡ cotÈ des lignes compliquÈes
+Mettre des commentaires (au moins un par fonction) /*Au dessus de la fonction*/ et √† cot√© des lignes compliqu√©es
 // au dessus d'un bloc d'une fonction
 
 troubleshooting :
-	ï MessageBox.Show pour quitter le formulaire frmMain
-		-> Si on annule, le formulaire passe en arriËre plan
-			-> DONE (TODO: AmÈliorer le code ?)
+	‚Ä¢ MessageBox.Show pour quitter le formulaire frmMain
+		-> Si on annule, le formulaire passe en arri√®re plan
+			-> DONE (TODO: Am√©liorer le code ?)
 
-	ï On peut resize les formulaire avec WIN + UP
+	‚Ä¢ On peut resize les formulaire avec WIN + UP
 		-> Ajouter max/min de la taille des formulaires
 			-> DONE
 		-> Bloquer WIN + UP
 		
-	ï TabIndex pas cohÈrent
+	‚Ä¢ TabIndex pas coh√©rent
 		-> frmMain
 			-> DONE
 		-> les autres
 		
-	ï frmOption - valeurSMS : on ne peut pas mettre 100%
+	‚Ä¢ frmOption - valeurSMS : on ne peut pas mettre 100%
 
-	ï frmMain - rÈsolution autre que 1.0F : mauvaise position du menu dÈroulant
+	‚Ä¢ frmMain - r√©solution autre que 1.0F : mauvaise position du menu d√©roulant
 	
-	ï frmModiTransac - Crash avec le tuple
-
-	ï frmModiTransac - mettre a jour les valeur -> CHECK
+	‚Ä¢ frmModiTransac - Crash avec le tuple
+Budget pr√©visionnel :
+Double d√©roul√© sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + r√©capAnn√©e)
