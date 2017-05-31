@@ -33,6 +33,7 @@
             this.btnAffichage = new System.Windows.Forms.Button();
             this.btnRecap = new System.Windows.Forms.Button();
             this.pnlGauche = new System.Windows.Forms.Panel();
+            this.btnBudget = new System.Windows.Forms.Button();
             this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.btnDeroulerTransaction = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -41,6 +42,8 @@
             this.picQuitter = new System.Windows.Forms.PictureBox();
             this.picOption = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.btnBudget2 = new System.Windows.Forms.Button();
+            this.btnBudget3 = new System.Windows.Forms.Button();
             this.pnlGauche.SuspendLayout();
             this.pnlHaut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
@@ -64,6 +67,7 @@
             // pnlGauche
             // 
             this.pnlGauche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.pnlGauche.Controls.Add(this.btnBudget);
             this.pnlGauche.Controls.Add(this.btnAjouterPersonne);
             this.pnlGauche.Controls.Add(this.btnDeroulerTransaction);
             this.pnlGauche.Controls.Add(this.pnlLogo);
@@ -72,6 +76,18 @@
             this.pnlGauche.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
             this.pnlGauche.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
             this.pnlGauche.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
+            // 
+            // btnBudget
+            // 
+            this.btnBudget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnBudget.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBudget.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnBudget, "btnBudget");
+            this.btnBudget.ForeColor = System.Drawing.Color.White;
+            this.btnBudget.Name = "btnBudget";
+            this.btnBudget.Tag = "";
+            this.btnBudget.UseVisualStyleBackColor = false;
+            this.btnBudget.Click += new System.EventHandler(this.HOLDHOVER_AND_BTN_BUDGET);
             // 
             // btnAjouterPersonne
             // 
@@ -147,11 +163,37 @@
             this.picOption.MouseLeave += new System.EventHandler(this._HoverOption);
             this.picOption.MouseHover += new System.EventHandler(this.HoverOption);
             // 
+            // btnBudget2
+            // 
+            this.btnBudget2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnBudget2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBudget2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnBudget2, "btnBudget2");
+            this.btnBudget2.ForeColor = System.Drawing.Color.White;
+            this.btnBudget2.Name = "btnBudget2";
+            this.btnBudget2.Tag = "";
+            this.btnBudget2.UseVisualStyleBackColor = false;
+            this.btnBudget2.Click += new System.EventHandler(this.HOLDHOVER_AND_BTN_BUDGET_2);
+            // 
+            // btnBudget3
+            // 
+            this.btnBudget3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnBudget3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBudget3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnBudget3, "btnBudget3");
+            this.btnBudget3.ForeColor = System.Drawing.Color.White;
+            this.btnBudget3.Name = "btnBudget3";
+            this.btnBudget3.Tag = "";
+            this.btnBudget3.UseVisualStyleBackColor = false;
+            this.btnBudget3.Click += new System.EventHandler(this.HOLDHOVER_AND_BTN_BUDGET_3);
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.btnBudget3);
+            this.Controls.Add(this.btnBudget2);
             this.Controls.Add(this.pnlHaut);
             this.Controls.Add(this.pnlGauche);
             this.Controls.Add(this.btnRecap);
@@ -184,6 +226,9 @@
         private System.Windows.Forms.PictureBox picQuitter;
         private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Button btnBudget;
+        private System.Windows.Forms.Button btnBudget2;
+        private System.Windows.Forms.Button btnBudget3;
     }
 }
 

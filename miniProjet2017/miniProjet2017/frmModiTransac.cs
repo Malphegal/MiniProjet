@@ -41,13 +41,13 @@ namespace miniProjet2017
             con.Open();
             da = new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", con));
             da.Fill(ds, "_Transaction");
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM [Personne]", con));
+            da.Fill(ds, "_Personne");
 
                 // Affichage de la première transaction, si il y en a une
 
             if (ds.Tables["_Transaction"].Rows.Count > 0)
             {
-                ModifierLeTuple();
-                
                     // Activation des composants
 
                 foreach (Control c in Controls)
@@ -62,6 +62,8 @@ namespace miniProjet2017
                 foreach (DataRow row in ds.Tables["_Transaction"].Rows)
                     cboListeTransaction.Items.Add(row[2] + " " + row[1]);
                 cboListeTransaction.SelectedIndex = 0;
+
+                ModifierLeTuple();
             }
             else
                 MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
@@ -70,12 +72,6 @@ namespace miniProjet2017
         /* Relance toutes les modification pour remplir les composants */
         private void ModifierLeTuple()
         {
-                // Tuple pour savoir si quelque chose à changé ou non
-
-            Tuple<string, string, float, bool, bool, string> tuple = new Tuple<string, string, float, bool, bool, string>
-                (calTransac.SelectionStart.ToString(), txtDescTran.Text, float.Parse(txtMontant.Text),
-                chkRecette.Checked, chkPerçu.Checked, cboType.SelectedText);
-
                 // Remplissage des composants
 
             string[] date = ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][1].ToString().Split('/');
@@ -101,6 +97,23 @@ namespace miniProjet2017
                 if (Convert.ToInt32(row.Row[0]) == Convert.ToInt32(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][6]))
                     cboType.SelectedIndex = row.Index;
             }
+
+                // Recharger listeParticipant de la transaction courante
+
+            listeParticipant = new List<uint>(ds.Tables["_Personne"].Rows.Count);
+
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM Beneficiaires WHERE codeTransaction = 0", con));
+            da.Fill(ds, "_Beneficiaires");
+
+            foreach (DataRow row in ds.Tables["_Beneficiaires"].Rows)
+                listeParticipant.Add(Convert.ToUInt32(row[1]));
+            // TODO: il manque qqch ??
+
+            // Tuple pour savoir si quelque chose à changé ou non
+            MessageBox.Show(txtMontant.Text.ToString());
+            Tuple<string, string, float, bool, bool, string> tuple = new Tuple<string, string, float, bool, bool, string>
+                (calTransac.SelectionStart.ToString(), txtDescTran.Text, float.Parse(txtMontant.Text.Replace(',', '.')),
+                chkRecette.Checked, chkPerçu.Checked, cboType.SelectedText);
         }
 
         // TODO: Check comment ajouter l'heure dans la table Transaction, ajout du TRY CATCH, ajout dans d'autre table (Beneficiaire ?)
@@ -232,10 +245,20 @@ namespace miniProjet2017
             Close();
         }
 
+        // TODO: a faire
         /* Modifier une autre transaction */
         private void ChangerIndexCboListeTransaction(object sender, EventArgs e)
         {
 
+        }
+
+        /* Ouvre le frmChoixPersonne pour ajouter les gens à la transaction que l'on veut ajouter */
+        List<uint> listeParticipant;
+        private void btnChoixPersonne_Click(object sender, EventArgs e)
+        {
+            frmChoisirPersonne frm = new frmChoisirPersonne(listeParticipant);
+            if (DialogResult.OK == frm.ShowDialog())
+                lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s :" : " :") + (listeParticipant = frm.listeParticipant).Count.ToString();
         }
     }
 }

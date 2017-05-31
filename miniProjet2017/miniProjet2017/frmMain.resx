@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAffichage.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="btnRecap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -172,7 +172,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnRecap.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
+  </data>
+  <data name="btnBudget.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnBudget.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBudget.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 262</value>
+  </data>
+  <data name="btnBudget.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 60</value>
+  </data>
+  <data name="btnBudget.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnBudget.Text" xml:space="preserve">
+    <value>Les budget(OFF-2)</value>
+  </data>
+  <data name="&gt;&gt;btnBudget.Name" xml:space="preserve">
+    <value>btnBudget</value>
+  </data>
+  <data name="&gt;&gt;btnBudget.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBudget.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnBudget.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="btnAjouterPersonne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -202,7 +232,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnDeroulerTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -232,7 +262,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnDeroulerTransaction.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pnlLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -259,7 +289,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -283,13 +313,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblTitre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 32.25pt, style=Italic</value>
+    <value>Microsoft Sans Serif, 32.25pt, style=Italic</value>
   </data>
   <data name="lblTitre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -298,7 +328,7 @@
     <value>100, 12</value>
   </data>
   <data name="lblTitre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>490, 59</value>
+    <value>489, 51</value>
   </data>
   <data name="lblTitre.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -394,11 +424,71 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="btnBudget2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnBudget2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBudget2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 340</value>
+  </data>
+  <data name="btnBudget2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 60</value>
+  </data>
+  <data name="btnBudget2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnBudget2.Text" xml:space="preserve">
+    <value>Les budget(OFF-2)</value>
+  </data>
+  <data name="&gt;&gt;btnBudget2.Name" xml:space="preserve">
+    <value>btnBudget2</value>
+  </data>
+  <data name="&gt;&gt;btnBudget2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBudget2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnBudget2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnBudget3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnBudget3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBudget3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 424</value>
+  </data>
+  <data name="btnBudget3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 60</value>
+  </data>
+  <data name="btnBudget3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnBudget3.Text" xml:space="preserve">
+    <value>Les budget(OFF-2)</value>
+  </data>
+  <data name="&gt;&gt;btnBudget3.Name" xml:space="preserve">
+    <value>btnBudget3</value>
+  </data>
+  <data name="&gt;&gt;btnBudget3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBudget3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnBudget3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

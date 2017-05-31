@@ -60,6 +60,8 @@
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.cboListeTransaction = new System.Windows.Forms.ComboBox();
             this.lblListeTransaction = new System.Windows.Forms.Label();
+            this.lblChoixPersonne = new System.Windows.Forms.Label();
+            this.btnChoixPersonne = new System.Windows.Forms.Button();
             this.grb1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -367,11 +369,32 @@
             this.lblListeTransaction.TabIndex = 43;
             this.lblListeTransaction.Text = "Liste des transactions :";
             // 
+            // lblChoixPersonne
+            // 
+            this.lblChoixPersonne.AutoSize = true;
+            this.lblChoixPersonne.Location = new System.Drawing.Point(628, 230);
+            this.lblChoixPersonne.Name = "lblChoixPersonne";
+            this.lblChoixPersonne.Size = new System.Drawing.Size(71, 13);
+            this.lblChoixPersonne.TabIndex = 55;
+            this.lblChoixPersonne.Text = "participant : 0";
+            // 
+            // btnChoixPersonne
+            // 
+            this.btnChoixPersonne.Location = new System.Drawing.Point(611, 175);
+            this.btnChoixPersonne.Name = "btnChoixPersonne";
+            this.btnChoixPersonne.Size = new System.Drawing.Size(88, 39);
+            this.btnChoixPersonne.TabIndex = 54;
+            this.btnChoixPersonne.Text = "Choisir les participants...";
+            this.btnChoixPersonne.UseVisualStyleBackColor = true;
+            this.btnChoixPersonne.Click += new System.EventHandler(this.btnChoixPersonne_Click);
+            // 
             // frmModiTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 536);
+            this.Controls.Add(this.lblChoixPersonne);
+            this.Controls.Add(this.btnChoixPersonne);
             this.Controls.Add(this.lblListeTransaction);
             this.Controls.Add(this.cboListeTransaction);
             this.Controls.Add(this.lblAideType);
@@ -452,5 +475,7 @@
         private System.Windows.Forms.Label lblRecette;
         private System.Windows.Forms.Label lblListeTransaction;
         private System.Windows.Forms.ComboBox cboListeTransaction;
+        private System.Windows.Forms.Label lblChoixPersonne;
+        private System.Windows.Forms.Button btnChoixPersonne;
     }
 }

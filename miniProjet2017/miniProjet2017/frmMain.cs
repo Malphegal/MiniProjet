@@ -304,6 +304,21 @@ namespace miniProjet2017
             toolTip.Show("Affiche les options.", picOption, 20, 5);
         }
 
+        private void HOLDHOVER_AND_BTN_BUDGET(object sender, EventArgs e)
+        {
+            new frm_1().ShowDialog();
+        }
+
+        private void HOLDHOVER_AND_BTN_BUDGET_2(object sender, EventArgs e)
+        {
+            new frm_2().ShowDialog();
+        }
+
+        private void HOLDHOVER_AND_BTN_BUDGET_3(object sender, EventArgs e)
+        {
+            new frm_3().ShowDialog();
+        }
+
         private void _HoverOption(object sender, EventArgs e)
         {
             toolTip.Show("", picOption);
