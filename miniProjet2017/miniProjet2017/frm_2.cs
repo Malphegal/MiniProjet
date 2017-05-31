@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace miniProjet2017
 {
-    public partial class frm_2 : Form
+    public partial class frmPostePonctuel : Form
     {
-        public frm_2()
+        public frmPostePonctuel()
         {
             InitializeComponent();
         }
