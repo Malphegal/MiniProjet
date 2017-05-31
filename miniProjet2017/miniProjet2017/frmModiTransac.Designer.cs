@@ -40,18 +40,12 @@
             this.lblMontant = new System.Windows.Forms.Label();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.lblDescTransac = new System.Windows.Forms.Label();
-            this.txtDescTran = new System.Windows.Forms.TextBox();
             this.lblTransac = new System.Windows.Forms.Label();
             this.calTransac = new System.Windows.Forms.MonthCalendar();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pic1 = new System.Windows.Forms.PictureBox();
-            this.pic2 = new System.Windows.Forms.PictureBox();
-            this.pic3 = new System.Windows.Forms.PictureBox();
-            this.pic4 = new System.Windows.Forms.PictureBox();
-            this.pic5 = new System.Windows.Forms.PictureBox();
             this.lblAideDate = new System.Windows.Forms.Label();
             this.lblAideDescri = new System.Windows.Forms.Label();
             this.lblAideMontant = new System.Windows.Forms.Label();
@@ -62,14 +56,20 @@
             this.lblListeTransaction = new System.Windows.Forms.Label();
             this.lblChoixPersonne = new System.Windows.Forms.Label();
             this.btnChoixPersonne = new System.Windows.Forms.Button();
+            this.pic5 = new System.Windows.Forms.PictureBox();
+            this.pic4 = new System.Windows.Forms.PictureBox();
+            this.pic3 = new System.Windows.Forms.PictureBox();
+            this.pic2 = new System.Windows.Forms.PictureBox();
+            this.pic1 = new System.Windows.Forms.PictureBox();
+            this.txtDescTran = new System.Windows.Forms.TextBox();
             this.grb1.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnQuitter
@@ -188,15 +188,6 @@
             this.lblDescTransac.TabIndex = 22;
             this.lblDescTransac.Text = "Description de la transaction";
             // 
-            // txtDescTran
-            // 
-            this.txtDescTran.Enabled = false;
-            this.txtDescTran.Location = new System.Drawing.Point(197, 242);
-            this.txtDescTran.Name = "txtDescTran";
-            this.txtDescTran.Size = new System.Drawing.Size(100, 20);
-            this.txtDescTran.TabIndex = 21;
-            this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
-            // 
             // lblTransac
             // 
             this.lblTransac.AutoSize = true;
@@ -246,51 +237,6 @@
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.quitterToolStripMenuItem.Text = "Quitter...";
-            // 
-            // pic1
-            // 
-            this.pic1.Location = new System.Drawing.Point(436, 65);
-            this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(100, 50);
-            this.pic1.TabIndex = 32;
-            this.pic1.TabStop = false;
-            this.pic1.Tag = "Aide";
-            // 
-            // pic2
-            // 
-            this.pic2.Location = new System.Drawing.Point(304, 242);
-            this.pic2.Name = "pic2";
-            this.pic2.Size = new System.Drawing.Size(100, 20);
-            this.pic2.TabIndex = 33;
-            this.pic2.TabStop = false;
-            this.pic2.Tag = "Aide2";
-            // 
-            // pic3
-            // 
-            this.pic3.Location = new System.Drawing.Point(304, 297);
-            this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(100, 20);
-            this.pic3.TabIndex = 34;
-            this.pic3.TabStop = false;
-            this.pic3.Tag = "Aide2";
-            // 
-            // pic4
-            // 
-            this.pic4.Location = new System.Drawing.Point(304, 341);
-            this.pic4.Name = "pic4";
-            this.pic4.Size = new System.Drawing.Size(100, 21);
-            this.pic4.TabIndex = 35;
-            this.pic4.TabStop = false;
-            this.pic4.Tag = "Aide2";
-            // 
-            // pic5
-            // 
-            this.pic5.Location = new System.Drawing.Point(304, 389);
-            this.pic5.Name = "pic5";
-            this.pic5.Size = new System.Drawing.Size(100, 21);
-            this.pic5.TabIndex = 36;
-            this.pic5.TabStop = false;
-            this.pic5.Tag = "Aide2";
             // 
             // lblAideDate
             // 
@@ -386,7 +332,62 @@
             this.btnChoixPersonne.TabIndex = 54;
             this.btnChoixPersonne.Text = "Choisir les participants...";
             this.btnChoixPersonne.UseVisualStyleBackColor = true;
-            this.btnChoixPersonne.Click += new System.EventHandler(this.btnChoixPersonne_Click);
+            this.btnChoixPersonne.Click += new System.EventHandler(this.AjouterPersonneATransaction);
+            // 
+            // pic5
+            // 
+            this.pic5.Location = new System.Drawing.Point(304, 389);
+            this.pic5.Name = "pic5";
+            this.pic5.Size = new System.Drawing.Size(100, 21);
+            this.pic5.TabIndex = 36;
+            this.pic5.TabStop = false;
+            this.pic5.Tag = "Aide2";
+            // 
+            // pic4
+            // 
+            this.pic4.Location = new System.Drawing.Point(304, 341);
+            this.pic4.Name = "pic4";
+            this.pic4.Size = new System.Drawing.Size(100, 21);
+            this.pic4.TabIndex = 35;
+            this.pic4.TabStop = false;
+            this.pic4.Tag = "Aide2";
+            // 
+            // pic3
+            // 
+            this.pic3.Location = new System.Drawing.Point(304, 297);
+            this.pic3.Name = "pic3";
+            this.pic3.Size = new System.Drawing.Size(100, 20);
+            this.pic3.TabIndex = 34;
+            this.pic3.TabStop = false;
+            this.pic3.Tag = "Aide2";
+            // 
+            // pic2
+            // 
+            this.pic2.Location = new System.Drawing.Point(304, 242);
+            this.pic2.Name = "pic2";
+            this.pic2.Size = new System.Drawing.Size(100, 20);
+            this.pic2.TabIndex = 33;
+            this.pic2.TabStop = false;
+            this.pic2.Tag = "Aide2";
+            // 
+            // pic1
+            // 
+            this.pic1.Location = new System.Drawing.Point(436, 65);
+            this.pic1.Name = "pic1";
+            this.pic1.Size = new System.Drawing.Size(100, 50);
+            this.pic1.TabIndex = 32;
+            this.pic1.TabStop = false;
+            this.pic1.Tag = "Aide";
+            // 
+            // txtDescTran
+            // 
+            this.txtDescTran.Enabled = false;
+            this.txtDescTran.Location = new System.Drawing.Point(197, 230);
+            this.txtDescTran.Multiline = true;
+            this.txtDescTran.Name = "txtDescTran";
+            this.txtDescTran.Size = new System.Drawing.Size(100, 61);
+            this.txtDescTran.TabIndex = 21;
+            this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
             // 
             // frmModiTransac
             // 
@@ -431,12 +432,12 @@
             this.grb1.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,7 +455,6 @@
         private System.Windows.Forms.Label lblMontant;
         private System.Windows.Forms.TextBox txtMontant;
         private System.Windows.Forms.Label lblDescTransac;
-        private System.Windows.Forms.TextBox txtDescTran;
         private System.Windows.Forms.Label lblTransac;
         private System.Windows.Forms.MonthCalendar calTransac;
         private System.Windows.Forms.MenuStrip menuStrip;
@@ -477,5 +477,6 @@
         private System.Windows.Forms.ComboBox cboListeTransaction;
         private System.Windows.Forms.Label lblChoixPersonne;
         private System.Windows.Forms.Button btnChoixPersonne;
+        private System.Windows.Forms.TextBox txtDescTran;
     }
 }

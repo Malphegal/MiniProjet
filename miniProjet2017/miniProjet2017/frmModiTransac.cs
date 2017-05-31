@@ -15,6 +15,7 @@ namespace miniProjet2017
 {
     public partial class frmModiTransac : Form
     {
+        Tuple<string, string, float, bool, bool, string, List<uint>, Tuple<string>> tuple;
         public frmModiTransac()
         {
             InitializeComponent();
@@ -58,15 +59,15 @@ namespace miniProjet2017
                         c.Enabled = true;
 
                     // Remplissage de la CBO
-
+                    
                 foreach (DataRow row in ds.Tables["_Transaction"].Rows)
                     cboListeTransaction.Items.Add(row[2] + " " + row[1]);
-                cboListeTransaction.SelectedIndex = 0;
-
-                ModifierLeTuple();
+                cboListeTransaction.SelectedIndex = 0; // modifierLeTuple se lance implicitement
             }
-            else
+            else {
                 MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
+                Close();
+            }
         }
 
         /* Relance toutes les modification pour remplir les composants */
@@ -83,7 +84,7 @@ namespace miniProjet2017
             if (Convert.ToBoolean(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][4]))
             {
                 chkRecette.Checked = true;
-//CliquerSurChkRecette(chkRecette, e);
+                CliquerSurChkRecette(chkRecette, new EventArgs());
             }
             else
                 chkPerçu.Checked = Convert.ToBoolean(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][5]);
@@ -102,36 +103,40 @@ namespace miniProjet2017
 
             listeParticipant = new List<uint>(ds.Tables["_Personne"].Rows.Count);
 
-            da = new OleDbDataAdapter(new CMD("SELECT * FROM Beneficiaires WHERE codeTransaction = 0", con));
+            if (ds.Tables.Contains("_Beneficiaires"))
+                ds.Tables["_Beneficiaires"].Clear();
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM Beneficiaires WHERE codeTransaction = " + (cboListeTransaction.SelectedIndex + 1), con));
             da.Fill(ds, "_Beneficiaires");
-
+            
             foreach (DataRow row in ds.Tables["_Beneficiaires"].Rows)
                 listeParticipant.Add(Convert.ToUInt32(row[1]));
-            // TODO: il manque qqch ??
 
-            // Tuple pour savoir si quelque chose à changé ou non
-            MessageBox.Show(txtMontant.Text.ToString());
-            Tuple<string, string, float, bool, bool, string> tuple = new Tuple<string, string, float, bool, bool, string>
-                (calTransac.SelectionStart.ToString(), txtDescTran.Text, float.Parse(txtMontant.Text.Replace(',', '.')),
-                chkRecette.Checked, chkPerçu.Checked, cboType.SelectedText);
+                // Tuple pour savoir si quelque chose à changé ou non
+                
+            tuple = new Tuple<string, string, float, bool, bool, string, List<uint>, Tuple<string>>
+                (calTransac.SelectionStart.ToString(), txtDescTran.Text, float.Parse(txtMontant.Text),
+                chkRecette.Checked, chkPerçu.Checked, cboType.SelectedItem.ToString(), new List<uint>(listeParticipant),
+                Tuple.Create(calTransac.SelectionStart.ToString()));
+
+            lblChoixPersonne.Text = "participant" + (listeParticipant.Count > 1 ? "s : " : " : ") + (listeParticipant.Count);
         }
 
         // TODO: Check comment ajouter l'heure dans la table Transaction, ajout du TRY CATCH, ajout dans d'autre table (Beneficiaire ?)
-        // TODO: valeur qui ont changé, changé de couleur ?
+        // TODO: valeur qui ont changé : METTRE A JOUR -> CHECK
         /* Bouton valider, vérification des valeurs avant la modification */
         private void ModifierLaTransaction(object sender, EventArgs e)
         {
-            // Sera 'false' si au moins une erreur se produit
+                // Sera 'false' si au moins une erreur se produit
 
             bool toutEstOk = true;
 
-            // Position des erreurs
+                // Position des erreurs
 
             errorProvider.SetIconPadding(cboType, 11);
             errorProvider.SetIconPadding(txtDescTran, 11);
             errorProvider.SetIconPadding(txtMontant, 11);
 
-            // Les vérifications au cas par cas
+                // Les vérifications au cas par cas
 
             if (cboType.SelectedIndex == -1)
             {
@@ -154,21 +159,34 @@ namespace miniProjet2017
             }
             else errorProvider.SetError(txtDescTran, "");
 
-            // Si aucune erreur est présente, on peut modifier la transaction
+                // Si aucune erreur est présente, on peut modifier la transaction
 
             if (toutEstOk)
             {
                     // Récapitulatif avant de valider la modification
                 if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
                     txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
-                short nbPersonne = 0;
-                foreach (CheckBox chk in Controls.OfType<CheckBox>())
-                    if (chk.Checked)
-                        nbPersonne++;
-                if (DialogResult.OK == MessageBox.Show("Modification de la transaction :\n\n • " + txtDescTran.Text
-                    + "\n\n • " + frmAjoutTransac.FormatDuMontant(txtMontant.Text)
-                    + " €\n\n • Type : " + cboType.SelectedItem
-                    + "\n\n • Elle conserne " + nbPersonne + " personne" + (nbPersonne > 1 ? "s." : ".")
+                bool memeListeQueAvant = true;
+                if (listeParticipant.Count != tuple.Item7.Count)
+                    memeListeQueAvant = false;
+                else
+                    for (int i = 0; i < tuple.Item7.Count; i++)
+                        if (listeParticipant[i] != tuple.Item7[i])
+                        {
+                            memeListeQueAvant = false;
+                            break;
+                        }
+                if (DialogResult.OK == MessageBox.Show("Modification de la transaction :"
+                    + "\n" + (calTransac.SelectionStart.ToString() != tuple.Rest.Item1 ? "\n  - A changé : " + tuple.Rest.Item1 : "")
+                    + "\n • " + calTransac.SelectionStart.ToString()
+                    + "\n" + (txtDescTran.Text != tuple.Item2 ? "\n  - A changé : " + tuple.Item2 : "")
+                    + "\n • " + txtDescTran.Text
+                    + "\n" + (float.Parse(txtMontant.Text) != tuple.Item3 ? "\n - A changé : " + tuple.Item3 : "")
+                    + "\n • " + frmAjoutTransac.FormatDuMontant(txtMontant.Text)
+                    + " €\n" + (cboType.SelectedItem.ToString() != tuple.Item6 ? "\n - A changé : " + tuple.Item6 : "")
+                    + "\n • Type : " + cboType.SelectedItem
+                    + "\n" + (!memeListeQueAvant ? "\n - A changé - " : "")
+                    + "\n • Elle concerne " + listeParticipant.Count + " personne" + (listeParticipant.Count > 1 ? "s." : ".")
                     + "\n\n     Voulez-vous valider cette modification ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
                 {
                     CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
@@ -184,9 +202,13 @@ namespace miniProjet2017
                                                             + "recetteON = " +(chkRecette.Checked ? "True" : "False") + ", "
                                                             + "percuON = " + (chkPerçu.Checked ? "True" : "False") + ", "
                                                             + "type = " + (cboType.SelectedIndex + 1)
-                                                            + " WHERE codeTransaction = ", con).ExecuteNonQuery();
+                                                            + " WHERE codeTransaction = " + (cboListeTransaction.SelectedIndex + 1), con).ExecuteNonQuery();
                     MessageBox.Show("Transaction modifiée !");
                     con.Close();
+
+                        // Refresh le tuple
+
+                    ModifierLeTuple();
                 }
                 else
                     MessageBox.Show("Aucune modification n'a été effectuée !");
@@ -249,16 +271,16 @@ namespace miniProjet2017
         /* Modifier une autre transaction */
         private void ChangerIndexCboListeTransaction(object sender, EventArgs e)
         {
-
+            ModifierLeTuple();            
         }
 
         /* Ouvre le frmChoixPersonne pour ajouter les gens à la transaction que l'on veut ajouter */
         List<uint> listeParticipant;
-        private void btnChoixPersonne_Click(object sender, EventArgs e)
+        private void AjouterPersonneATransaction(object sender, EventArgs e)
         {
             frmChoisirPersonne frm = new frmChoisirPersonne(listeParticipant);
             if (DialogResult.OK == frm.ShowDialog())
-                lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s :" : " :") + (listeParticipant = frm.listeParticipant).Count.ToString();
+                lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s : " : " : ") + (listeParticipant = frm.listeParticipant).Count.ToString();
         }
     }
 }

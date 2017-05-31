@@ -36,3 +36,5 @@ troubleshooting :
 	• frmMain - résolution autre que 1.0F : mauvaise position du menu déroulant
 	
 	• frmModiTransac - Crash avec le tuple
+
+	• frmModiTransac - mettre a jour les valeur -> CHECK
