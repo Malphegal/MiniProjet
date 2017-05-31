@@ -12,11 +12,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace miniProjet2017
 {
     public partial class frmMain : Form
     {
+        static System.Drawing.Text.PrivateFontCollection fonts = new System.Drawing.Text.PrivateFontCollection();
+
         public frmMain()
         {
             InitializeComponent();
@@ -157,9 +158,16 @@ namespace miniProjet2017
             }
         }
 
+        // TODO: Dérouler proprement et joliment
         /* Création des boutons du menu déroulant */
         private void PremierChargementDeApplication(object sender, EventArgs e)
         {
+                // Font
+
+            fonts.AddFontFile("..\\..\\..\\..\\Font\\Café Françoise.otf");
+
+            lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
+
                 // Dérouler transaction
 
             Button b =
