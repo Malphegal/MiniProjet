@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjoutTransac));
             this.lblTransac = new System.Windows.Forms.Label();
             this.lblDescTransac = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnQuitter = new System.Windows.Forms.Button();
             this.txtDescTran = new System.Windows.Forms.RichTextBox();
             this.lblEuro = new System.Windows.Forms.Label();
             this.lblAideType = new System.Windows.Forms.Label();
@@ -61,6 +61,8 @@
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.btnChoixPersonne = new System.Windows.Forms.Button();
             this.lblChoixPersonne = new System.Windows.Forms.Label();
+            this.picQuitter = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -69,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTransac
@@ -221,16 +225,6 @@
             this.quitterToolStripMenuItem.Text = "Quitter...";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterAjoutTransac);
             // 
-            // btnQuitter
-            // 
-            this.btnQuitter.Location = new System.Drawing.Point(629, 460);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(111, 36);
-            this.btnQuitter.TabIndex = 14;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.QuitterAjoutTransac);
-            // 
             // txtDescTran
             // 
             this.txtDescTran.Location = new System.Drawing.Point(162, 210);
@@ -368,11 +362,33 @@
             this.lblChoixPersonne.TabIndex = 53;
             this.lblChoixPersonne.Text = "participant : 0";
             // 
+            // picQuitter
+            // 
+            this.picQuitter.Image = ((System.Drawing.Image)(resources.GetObject("picQuitter.Image")));
+            this.picQuitter.Location = new System.Drawing.Point(706, 39);
+            this.picQuitter.Name = "picQuitter";
+            this.picQuitter.Size = new System.Drawing.Size(50, 50);
+            this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picQuitter.TabIndex = 54;
+            this.picQuitter.TabStop = false;
+            this.picQuitter.Click += new System.EventHandler(this.QuitterAjoutTransac);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(768, 547);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmAjoutTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 547);
+            this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.lblChoixPersonne);
             this.Controls.Add(this.btnChoixPersonne);
             this.Controls.Add(this.lblAideType);
@@ -387,7 +403,6 @@
             this.Controls.Add(this.pic1);
             this.Controls.Add(this.lblEuro);
             this.Controls.Add(this.txtDescTran);
-            this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.grb1);
             this.Controls.Add(this.txtMontant);
@@ -398,6 +413,7 @@
             this.Controls.Add(this.lblDescTransac);
             this.Controls.Add(this.lblTransac);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(768, 547);
@@ -416,6 +432,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,7 +457,6 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.RichTextBox txtDescTran;
         private System.Windows.Forms.Label lblEuro;
         private System.Windows.Forms.Label lblAideType;
@@ -455,5 +472,7 @@
         private System.Windows.Forms.Label lblRecette;
         private System.Windows.Forms.Button btnChoixPersonne;
         private System.Windows.Forms.Label lblChoixPersonne;
+        private System.Windows.Forms.PictureBox picQuitter;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

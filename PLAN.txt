@@ -32,9 +32,14 @@ troubleshooting :
 		-> les autres
 		
 	• frmOption - valeurSMS : on ne peut pas mettre 100%
-
+	
 	• frmMain - résolution autre que 1.0F : mauvaise position du menu déroulant
 	
 	• frmModiTransac - Crash avec le tuple
+		-> DONE
+		
+	• ALL - vérif' les scales dans chaque formulaire appelé
+	
+	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)
