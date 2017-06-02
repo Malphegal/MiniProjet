@@ -135,9 +135,9 @@
             this.chkRecette.AutoSize = true;
             this.chkRecette.Location = new System.Drawing.Point(77, 12);
             this.chkRecette.Name = "chkRecette";
-            this.chkRecette.Size = new System.Drawing.Size(64, 17);
+            this.chkRecette.Size = new System.Drawing.Size(73, 17);
             this.chkRecette.TabIndex = 4;
-            this.chkRecette.Text = "Recette";
+            this.chkRecette.Text = "• Recette";
             this.chkRecette.UseVisualStyleBackColor = true;
             this.chkRecette.CheckedChanged += new System.EventHandler(this.CliquerSurChkRecette);
             // 
@@ -166,7 +166,7 @@
             // 
             this.lblRecette.AutoSize = true;
             this.lblRecette.ForeColor = System.Drawing.Color.Gray;
-            this.lblRecette.Location = new System.Drawing.Point(19, 13);
+            this.lblRecette.Location = new System.Drawing.Point(12, 13);
             this.lblRecette.Name = "lblRecette";
             this.lblRecette.Size = new System.Drawing.Size(50, 13);
             this.lblRecette.TabIndex = 6;
@@ -372,7 +372,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 508);
+            this.ClientSize = new System.Drawing.Size(768, 547);
             this.Controls.Add(this.lblChoixPersonne);
             this.Controls.Add(this.btnChoixPersonne);
             this.Controls.Add(this.lblAideType);

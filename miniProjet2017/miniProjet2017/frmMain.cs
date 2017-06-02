@@ -115,7 +115,10 @@ namespace miniProjet2017
                     if (b.Name == "btnAjouterTransaction"
                         || b.Name == "btnModifierTransaction"
                         || b.Name == "btnSupprimerTransaction")
+                    {
                         b.Left += 220;
+                        b.TabStop = true;
+                    }
                 }
                 btnDeroulerTransaction.Text = btnDeroulerTransaction.Text.Replace('↓', '↑');
             }
@@ -126,7 +129,10 @@ namespace miniProjet2017
                     if (b.Name == "btnAjouterTransaction"
                         || b.Name == "btnModifierTransaction"
                         || b.Name == "btnSupprimerTransaction")
+                    {
                         b.Left -= 220;
+                        b.TabStop = false;
+                    }
                 }
                 btnDeroulerTransaction.Text = btnDeroulerTransaction.Text.Replace('↑', '↓');
             }
@@ -142,7 +148,10 @@ namespace miniProjet2017
                     if (b.Name == "btnPostFixe"
                         || b.Name == "btnPostePonctuel"
                         || b.Name == "btnFrm_3")
+                    {
                         b.Left += 220;
+                        b.TabStop = true;
+                    }
                 }
                 btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↓', '↑');
             }
@@ -152,7 +161,10 @@ namespace miniProjet2017
                     if (b.Name == "btnPostFixe"
                         || b.Name == "btnPostePonctuel"
                         || b.Name == "btnFrm_3")
+                    {
                         b.Left -= 220;
+                        b.TabStop = false;
+                    }
                 }
                 btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↑', '↓');
             }
@@ -250,7 +262,7 @@ namespace miniProjet2017
                 ForeColor = Color.White,
                 TabStop = false,
                 Tag = "derouler;3",
-                TabIndex = 2
+                TabIndex = 6
             };
             b.FlatAppearance.BorderColor = Color.Black;
             b.FlatAppearance.BorderSize = 2;
@@ -271,7 +283,7 @@ namespace miniProjet2017
                 ForeColor = Color.White,
                 TabStop = false,
                 Tag = "derouler;3",
-                TabIndex = 2
+                TabIndex = 7
             };
             b.FlatAppearance.BorderColor = Color.Black;
             b.FlatAppearance.BorderSize = 2;
@@ -292,7 +304,7 @@ namespace miniProjet2017
                 ForeColor = Color.White,
                 TabStop = false,
                 Tag = "derouler;3",
-                TabIndex = 2
+                TabIndex = 8
             };
             b.FlatAppearance.BorderColor = Color.Black;
             b.FlatAppearance.BorderSize = 2;

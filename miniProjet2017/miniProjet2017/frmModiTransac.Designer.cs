@@ -111,7 +111,7 @@
             this.lblRecette.AutoSize = true;
             this.lblRecette.Enabled = false;
             this.lblRecette.ForeColor = System.Drawing.Color.Gray;
-            this.lblRecette.Location = new System.Drawing.Point(24, 13);
+            this.lblRecette.Location = new System.Drawing.Point(17, 13);
             this.lblRecette.Name = "lblRecette";
             this.lblRecette.Size = new System.Drawing.Size(50, 13);
             this.lblRecette.TabIndex = 10;
@@ -134,9 +134,9 @@
             this.chkRecette.Enabled = false;
             this.chkRecette.Location = new System.Drawing.Point(80, 12);
             this.chkRecette.Name = "chkRecette";
-            this.chkRecette.Size = new System.Drawing.Size(64, 17);
+            this.chkRecette.Size = new System.Drawing.Size(73, 17);
             this.chkRecette.TabIndex = 8;
-            this.chkRecette.Text = "Recette";
+            this.chkRecette.Text = "• Recette";
             this.chkRecette.UseVisualStyleBackColor = true;
             this.chkRecette.Click += new System.EventHandler(this.CliquerSurChkRecette);
             // 

@@ -173,12 +173,16 @@ namespace miniProjet2017
             if (_sender.Checked) {
                 _sender.ForeColor = Color.Gray;
                 lblRecette.ForeColor = Color.Black;
-                chkPerçu.Checked = true;
+                lblRecette.Text = "Dépense •";
+                _sender.Text = "  Recette";
+                chkPerçu.Checked = false;
                 chkPerçu.Enabled = false;
             }
             else {
                 _sender.ForeColor = Color.Black;
                 lblRecette.ForeColor = Color.Gray;
+                lblRecette.Text = "Dépense";
+                _sender.Text = "• Recette";
                 chkPerçu.Checked = false;
                 chkPerçu.Enabled = true;
             }

@@ -250,7 +250,7 @@ namespace miniProjet2017
             {
                 _sender.ForeColor = Color.Gray;
                 lblRecette.ForeColor = Color.Black;
-                chkPerçu.Checked = true;
+                chkPerçu.Checked = false;
                 chkPerçu.Enabled = false;
             }
             else {
@@ -267,7 +267,6 @@ namespace miniProjet2017
             Close();
         }
 
-        // TODO: a faire
         /* Modifier une autre transaction */
         private void ChangerIndexCboListeTransaction(object sender, EventArgs e)
         {
