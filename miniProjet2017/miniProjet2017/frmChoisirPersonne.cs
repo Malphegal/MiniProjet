@@ -29,7 +29,7 @@ namespace miniProjet2017
         {
                 // Remplissage de la table locale _Personne
 
-            CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+            CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
             con.Open();
             DataSet ds = new DataSet();
             new OleDbDataAdapter("SELECT * FROM Personne", con).Fill(ds, "_Personne");

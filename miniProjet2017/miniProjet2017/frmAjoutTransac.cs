@@ -15,6 +15,8 @@ namespace miniProjet2017
 {
     public partial class frmAjoutTransac : Form
     {
+        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
+
         // TODO: s'il n'y a pas de typeTransaction, on ne peut pas ajouter !
         public frmAjoutTransac()
         {
@@ -29,8 +31,7 @@ namespace miniProjet2017
         private void DemarrageDeAjoutTransac()
         {
                 // Initialisation des variables de connection
-
-            CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+            
             CMD cmd;
             OleDbDataAdapter da;
             DataSet ds = new DataSet();
@@ -49,20 +50,6 @@ namespace miniProjet2017
                 // Initialisaton de la liste des participants
 
             listeParticipant = new List<uint>(ds.Tables["_Personne"].Rows.Count);
-
-                // Ajout des CheckBox pour chaque personne se trouvant dans la base de donnée
-
-            /*
-            short top = 0;
-            foreach (DataRow row in ds.Tables["_Personne"].Rows)
-                new CheckBox()
-                {
-                    Parent = this,
-                    Text = "[" + row[0] + "] " + row[1] + " " + row[2],
-                    Location = new Point(480, top += 40),
-                    AutoSize = true
-                };
-            */
 
                 // Remplissage de la combobox pour les types de transaction
 
@@ -83,6 +70,7 @@ namespace miniProjet2017
             errorProvider.SetIconPadding(cboType, 11);
             errorProvider.SetIconPadding(txtDescTran, 11);
             errorProvider.SetIconPadding(txtMontant, 11);
+            errorProvider.SetIconPadding(btnChoixPersonne, 11);
 
                 // Les vérifications au cas par cas
 
@@ -107,9 +95,17 @@ namespace miniProjet2017
             }
             else errorProvider.SetError(txtDescTran, "");
 
-                // Si aucune erreur est présente, on peut ajouter la transaction
+            if (listeParticipant.Count == 0)
+            {
+                errorProvider.SetError(btnChoixPersonne, "Il faut au moins une personne en relation avec cette transaction !");
+                toutEstOk = false;
+            }
+            else errorProvider.SetError(btnChoixPersonne, "");
 
-            if (toutEstOk) {
+            // Si aucune erreur est présente, on peut ajouter la transaction
+
+            if (toutEstOk)
+            {
                 if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
                     txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
                 if (DialogResult.OK == MessageBox.Show("Ajout de la transaction :\n\n • " + txtDescTran.Text
@@ -206,9 +202,10 @@ namespace miniProjet2017
         /* Saisie de la description, ne doit pas dépasser 30 caractères */
         private void SaisieDescription(object sender, KeyPressEventArgs e)
         {
-            if (txtDescTran.Text.Length == 30)
+            if (txtDescTran.Text.Length == 30 && (e.KeyChar != 8 && txtDescTran.SelectedText.Length == 0))
             {
                 e.Handled = true;
+                errorProvider.SetIconPadding(txtDescTran, 11);
                 errorProvider.SetError(txtDescTran, "La description ne doit pas dépasser 30 caractères !");
             }
             else

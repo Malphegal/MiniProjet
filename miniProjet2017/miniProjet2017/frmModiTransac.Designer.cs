@@ -144,7 +144,7 @@
             // 
             this.cboType.Enabled = false;
             this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(174, 389);
+            this.cboType.Location = new System.Drawing.Point(132, 389);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(121, 21);
             this.cboType.TabIndex = 26;
@@ -172,7 +172,7 @@
             // txtMontant
             // 
             this.txtMontant.Enabled = false;
-            this.txtMontant.Location = new System.Drawing.Point(197, 297);
+            this.txtMontant.Location = new System.Drawing.Point(185, 297);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
             this.txtMontant.TabIndex = 23;
@@ -252,7 +252,7 @@
             // lblAideDescri
             // 
             this.lblAideDescri.AutoSize = true;
-            this.lblAideDescri.Location = new System.Drawing.Point(410, 245);
+            this.lblAideDescri.Location = new System.Drawing.Point(470, 245);
             this.lblAideDescri.Name = "lblAideDescri";
             this.lblAideDescri.Size = new System.Drawing.Size(35, 13);
             this.lblAideDescri.TabIndex = 38;
@@ -263,7 +263,7 @@
             // lblAideMontant
             // 
             this.lblAideMontant.AutoSize = true;
-            this.lblAideMontant.Location = new System.Drawing.Point(410, 300);
+            this.lblAideMontant.Location = new System.Drawing.Point(423, 300);
             this.lblAideMontant.Name = "lblAideMontant";
             this.lblAideMontant.Size = new System.Drawing.Size(35, 13);
             this.lblAideMontant.TabIndex = 39;
@@ -274,7 +274,7 @@
             // lblAideRecette
             // 
             this.lblAideRecette.AutoSize = true;
-            this.lblAideRecette.Location = new System.Drawing.Point(410, 345);
+            this.lblAideRecette.Location = new System.Drawing.Point(423, 351);
             this.lblAideRecette.Name = "lblAideRecette";
             this.lblAideRecette.Size = new System.Drawing.Size(35, 13);
             this.lblAideRecette.TabIndex = 40;
@@ -345,7 +345,7 @@
             // 
             // pic4
             // 
-            this.pic4.Location = new System.Drawing.Point(304, 341);
+            this.pic4.Location = new System.Drawing.Point(317, 347);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(100, 21);
             this.pic4.TabIndex = 35;
@@ -354,7 +354,7 @@
             // 
             // pic3
             // 
-            this.pic3.Location = new System.Drawing.Point(304, 297);
+            this.pic3.Location = new System.Drawing.Point(317, 297);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(100, 20);
             this.pic3.TabIndex = 34;
@@ -363,7 +363,7 @@
             // 
             // pic2
             // 
-            this.pic2.Location = new System.Drawing.Point(304, 242);
+            this.pic2.Location = new System.Drawing.Point(364, 242);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(100, 20);
             this.pic2.TabIndex = 33;
@@ -382,10 +382,9 @@
             // txtDescTran
             // 
             this.txtDescTran.Enabled = false;
-            this.txtDescTran.Location = new System.Drawing.Point(197, 230);
-            this.txtDescTran.Multiline = true;
+            this.txtDescTran.Location = new System.Drawing.Point(185, 242);
             this.txtDescTran.Name = "txtDescTran";
-            this.txtDescTran.Size = new System.Drawing.Size(100, 61);
+            this.txtDescTran.Size = new System.Drawing.Size(145, 20);
             this.txtDescTran.TabIndex = 21;
             this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
             // 

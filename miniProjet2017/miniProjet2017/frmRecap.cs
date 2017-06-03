@@ -15,7 +15,7 @@ namespace miniProjet2017
 {
     public partial class frmRecap : Form
     {
-        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
         BindingSource bs = new BindingSource();
         DataSet ds = new DataSet();
 

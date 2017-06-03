@@ -30,27 +30,47 @@ namespace miniProjet2017
 
         private void NouveauFrmAjoutTransac(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmAjoutTransac().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         private void NouveauFrmAffichage(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmAffichage().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         private void NouveauFrmModiTransac(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmModiTransac().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         private void NouveauFrmRecap(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmRecap().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         private void NouveauFrmSupprTransac(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmSupprTransac().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         private void NouveauFrmOption(object sender, EventArgs e)
@@ -75,17 +95,29 @@ namespace miniProjet2017
 
         private void NouveauFrmPostFixe(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmPostFixe().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         private void NouveauFrmPostePonctuel(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frmPostePonctuel().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         private void NouveauFrm3(object sender, EventArgs e)
         {
+            foreach (Control c in Controls)
+                c.Enabled = false;
             new frm_3().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
         }
 
         /* Ferme l'application */
@@ -310,7 +342,7 @@ namespace miniProjet2017
             b.FlatAppearance.BorderSize = 2;
             b.Click += new EventHandler(NouveauFrm3);
 
-            // Pour focus le premier bouton
+                // Pour focus le premier bouton
 
             ActiveControl = btnDeroulerTransaction;
         }
@@ -318,17 +350,17 @@ namespace miniProjet2017
         /* Initialise les valeurs par défaut du formulaire des options */
         void InitValeurOption()
         {
-            // Fichier de stockage
+                // Fichier de stockage
 
             string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
 
-            // [1] == BDD
+                // [1] == BDD
 
             frmOption.pourcentageSMS = Convert.ToByte(fichier[3]);
 
             frmOption.valeurResolution = Convert.ToByte(fichier[5]);
 
-            // Mise à jour de la résolution
+                // Mise à jour de la résolution
 
             resolutionScale = (0.6F + 0.2F * frmOption.valeurResolution);
             privateResolutionScale = resolutionScale;
@@ -337,7 +369,7 @@ namespace miniProjet2017
         }
         public static float resolutionScale;
         static float privateResolutionScale;
-        // TODO: changer les valeurs
+        // TODO: changer les valeurs ??
         public static void RedimensionnerLesControls(Control parent, float coeff)
         {
             foreach (Control c in parent.Controls)
@@ -432,7 +464,6 @@ namespace miniProjet2017
             toolTip.Show("", picOption);
         }
     }
-
 
     /*class PDF_TEST
     {

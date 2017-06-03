@@ -43,11 +43,6 @@
             this.lblRecette = new System.Windows.Forms.Label();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtDescTran = new System.Windows.Forms.RichTextBox();
             this.lblEuro = new System.Windows.Forms.Label();
             this.lblAideType = new System.Windows.Forms.Label();
             this.lblAideRecette = new System.Windows.Forms.Label();
@@ -62,23 +57,24 @@
             this.btnChoixPersonne = new System.Windows.Forms.Button();
             this.lblChoixPersonne = new System.Windows.Forms.Label();
             this.picQuitter = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBordure = new System.Windows.Forms.PictureBox();
+            this.txtDescTran = new System.Windows.Forms.TextBox();
+            this.btnAide = new System.Windows.Forms.Button();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTransac
             // 
             this.lblTransac.AutoSize = true;
-            this.lblTransac.Location = new System.Drawing.Point(12, 50);
+            this.lblTransac.Location = new System.Drawing.Point(36, 71);
             this.lblTransac.Name = "lblTransac";
             this.lblTransac.Size = new System.Drawing.Size(111, 13);
             this.lblTransac.TabIndex = 0;
@@ -87,7 +83,7 @@
             // lblDescTransac
             // 
             this.lblDescTransac.AutoSize = true;
-            this.lblDescTransac.Location = new System.Drawing.Point(12, 246);
+            this.lblDescTransac.Location = new System.Drawing.Point(36, 267);
             this.lblDescTransac.Name = "lblDescTransac";
             this.lblDescTransac.Size = new System.Drawing.Size(141, 13);
             this.lblDescTransac.TabIndex = 1;
@@ -96,7 +92,7 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(12, 315);
+            this.lblMontant.Location = new System.Drawing.Point(36, 336);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(46, 13);
             this.lblMontant.TabIndex = 2;
@@ -105,7 +101,7 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(15, 387);
+            this.lblType.Location = new System.Drawing.Point(39, 408);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(31, 13);
             this.lblType.TabIndex = 3;
@@ -113,7 +109,7 @@
             // 
             // calTransac
             // 
-            this.calTransac.Location = new System.Drawing.Point(130, 39);
+            this.calTransac.Location = new System.Drawing.Point(154, 60);
             this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
             this.calTransac.TabIndex = 0;
@@ -121,14 +117,14 @@
             // cboType
             // 
             this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(162, 387);
+            this.cboType.Location = new System.Drawing.Point(137, 408);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(121, 21);
             this.cboType.TabIndex = 6;
             // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(162, 308);
+            this.txtMontant.Location = new System.Drawing.Point(186, 329);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(107, 20);
             this.txtMontant.TabIndex = 2;
@@ -137,7 +133,7 @@
             // chkRecette
             // 
             this.chkRecette.AutoSize = true;
-            this.chkRecette.Location = new System.Drawing.Point(77, 12);
+            this.chkRecette.Location = new System.Drawing.Point(101, 16);
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.Size = new System.Drawing.Size(73, 17);
             this.chkRecette.TabIndex = 4;
@@ -148,7 +144,7 @@
             // chkPerçu
             // 
             this.chkPerçu.AutoSize = true;
-            this.chkPerçu.Location = new System.Drawing.Point(150, 12);
+            this.chkPerçu.Location = new System.Drawing.Point(174, 16);
             this.chkPerçu.Name = "chkPerçu";
             this.chkPerçu.Size = new System.Drawing.Size(54, 17);
             this.chkPerçu.TabIndex = 5;
@@ -160,7 +156,7 @@
             this.grb1.Controls.Add(this.lblRecette);
             this.grb1.Controls.Add(this.chkPerçu);
             this.grb1.Controls.Add(this.chkRecette);
-            this.grb1.Location = new System.Drawing.Point(12, 331);
+            this.grb1.Location = new System.Drawing.Point(36, 352);
             this.grb1.Name = "grb1";
             this.grb1.Size = new System.Drawing.Size(281, 43);
             this.grb1.TabIndex = 3;
@@ -170,7 +166,7 @@
             // 
             this.lblRecette.AutoSize = true;
             this.lblRecette.ForeColor = System.Drawing.Color.Gray;
-            this.lblRecette.Location = new System.Drawing.Point(12, 13);
+            this.lblRecette.Location = new System.Drawing.Point(36, 17);
             this.lblRecette.Name = "lblRecette";
             this.lblRecette.Size = new System.Drawing.Size(50, 13);
             this.lblRecette.TabIndex = 6;
@@ -179,9 +175,15 @@
             // btnAjouter
             // 
             this.btnAjouter.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAjouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAjouter.Location = new System.Drawing.Point(66, 438);
+            this.btnAjouter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAjouter.BackgroundImage")));
+            this.btnAjouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAjouter.FlatAppearance.BorderSize = 0;
+            this.btnAjouter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjouter.Location = new System.Drawing.Point(90, 459);
             this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnAjouter.Size = new System.Drawing.Size(150, 41);
             this.btnAjouter.TabIndex = 7;
             this.btnAjouter.Text = "Ajouter la transaction";
@@ -192,52 +194,10 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichierToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(768, 24);
-            this.menuStrip1.TabIndex = 13;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fichierToolStripMenuItem
-            // 
-            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aideToolStripMenuItem,
-            this.quitterToolStripMenuItem});
-            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.fichierToolStripMenuItem.Text = "Fichier";
-            // 
-            // aideToolStripMenuItem
-            // 
-            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.aideToolStripMenuItem.Text = "Aide...";
-            this.aideToolStripMenuItem.Click += new System.EventHandler(this.CliquerAideAjout);
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter...";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterAjoutTransac);
-            // 
-            // txtDescTran
-            // 
-            this.txtDescTran.Location = new System.Drawing.Point(162, 210);
-            this.txtDescTran.Name = "txtDescTran";
-            this.txtDescTran.Size = new System.Drawing.Size(195, 92);
-            this.txtDescTran.TabIndex = 1;
-            this.txtDescTran.Text = "";
-            this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
-            // 
             // lblEuro
             // 
             this.lblEuro.AutoSize = true;
-            this.lblEuro.Location = new System.Drawing.Point(270, 311);
+            this.lblEuro.Location = new System.Drawing.Point(294, 332);
             this.lblEuro.Name = "lblEuro";
             this.lblEuro.Size = new System.Drawing.Size(13, 13);
             this.lblEuro.TabIndex = 16;
@@ -246,7 +206,7 @@
             // lblAideType
             // 
             this.lblAideType.AutoSize = true;
-            this.lblAideType.Location = new System.Drawing.Point(395, 395);
+            this.lblAideType.Location = new System.Drawing.Point(413, 416);
             this.lblAideType.Name = "lblAideType";
             this.lblAideType.Size = new System.Drawing.Size(35, 13);
             this.lblAideType.TabIndex = 51;
@@ -257,7 +217,7 @@
             // lblAideRecette
             // 
             this.lblAideRecette.AutoSize = true;
-            this.lblAideRecette.Location = new System.Drawing.Point(395, 347);
+            this.lblAideRecette.Location = new System.Drawing.Point(428, 372);
             this.lblAideRecette.Name = "lblAideRecette";
             this.lblAideRecette.Size = new System.Drawing.Size(35, 13);
             this.lblAideRecette.TabIndex = 50;
@@ -268,7 +228,7 @@
             // lblAideMontant
             // 
             this.lblAideMontant.AutoSize = true;
-            this.lblAideMontant.Location = new System.Drawing.Point(395, 311);
+            this.lblAideMontant.Location = new System.Drawing.Point(428, 332);
             this.lblAideMontant.Name = "lblAideMontant";
             this.lblAideMontant.Size = new System.Drawing.Size(35, 13);
             this.lblAideMontant.TabIndex = 49;
@@ -279,7 +239,7 @@
             // lblAideDescri
             // 
             this.lblAideDescri.AutoSize = true;
-            this.lblAideDescri.Location = new System.Drawing.Point(469, 249);
+            this.lblAideDescri.Location = new System.Drawing.Point(461, 270);
             this.lblAideDescri.Name = "lblAideDescri";
             this.lblAideDescri.Size = new System.Drawing.Size(35, 13);
             this.lblAideDescri.TabIndex = 48;
@@ -290,7 +250,7 @@
             // lblAideDate
             // 
             this.lblAideDate.AutoSize = true;
-            this.lblAideDate.Location = new System.Drawing.Point(396, 92);
+            this.lblAideDate.Location = new System.Drawing.Point(420, 113);
             this.lblAideDate.Name = "lblAideDate";
             this.lblAideDate.Size = new System.Drawing.Size(35, 13);
             this.lblAideDate.TabIndex = 47;
@@ -300,7 +260,7 @@
             // 
             // pic5
             // 
-            this.pic5.Location = new System.Drawing.Point(289, 387);
+            this.pic5.Location = new System.Drawing.Point(307, 408);
             this.pic5.Name = "pic5";
             this.pic5.Size = new System.Drawing.Size(100, 21);
             this.pic5.TabIndex = 46;
@@ -309,7 +269,7 @@
             // 
             // pic4
             // 
-            this.pic4.Location = new System.Drawing.Point(289, 343);
+            this.pic4.Location = new System.Drawing.Point(322, 368);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(100, 21);
             this.pic4.TabIndex = 45;
@@ -318,7 +278,7 @@
             // 
             // pic3
             // 
-            this.pic3.Location = new System.Drawing.Point(289, 308);
+            this.pic3.Location = new System.Drawing.Point(322, 329);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(100, 20);
             this.pic3.TabIndex = 44;
@@ -327,7 +287,7 @@
             // 
             // pic2
             // 
-            this.pic2.Location = new System.Drawing.Point(363, 246);
+            this.pic2.Location = new System.Drawing.Point(355, 267);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(100, 20);
             this.pic2.TabIndex = 43;
@@ -336,7 +296,7 @@
             // 
             // pic1
             // 
-            this.pic1.Location = new System.Drawing.Point(363, 39);
+            this.pic1.Location = new System.Drawing.Point(387, 60);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(100, 50);
             this.pic1.TabIndex = 42;
@@ -345,7 +305,7 @@
             // 
             // btnChoixPersonne
             // 
-            this.btnChoixPersonne.Location = new System.Drawing.Point(572, 131);
+            this.btnChoixPersonne.Location = new System.Drawing.Point(596, 152);
             this.btnChoixPersonne.Name = "btnChoixPersonne";
             this.btnChoixPersonne.Size = new System.Drawing.Size(88, 39);
             this.btnChoixPersonne.TabIndex = 52;
@@ -356,7 +316,7 @@
             // lblChoixPersonne
             // 
             this.lblChoixPersonne.AutoSize = true;
-            this.lblChoixPersonne.Location = new System.Drawing.Point(589, 186);
+            this.lblChoixPersonne.Location = new System.Drawing.Point(613, 207);
             this.lblChoixPersonne.Name = "lblChoixPersonne";
             this.lblChoixPersonne.Size = new System.Drawing.Size(71, 13);
             this.lblChoixPersonne.TabIndex = 53;
@@ -364,8 +324,9 @@
             // 
             // picQuitter
             // 
-            this.picQuitter.Image = ((System.Drawing.Image)(resources.GetObject("picQuitter.Image")));
-            this.picQuitter.Location = new System.Drawing.Point(706, 39);
+            this.picQuitter.BackColor = System.Drawing.SystemColors.Control;
+            this.picQuitter.Image = global::miniProjet2017.Properties.Resources.croixQuitter;
+            this.picQuitter.Location = new System.Drawing.Point(691, 39);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(50, 50);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,21 +334,44 @@
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.QuitterAjoutTransac);
             // 
-            // pictureBox1
+            // picBordure
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(768, 547);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
+            this.picBordure.Image = ((System.Drawing.Image)(resources.GetObject("picBordure.Image")));
+            this.picBordure.Location = new System.Drawing.Point(0, 0);
+            this.picBordure.Name = "picBordure";
+            this.picBordure.Size = new System.Drawing.Size(768, 547);
+            this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBordure.TabIndex = 55;
+            this.picBordure.TabStop = false;
+            // 
+            // txtDescTran
+            // 
+            this.txtDescTran.Location = new System.Drawing.Point(186, 264);
+            this.txtDescTran.Name = "txtDescTran";
+            this.txtDescTran.Size = new System.Drawing.Size(144, 20);
+            this.txtDescTran.TabIndex = 56;
+            this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
+            // 
+            // btnAide
+            // 
+            this.btnAide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAide.Location = new System.Drawing.Point(62, 30);
+            this.btnAide.Name = "btnAide";
+            this.btnAide.Size = new System.Drawing.Size(75, 23);
+            this.btnAide.TabIndex = 57;
+            this.btnAide.Text = "Aide";
+            this.btnAide.UseVisualStyleBackColor = true;
+            this.btnAide.Click += new System.EventHandler(this.CliquerAideAjout);
             // 
             // frmAjoutTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 547);
+            this.Controls.Add(this.btnAide);
+            this.Controls.Add(this.txtDescTran);
             this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.lblChoixPersonne);
             this.Controls.Add(this.btnChoixPersonne);
@@ -402,7 +386,6 @@
             this.Controls.Add(this.pic2);
             this.Controls.Add(this.pic1);
             this.Controls.Add(this.lblEuro);
-            this.Controls.Add(this.txtDescTran);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.grb1);
             this.Controls.Add(this.txtMontant);
@@ -412,10 +395,8 @@
             this.Controls.Add(this.lblMontant);
             this.Controls.Add(this.lblDescTransac);
             this.Controls.Add(this.lblTransac);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(768, 547);
             this.MinimumSize = new System.Drawing.Size(768, 547);
             this.Name = "frmAjoutTransac";
@@ -425,15 +406,13 @@
             this.grb1.ResumeLayout(false);
             this.grb1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,11 +432,6 @@
         private System.Windows.Forms.GroupBox grb1;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.RichTextBox txtDescTran;
         private System.Windows.Forms.Label lblEuro;
         private System.Windows.Forms.Label lblAideType;
         private System.Windows.Forms.Label lblAideRecette;
@@ -473,6 +447,8 @@
         private System.Windows.Forms.Button btnChoixPersonne;
         private System.Windows.Forms.Label lblChoixPersonne;
         private System.Windows.Forms.PictureBox picQuitter;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBordure;
+        private System.Windows.Forms.TextBox txtDescTran;
+        private System.Windows.Forms.Button btnAide;
     }
 }

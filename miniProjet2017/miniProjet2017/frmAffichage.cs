@@ -27,7 +27,7 @@ namespace miniProjet2017
         {
                 // Création de la table en local
 
-            CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+            CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
             DataSet ds = new DataSet();
             new OleDbDataAdapter(new CMD(@"SELECT t.*, t2.libType
                                             FROM [Transaction] t, TypeTransaction t2

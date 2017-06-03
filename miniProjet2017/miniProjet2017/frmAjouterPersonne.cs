@@ -71,7 +71,7 @@ namespace miniProjet2017
             if (toutEstOK)
                 if (DialogResult.OK == MessageBox.Show("Voulez-vous ajouter cette personne ?", "Ajouter une personne", MessageBoxButtons.OKCancel)) {
                     try {
-                        CON con = new CON(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+                        CON con = new CON(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
                         con.Open();
                         new CMD(@"INSERT INTO Personne VALUES (" + new CMD(@"SELECT IIF(max(codePersonne) IS NULL, 1, max(codePersonne) + 1) FROM Personne", con).ExecuteScalar() + ", '"
                                                                 + txtNom.Text + "', '"

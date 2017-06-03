@@ -23,7 +23,7 @@ namespace miniProjet2017
             frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
-        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
+        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
         OleDbDataAdapter da = new OleDbDataAdapter();
         DataSet ds = new DataSet();
 
@@ -189,7 +189,6 @@ namespace miniProjet2017
                     + "\n • Elle concerne " + listeParticipant.Count + " personne" + (listeParticipant.Count > 1 ? "s." : ".")
                     + "\n\n     Voulez-vous valider cette modification ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
                 {
-                    CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
                     con.Open();
                     new CMD(@"UPDATE [Transaction] set dateTransaction = "
                                                             + "#" + (calTransac.SelectionStart.Day > 9
@@ -218,9 +217,10 @@ namespace miniProjet2017
         /* Saisie de la description, ne doit pas dépasser 30 caractères */
         private void SaisieDescription(object sender, KeyPressEventArgs e)
         {
-            if (txtDescTran.Text.Length == 30)
+            if (txtDescTran.Text.Length == 30 && (e.KeyChar != 8 && txtDescTran.SelectedText.Length == 0))
             {
                 e.Handled = true;
+                errorProvider.SetIconPadding(txtDescTran, 11);
                 errorProvider.SetError(txtDescTran, "La description ne doit pas dépasser 30 caractères !");
             }
             else
