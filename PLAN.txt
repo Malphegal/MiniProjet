@@ -40,6 +40,10 @@ troubleshooting :
 		
 	• ALL - vérif' les scales dans chaque formulaire appelé
 	
+	• Load font -> ralenti tout
+	
+	• frmAjouterTransac - prix > 999 : crash
+	
 	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)

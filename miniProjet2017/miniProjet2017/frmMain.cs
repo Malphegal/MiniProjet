@@ -17,7 +17,7 @@ namespace miniProjet2017
 {
     public partial class frmMain : Form
     {
-        static System.Drawing.Text.PrivateFontCollection fonts = new System.Drawing.Text.PrivateFontCollection();
+        public static System.Drawing.Text.PrivateFontCollection fonts = new System.Drawing.Text.PrivateFontCollection();
         public static CON con = new CON();
 
         public frmMain()

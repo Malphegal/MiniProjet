@@ -73,6 +73,16 @@ namespace miniProjet2017.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boutonFondBleu {
+            get {
+                object obj = ResourceManager.GetObject("boutonFondBleu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
@@ -96,6 +106,16 @@ namespace miniProjet2017.Properties {
         internal static System.Drawing.Bitmap engrenage {
             get {
                 object obj = ResourceManager.GetObject("engrenage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ligneVerte {
+            get {
+                object obj = ResourceManager.GetObject("ligneVerte", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

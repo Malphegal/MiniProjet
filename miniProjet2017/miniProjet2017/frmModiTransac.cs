@@ -48,15 +48,6 @@ namespace miniProjet2017
 
             if (ds.Tables["_Transaction"].Rows.Count > 0)
             {
-                    // Activation des composants
-
-                foreach (Control c in Controls)
-                    if (c.Controls.Count > 0)
-                        foreach (Control _c in c.Controls)
-                            _c.Enabled = true;
-                    else
-                        c.Enabled = true;
-
                     // Remplissage de la CBO
                     
                 foreach (DataRow row in ds.Tables["_Transaction"].Rows)
