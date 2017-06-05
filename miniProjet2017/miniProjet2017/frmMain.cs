@@ -11,12 +11,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CON = System.Data.OleDb.OleDbConnection;
 
 namespace miniProjet2017
 {
     public partial class frmMain : Form
     {
         static System.Drawing.Text.PrivateFontCollection fonts = new System.Drawing.Text.PrivateFontCollection();
+        public static CON con = new CON();
 
         public frmMain()
         {
@@ -30,6 +32,11 @@ namespace miniProjet2017
 
         private void NouveauFrmAjoutTransac(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frmAjoutTransac().ShowDialog();
@@ -39,6 +46,11 @@ namespace miniProjet2017
 
         private void NouveauFrmAffichage(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frmAffichage().ShowDialog();
@@ -48,6 +60,11 @@ namespace miniProjet2017
 
         private void NouveauFrmModiTransac(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frmModiTransac().ShowDialog();
@@ -57,6 +74,11 @@ namespace miniProjet2017
 
         private void NouveauFrmRecap(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frmRecap().ShowDialog();
@@ -66,6 +88,11 @@ namespace miniProjet2017
 
         private void NouveauFrmSupprTransac(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frmSupprTransac().ShowDialog();
@@ -86,6 +113,11 @@ namespace miniProjet2017
 
         private void NouveauFrmAjouterPersonne(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frmAjouterPersonne().ShowDialog();
@@ -95,6 +127,11 @@ namespace miniProjet2017
 
         private void NouveauFrmPostFixe(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frmPostFixe().ShowDialog();
@@ -104,6 +141,11 @@ namespace miniProjet2017
 
         private void NouveauFrmPostePonctuel(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frmPostePonctuel().ShowDialog();
@@ -113,6 +155,11 @@ namespace miniProjet2017
 
         private void NouveauFrm3(object sender, EventArgs e)
         {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
             foreach (Control c in Controls)
                 c.Enabled = false;
             new frm_3().ShowDialog();
@@ -348,18 +395,30 @@ namespace miniProjet2017
         }
 
         /* Initialise les valeurs par défaut du formulaire des options */
+        public static bool baseExist = true;
         void InitValeurOption()
         {
-                // Fichier de stockage
+                // Recherche du fichier de stockage
 
-            string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
+            if (!File.Exists(@"..\..\Resources\ValeurParDefaut.txt"))
+            {
+                MessageBox.Show("Le fichier ValeurParDefaut est manquant ! ");
+            }
+            else {
+                    // Fichier de stockage
 
-                // [1] == BDD
+                string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
 
-            frmOption.pourcentageSMS = Convert.ToByte(fichier[3]);
+                if (!File.Exists(fichier[1]))
+                    baseExist = false;
+                else
+                    con.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + fichier[1] + ";Persist Security Info=True";
 
-            frmOption.valeurResolution = Convert.ToByte(fichier[5]);
-
+                try { frmOption.pourcentageSMS = Convert.ToByte(fichier[3]); }
+                catch { MessageBox.Show("Le poucentageSMS n'est pas correct !"); };
+                try { frmOption.valeurResolution = Convert.ToByte(fichier[5]); }
+                catch { MessageBox.Show("La valeur de résolution n'est pas correct !"); };
+            }
                 // Mise à jour de la résolution
 
             resolutionScale = (0.6F + 0.2F * frmOption.valeurResolution);

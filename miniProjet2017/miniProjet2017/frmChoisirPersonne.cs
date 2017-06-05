@@ -8,8 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CON = System.Data.OleDb.OleDbConnection;
-using CMD = System.Data.OleDb.OleDbCommand;
 
 namespace miniProjet2017
 {
@@ -29,11 +27,10 @@ namespace miniProjet2017
         {
                 // Remplissage de la table locale _Personne
 
-            CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
-            con.Open();
+            frmMain.con.Open();
             DataSet ds = new DataSet();
-            new OleDbDataAdapter("SELECT * FROM Personne", con).Fill(ds, "_Personne");
-            con.Close();
+            new OleDbDataAdapter("SELECT * FROM Personne", frmMain.con).Fill(ds, "_Personne");
+            frmMain.con.Close();
 
                 // Affichage de toutes les personnes dans le panel
 

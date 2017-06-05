@@ -62,6 +62,7 @@
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.txtDescTran = new System.Windows.Forms.TextBox();
+            this.lblEuro = new System.Windows.Forms.Label();
             this.grb1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -111,7 +112,7 @@
             this.lblRecette.AutoSize = true;
             this.lblRecette.Enabled = false;
             this.lblRecette.ForeColor = System.Drawing.Color.Gray;
-            this.lblRecette.Location = new System.Drawing.Point(17, 13);
+            this.lblRecette.Location = new System.Drawing.Point(26, 18);
             this.lblRecette.Name = "lblRecette";
             this.lblRecette.Size = new System.Drawing.Size(50, 13);
             this.lblRecette.TabIndex = 10;
@@ -121,7 +122,7 @@
             // 
             this.chkPerçu.AutoSize = true;
             this.chkPerçu.Enabled = false;
-            this.chkPerçu.Location = new System.Drawing.Point(150, 12);
+            this.chkPerçu.Location = new System.Drawing.Point(207, 17);
             this.chkPerçu.Name = "chkPerçu";
             this.chkPerçu.Size = new System.Drawing.Size(54, 17);
             this.chkPerçu.TabIndex = 9;
@@ -132,7 +133,7 @@
             // 
             this.chkRecette.AutoSize = true;
             this.chkRecette.Enabled = false;
-            this.chkRecette.Location = new System.Drawing.Point(80, 12);
+            this.chkRecette.Location = new System.Drawing.Point(95, 17);
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.Size = new System.Drawing.Size(73, 17);
             this.chkRecette.TabIndex = 8;
@@ -212,7 +213,7 @@
             this.fichierToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(770, 24);
+            this.menuStrip.Size = new System.Drawing.Size(786, 24);
             this.menuStrip.TabIndex = 31;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -388,11 +389,21 @@
             this.txtDescTran.TabIndex = 21;
             this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
             // 
+            // lblEuro
+            // 
+            this.lblEuro.AutoSize = true;
+            this.lblEuro.Location = new System.Drawing.Point(288, 300);
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Size = new System.Drawing.Size(13, 13);
+            this.lblEuro.TabIndex = 56;
+            this.lblEuro.Text = "€";
+            // 
             // frmModiTransac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 536);
+            this.Controls.Add(this.lblEuro);
             this.Controls.Add(this.lblChoixPersonne);
             this.Controls.Add(this.btnChoixPersonne);
             this.Controls.Add(this.lblListeTransaction);
@@ -419,6 +430,7 @@
             this.Controls.Add(this.lblTransac);
             this.Controls.Add(this.calTransac);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip;
             this.MaximumSize = new System.Drawing.Size(786, 575);
             this.MinimumSize = new System.Drawing.Size(786, 575);
@@ -477,5 +489,6 @@
         private System.Windows.Forms.Label lblChoixPersonne;
         private System.Windows.Forms.Button btnChoixPersonne;
         private System.Windows.Forms.TextBox txtDescTran;
+        private System.Windows.Forms.Label lblEuro;
     }
 }

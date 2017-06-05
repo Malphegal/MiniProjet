@@ -75,14 +75,38 @@ namespace miniProjet2017
             File.WriteAllLines(@"..\..\Resources\ValeurParDefaut.txt", fichier);
         }
 
-        // TODO: A compléter !
         /* Modification du fichier de la base de donnéee */
+        public static string baseDeDonnee;
         private void ChangerBaseDeDonnee(object sender, EventArgs e)
         {
             openFD.Title = "Sélectionnez votre base de donnée";
             openFD.Filter = "Votre_base_de_donnée | *.mdb";
             openFD.InitialDirectory = ".";
-            openFD.ShowDialog();
+            if (DialogResult.OK == openFD.ShowDialog())
+            {
+                baseDeDonnee = openFD.FileName;
+                frmMain.con.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + baseDeDonnee + ";Persist Security Info=True";
+                if (File.Exists(@"..\..\Resources\ValeurParDefaut.txt"))
+                {
+                    string[] fichier = File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
+                    try { fichier[1] = baseDeDonnee; File.WriteAllLines(@"..\..\Resources\ValeurParDefaut.txt", fichier);
+                        lblSourceBaseDonnee.Text = baseDeDonnee; frmMain.baseExist = true; }
+                    catch { MessageBox.Show("Erreur dans le fichier ValeurParDefaut"); }
+                }
+            }
+        }
+
+        /* Initialise le label du chemin de la base de donnée */
+        private void ChargementDeFrmOption(object sender, EventArgs e)
+        {
+            if (File.Exists(@"..\..\Resources\ValeurParDefaut.txt"))
+                try {
+                    if (File.Exists(File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt")[1]))
+                        lblSourceBaseDonnee.Text = baseDeDonnee = File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt")[1];
+                    else
+                        lblSourceBaseDonnee.Text = "Manquante !"; 
+                }
+                catch { MessageBox.Show("Erreur de base de donnée !"); }
         }
     }
 }

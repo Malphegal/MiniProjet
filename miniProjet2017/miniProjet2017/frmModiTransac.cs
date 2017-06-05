@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CMD = System.Data.OleDb.OleDbCommand;
-using CON = System.Data.OleDb.OleDbConnection;
 
 namespace miniProjet2017
 {
@@ -23,7 +22,6 @@ namespace miniProjet2017
             frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
-        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
         OleDbDataAdapter da = new OleDbDataAdapter();
         DataSet ds = new DataSet();
 
@@ -39,11 +37,12 @@ namespace miniProjet2017
         {
                 // Remplir la table locale
 
-            con.Open();
-            da = new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", con));
+            frmMain.con.Open();
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", frmMain.con));
             da.Fill(ds, "_Transaction");
-            da = new OleDbDataAdapter(new CMD("SELECT * FROM [Personne]", con));
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM [Personne]", frmMain.con));
             da.Fill(ds, "_Personne");
+            frmMain.con.Close();
 
                 // Affichage de la première transaction, si il y en a une
 
@@ -89,7 +88,7 @@ namespace miniProjet2017
             else
                 chkPerçu.Checked = Convert.ToBoolean(ds.Tables["_Transaction"].Rows[cboListeTransaction.SelectedIndex][5]);
 
-            da = new OleDbDataAdapter(new CMD("SELECT * FROM TypeTransaction", con));
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM TypeTransaction", frmMain.con));
             da.Fill(ds, "_TypeTransaction");
 
             foreach (var row in ds.Tables["_TypeTransaction"].Rows.Cast<DataRow>().Select((row, i) => new { Row = row, Index = i }))
@@ -105,7 +104,7 @@ namespace miniProjet2017
 
             if (ds.Tables.Contains("_Beneficiaires"))
                 ds.Tables["_Beneficiaires"].Clear();
-            da = new OleDbDataAdapter(new CMD("SELECT * FROM Beneficiaires WHERE codeTransaction = " + (cboListeTransaction.SelectedIndex + 1), con));
+            da = new OleDbDataAdapter(new CMD("SELECT * FROM Beneficiaires WHERE codeTransaction = " + (cboListeTransaction.SelectedIndex + 1), frmMain.con));
             da.Fill(ds, "_Beneficiaires");
             
             foreach (DataRow row in ds.Tables["_Beneficiaires"].Rows)
@@ -189,7 +188,7 @@ namespace miniProjet2017
                     + "\n • Elle concerne " + listeParticipant.Count + " personne" + (listeParticipant.Count > 1 ? "s." : ".")
                     + "\n\n     Voulez-vous valider cette modification ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
                 {
-                    con.Open();
+                    frmMain.con.Open();
                     new CMD(@"UPDATE [Transaction] set dateTransaction = "
                                                             + "#" + (calTransac.SelectionStart.Day > 9
                                                             ? calTransac.SelectionStart.Day.ToString()
@@ -201,9 +200,9 @@ namespace miniProjet2017
                                                             + "recetteON = " +(chkRecette.Checked ? "True" : "False") + ", "
                                                             + "percuON = " + (chkPerçu.Checked ? "True" : "False") + ", "
                                                             + "type = " + (cboType.SelectedIndex + 1)
-                                                            + " WHERE codeTransaction = " + (cboListeTransaction.SelectedIndex + 1), con).ExecuteNonQuery();
+                                                            + " WHERE codeTransaction = " + (cboListeTransaction.SelectedIndex + 1), frmMain.con).ExecuteNonQuery();
                     MessageBox.Show("Transaction modifiée !");
-                    con.Close();
+                    frmMain.con.Close();
 
                         // Refresh le tuple
 

@@ -51,7 +51,7 @@
             this.lblNombreSMSTransaction.AutoSize = true;
             this.lblNombreSMSTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreSMSTransaction.ForeColor = System.Drawing.Color.Maroon;
-            this.lblNombreSMSTransaction.Location = new System.Drawing.Point(26, 118);
+            this.lblNombreSMSTransaction.Location = new System.Drawing.Point(26, 148);
             this.lblNombreSMSTransaction.Name = "lblNombreSMSTransaction";
             this.lblNombreSMSTransaction.Size = new System.Drawing.Size(246, 15);
             this.lblNombreSMSTransaction.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             // txtPourcentageSMS
             // 
-            this.txtPourcentageSMS.Location = new System.Drawing.Point(277, 117);
+            this.txtPourcentageSMS.Location = new System.Drawing.Point(277, 147);
             this.txtPourcentageSMS.Name = "txtPourcentageSMS";
             this.txtPourcentageSMS.Size = new System.Drawing.Size(43, 20);
             this.txtPourcentageSMS.TabIndex = 1;
@@ -69,7 +69,7 @@
             // lblPourcent
             // 
             this.lblPourcent.AutoSize = true;
-            this.lblPourcent.Location = new System.Drawing.Point(326, 120);
+            this.lblPourcent.Location = new System.Drawing.Point(326, 150);
             this.lblPourcent.Name = "lblPourcent";
             this.lblPourcent.Size = new System.Drawing.Size(15, 13);
             this.lblPourcent.TabIndex = 2;
@@ -126,7 +126,8 @@
             // lblSourceBaseDonnee
             // 
             this.lblSourceBaseDonnee.AutoSize = true;
-            this.lblSourceBaseDonnee.Location = new System.Drawing.Point(155, 90);
+            this.lblSourceBaseDonnee.Location = new System.Drawing.Point(26, 87);
+            this.lblSourceBaseDonnee.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblSourceBaseDonnee.Name = "lblSourceBaseDonnee";
             this.lblSourceBaseDonnee.Size = new System.Drawing.Size(98, 13);
             this.lblSourceBaseDonnee.TabIndex = 7;
@@ -177,7 +178,7 @@
             // lblResolutionMax
             // 
             this.lblResolutionMax.AutoSize = true;
-            this.lblResolutionMax.Location = new System.Drawing.Point(329, 181);
+            this.lblResolutionMax.Location = new System.Drawing.Point(326, 181);
             this.lblResolutionMax.Name = "lblResolutionMax";
             this.lblResolutionMax.Size = new System.Drawing.Size(21, 13);
             this.lblResolutionMax.TabIndex = 12;
@@ -207,6 +208,7 @@
             this.Name = "frmOption";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmOption";
+            this.Load += new System.EventHandler(this.ChargementDeFrmOption);
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

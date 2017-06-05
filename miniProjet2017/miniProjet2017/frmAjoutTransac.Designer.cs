@@ -144,7 +144,7 @@
             // chkPerçu
             // 
             this.chkPerçu.AutoSize = true;
-            this.chkPerçu.Location = new System.Drawing.Point(174, 16);
+            this.chkPerçu.Location = new System.Drawing.Point(203, 16);
             this.chkPerçu.Name = "chkPerçu";
             this.chkPerçu.Size = new System.Drawing.Size(54, 17);
             this.chkPerçu.TabIndex = 5;
@@ -174,17 +174,19 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAjouter.BackColor = System.Drawing.Color.Transparent;
             this.btnAjouter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAjouter.BackgroundImage")));
             this.btnAjouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAjouter.FlatAppearance.BorderSize = 0;
             this.btnAjouter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjouter.ForeColor = System.Drawing.Color.Red;
             this.btnAjouter.Location = new System.Drawing.Point(90, 459);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAjouter.Size = new System.Drawing.Size(150, 41);
+            this.btnAjouter.Size = new System.Drawing.Size(168, 53);
             this.btnAjouter.TabIndex = 7;
             this.btnAjouter.Text = "Ajouter la transaction";
             this.btnAjouter.UseVisualStyleBackColor = false;
@@ -324,7 +326,7 @@
             // 
             // picQuitter
             // 
-            this.picQuitter.BackColor = System.Drawing.SystemColors.Control;
+            this.picQuitter.BackColor = System.Drawing.Color.Transparent;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.croixQuitter;
             this.picQuitter.Location = new System.Drawing.Point(691, 39);
             this.picQuitter.Name = "picQuitter";

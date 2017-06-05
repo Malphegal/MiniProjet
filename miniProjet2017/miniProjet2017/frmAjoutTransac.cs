@@ -8,15 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CON = System.Data.OleDb.OleDbConnection;
 using CMD = System.Data.OleDb.OleDbCommand;
 
 namespace miniProjet2017
 {
     public partial class frmAjoutTransac : Form
     {
-        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
-
         // TODO: s'il n'y a pas de typeTransaction, on ne peut pas ajouter !
         public frmAjoutTransac()
         {
@@ -24,9 +21,9 @@ namespace miniProjet2017
             DemarrageDeAjoutTransac();
             Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
             frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
+            picQuitter.Parent = picBordure;
         }
 
-        // TODO: comment afficher la liste de personne en rapport avec cette transaction ?
         /* Affiche toutes les personne de la table Personne et rempli la combobox pour les type de transaction */
         private void DemarrageDeAjoutTransac()
         {
@@ -35,15 +32,15 @@ namespace miniProjet2017
             CMD cmd;
             OleDbDataAdapter da;
             DataSet ds = new DataSet();
-            con.Open();
+            frmMain.con.Open();
 
                 // Ajout des tables locales
 
-            cmd = new CMD("SELECT * FROM Personne", con);
+            cmd = new CMD("SELECT * FROM Personne", frmMain.con);
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "_Personne");
 
-            cmd = new CMD("SELECT * FROM TypeTransaction", con);
+            cmd = new CMD("SELECT * FROM TypeTransaction", frmMain.con);
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "_TypeTransaction");
 
@@ -55,6 +52,8 @@ namespace miniProjet2017
 
             foreach (DataRow row in ds.Tables["_TypeTransaction"].Rows)
                 cboType.Items.Add(row["libType"]);
+
+            frmMain.con.Close();
         }
 
         // TODO: Check comment ajouter l'heure dans la table Transaction, ajout du TRY CATCH, ajout dans d'autre table (Beneficiaire ?)
@@ -116,12 +115,11 @@ namespace miniProjet2017
                 {
                         // Remplir la table locale
 
-                    CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget1.mdb");
-                    con.Open();
+                    frmMain.con.Open();
 
                         // Table Transaction
 
-                    object idCetteTransaction = new CMD(@"SELECT IIF(max(codeTransaction) IS NULL, 1, max(codeTransaction) + 1) FROM [Transaction]", con).ExecuteScalar();
+                    object idCetteTransaction = new CMD(@"SELECT IIF(max(codeTransaction) IS NULL, 1, max(codeTransaction) + 1) FROM [Transaction]", frmMain.con).ExecuteScalar();
                     new CMD(@"INSERT INTO [Transaction] VALUES (" + idCetteTransaction + ", "
                                                             + "#" + (calTransac.SelectionStart.Day > 9
                                                             ? calTransac.SelectionStart.Day.ToString()
@@ -132,15 +130,15 @@ namespace miniProjet2017
                                                             + FormatDuMontant(txtMontant.Text).Replace(',', '.') + ", "
                                                             + (chkRecette.Checked ? "True" : "False") + ", "
                                                             + (chkPerçu.Checked ? "True" : "False") + ", "
-                                                            + (cboType.SelectedIndex + 1) + ")", con).ExecuteNonQuery();
+                                                            + (cboType.SelectedIndex + 1) + ")", frmMain.con).ExecuteNonQuery();
 
                         // Ajout des personnes dans table Beneficiaire
 
                     foreach (uint i in listeParticipant)
-                        new CMD(@"INSERT INTO Beneficiaires VALUES (" + idCetteTransaction + ", " + i + ")", con).ExecuteNonQuery();
+                        new CMD(@"INSERT INTO Beneficiaires VALUES (" + idCetteTransaction + ", " + i + ")", frmMain.con).ExecuteNonQuery();
 
                     MessageBox.Show("Transaction ajoutée !");
-                    con.Close();
+                    frmMain.con.Close();
                 }
                 else
                     MessageBox.Show("Aucune modification n'a été effectuée !");
