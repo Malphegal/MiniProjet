@@ -4,12 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CON = System.Data.OleDb.OleDbConnection;
 using CMD = System.Data.OleDb.OleDbCommand;
+using System.IO;
 
 namespace miniProjet2017
 {
@@ -25,23 +28,24 @@ namespace miniProjet2017
         /* Remplir le contenu de la DataGridView */
         private void DebutDuFormulaire(object sender, EventArgs e)
         {
+            picQuitter.Parent = picBordure;
+
                 // Création de la table en local
 
-            CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
             DataSet ds = new DataSet();
-            new OleDbDataAdapter(new CMD(@"SELECT t.*, t2.libType
+            new OleDbDataAdapter(new CMD(@"SELECT t.dateTransaction, t.description, t.montant, t.recetteON, t.percuON, t2.libType
                                             FROM [Transaction] t, TypeTransaction t2
-                                            WHERE t2.codeType = t.type", con)).Fill(ds, "_Transaction");
+                                            WHERE t2.codeType = t.type", frmMain.con)).Fill(ds, "_Transaction");
 
                 // Ajout du contenu du DataGridView
 
-            dataGridView1.DataSource = ds.Tables["_Transaction"];
-            dataGridView1.Columns[1].Width += 60;
-            dataGridView1.Columns[2].Width += 20;
-            dataGridView1.Columns[3].Width -= 45;
-            dataGridView1.Columns[4].Width -= 40;
-            dataGridView1.Columns[5].Width -= 45;
-            dataGridView1.Columns[6].Width -= 65;
+            gridViewPDF.DataSource = ds.Tables["_Transaction"];
+            gridViewPDF.Columns[1].Width += 60;
+            gridViewPDF.Columns[2].Width += 20;
+            gridViewPDF.Columns[3].Width -= 45;
+            gridViewPDF.Columns[4].Width -= 40;
+            gridViewPDF.Columns[5].Width -= 45;
+            //gridViewPDF.Columns[6].Width -= 65;
         }
 
         /* Ferme ce formulaire */
@@ -67,6 +71,149 @@ namespace miniProjet2017
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmSupprTransac().ShowDialog();
+        }
+
+        private void GenerationDuPDF(object sender, EventArgs e)
+        {
+            saveFileDialog1.InitialDirectory = @"C:";
+            saveFileDialog1.Filter = "Emplacement du fichier PDF | *.pdf";
+            if (DialogResult.OK == saveFileDialog1.ShowDialog())
+                CliquerSurBoutonPDF(saveFileDialog1.FileName);
+        }
+
+        /* Création du PDF */
+        // TODO: Changer la date, pour choisir un mois d'une année
+        // TODO: dataGridView -> Pouvoir faire une recherche sur la date, description, ...
+        private void CliquerSurBoutonPDF(string cheminDuPDF)
+        {
+            string mois = "Avril"; // TODO: A VOIR
+
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            doc.SetPageSize(iTextSharp.text.PageSize.A4); //met le PDF en format A4 
+            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(cheminDuPDF, FileMode.Create));
+            doc.Open(); //ouvre le document
+
+            PdfPTable dtgw = new PdfPTable(gridViewPDF.Columns.Count);
+
+            Paragraph ligne = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLUE, Element.ALIGN_LEFT, 1))); //construction d'une ligne
+
+            Paragraph titre = new Paragraph(); //créé un texte souligné
+            Chunk text = new Chunk("Récapitulatif du mois : " + mois);
+            text.SetUnderline(0.5f, -2f);
+            titre.Add(text);
+            doc.Add(titre);
+
+            doc.Add(Chunk.NEWLINE); // saute une ligne
+
+            doc.Add(ligne); //rajoute une ligne bleue
+
+            Paragraph Dep = new Paragraph("Dépenses");
+            doc.Add(Dep);
+
+            doc.Add(Chunk.NEWLINE);
+
+            PdfPTable table = new PdfPTable(6);
+            table.AddCell("Date de la transaction");
+            table.AddCell("Description");
+            table.AddCell("Montant");
+            table.AddCell("Recette ?");
+            table.AddCell("Perçu ?");
+            table.AddCell("Type de dépense");
+
+            for (int i = 0; i < gridViewPDF.Rows.Count; i++)
+            {
+                for (int j = 0; j < gridViewPDF.Columns.Count; j++)
+                {
+                    if (gridViewPDF[j, i].Value != null)
+                    {
+                        table.AddCell(new Phrase(gridViewPDF[j, i].Value.ToString()));
+                    }
+                }
+            }
+            doc.Add(table); //rajoute la table avec les informations de la dataGridView
+
+            double nbDepen = 0;
+            double nbRecet = 0;
+            for (int k = 0; k < gridViewPDF.Rows.Count; k++)
+            {
+                //if (gridViewPDF[3, k].Value.ToString() == "False")
+                if (!Convert.ToBoolean(gridViewPDF[3, k].Value))
+                {
+                    nbDepen += (double)Convert.ToDouble((gridViewPDF[2, k].Value));
+                }
+                else
+                {
+                    nbRecet += (double)Convert.ToDouble((gridViewPDF[2, k].Value));
+                }
+            }
+
+            double restPerc = 0;
+            for (int l = 0; l < gridViewPDF.Rows.Count; l++)
+            {
+                //if (gridViewPDF[4, l].Value.ToString() == "True")
+                if (Convert.ToBoolean(gridViewPDF[4, l].Value))
+                {
+                    restPerc += (double)(gridViewPDF[2, l].Value);
+                }
+            }
+
+            double sommDepen = nbRecet - nbDepen + restPerc;
+            int nbTransac = gridViewPDF.Rows.Count - 1; // -1 -> car ligne vide à la fin en trop
+
+            doc.Add(Chunk.NEWLINE);
+
+            Paragraph p = new Paragraph();
+
+            p.Add(ligne); //rajoute une ligne bleue
+
+            Chunk recet = new Chunk("Recette : " + nbRecet);
+            p.Add(recet);
+
+            p.Add(Chunk.NEWLINE);
+            p.Add(Chunk.NEWLINE);
+
+            p.Add(ligne); //rajoute une ligne bleue
+
+            Chunk depen = new Chunk("Dépenses : " + nbDepen);
+            p.Add(depen);
+            p.Add(Chunk.NEWLINE);
+            p.Add(Chunk.NEWLINE);
+
+            p.Add(ligne); //rajoute une ligne bleue
+
+            Chunk perc = new Chunk("Reste à percevoir : " + restPerc);
+            p.Add(perc);
+            p.Add(Chunk.NEWLINE);
+            p.Add(Chunk.NEWLINE);
+
+            p.Add(ligne); //rajoute une ligne bleue
+
+            Chunk somm = new Chunk("Somme totale dépensée : " + sommDepen);
+            p.Add(somm);
+            p.Add(Chunk.NEWLINE);
+            p.Add(Chunk.NEWLINE);
+
+            p.Add(ligne); //rajoute une ligne bleue
+
+            Chunk trans = new Chunk("Nombre de transaction : " + nbTransac);
+            p.Add(trans);
+            p.Add(Chunk.NEWLINE);
+            p.Add(Chunk.NEWLINE);
+
+            p.Add(ligne); //rajoute une ligne bleue
+
+            doc.Add(p);
+
+
+            //rajoute, redimensionne et positionne une image
+            iTextSharp.text.Image JPG = iTextSharp.text.Image.GetInstance("croixQuitter.png");
+            JPG.ScalePercent(10f);
+            JPG.SetAbsolutePosition(doc.PageSize.Width - 36f - 36f, doc.PageSize.Height - 36f - 216.6f);
+            doc.Add(JPG);
+
+            MessageBox.Show("Le document PDF à été créé !\n\n");
+
+            doc.Close(); //ferme le document
         }
     }
 }

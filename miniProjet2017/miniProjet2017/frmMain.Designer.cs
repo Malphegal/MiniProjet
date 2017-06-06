@@ -38,12 +38,14 @@
             this.btnDeroulerTransaction = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlHaut = new System.Windows.Forms.Panel();
+            this.picReduire = new System.Windows.Forms.PictureBox();
             this.lblTitre = new System.Windows.Forms.Label();
             this.picQuitter = new System.Windows.Forms.PictureBox();
             this.picOption = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pnlGauche.SuspendLayout();
             this.pnlHaut.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picReduire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOption)).BeginInit();
             this.SuspendLayout();
@@ -123,6 +125,7 @@
             // pnlHaut
             // 
             this.pnlHaut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.pnlHaut.Controls.Add(this.picReduire);
             this.pnlHaut.Controls.Add(this.lblTitre);
             this.pnlHaut.Controls.Add(this.picQuitter);
             this.pnlHaut.Controls.Add(this.picOption);
@@ -131,6 +134,14 @@
             this.pnlHaut.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
             this.pnlHaut.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
             this.pnlHaut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
+            // 
+            // picReduire
+            // 
+            this.picReduire.Image = global::miniProjet2017.Properties.Resources.reduire1;
+            resources.ApplyResources(this.picReduire, "picReduire");
+            this.picReduire.Name = "picReduire";
+            this.picReduire.TabStop = false;
+            this.picReduire.Click += new System.EventHandler(this.CliquerSurReduire);
             // 
             // lblTitre
             // 
@@ -165,7 +176,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
             this.Controls.Add(this.pnlHaut);
             this.Controls.Add(this.pnlGauche);
             this.Controls.Add(this.btnRecap);
@@ -179,6 +190,7 @@
             this.pnlGauche.ResumeLayout(false);
             this.pnlHaut.ResumeLayout(false);
             this.pnlHaut.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picReduire)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOption)).EndInit();
             this.ResumeLayout(false);
@@ -199,6 +211,7 @@
         private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Button btnDeroulerBudget;
+        private System.Windows.Forms.PictureBox picReduire;
     }
 }
 

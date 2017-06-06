@@ -148,10 +148,10 @@
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
-            this.lblTitre.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.Location = new System.Drawing.Point(163, 16);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(102, 25);
+            this.lblTitre.Size = new System.Drawing.Size(112, 25);
             this.lblTitre.TabIndex = 9;
             this.lblTitre.Text = "OPTIONS";
             // 

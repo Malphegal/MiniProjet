@@ -182,6 +182,12 @@ namespace miniProjet2017
             }
         }
 
+        /* Réduire cette application */
+        private void CliquerSurReduire(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
         /* Cliquer sur le bouton des transactions dans le panel de gauche */
         static bool deroulerTransaction = false;
         private void CliquerSurDeroulerTransaction(object sender, EventArgs e)
@@ -221,7 +227,8 @@ namespace miniProjet2017
         static bool deroulerBudget = false;
         private void CliquerSurDeroulerBudget(object sender, EventArgs e)
         {
-            if (deroulerBudget = !deroulerBudget) {
+            if (deroulerBudget = !deroulerBudget)
+            {
                 foreach (Button b in pnlGauche.Controls.OfType<Button>())
                 {
                     if (b.Name == "btnPostFixe"
@@ -253,13 +260,13 @@ namespace miniProjet2017
         /* Création des boutons du menu déroulant */
         private void PremierChargementDeApplication(object sender, EventArgs e)
         {
-                // Font
+            // Font
 
             fonts.AddFontFile("..\\..\\..\\..\\Font\\Café Françoise.otf");
 
             lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
 
-                // Dérouler transaction
+            // Dérouler transaction
 
             Button b =
             new Button()
@@ -324,7 +331,7 @@ namespace miniProjet2017
             b.FlatAppearance.BorderSize = 2;
             b.Click += new EventHandler(NouveauFrmSupprTransac);
 
-                // Dérouler budget
+            // Dérouler budget
 
             b =
             new Button()
@@ -389,7 +396,7 @@ namespace miniProjet2017
             b.FlatAppearance.BorderSize = 2;
             b.Click += new EventHandler(NouveauFrm3);
 
-                // Pour focus le premier bouton
+            // Pour focus le premier bouton
 
             ActiveControl = btnDeroulerTransaction;
         }
@@ -398,14 +405,14 @@ namespace miniProjet2017
         public static bool baseExist = true;
         void InitValeurOption()
         {
-                // Recherche du fichier de stockage
+            // Recherche du fichier de stockage
 
             if (!File.Exists(@"..\..\Resources\ValeurParDefaut.txt"))
             {
                 MessageBox.Show("Le fichier ValeurParDefaut est manquant ! ");
             }
             else {
-                    // Fichier de stockage
+                // Fichier de stockage
 
                 string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
 
@@ -419,7 +426,7 @@ namespace miniProjet2017
                 try { frmOption.valeurResolution = Convert.ToByte(fichier[5]); }
                 catch { MessageBox.Show("La valeur de résolution n'est pas correct !"); };
             }
-                // Mise à jour de la résolution
+            // Mise à jour de la résolution
 
             resolutionScale = (0.6F + 0.2F * frmOption.valeurResolution);
             privateResolutionScale = resolutionScale;
@@ -523,141 +530,4 @@ namespace miniProjet2017
             toolTip.Show("", picOption);
         }
     }
-
-    /*class PDF_TEST
-    {
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string mois = "Avril";
-
-            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
-            doc.SetPageSize(iTextSharp.text.PageSize.A4); //met le PDF en format A4 
-            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("Test omega.pdf", FileMode.Create));
-            doc.Open(); //ouvre le document
-
-
-            PdfPTable dtgw = new PdfPTable(dataGridView1.Columns.Count);
-
-            Paragraph ligne = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLUE, Element.ALIGN_LEFT, 1))); //construction d'une ligne
-
-            Paragraph titre = new Paragraph(); //créé un texte souligné
-            Chunk text = new Chunk("Récapitulatif du mois : " + mois);
-            text.SetUnderline(0.5f, -2f);
-            titre.Add(text);
-            doc.Add(titre);
-
-            doc.Add(Chunk.NEWLINE); // saute une ligne
-
-            doc.Add(ligne); //rajoute une ligne bleue
-
-            Paragraph Dep = new Paragraph("Dépenses");
-            doc.Add(Dep);
-
-            doc.Add(Chunk.NEWLINE);
-
-            PdfPTable table = new PdfPTable(6);
-            table.AddCell("Date de la transaction");
-            table.AddCell("Description");
-            table.AddCell("Montant");
-            table.AddCell("Recette ?");
-            table.AddCell("Perçu ?");
-            table.AddCell("Type de dépense");
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                {
-                    if (dataGridView1[j, i].Value != null)
-                    {
-                        table.AddCell(new Phrase(dataGridView1[j, i].Value.ToString()));
-                    }
-                }
-            }
-            doc.Add(table); //rajoute la table avec les informations de la dataGridView
-
-            double nbDepen = 0;
-            double nbRecet = 0;
-            for (int k = 0; k < dataGridView1.Rows.Count; k++)
-            {
-                if (dataGridView1[3, k].Value.ToString() == "False")
-                {
-                    nbDepen += (double)(dataGridView1[2, k].Value);
-                }
-                else
-                {
-                    nbRecet += (double)(dataGridView1[2, k].Value);
-                }
-            }
-
-            double restPerc = 0;
-            for (int l = 0; l < dataGridView1.Rows.Count; l++)
-            {
-                if (dataGridView1[4, l].Value.ToString() == "True")
-                {
-                    restPerc += (double)(dataGridView1[2, l].Value);
-                }
-            }
-
-
-
-            double sommDepen = nbRecet - nbDepen + restPerc;
-
-
-
-            int nbTransac = dataGridView1.Rows.Count;
-
-            doc.Add(Chunk.NEWLINE);
-
-            Paragraph p = new Paragraph();
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk recet = new Chunk("Recette : " + nbRecet);
-            p.Add(recet);
-
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk depen = new Chunk("Dépenses : " + nbDepen);
-            p.Add(depen);
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk perc = new Chunk("Reste à percevoir : " + restPerc);
-            p.Add(perc);
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk somm = new Chunk("Somme totale dépensée : " + sommDepen);
-            p.Add(somm);
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk trans = new Chunk("Nombre de transaction : " + nbTransac);
-            p.Add(trans);
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            doc.Add(p);
-
-
-            //rajoute, redimensionne et positionne une image
-            iTextSharp.text.Image JPG = iTextSharp.text.Image.GetInstance("phoenix.jpg");
-            JPG.ScalePercent(10f);
-            JPG.SetAbsolutePosition(doc.PageSize.Width - 36f - 36f, doc.PageSize.Height - 36f - 216.6f);
-            doc.Add(JPG);
-
-            doc.Close(); //ferme le document
-        }
-    }*/
 }

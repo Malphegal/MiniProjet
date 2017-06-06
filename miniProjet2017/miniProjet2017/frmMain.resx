@@ -324,6 +324,36 @@
   <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="picReduire.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picReduire.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="picReduire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>595, 12</value>
+  </data>
+  <data name="picReduire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 38</value>
+  </data>
+  <data name="picReduire.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="picReduire.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;picReduire.Name" xml:space="preserve">
+    <value>picReduire</value>
+  </data>
+  <data name="&gt;&gt;picReduire.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picReduire.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;picReduire.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -355,16 +385,16 @@
     <value>pnlHaut</value>
   </data>
   <data name="&gt;&gt;lblTitre.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="picQuitter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picQuitter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 12</value>
+    <value>688, 13</value>
   </data>
   <data name="picQuitter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 29</value>
+    <value>50, 50</value>
   </data>
   <data name="picQuitter.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -382,16 +412,16 @@
     <value>pnlHaut</value>
   </data>
   <data name="&gt;&gt;picQuitter.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="picOption.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picOption.Location" type="System.Drawing.Point, System.Drawing">
-    <value>679, 12</value>
+    <value>645, 13</value>
   </data>
   <data name="picOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 29</value>
+    <value>37, 37</value>
   </data>
   <data name="picOption.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -409,7 +439,7 @@
     <value>pnlHaut</value>
   </data>
   <data name="&gt;&gt;picOption.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pnlHaut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
