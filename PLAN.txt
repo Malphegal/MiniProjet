@@ -39,7 +39,7 @@ troubleshooting :
 	
 	• ALL - vérif' les scales dans chaque formulaire appelé
 	
-	• Load font -> ralenti tout
+	• Load font -> ralenti toutes l'appli
 	
 	• frmAjouterTransac - prix > 999 : crash
 	
@@ -53,6 +53,10 @@ troubleshooting :
 	
 	• frmAjouterPersonne -> Doit il exister ?
 		-> Si oui, doit on ajouter frmSupprimerPersonne ?
+		
+	• frmAjoutTransac - Si aucune personne -> tout le monde sera impliqué ?
+	
+	• frmModiTransac -> A SURVEILLER
 	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)

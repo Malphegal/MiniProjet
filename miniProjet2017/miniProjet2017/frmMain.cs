@@ -260,13 +260,13 @@ namespace miniProjet2017
         /* Création des boutons du menu déroulant */
         private void PremierChargementDeApplication(object sender, EventArgs e)
         {
-            // Font
+                // Les polices d'écritures
 
             fonts.AddFontFile("..\\..\\..\\..\\Font\\Café Françoise.otf");
 
             lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
 
-            // Dérouler transaction
+                // Dérouler transaction
 
             Button b =
             new Button()

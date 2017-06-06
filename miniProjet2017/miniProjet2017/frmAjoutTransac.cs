@@ -27,8 +27,13 @@ namespace miniProjet2017
         /* Affiche toutes les personne de la table Personne et rempli la combobox pour les type de transaction */
         private void DemarrageDeAjoutTransac()
         {
+                // Initialisation des valeurs static
+
+            flecheRetour = picQuitter.Image;
+            c = Color.FromArgb(56, 69, 80);
+
                 // Initialisation des variables de connection
-            
+
             CMD cmd;
             OleDbDataAdapter da;
             DataSet ds = new DataSet();
@@ -68,7 +73,7 @@ namespace miniProjet2017
 
             errorProvider.SetIconPadding(cboType, 11);
             errorProvider.SetIconPadding(txtDescTran, 11);
-            errorProvider.SetIconPadding(txtMontant, 11);
+            errorProvider.SetIconPadding(txtMontant, 19);
             errorProvider.SetIconPadding(btnChoixPersonne, 11);
 
                 // Les vérifications au cas par cas
@@ -227,15 +232,26 @@ namespace miniProjet2017
                 lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s :" : " :") + (listeParticipant = frm.listeParticipant).Count.ToString();
         }
 
-        // HOVER
-
-        private void btnAjouterHover(object sender, EventArgs e)
+        static Color c;
+        /* Change la couleur des boutons quand la souris est sur l'un d'entre eux */
+        private void BoutonHover(object sender, EventArgs e)
         {
-            btnAjouter.BackColor = Color.FromArgb(56, 69, 80);
+            (sender as Button).FlatAppearance.MouseOverBackColor = c;
         }
 
-        private void btnAjouter_MouseLeave(object sender, EventArgs e)
+        static Image flecheRetour_clair = new Bitmap("..\\..\\Resources\\flecheRetour_clair.png");
+        static Image flecheRetour;
+        /* Souris sur picQuitter */
+        private void SourisSurPicQuitter(object sender, EventArgs e)
         {
+            (sender as PictureBox).Image = flecheRetour_clair;
         }
+
+        /* Souris sors de picQuitter */
+        private void SourisSortDePicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour;
+        }
+
     }
 }

@@ -135,6 +135,7 @@
             // 
             this.txtMontant.Location = new System.Drawing.Point(204, 289);
             this.txtMontant.Name = "txtMontant";
+            this.txtMontant.ShortcutsEnabled = false;
             this.txtMontant.Size = new System.Drawing.Size(107, 20);
             this.txtMontant.TabIndex = 2;
             this.txtMontant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnMontant);
@@ -201,8 +202,7 @@
             this.btnAjouter.Text = "Ajouter la transaction";
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.AjouterUneTransaction);
-            this.btnAjouter.MouseLeave += new System.EventHandler(this.btnAjouter_MouseLeave);
-            this.btnAjouter.MouseHover += new System.EventHandler(this.btnAjouterHover);
+            this.btnAjouter.MouseHover += new System.EventHandler(this.BoutonHover);
             // 
             // errorProvider
             // 
@@ -343,6 +343,7 @@
             this.btnChoixPersonne.Text = "Choisir les participants...";
             this.btnChoixPersonne.UseVisualStyleBackColor = true;
             this.btnChoixPersonne.Click += new System.EventHandler(this.AjouterPersonneATransaction);
+            this.btnChoixPersonne.MouseHover += new System.EventHandler(this.BoutonHover);
             // 
             // lblChoixPersonne
             // 
@@ -366,6 +367,8 @@
             this.picQuitter.TabIndex = 54;
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.QuitterAjoutTransac);
+            this.picQuitter.MouseEnter += new System.EventHandler(this.SourisSurPicQuitter);
+            this.picQuitter.MouseLeave += new System.EventHandler(this.SourisSortDePicQuitter);
             // 
             // picBordure
             // 
@@ -381,7 +384,8 @@
             // 
             this.txtDescTran.Location = new System.Drawing.Point(203, 196);
             this.txtDescTran.Name = "txtDescTran";
-            this.txtDescTran.Size = new System.Drawing.Size(144, 20);
+            this.txtDescTran.ShortcutsEnabled = false;
+            this.txtDescTran.Size = new System.Drawing.Size(196, 20);
             this.txtDescTran.TabIndex = 1;
             this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
             // 
@@ -398,6 +402,7 @@
             this.btnAide.Text = "Aide";
             this.btnAide.UseVisualStyleBackColor = true;
             this.btnAide.Click += new System.EventHandler(this.CliquerAideAjout);
+            this.btnAide.MouseHover += new System.EventHandler(this.BoutonHover);
             // 
             // lblTitre
             // 
