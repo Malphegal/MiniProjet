@@ -166,19 +166,21 @@ namespace miniProjet2017
             CheckBox _sender = (CheckBox)sender;
             if (_sender.Checked) {
                 _sender.ForeColor = Color.Gray;
-                lblRecette.ForeColor = Color.Black;
+                lblRecette.ForeColor = Color.White;
+                chkPerçu.ForeColor = Color.Gray;
                 lblRecette.Text = "Dépense •";
                 _sender.Text = "  Recette";
                 chkPerçu.Checked = false;
-                chkPerçu.Enabled = false;
+                chkPerçu.AutoCheck = false;
             }
             else {
-                _sender.ForeColor = Color.Black;
+                _sender.ForeColor = Color.White;
                 lblRecette.ForeColor = Color.Gray;
+                chkPerçu.ForeColor = Color.White;
                 lblRecette.Text = "Dépense";
                 _sender.Text = "• Recette";
                 chkPerçu.Checked = false;
-                chkPerçu.Enabled = true;
+                chkPerçu.AutoCheck = true;
             }
         }
 
@@ -223,6 +225,17 @@ namespace miniProjet2017
             frmChoisirPersonne frm = new frmChoisirPersonne(listeParticipant);
             if (DialogResult.OK == frm.ShowDialog())
                 lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s :" : " :") + (listeParticipant = frm.listeParticipant).Count.ToString();
+        }
+
+        // HOVER
+
+        private void btnAjouterHover(object sender, EventArgs e)
+        {
+            btnAjouter.BackColor = Color.FromArgb(56, 69, 80);
+        }
+
+        private void btnAjouter_MouseLeave(object sender, EventArgs e)
+        {
         }
     }
 }

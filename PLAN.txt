@@ -29,6 +29,8 @@ troubleshooting :
 	• TabIndex pas cohérent
 		-> frmMain
 			-> DONE
+		-> frmAjouterTransac
+			-> DONE
 		-> les autres
 		
 	• frmOption - valeurSMS : on ne peut pas mettre 100%
@@ -44,6 +46,13 @@ troubleshooting :
 	• ALL - ajouter le déplacement avec la souris sur chaque formulaire
 		-> frmMain
 			-> DONE
+			
+	• ALL - pas de bouton Minimize !!
+	
+	• ALL - problème de scall avec une valeur autre que 2/3
+	
+	• frmAjouterPersonne -> Doit il exister ?
+		-> Si oui, doit on ajouter frmSupprimerPersonne ?
 	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)

@@ -402,7 +402,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 536);
+            this.ClientSize = new System.Drawing.Size(786, 575);
             this.Controls.Add(this.lblEuro);
             this.Controls.Add(this.lblChoixPersonne);
             this.Controls.Add(this.btnChoixPersonne);
