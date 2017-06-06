@@ -127,7 +127,7 @@ namespace miniProjet2017
                                                             ? calTransac.SelectionStart.Month.ToString()
                                                             : "0" + calTransac.SelectionStart.Month.ToString()) + '/' + calTransac.SelectionStart.Year + "#, '"
                                                             + txtDescTran.Text + "', "
-                                                            + FormatDuMontant(txtMontant.Text).Replace(',', '.') + ", "
+                                                            + txtMontant.Text.Replace(',', '.') + ", "
                                                             + (chkRecette.Checked ? "True" : "False") + ", "
                                                             + (chkPerçu.Checked ? "True" : "False") + ", "
                                                             + (cboType.SelectedIndex + 1) + ")", frmMain.con).ExecuteNonQuery();

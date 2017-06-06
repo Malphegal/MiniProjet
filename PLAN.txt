@@ -19,7 +19,7 @@ Mettre des commentaires (au moins un par fonction) /*Au dessus de la fonction*/ 
 troubleshooting :
 	• MessageBox.Show pour quitter le formulaire frmMain
 		-> Si on annule, le formulaire passe en arrière plan
-			-> DONE (TODO: Améliorer le code ?)
+			-> DONE(PAS VRAIMENT) (TODO: Améliorer le code ?)
 
 	• On peut resize les formulaire avec WIN + UP
 		-> Ajouter max/min de la taille des formulaires
@@ -35,15 +35,15 @@ troubleshooting :
 	
 	• frmMain - résolution autre que 1.0F : mauvaise position du menu déroulant
 	
-	• frmModiTransac - Crash avec le tuple
-		-> DONE
-		
 	• ALL - vérif' les scales dans chaque formulaire appelé
 	
 	• Load font -> ralenti tout
 	
 	• frmAjouterTransac - prix > 999 : crash
 	
+	• ALL - ajouter le déplacement avec la souris sur chaque formulaire
+		-> frmMain
+			-> DONE
 	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)

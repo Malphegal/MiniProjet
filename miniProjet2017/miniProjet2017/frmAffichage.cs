@@ -18,6 +18,8 @@ namespace miniProjet2017
 {
     public partial class frmAffichage : Form
     {
+        //DataGridView dataGridViewClone = new DataGridView();
+
         public frmAffichage()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace miniProjet2017
                 // Création de la table en local
 
             DataSet ds = new DataSet();
-            new OleDbDataAdapter(new CMD(@"SELECT t.dateTransaction, t.description, t.montant, t.recetteON, t.percuON, t2.libType
+            new OleDbDataAdapter(new CMD(@"SELECT t.*, t2.libType
                                             FROM [Transaction] t, TypeTransaction t2
                                             WHERE t2.codeType = t.type", frmMain.con)).Fill(ds, "_Transaction");
 
@@ -45,7 +47,11 @@ namespace miniProjet2017
             gridViewPDF.Columns[3].Width -= 45;
             gridViewPDF.Columns[4].Width -= 40;
             gridViewPDF.Columns[5].Width -= 45;
-            //gridViewPDF.Columns[6].Width -= 65;
+            gridViewPDF.Columns[6].Width -= 65;
+
+            gridViewClone.DataSource = ds.Tables["_Transaction"];
+            gridViewClone.Columns.RemoveAt(6);
+            gridViewClone.Columns.RemoveAt(0);
         }
 
         /* Ferme ce formulaire */
@@ -62,12 +68,14 @@ namespace miniProjet2017
         }
 
         /* Ouvre le formulaire pour modifier une transaction */
+        // TODO: Afficher la bonne transaction
         private void ContextStripModifier(object sender, EventArgs e)
         {
             new frmModiTransac().ShowDialog();
         }
 
         /* Ouvre le formulaire pour supprimer une transaction */
+        // TODO: Afficher la bonne transaction
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmSupprTransac().ShowDialog();
@@ -93,7 +101,7 @@ namespace miniProjet2017
             PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(cheminDuPDF, FileMode.Create));
             doc.Open(); //ouvre le document
 
-            PdfPTable dtgw = new PdfPTable(gridViewPDF.Columns.Count);
+            PdfPTable dtgw = new PdfPTable(gridViewClone.Columns.Count);
 
             Paragraph ligne = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLUE, Element.ALIGN_LEFT, 1))); //construction d'une ligne
 
@@ -120,13 +128,13 @@ namespace miniProjet2017
             table.AddCell("Perçu ?");
             table.AddCell("Type de dépense");
 
-            for (int i = 0; i < gridViewPDF.Rows.Count; i++)
+            for (int i = 0; i < gridViewClone.Rows.Count; i++)
             {
-                for (int j = 0; j < gridViewPDF.Columns.Count; j++)
+                for (int j = 0; j < gridViewClone.Columns.Count; j++)
                 {
-                    if (gridViewPDF[j, i].Value != null)
+                    if (gridViewClone[j, i].Value != null)
                     {
-                        table.AddCell(new Phrase(gridViewPDF[j, i].Value.ToString()));
+                        table.AddCell(new Phrase(gridViewClone[j, i].Value.ToString()));
                     }
                 }
             }
@@ -134,31 +142,31 @@ namespace miniProjet2017
 
             double nbDepen = 0;
             double nbRecet = 0;
-            for (int k = 0; k < gridViewPDF.Rows.Count; k++)
+            for (int k = 0; k < gridViewClone.Rows.Count; k++)
             {
                 //if (gridViewPDF[3, k].Value.ToString() == "False")
-                if (!Convert.ToBoolean(gridViewPDF[3, k].Value))
+                if (!Convert.ToBoolean(gridViewClone[3, k].Value))
                 {
-                    nbDepen += (double)Convert.ToDouble((gridViewPDF[2, k].Value));
+                    nbDepen += Convert.ToDouble((gridViewClone[2, k].Value));
                 }
                 else
                 {
-                    nbRecet += (double)Convert.ToDouble((gridViewPDF[2, k].Value));
+                    nbRecet += Convert.ToDouble((gridViewClone[2, k].Value));
                 }
             }
 
             double restPerc = 0;
-            for (int l = 0; l < gridViewPDF.Rows.Count; l++)
+            for (int l = 0; l < gridViewClone.Rows.Count; l++)
             {
                 //if (gridViewPDF[4, l].Value.ToString() == "True")
-                if (Convert.ToBoolean(gridViewPDF[4, l].Value))
+                if (Convert.ToBoolean(gridViewClone[4, l].Value))
                 {
-                    restPerc += (double)(gridViewPDF[2, l].Value);
+                    restPerc += (double)(gridViewClone[2, l].Value);
                 }
             }
 
             double sommDepen = nbRecet - nbDepen + restPerc;
-            int nbTransac = gridViewPDF.Rows.Count - 1; // -1 -> car ligne vide à la fin en trop
+            int nbTransac = gridViewClone.Rows.Count - 1; // -1 -> car ligne vide à la fin en trop
 
             doc.Add(Chunk.NEWLINE);
 

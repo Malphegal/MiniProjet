@@ -39,10 +39,12 @@
             this.btnPDF = new System.Windows.Forms.Button();
             this.lblTitre = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.gridViewClone = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewClone)).BeginInit();
             this.SuspendLayout();
             // 
             // gridViewPDF
@@ -66,10 +68,11 @@
             // 
             // picQuitter
             // 
+            this.picQuitter.BackColor = System.Drawing.Color.Transparent;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
-            this.picQuitter.Location = new System.Drawing.Point(704, 12);
+            this.picQuitter.Location = new System.Drawing.Point(685, 12);
             this.picQuitter.Name = "picQuitter";
-            this.picQuitter.Size = new System.Drawing.Size(50, 50);
+            this.picQuitter.Size = new System.Drawing.Size(69, 68);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picQuitter.TabIndex = 2;
             this.picQuitter.TabStop = false;
@@ -110,18 +113,27 @@
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
-            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitre.Location = new System.Drawing.Point(321, 27);
+            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.Location = new System.Drawing.Point(319, 27);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(137, 24);
+            this.lblTitre.Size = new System.Drawing.Size(175, 29);
             this.lblTitre.TabIndex = 4;
             this.lblTitre.Text = "Affichage[OFF]";
+            // 
+            // gridViewClone
+            // 
+            this.gridViewClone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewClone.Location = new System.Drawing.Point(0, 0);
+            this.gridViewClone.Name = "gridViewClone";
+            this.gridViewClone.Size = new System.Drawing.Size(0, 0);
+            this.gridViewClone.TabIndex = 5;
             // 
             // frmAffichage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 420);
+            this.Controls.Add(this.gridViewClone);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.btnPDF);
             this.Controls.Add(this.picQuitter);
@@ -138,6 +150,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewClone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +166,6 @@
         private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.DataGridView gridViewPDF;
+        private System.Windows.Forms.DataGridView gridViewClone;
     }
 }

@@ -8,14 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CON = System.Data.OleDb.OleDbConnection;
 using CMD = System.Data.OleDb.OleDbCommand;
 
 namespace miniProjet2017
 {
     public partial class frmRecap : Form
     {
-        CON con = new CON("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
         BindingSource bs = new BindingSource();
         DataSet ds = new DataSet();
 
@@ -31,6 +29,13 @@ namespace miniProjet2017
             frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
         }
 
+        /* Chargement du formulaire */
+        private void ChargementDeFrmRecap(object sender, EventArgs e)
+        {
+            picQuitter.Parent = picBordure;
+        }
+
+        /* Ferme le formulaire frmRecap */
         private void picQuitter_Click(object sender, EventArgs e)
         {
             Close();
@@ -62,11 +67,11 @@ namespace miniProjet2017
 
                     // Création de la source de donnée pour les transactions
 
-                new OleDbDataAdapter(new CMD(@"SELECT * FROM [Transaction]", con)).Fill(ds, "_Transaction");
+                new OleDbDataAdapter(new CMD(@"SELECT * FROM [Transaction]", frmMain.con)).Fill(ds, "_Transaction");
 
                 typeTranscation = new Dictionary<int, string>();
 
-                new OleDbDataAdapter(new CMD(@"SELECT * FROM TypeTransaction", con)).Fill(ds, "_TypeTransaction");
+                new OleDbDataAdapter(new CMD(@"SELECT * FROM TypeTransaction", frmMain.con)).Fill(ds, "_TypeTransaction");
                 foreach (DataRow row in ds.Tables["_TypeTransaction"].Rows)
                     typeTranscation.Add((int)row[0], (string)row[1]);
 
@@ -78,21 +83,26 @@ namespace miniProjet2017
                 btnRR.Enabled = true;
             }
 
-            bs.DataSource = ds.Tables["_Transaction"];
+            if (ds.Tables["_Transaction"].Rows.Count != 0)
+            {
+                bs.DataSource = ds.Tables["_Transaction"];
 
-                // Liaison de donnée
+                    // Liaison de donnée
 
-            lblId.DataBindings.Clear();lblId.DataBindings.Add("Text", bs, "codeTransaction");
-            lblDate.DataBindings.Clear();lblDate.DataBindings.Add("Text", bs, "dateTransaction");
-            lblDescription.DataBindings.Clear();lblDescription.DataBindings.Add("Text", bs, "description");
-            lblMontant.DataBindings.Clear();lblMontant.DataBindings.Add("Text", bs, "montant"); lblMontant.Text += " €";
-            chkRecette.DataBindings.Clear();chkRecette.DataBindings.Add("Checked", bs, "recetteON");
-            chkPercu.DataBindings.Clear();chkPercu.DataBindings.Add("Checked", bs, "percuON");
+                lblId.DataBindings.Clear(); lblId.DataBindings.Add("Text", bs, "codeTransaction");
+                lblDate.DataBindings.Clear(); lblDate.DataBindings.Add("Text", bs, "dateTransaction");
+                lblDescription.DataBindings.Clear(); lblDescription.DataBindings.Add("Text", bs, "description");
+                lblMontant.DataBindings.Clear(); lblMontant.DataBindings.Add("Text", bs, "montant"); lblMontant.Text += " €";
+                chkRecette.DataBindings.Clear(); chkRecette.DataBindings.Add("Checked", bs, "recetteON");
+                chkPercu.DataBindings.Clear(); chkPercu.DataBindings.Add("Checked", bs, "percuON");
 
-            lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[0][6]];
-            lblEnregistrement.Text = "Enregistrement " + 1 + " / " + bs.Count;
+                lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[0][6]];
+                lblEnregistrement.Text = "Enregistrement " + 1 + " / " + bs.Count;
 
-            bs.MoveFirst();
+                bs.MoveFirst();
+            }
+            else
+                MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
         }
 
         /* Lance la liaison de donnée vers les personnes*/
@@ -124,7 +134,7 @@ namespace miniProjet2017
 
                     // Création de la source de donnée pour les personnes
 
-                new OleDbDataAdapter(new CMD(@"SELECT * FROM Personne", con)).Fill(ds, "_Personne");
+                new OleDbDataAdapter(new CMD(@"SELECT * FROM Personne", frmMain.con)).Fill(ds, "_Personne");
 
                     // Activation des boutons de navigation
 
@@ -134,18 +144,23 @@ namespace miniProjet2017
                 _btnRR.Enabled = true;
             }
 
-            bs.DataSource = ds.Tables["_Personne"];
+            if (ds.Tables["_Personne"].Rows.Count != 0)
+            {
+                bs.DataSource = ds.Tables["_Personne"];
 
-                // Liaison de donnée
+                    // Liaison de donnée
 
-            lblIdPersonne.DataBindings.Clear(); lblIdPersonne.DataBindings.Add("Text", bs, "codePersonne");
-            lblNom.DataBindings.Clear(); lblNom.DataBindings.Add("Text", bs, "nomPersonne");
-            lblPrenom.DataBindings.Clear(); lblPrenom.DataBindings.Add("Text", bs, "pnPersonne");
-            lblTelephone.DataBindings.Clear(); lblTelephone.DataBindings.Add("Text", bs, "telMobile");
+                lblIdPersonne.DataBindings.Clear(); lblIdPersonne.DataBindings.Add("Text", bs, "codePersonne");
+                lblNom.DataBindings.Clear(); lblNom.DataBindings.Add("Text", bs, "nomPersonne");
+                lblPrenom.DataBindings.Clear(); lblPrenom.DataBindings.Add("Text", bs, "pnPersonne");
+                lblTelephone.DataBindings.Clear(); lblTelephone.DataBindings.Add("Text", bs, "telMobile");
 
-            _lblEnregistrement.Text = "Enregistrement " + 1 + " / " + bs.Count;
+                _lblEnregistrement.Text = "Enregistrement " + 1 + " / " + bs.Count;
 
-            bs.MoveFirst();
+                bs.MoveFirst();
+            }
+            else
+                 MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
         }
 
         // ----------------------------------
@@ -212,6 +227,5 @@ namespace miniProjet2017
             bs.MoveLast();
             _lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
         }
-
     }
 }
