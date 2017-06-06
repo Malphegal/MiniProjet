@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAffichage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 211</value>
+    <value>790, 211</value>
   </data>
   <data name="btnAffichage.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 41</value>
@@ -151,7 +151,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnRecap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 258</value>
+    <value>790, 258</value>
   </data>
   <data name="btnRecap.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 41</value>
@@ -669,114 +669,6 @@
   <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;picReduire.Name" xml:space="preserve">
-    <value>picReduire</value>
-  </data>
-  <data name="&gt;&gt;picReduire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picReduire.Parent" xml:space="preserve">
-    <value>pnlHaut</value>
-  </data>
-  <data name="&gt;&gt;picReduire.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.Name" xml:space="preserve">
-    <value>lblTitre</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.Parent" xml:space="preserve">
-    <value>pnlHaut</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;picQuitter.Name" xml:space="preserve">
-    <value>picQuitter</value>
-  </data>
-  <data name="&gt;&gt;picQuitter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picQuitter.Parent" xml:space="preserve">
-    <value>pnlHaut</value>
-  </data>
-  <data name="&gt;&gt;picQuitter.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;picOption.Name" xml:space="preserve">
-    <value>picOption</value>
-  </data>
-  <data name="&gt;&gt;picOption.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picOption.Parent" xml:space="preserve">
-    <value>pnlHaut</value>
-  </data>
-  <data name="&gt;&gt;picOption.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pnlHaut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlHaut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 0</value>
-  </data>
-  <data name="pnlHaut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>750, 82</value>
-  </data>
-  <data name="pnlHaut.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Name" xml:space="preserve">
-    <value>pnlHaut</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTitre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 32.25pt, style=Italic</value>
-  </data>
-  <data name="lblTitre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblTitre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 12</value>
-  </data>
-  <data name="lblTitre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>489, 51</value>
-  </data>
-  <data name="lblTitre.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblTitre.Text" xml:space="preserve">
-    <value>Miudget Manager - 2017</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.Name" xml:space="preserve">
-    <value>lblTitre</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.Parent" xml:space="preserve">
-    <value>pnlHaut</value>
-  </data>
-  <data name="&gt;&gt;lblTitre.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="picReduire.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB3AAAABzCAYAAABpT5NmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -833,6 +725,39 @@
   <data name="&gt;&gt;picReduire.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTitre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 32.25pt, style=Italic</value>
+  </data>
+  <data name="lblTitre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTitre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 12</value>
+  </data>
+  <data name="lblTitre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>489, 51</value>
+  </data>
+  <data name="lblTitre.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblTitre.Text" xml:space="preserve">
+    <value>Miudget Manager - 2017</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Name" xml:space="preserve">
+    <value>lblTitre</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;lblTitre.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="picQuitter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -887,6 +812,33 @@
   <data name="&gt;&gt;picOption.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="pnlHaut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlHaut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="pnlHaut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 82</value>
+  </data>
+  <data name="pnlHaut.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Name" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3597,9 +3549,6 @@
         qDholKBGSmRrKkJbZAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwPwAA8D8AAOAfAADABwAAwAAAAMAA
         AADAAAAAwAAAAMAAAADAAQAAwB8AAMAPAADADwAA4B8AAOAfAADwPwAA
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>970, 584</value>
