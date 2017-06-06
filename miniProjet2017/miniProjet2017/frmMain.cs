@@ -190,36 +190,57 @@ namespace miniProjet2017
 
         /* Cliquer sur le bouton des transactions dans le panel de gauche */
         static bool deroulerTransaction = false;
+        static Timer timerDeroulantTransaction = new Timer();
         private void CliquerSurDeroulerTransaction(object sender, EventArgs e)
         {
             if (deroulerTransaction = !deroulerTransaction)
             {
-                foreach (Button b in pnlGauche.Controls.OfType<Button>())
-                {
-                    b.Top += Convert.ToInt32(b.Tag.ToString().Split(';')[1]) * 59;
-                    if (b.Name == "btnAjouterTransaction"
-                        || b.Name == "btnModifierTransaction"
-                        || b.Name == "btnSupprimerTransaction")
-                    {
-                        b.Left += 220;
-                        b.TabStop = true;
-                    }
-                }
-                btnDeroulerTransaction.Text = btnDeroulerTransaction.Text.Replace('↓', '↑');
+                timerDeroulantTransaction.Stop();
+                timerDeroulantTransaction.Start();
+                _btnDeroulerTransaction.Text = _btnDeroulerTransaction.Text.Replace('↓', '↑');
             }
             else {
-                foreach (Button b in pnlGauche.Controls.OfType<Button>())
-                {
-                    b.Top -= Convert.ToInt32(b.Tag.ToString().Split(';')[1]) * 59;
-                    if (b.Name == "btnAjouterTransaction"
-                        || b.Name == "btnModifierTransaction"
-                        || b.Name == "btnSupprimerTransaction")
-                    {
-                        b.Left -= 220;
-                        b.TabStop = false;
-                    }
-                }
-                btnDeroulerTransaction.Text = btnDeroulerTransaction.Text.Replace('↑', '↓');
+                timerDeroulantTransaction.Stop();
+                timerDeroulantTransaction.Start();
+                _btnDeroulerTransaction.Text = _btnDeroulerTransaction.Text.Replace('↑', '↓');
+            }
+        }
+
+        void DeroulementDeTransaction(object sender, EventArgs e)
+        {
+            btnAjouterTransaction.Height += 3;
+            btnModifierTransaction.Height += 3;
+            btnSupprimerTransaction.Height += 3;
+            if (btnAjouterTransaction.Height >= 50)
+            {
+                timerDeroulantTransaction.Stop();
+                btnAjouterTransaction.Height = 50;
+                btnModifierTransaction.Height = 50;
+                btnSupprimerTransaction.Height = 50;
+                btnAjouterTransaction.TabStop = true;
+                btnModifierTransaction.TabStop = true;
+                btnSupprimerTransaction.TabStop = true;
+                timerDeroulantTransaction.Tick -= new EventHandler(DeroulementDeTransaction);
+                timerDeroulantTransaction.Tick += new EventHandler(EnroulementDeTransaction);
+            }
+        }
+
+        void EnroulementDeTransaction(object sender, EventArgs e)
+        {
+            btnAjouterTransaction.Height -= 3;
+            btnModifierTransaction.Height -= 3;
+            btnSupprimerTransaction.Height -= 3;
+            if (btnAjouterTransaction.Height <= 0)
+            {
+                timerDeroulantTransaction.Stop();
+                btnAjouterTransaction.Height = 0;
+                btnModifierTransaction.Height = 0;
+                btnSupprimerTransaction.Height = 0;
+                btnAjouterTransaction.TabStop = false;
+                btnModifierTransaction.TabStop = false;
+                btnSupprimerTransaction.TabStop = false;
+                timerDeroulantTransaction.Tick -= new EventHandler(EnroulementDeTransaction);
+                timerDeroulantTransaction.Tick += new EventHandler(DeroulementDeTransaction);
             }
         }
 
@@ -260,15 +281,19 @@ namespace miniProjet2017
         /* Création des boutons du menu déroulant */
         private void PremierChargementDeApplication(object sender, EventArgs e)
         {
+                // Les timer
+
+            timerDeroulantTransaction.Tick += new EventHandler(DeroulementDeTransaction);
+            timerDeroulantTransaction.Interval = 1;
+
                 // Les polices d'écritures
 
             fonts.AddFontFile("..\\..\\..\\..\\Font\\Café Françoise.otf");
-
             lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
 
                 // Dérouler transaction
 
-            Button b =
+            /*Button b =
             new Button()
             {
                 Name = "btnAjouterTransaction",
@@ -394,11 +419,11 @@ namespace miniProjet2017
             };
             b.FlatAppearance.BorderColor = Color.Black;
             b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrm3);
+            b.Click += new EventHandler(NouveauFrm3);*/
 
             // Pour focus le premier bouton
 
-            ActiveControl = btnDeroulerTransaction;
+            ActiveControl = _btnDeroulerTransaction;
         }
 
         /* Initialise les valeurs par défaut du formulaire des options */
@@ -512,7 +537,7 @@ namespace miniProjet2017
 
         private void HoverQuitter(object sender, EventArgs e)
         {
-            toolTip.Show("Quitte l'application.", picQuitter, 20, 5);
+            toolTip.Show("Quitte l'application.", picQuitter, 25, 0);
         }
 
         private void _HoverQuitter(object sender, EventArgs e)
@@ -522,7 +547,7 @@ namespace miniProjet2017
 
         private void HoverOption(object sender, EventArgs e)
         {
-            toolTip.Show("Affiche les options.", picOption, 20, 5);
+            toolTip.Show("Affiche les options.", picOption, 25, 0);
         }
 
         private void _HoverOption(object sender, EventArgs e)

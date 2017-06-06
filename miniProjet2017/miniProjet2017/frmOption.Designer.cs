@@ -32,8 +32,6 @@
             this.txtPourcentageSMS = new System.Windows.Forms.TextBox();
             this.lblPourcent = new System.Windows.Forms.Label();
             this.btnRetour = new System.Windows.Forms.Button();
-            this.picQuitter = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBaseDonnee = new System.Windows.Forms.Label();
             this.openFD = new System.Windows.Forms.OpenFileDialog();
             this.lblSourceBaseDonnee = new System.Windows.Forms.Label();
@@ -42,8 +40,10 @@
             this.lblResolution = new System.Windows.Forms.Label();
             this.txtResolution = new System.Windows.Forms.TextBox();
             this.lblResolutionMax = new System.Windows.Forms.Label();
+            this.picQuitter = new System.Windows.Forms.PictureBox();
+            this.picBordure = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombreSMSTransaction
@@ -85,28 +85,6 @@
             this.btnRetour.Text = "OK";
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.FermerFrmOption);
-            // 
-            // picQuitter
-            // 
-            this.picQuitter.Image = global::miniProjet2017.Properties.Resources.croixQuitter;
-            this.picQuitter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.picQuitter.Location = new System.Drawing.Point(400, 12);
-            this.picQuitter.Name = "picQuitter";
-            this.picQuitter.Size = new System.Drawing.Size(29, 29);
-            this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picQuitter.TabIndex = 4;
-            this.picQuitter.TabStop = false;
-            this.picQuitter.Click += new System.EventHandler(this.FermerFrmOption);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::miniProjet2017.Properties.Resources.bordureOption;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(443, 365);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // lblBaseDonnee
             // 
@@ -184,6 +162,29 @@
             this.lblResolutionMax.TabIndex = 12;
             this.lblResolutionMax.Text = "/ 3";
             // 
+            // picQuitter
+            // 
+            this.picQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
+            this.picQuitter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picQuitter.Location = new System.Drawing.Point(377, 12);
+            this.picQuitter.Name = "picQuitter";
+            this.picQuitter.Size = new System.Drawing.Size(50, 50);
+            this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picQuitter.TabIndex = 4;
+            this.picQuitter.TabStop = false;
+            this.picQuitter.Click += new System.EventHandler(this.FermerFrmOption);
+            // 
+            // picBordure
+            // 
+            this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
+            this.picBordure.Location = new System.Drawing.Point(0, 0);
+            this.picBordure.Name = "picBordure";
+            this.picBordure.Size = new System.Drawing.Size(443, 365);
+            this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBordure.TabIndex = 5;
+            this.picBordure.TabStop = false;
+            // 
             // frmOption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,7 +202,7 @@
             this.Controls.Add(this.lblPourcent);
             this.Controls.Add(this.txtPourcentageSMS);
             this.Controls.Add(this.lblNombreSMSTransaction);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(441, 364);
             this.MinimumSize = new System.Drawing.Size(441, 364);
@@ -210,7 +211,7 @@
             this.Text = "frmOption";
             this.Load += new System.EventHandler(this.ChargementDeFrmOption);
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +224,7 @@
         private System.Windows.Forms.Label lblPourcent;
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.PictureBox picQuitter;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBordure;
         private System.Windows.Forms.Label lblBaseDonnee;
         private System.Windows.Forms.OpenFileDialog openFD;
         private System.Windows.Forms.Label lblSourceBaseDonnee;
