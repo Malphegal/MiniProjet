@@ -39,19 +39,25 @@ namespace miniProjet2017
                                             FROM [Transaction] t, TypeTransaction t2
                                             WHERE t2.codeType = t.type", frmMain.con)).Fill(ds, "_Transaction");
 
-                // Ajout du contenu du DataGridView
+            if (ds.Tables["_Transaction"].Rows.Count != 0)
+            {
 
-            gridViewPDF.DataSource = ds.Tables["_Transaction"];
-            gridViewPDF.Columns[1].Width += 60;
-            gridViewPDF.Columns[2].Width += 20;
-            gridViewPDF.Columns[3].Width -= 45;
-            gridViewPDF.Columns[4].Width -= 40;
-            gridViewPDF.Columns[5].Width -= 45;
-            gridViewPDF.Columns[6].Width -= 65;
+                    // Ajout du contenu du DataGridView
 
-            gridViewClone.DataSource = ds.Tables["_Transaction"];
-            gridViewClone.Columns.RemoveAt(6);
-            gridViewClone.Columns.RemoveAt(0);
+                gridViewPDF.DataSource = ds.Tables["_Transaction"];
+                gridViewPDF.Columns[1].Width += 60;
+                gridViewPDF.Columns[2].Width += 20;
+                gridViewPDF.Columns[3].Width -= 45;
+                gridViewPDF.Columns[4].Width -= 40;
+                gridViewPDF.Columns[5].Width -= 45;
+                gridViewPDF.Columns[6].Width -= 65;
+
+                gridViewClone.DataSource = ds.Tables["_Transaction"];
+                gridViewClone.Columns.RemoveAt(6);
+                gridViewClone.Columns.RemoveAt(0);
+            }
+            else
+                MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
         }
 
         /* Ferme ce formulaire */
@@ -161,7 +167,7 @@ namespace miniProjet2017
                 //if (gridViewPDF[4, l].Value.ToString() == "True")
                 if (Convert.ToBoolean(gridViewClone[4, l].Value))
                 {
-                    restPerc += (double)(gridViewClone[2, l].Value);
+                    restPerc += Convert.ToDouble((gridViewClone[2, l].Value));
                 }
             }
 
@@ -214,7 +220,7 @@ namespace miniProjet2017
 
 
             //rajoute, redimensionne et positionne une image
-            iTextSharp.text.Image JPG = iTextSharp.text.Image.GetInstance("croixQuitter.png");
+            iTextSharp.text.Image JPG = iTextSharp.text.Image.GetInstance("..\\..\\Resources\\logo.jpg");
             JPG.ScalePercent(10f);
             JPG.SetAbsolutePosition(doc.PageSize.Width - 36f - 36f, doc.PageSize.Height - 36f - 216.6f);
             doc.Add(JPG);

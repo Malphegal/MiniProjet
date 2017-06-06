@@ -48,6 +48,10 @@
             this.picVertePnlGauche1 = new System.Windows.Forms.PictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.picVertePnlGauche2 = new System.Windows.Forms.PictureBox();
+            this.btnPostFixe = new System.Windows.Forms.Button();
+            this.btnPostePonctuel = new System.Windows.Forms.Button();
+            this.btnFrm_3 = new System.Windows.Forms.Button();
+            this.btnBudgetRecap = new System.Windows.Forms.Button();
             this.pnlGauche.SuspendLayout();
             this.pnlHaut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picReduire)).BeginInit();
@@ -73,7 +77,12 @@
             // 
             // pnlGauche
             // 
+            resources.ApplyResources(this.pnlGauche, "pnlGauche");
             this.pnlGauche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.pnlGauche.Controls.Add(this.btnBudgetRecap);
+            this.pnlGauche.Controls.Add(this.btnFrm_3);
+            this.pnlGauche.Controls.Add(this.btnPostePonctuel);
+            this.pnlGauche.Controls.Add(this.btnPostFixe);
             this.pnlGauche.Controls.Add(this.btnDeroulerBudget);
             this.pnlGauche.Controls.Add(this.picVertePnlGauche2);
             this.pnlGauche.Controls.Add(this.btnAjouterPersonne);
@@ -83,7 +92,6 @@
             this.pnlGauche.Controls.Add(this.btnAjouterTransaction);
             this.pnlGauche.Controls.Add(this._btnDeroulerTransaction);
             this.pnlGauche.Controls.Add(this.pnlLogo);
-            resources.ApplyResources(this.pnlGauche, "pnlGauche");
             this.pnlGauche.Name = "pnlGauche";
             this.pnlGauche.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
             this.pnlGauche.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
@@ -119,7 +127,7 @@
             this.btnSupprimerTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnSupprimerTransaction, "btnSupprimerTransaction");
             this.btnSupprimerTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSupprimerTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnSupprimerTransaction.ForeColor = System.Drawing.Color.Salmon;
             this.btnSupprimerTransaction.Name = "btnSupprimerTransaction";
             this.btnSupprimerTransaction.TabStop = false;
             this.btnSupprimerTransaction.Tag = "derouler;0";
@@ -132,7 +140,7 @@
             this.btnModifierTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnModifierTransaction, "btnModifierTransaction");
             this.btnModifierTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnModifierTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnModifierTransaction.ForeColor = System.Drawing.Color.Salmon;
             this.btnModifierTransaction.Name = "btnModifierTransaction";
             this.btnModifierTransaction.TabStop = false;
             this.btnModifierTransaction.Tag = "derouler;0";
@@ -145,7 +153,7 @@
             this.btnAjouterTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnAjouterTransaction, "btnAjouterTransaction");
             this.btnAjouterTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAjouterTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnAjouterTransaction.ForeColor = System.Drawing.Color.Salmon;
             this.btnAjouterTransaction.Name = "btnAjouterTransaction";
             this.btnAjouterTransaction.TabStop = false;
             this.btnAjouterTransaction.Tag = "derouler;0";
@@ -236,6 +244,58 @@
             this.picVertePnlGauche2.Name = "picVertePnlGauche2";
             this.picVertePnlGauche2.TabStop = false;
             // 
+            // btnPostFixe
+            // 
+            this.btnPostFixe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnPostFixe.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnPostFixe, "btnPostFixe");
+            this.btnPostFixe.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPostFixe.ForeColor = System.Drawing.Color.Salmon;
+            this.btnPostFixe.Name = "btnPostFixe";
+            this.btnPostFixe.TabStop = false;
+            this.btnPostFixe.Tag = "";
+            this.btnPostFixe.UseVisualStyleBackColor = false;
+            this.btnPostFixe.Click += new System.EventHandler(this.NouveauFrmPostFixe);
+            // 
+            // btnPostePonctuel
+            // 
+            this.btnPostePonctuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnPostePonctuel.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnPostePonctuel, "btnPostePonctuel");
+            this.btnPostePonctuel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPostePonctuel.ForeColor = System.Drawing.Color.Salmon;
+            this.btnPostePonctuel.Name = "btnPostePonctuel";
+            this.btnPostePonctuel.TabStop = false;
+            this.btnPostePonctuel.Tag = "";
+            this.btnPostePonctuel.UseVisualStyleBackColor = false;
+            this.btnPostePonctuel.Click += new System.EventHandler(this.NouveauFrmPostePonctuel);
+            // 
+            // btnFrm_3
+            // 
+            this.btnFrm_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnFrm_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnFrm_3, "btnFrm_3");
+            this.btnFrm_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnFrm_3.ForeColor = System.Drawing.Color.Salmon;
+            this.btnFrm_3.Name = "btnFrm_3";
+            this.btnFrm_3.TabStop = false;
+            this.btnFrm_3.Tag = "";
+            this.btnFrm_3.UseVisualStyleBackColor = false;
+            this.btnFrm_3.Click += new System.EventHandler(this.NouveauFrm3);
+            // 
+            // btnBudgetRecap
+            // 
+            this.btnBudgetRecap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnBudgetRecap.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnBudgetRecap, "btnBudgetRecap");
+            this.btnBudgetRecap.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBudgetRecap.ForeColor = System.Drawing.Color.Salmon;
+            this.btnBudgetRecap.Name = "btnBudgetRecap";
+            this.btnBudgetRecap.TabStop = false;
+            this.btnBudgetRecap.Tag = "";
+            this.btnBudgetRecap.UseVisualStyleBackColor = false;
+            this.btnBudgetRecap.Click += new System.EventHandler(this.NouveauBudgetRecap);
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -283,6 +343,10 @@
         private System.Windows.Forms.Button btnSupprimerTransaction;
         private System.Windows.Forms.PictureBox picVertePnlGauche1;
         private System.Windows.Forms.PictureBox picVertePnlGauche2;
+        private System.Windows.Forms.Button btnPostFixe;
+        private System.Windows.Forms.Button btnFrm_3;
+        private System.Windows.Forms.Button btnPostePonctuel;
+        private System.Windows.Forms.Button btnBudgetRecap;
     }
 }
 

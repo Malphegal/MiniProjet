@@ -167,6 +167,20 @@ namespace miniProjet2017
                 c.Enabled = true;
         }
 
+        private void NouveauBudgetRecap(object sender, EventArgs e)
+        {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
+            foreach (Control c in Controls)
+                c.Enabled = false;
+            new frmBudgetRecap().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
+        }
+
         /* Ferme l'application */
         private void QuitterApplication(object sender, EventArgs e)
         {
@@ -246,34 +260,63 @@ namespace miniProjet2017
 
         /* Cliquer sur le bouton des budgets dans le panel de gauche */
         static bool deroulerBudget = false;
+        static Timer timerDeroulantBudget = new Timer();
         private void CliquerSurDeroulerBudget(object sender, EventArgs e)
         {
             if (deroulerBudget = !deroulerBudget)
             {
-                foreach (Button b in pnlGauche.Controls.OfType<Button>())
-                {
-                    if (b.Name == "btnPostFixe"
-                        || b.Name == "btnPostePonctuel"
-                        || b.Name == "btnFrm_3")
-                    {
-                        b.Left += 220;
-                        b.TabStop = true;
-                    }
-                }
+                timerDeroulantBudget.Stop();
+                timerDeroulantBudget.Start();
                 btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↓', '↑');
             }
             else {
-                foreach (Button b in pnlGauche.Controls.OfType<Button>())
-                {
-                    if (b.Name == "btnPostFixe"
-                        || b.Name == "btnPostePonctuel"
-                        || b.Name == "btnFrm_3")
-                    {
-                        b.Left -= 220;
-                        b.TabStop = false;
-                    }
-                }
+                timerDeroulantBudget.Stop();
+                timerDeroulantBudget.Start();
                 btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↑', '↓');
+            }
+        }
+
+        void DeroulementDeBudget(object sender, EventArgs e)
+        {
+            btnPostFixe.Height += 3;
+            btnPostePonctuel.Height += 3;
+            btnFrm_3.Height += 3;
+            btnBudgetRecap.Height += 3;
+            if (btnPostFixe.Height >= 50)
+            {
+                timerDeroulantBudget.Stop();
+                btnPostFixe.Height = 50;
+                btnPostePonctuel.Height = 50;
+                btnFrm_3.Height = 50;
+                btnBudgetRecap.Height = 50;
+                btnPostFixe.TabStop = true;
+                btnPostePonctuel.TabStop = true;
+                btnFrm_3.TabStop = true;
+                btnBudgetRecap.TabStop = true;
+                timerDeroulantBudget.Tick -= new EventHandler(DeroulementDeBudget);
+                timerDeroulantBudget.Tick += new EventHandler(EnroulementDeBudget);
+            }
+        }
+
+        void EnroulementDeBudget(object sender, EventArgs e)
+        {
+            btnPostFixe.Height -= 3;
+            btnPostePonctuel.Height -= 3;
+            btnFrm_3.Height -= 3;
+            btnBudgetRecap.Height -= 3;
+            if (btnPostFixe.Height <= 0)
+            {
+                timerDeroulantBudget.Stop();
+                btnPostFixe.Height = 0;
+                btnPostePonctuel.Height = 0;
+                btnFrm_3.Height = 0;
+                btnBudgetRecap.Height = 0;
+                btnPostFixe.TabStop = false;
+                btnPostePonctuel.TabStop = false;
+                btnFrm_3.TabStop = false;
+                btnBudgetRecap.TabStop = false;
+                timerDeroulantBudget.Tick -= new EventHandler(EnroulementDeBudget);
+                timerDeroulantBudget.Tick += new EventHandler(DeroulementDeBudget);
             }
         }
 
@@ -285,143 +328,15 @@ namespace miniProjet2017
 
             timerDeroulantTransaction.Tick += new EventHandler(DeroulementDeTransaction);
             timerDeroulantTransaction.Interval = 1;
+            timerDeroulantBudget.Tick += new EventHandler(DeroulementDeBudget);
+            timerDeroulantBudget.Interval = 1;
 
-                // Les polices d'écritures
+            // Les polices d'écritures
 
             fonts.AddFontFile("..\\..\\..\\..\\Font\\Café Françoise.otf");
             lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
 
-                // Dérouler transaction
-
-            /*Button b =
-            new Button()
-            {
-                Name = "btnAjouterTransaction",
-                Text = "Ajouter une transaction",
-                Top = 140,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;0",
-                TabIndex = 1
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmAjoutTransac);
-
-            b =
-            new Button()
-            {
-                Name = "btnModifierTransaction",
-                Text = "Modifier une transaction",
-                Top = 199,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;0",
-                TabIndex = 2
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmModiTransac);
-
-            b =
-            new Button()
-            {
-                Name = "btnSupprimerTransaction",
-                Text = "Supprimer une transaction",
-                Top = 258,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;0",
-                TabIndex = 3
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmSupprTransac);
-
-            // Dérouler budget
-
-            b =
-            new Button()
-            {
-                Name = "btnPostFixe",
-                Text = "frmPostFixe",
-                Top = 258,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;3",
-                TabIndex = 6
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmPostFixe);
-
-            b =
-            new Button()
-            {
-                Name = "btnPostePonctuel",
-                Text = "frmPostePonctuel",
-                Top = 317,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;3",
-                TabIndex = 7
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmPostePonctuel);
-
-            b =
-            new Button()
-            {
-                Name = "btnFrm_3",
-                Text = "frmFrm_3",
-                Top = 376,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;3",
-                TabIndex = 8
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrm3);*/
-
-            // Pour focus le premier bouton
+                // Pour focus le premier bouton
 
             ActiveControl = _btnDeroulerTransaction;
         }

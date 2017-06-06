@@ -32,7 +32,9 @@ namespace miniProjet2017
                 // Création de la table locale
 
             ds = new DataSet();
-            new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", frmMain.con)).Fill(ds, "_Transaction");
+            new OleDbDataAdapter(new CMD(@"SELECT t.codeTransaction, t.dateTransaction, t.description, t.montant,
+                    t.recetteON, t.percuON, tt.libType FROM [Transaction] t, TypeTransaction tt
+                                            WHERE t.type = tt.codeType", frmMain.con)).Fill(ds, "_Transaction");
 
             if (ds.Tables["_Transaction"].Rows.Count != 0)
             {

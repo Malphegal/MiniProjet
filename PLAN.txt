@@ -30,10 +30,12 @@ troubleshooting :
 		-> frmMain
 			-> DONE
 		-> frmAjouterTransac
-			-> DONE
+			-> A FAIRE
 		-> les autres
+			-> PAREIL
 		
 	• frmOption - valeurSMS : on ne peut pas mettre 100%
+		-> Changer la fonction de KeyPress du textBox pour le 100
 	
 	• frmMain - résolution autre que 1.0F : mauvaise position du menu déroulant et dataGridView
 		-> DOCK MENU -> DONE
@@ -44,6 +46,7 @@ troubleshooting :
 	• Load font -> ralenti toutes l'appli
 	
 	• frmAjouterTransac - prix > 999 : crash
+		-> DONE -> CHECK ModiTransac
 	
 	• ALL - ajouter le déplacement avec la souris sur chaque formulaire
 		-> frmMain
@@ -62,10 +65,28 @@ troubleshooting :
 	
 	• TROUBLESHOOTING -> PICSLOW-> WUT ?
 	
+	• Hover -> Très lent
+	
 	• Resources à nettoyer
 	
 	• frmMain -> HOVER pnlHaut -> Souris par dessus
 		-> DONE
+		
+	• frmMain -> Supprimer les tags -> pngGauche
+	
+	• frmMain -> AutoVertScrollBar -> C'est moche ! trouver une solution ?
+	
+	• frmMain -> ArrowKeys -> permettent de séléctionner les boutons cachés du menu déroulant !
+		-> Retirer le .Click tant que le menu n'est pas ouvert ?
+		
+	• frmMain -> MultiClick sur un menu déroulant -> La flèche n'est plus correctement placée
+	
+	• frmAffichage -> MenuStrip -> modi/suppr -> Afficher la bonne transac directement
+						-> Bloqué la saisie / modification SUR le dataGridView
+						
+	• code PDF -> Booléen recette et dépense sont inversés
+	
+	• frmChoixPersonne -> Ajouter bouton tout cocher/décocher
 	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)
