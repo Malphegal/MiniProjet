@@ -61,10 +61,10 @@ namespace miniProjet2017
         {
                 // Obtenir la liste des personnes qui sont cochées
 
-            List<uint> idDesPersonnesASuppr = new List<uint>();
+            List<int> idDesPersonnesASuppr = new List<int>();
             foreach (CheckBox chk in pnlPersonne.Controls.OfType<CheckBox>())
                 if (chk.Checked)
-                    idDesPersonnesASuppr.Add(Convert.ToUInt32(chk.Tag));
+                    idDesPersonnesASuppr.Add(Convert.ToInt32(chk.Tag));
 
                 // Si au moins une personne est cochée, on peut demander si l'utilisateur souhaite vraiment supprimer
 
@@ -74,12 +74,14 @@ namespace miniProjet2017
                     // On supprime toutes les références de cette personne dans les autres tables
 
                 // id des transaction qui possède une personne
-                List<uint> idDesTransaction = new List<uint>();
+                List<int> idDesTransaction = new List<int>();
 
                 frmMain.con.Open();
-                foreach (uint i in idDesPersonnesASuppr)
+                foreach (int i in idDesPersonnesASuppr)
                 {
-                    //if ()
+                    idDesTransaction.Add(Convert.ToInt32(new CMD(@"SELECT codeTransaction FROM Beneficiaires
+                                                                   WHERE codePersonne = " + i, frmMain.con).ExecuteScalar()));
+
                     new CMD(@"DELETE FROM Beneficiaires
                               WHERE codePersonne = " + i, frmMain.con).ExecuteNonQuery();
 
@@ -88,13 +90,17 @@ namespace miniProjet2017
                     new CMD(@"DELETE FROM Personne
                               WHERE codePersonne = " + i, frmMain.con).ExecuteNonQuery();
                 }
-                    // On vérifie si la transaction possde encore des personnes ou non !
+                    // On vérifie si la transaction possède encore des personnes ou non !
 
-                //if ((int)new CMD(@"SELECT count(*) FROM [Transaction]
-                //                    WHERE "))
+                foreach (int i in idDesTransaction)
+                    if (Convert.ToInt32(new CMD("SELECT count(*) FROM Beneficiaire WHERE codeTransaction = " + i, frmMain.con).ExecuteScalar()) == 0)
+                        new CMD(@"SELECT count(*) FROM [Transaction]
+                                  WHERE codeTransaction = ", frmMain.con).ExecuteScalar();
 
                     // On ferme con et le formulaire
 
+                foreach (int i in idDesTransaction)
+                    MessageBox.Show(i.ToString());
                 frmMain.con.Close();
                 MessageBox.Show("Personne supprimée !");
                 Close();
