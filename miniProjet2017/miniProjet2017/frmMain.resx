@@ -130,7 +130,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnAffichage.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="btnAffichage.Text" xml:space="preserve">
     <value>frmAffichage</value>
@@ -157,7 +157,7 @@
     <value>140, 41</value>
   </data>
   <data name="btnRecap.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="btnRecap.Text" xml:space="preserve">
     <value>frmRecap</value>
@@ -196,7 +196,7 @@
     <value>220, 0</value>
   </data>
   <data name="btnBudgetRecap.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>10</value>
   </data>
   <data name="btnBudgetRecap.Text" xml:space="preserve">
     <value> • Le budgets - Récapitulatif</value>
@@ -274,7 +274,7 @@
     <value>220, 0</value>
   </data>
   <data name="btnPostePonctuel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="btnPostePonctuel.Text" xml:space="preserve">
     <value> • Les postes ponctuels</value>
@@ -313,7 +313,7 @@
     <value>220, 0</value>
   </data>
   <data name="btnPostFixe.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="btnPostFixe.Text" xml:space="preserve">
     <value> • Les postes fixes</value>
@@ -352,7 +352,7 @@
     <value>220, 60</value>
   </data>
   <data name="btnDeroulerBudget.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="btnDeroulerBudget.Text" xml:space="preserve">
     <value>Les budgets ↓</value>
@@ -399,6 +399,45 @@
   <data name="&gt;&gt;picVertePnlGauche2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="btnSupprimerPersonne.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnSupprimerPersonne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnSupprimerPersonne.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnSupprimerPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSupprimerPersonne.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 215</value>
+  </data>
+  <data name="btnSupprimerPersonne.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnSupprimerPersonne.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnSupprimerPersonne.Text" xml:space="preserve">
+    <value> • Supprimer une personne</value>
+  </data>
+  <data name="btnSupprimerPersonne.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnSupprimerPersonne.Name" xml:space="preserve">
+    <value>btnSupprimerPersonne</value>
+  </data>
+  <data name="&gt;&gt;btnSupprimerPersonne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSupprimerPersonne.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnSupprimerPersonne.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="btnAjouterPersonne.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -406,22 +445,25 @@
     <value>Popup</value>
   </data>
   <data name="btnAjouterPersonne.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 13.5pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="btnAjouterPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnAjouterPersonne.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 155</value>
+    <value>0, 215</value>
   </data>
   <data name="btnAjouterPersonne.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
+    <value>220, 0</value>
   </data>
   <data name="btnAjouterPersonne.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnAjouterPersonne.Text" xml:space="preserve">
-    <value>Ajouter une personne</value>
+    <value> • Ajouter une personne</value>
+  </data>
+  <data name="btnAjouterPersonne.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;btnAjouterPersonne.Name" xml:space="preserve">
     <value>btnAjouterPersonne</value>
@@ -433,7 +475,43 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
+  </data>
+  <data name="btnDeroulerPersonne.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnDeroulerPersonne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDeroulerPersonne.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="btnDeroulerPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDeroulerPersonne.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 155</value>
+  </data>
+  <data name="btnDeroulerPersonne.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 60</value>
+  </data>
+  <data name="btnDeroulerPersonne.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnDeroulerPersonne.Text" xml:space="preserve">
+    <value>Les personnes ↓</value>
+  </data>
+  <data name="&gt;&gt;btnDeroulerPersonne.Name" xml:space="preserve">
+    <value>btnDeroulerPersonne</value>
+  </data>
+  <data name="&gt;&gt;btnDeroulerPersonne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeroulerPersonne.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnDeroulerPersonne.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="picVertePnlGauche1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -463,7 +541,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;picVertePnlGauche1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="btnSupprimerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -502,7 +580,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnSupprimerTransaction.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="btnModifierTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -541,7 +619,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnModifierTransaction.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="btnAjouterTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -580,7 +658,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnAjouterTransaction.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="_btnDeroulerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -616,7 +694,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;_btnDeroulerTransaction.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="pnlLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -670,7 +748,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>

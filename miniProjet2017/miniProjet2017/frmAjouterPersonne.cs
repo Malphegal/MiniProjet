@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CON = System.Data.OleDb.OleDbConnection;
 using CMD = System.Data.OleDb.OleDbCommand;
 
 namespace miniProjet2017
@@ -71,15 +70,14 @@ namespace miniProjet2017
             if (toutEstOK)
                 if (DialogResult.OK == MessageBox.Show("Voulez-vous ajouter cette personne ?", "Ajouter une personne", MessageBoxButtons.OKCancel)) {
                     try {
-                        CON con = new CON(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\BaseDeDonnee\\budget1.mdb");
-                        con.Open();
-                        new CMD(@"INSERT INTO Personne VALUES (" + new CMD(@"SELECT IIF(max(codePersonne) IS NULL, 1, max(codePersonne) + 1) FROM Personne", con).ExecuteScalar() + ", '"
-                                                                + txtNom.Text + "', '"
+                        frmMain.con.Open();
+                        new CMD(@"INSERT INTO Personne VALUES (" + new CMD(@"SELECT IIF(max(codePersonne) IS NULL, 1, max(codePersonne) + 1) FROM Personne", frmMain.con).ExecuteScalar()
+                                                                + ", '" + txtNom.Text + "', '"
                                                                 + txtPrenom.Text + "', "
                                                                 + (txtNumero.Text.Length == 0 ? "NULL" : txtNumero.Text)
-                                                                + ")", con).ExecuteNonQuery();
+                                                                + ")", frmMain.con).ExecuteNonQuery();
                         MessageBox.Show("Personne ajoutée !");
-                        con.Close();
+                        frmMain.con.Close();
                     }
                     catch (Exception ex)
                     {

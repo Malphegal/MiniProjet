@@ -44,7 +44,7 @@ namespace miniProjet2017
                         + " " + ds.Tables["_Personne"].Rows[i][2].ToString(),
                     Font = new Font(FontFamily.GenericSansSerif, 14F),
                     AutoSize = true,
-                    Tag = i + 1
+                    Tag = ds.Tables["_Personne"].Rows[i][0]
                 }.Checked = listeParticipant.Contains((uint)i + 1);
 
                 // Message s'il n'y a personne dans la base de donnée

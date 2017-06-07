@@ -38,7 +38,9 @@
             this.btnPostePonctuel = new System.Windows.Forms.Button();
             this.btnPostFixe = new System.Windows.Forms.Button();
             this.btnDeroulerBudget = new System.Windows.Forms.Button();
+            this.btnSupprimerPersonne = new System.Windows.Forms.Button();
             this.btnAjouterPersonne = new System.Windows.Forms.Button();
+            this.btnDeroulerPersonne = new System.Windows.Forms.Button();
             this.btnSupprimerTransaction = new System.Windows.Forms.Button();
             this.btnModifierTransaction = new System.Windows.Forms.Button();
             this.btnAjouterTransaction = new System.Windows.Forms.Button();
@@ -88,7 +90,9 @@
             this.pnlGauche.Controls.Add(this.btnPostFixe);
             this.pnlGauche.Controls.Add(this.btnDeroulerBudget);
             this.pnlGauche.Controls.Add(this.picVertePnlGauche2);
+            this.pnlGauche.Controls.Add(this.btnSupprimerPersonne);
             this.pnlGauche.Controls.Add(this.btnAjouterPersonne);
+            this.pnlGauche.Controls.Add(this.btnDeroulerPersonne);
             this.pnlGauche.Controls.Add(this.picVertePnlGauche1);
             this.pnlGauche.Controls.Add(this.btnSupprimerTransaction);
             this.pnlGauche.Controls.Add(this.btnModifierTransaction);
@@ -164,17 +168,43 @@
             this.btnDeroulerBudget.UseVisualStyleBackColor = false;
             this.btnDeroulerBudget.Click += new System.EventHandler(this.CliquerSurDeroulerBudget);
             // 
+            // btnSupprimerPersonne
+            // 
+            this.btnSupprimerPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnSupprimerPersonne.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnSupprimerPersonne, "btnSupprimerPersonne");
+            this.btnSupprimerPersonne.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSupprimerPersonne.ForeColor = System.Drawing.Color.Salmon;
+            this.btnSupprimerPersonne.Name = "btnSupprimerPersonne";
+            this.btnSupprimerPersonne.TabStop = false;
+            this.btnSupprimerPersonne.Tag = "";
+            this.btnSupprimerPersonne.UseVisualStyleBackColor = false;
+            this.btnSupprimerPersonne.Click += new System.EventHandler(this.NouveauFrmSupprPersonne);
+            // 
             // btnAjouterPersonne
             // 
             this.btnAjouterPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btnAjouterPersonne.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnAjouterPersonne, "btnAjouterPersonne");
             this.btnAjouterPersonne.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAjouterPersonne.ForeColor = System.Drawing.Color.White;
+            this.btnAjouterPersonne.ForeColor = System.Drawing.Color.Salmon;
             this.btnAjouterPersonne.Name = "btnAjouterPersonne";
-            this.btnAjouterPersonne.Tag = "derouler;3";
+            this.btnAjouterPersonne.TabStop = false;
+            this.btnAjouterPersonne.Tag = "";
             this.btnAjouterPersonne.UseVisualStyleBackColor = false;
             this.btnAjouterPersonne.Click += new System.EventHandler(this.NouveauFrmAjouterPersonne);
+            // 
+            // btnDeroulerPersonne
+            // 
+            this.btnDeroulerPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnDeroulerPersonne.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnDeroulerPersonne, "btnDeroulerPersonne");
+            this.btnDeroulerPersonne.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDeroulerPersonne.ForeColor = System.Drawing.Color.White;
+            this.btnDeroulerPersonne.Name = "btnDeroulerPersonne";
+            this.btnDeroulerPersonne.Tag = "derouler;0";
+            this.btnDeroulerPersonne.UseVisualStyleBackColor = false;
+            this.btnDeroulerPersonne.Click += new System.EventHandler(this.CliquerSurDeroulerPersonne);
             // 
             // btnSupprimerTransaction
             // 
@@ -363,6 +393,8 @@
         private System.Windows.Forms.Button btnBudgetRecap;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDeroulerPersonne;
+        private System.Windows.Forms.Button btnSupprimerPersonne;
     }
 }
 

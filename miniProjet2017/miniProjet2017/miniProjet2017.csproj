@@ -108,6 +108,12 @@
     <Compile Include="frmRecap.Designer.cs">
       <DependentUpon>frmRecap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSupprPersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupprPersonne.Designer.cs">
+      <DependentUpon>frmSupprPersonne.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSupprTransac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecap.resx">
       <DependentUpon>frmRecap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupprPersonne.resx">
+      <DependentUpon>frmSupprPersonne.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupprTransac.resx">
       <DependentUpon>frmSupprTransac.cs</DependentUpon>

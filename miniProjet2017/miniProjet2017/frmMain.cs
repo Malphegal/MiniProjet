@@ -125,6 +125,20 @@ namespace miniProjet2017
                 c.Enabled = true;
         }
 
+        private void NouveauFrmSupprPersonne(object sender, EventArgs e)
+        {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
+            foreach (Control c in Controls)
+                c.Enabled = false;
+            new frmSupprPersonne().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
+        }
+
         private void NouveauFrmPostFixe(object sender, EventArgs e)
         {
             if (!baseExist)
@@ -219,7 +233,6 @@ namespace miniProjet2017
                 _btnDeroulerTransaction.Text = _btnDeroulerTransaction.Text.Replace('↑', '↓');
             }
         }
-
         void DeroulementDeTransaction(object sender, EventArgs e)
         {
             btnAjouterTransaction.Height += 3;
@@ -238,7 +251,6 @@ namespace miniProjet2017
                 timerDeroulantTransaction.Tick += new EventHandler(EnroulementDeTransaction);
             }
         }
-
         void EnroulementDeTransaction(object sender, EventArgs e)
         {
             btnAjouterTransaction.Height -= 3;
@@ -275,7 +287,6 @@ namespace miniProjet2017
                 btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↑', '↓');
             }
         }
-
         void DeroulementDeBudget(object sender, EventArgs e)
         {
             btnPostFixe.Height += 3;
@@ -297,7 +308,6 @@ namespace miniProjet2017
                 timerDeroulantBudget.Tick += new EventHandler(EnroulementDeBudget);
             }
         }
-
         void EnroulementDeBudget(object sender, EventArgs e)
         {
             btnPostFixe.Height -= 3;
@@ -320,7 +330,54 @@ namespace miniProjet2017
             }
         }
 
-        // TODO: Dérouler proprement et joliment
+        /* Cliquer sur le bouton des personnes dans le panel de gauche */
+        static bool deroulerPersonne = false;
+        static Timer timerDeroulantPersonne = new Timer();
+        private void CliquerSurDeroulerPersonne(object sender, EventArgs e)
+        {
+            if (deroulerPersonne = !deroulerPersonne)
+            {
+                timerDeroulantPersonne.Stop();
+                timerDeroulantPersonne.Start();
+                btnDeroulerPersonne.Text = btnDeroulerPersonne.Text.Replace('↓', '↑');
+            }
+            else {
+                timerDeroulantPersonne.Stop();
+                timerDeroulantPersonne.Start();
+                btnDeroulerPersonne.Text = btnDeroulerPersonne.Text.Replace('↑', '↓');
+            }
+        }
+        void DeroulementDePersonne(object sender, EventArgs e)
+        {
+            btnAjouterPersonne.Height += 3;
+            btnSupprimerPersonne.Height += 3;
+            if (btnAjouterPersonne.Height >= 50)
+            {
+                timerDeroulantPersonne.Stop();
+                btnAjouterPersonne.Height = 50;
+                btnSupprimerPersonne.Height = 50;
+                btnAjouterPersonne.TabStop = true;
+                btnSupprimerPersonne.TabStop = true;
+                timerDeroulantPersonne.Tick -= new EventHandler(DeroulementDePersonne);
+                timerDeroulantPersonne.Tick += new EventHandler(EnroulementDePersonne);
+            }
+        }
+        void EnroulementDePersonne(object sender, EventArgs e)
+        {
+            btnAjouterPersonne.Height -= 3;
+            btnSupprimerPersonne.Height -= 3;
+            if (btnAjouterPersonne.Height <= 0)
+            {
+                timerDeroulantPersonne.Stop();
+                btnSupprimerPersonne.Height = 0;
+                btnPostePonctuel.Height = 0;
+                btnSupprimerPersonne.TabStop = false;
+                btnBudgetRecap.TabStop = false;
+                timerDeroulantPersonne.Tick -= new EventHandler(EnroulementDePersonne);
+                timerDeroulantPersonne.Tick += new EventHandler(DeroulementDePersonne);
+            }
+        }
+
         /* Création des boutons du menu déroulant */
         private void PremierChargementDeApplication(object sender, EventArgs e)
         {
@@ -330,8 +387,10 @@ namespace miniProjet2017
             timerDeroulantTransaction.Interval = 1;
             timerDeroulantBudget.Tick += new EventHandler(DeroulementDeBudget);
             timerDeroulantBudget.Interval = 1;
+            timerDeroulantPersonne.Tick += new EventHandler(DeroulementDePersonne);
+            timerDeroulantPersonne.Interval = 1;
 
-            // Les polices d'écritures
+                // Les polices d'écritures
 
             fonts.AddFontFile("..\\..\\..\\..\\Font\\Café Françoise.otf");
             lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
