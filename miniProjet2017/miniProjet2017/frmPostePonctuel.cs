@@ -30,8 +30,9 @@ namespace miniProjet2017
 
         private void txtNbPreleve_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
-            if (e.KeyChar == 13 && int.Parse(txtNbPreleve.Text) > 1 )
+            if (e.KeyChar == 13 && txtNbPreleve.Text.Length == 0)
+                return;
+            if (txtNbPreleve.Text.Length > 0 && e.KeyChar == 13 && int.Parse(txtNbPreleve.Text) > 1)
             {
                 int i = int.Parse(txtNbPreleve.Text);
                 genererElementsPrelevements(i);
@@ -44,7 +45,7 @@ namespace miniProjet2017
             else if (e.KeyChar == 13 && int.Parse(txtNbPreleve.Text) <= 1)
             {
                 errorProvider1.SetIconPadding(txtNbPreleve, 10);
-                errorProvider1.SetError(txtNbPreleve, "Veuillez entrer un valeur supérieure à 1");
+                errorProvider1.SetError(txtNbPreleve, "Veuillez entrer un valeur supérieure à 1 !");
             }
             else
             {
@@ -91,43 +92,14 @@ namespace miniProjet2017
                 }
             }
             else if(ancienNbEcheance > i){
-                for(int j = pnl.Controls.Count-1; j < i*2+1; )
+                for(int j = 0; j < (ancienNbEcheance - i) * 2; j+= 2)
                 {
-                    MessageBox.Show(pnl.Controls.Count.ToString());
-                    pnl.Controls.RemoveAt(j--);
-                    pnl.Controls.RemoveAt(j--);
-                    MessageBox.Show(pnl.Controls.Count.ToString());
+                    pnl.Controls.RemoveAt(pnl.Controls.Count - 1);
+                    pnl.Controls.RemoveAt(pnl.Controls.Count - 1);
+                    topElem -= 30;
                 }
             }
-            MessageBox.Show(pnl.Controls.Count.ToString());
             ancienNbEcheance = i;
-        }
-
-        private void txtNbPreleve_TextChanged(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtNbPreleve.Text) && Convert.ToInt32(txtNbPreleve.Text) > ancienNbEcheance)
-            {
-                for(int i = 0; i < Controls.Count; i++)
-                {
-                    if(Controls[i].Name == "pnl")
-                    {
-                        for(int j = 0; j < Convert.ToInt32(txtNbPreleve.Text) - ancienNbEcheance; j++)
-                        {
-                            Label lbl = new Label();
-                            DateTimePicker dtPick = new DateTimePicker();
-                            TextBox txt2 = new TextBox();
-                            dtPick.Top = topElem;
-                            dtPick.Left = leftElem + lbl.Width;
-                            lbl.Top = topElem;
-                            lbl.Left = leftElem;
-                            lbl.Text = "Prélévement n°" + j;
-                            Controls[i].Controls.Add(lbl);
-                            Controls[i].Controls.Add(dtPick);
-                            topElem += 30;
-                        }
-                    }
-                }
-            }
         }
     }
 }
