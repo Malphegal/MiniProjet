@@ -111,5 +111,10 @@ namespace miniProjet2017
         {
             Close();
         }
+
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            //Ici traitement de la transaction SQL
+        }
     }
 }
