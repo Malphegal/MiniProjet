@@ -57,6 +57,7 @@ namespace miniProjet2017
             }
         }
 
+        /* Toutes les vérifications pour pouvoir supprimer les personnes */
         private void SupprimerLesPersonnes(object sender, EventArgs e)
         {
                 // Obtenir la liste des personnes qui sont cochées
@@ -75,12 +76,15 @@ namespace miniProjet2017
 
                 // id des transaction qui possède une personne
                 List<int> idDesTransaction = new List<int>();
+                DataSet ds = new DataSet();
 
                 frmMain.con.Open();
                 foreach (int i in idDesPersonnesASuppr)
                 {
-                    idDesTransaction.Add(Convert.ToInt32(new CMD(@"SELECT codeTransaction FROM Beneficiaires
-                                                                   WHERE codePersonne = " + i, frmMain.con).ExecuteScalar()));
+                    new OleDbDataAdapter(new CMD(@"SELECT codeTransaction FROM Beneficiaires
+                                                                   WHERE codePersonne = " + i, frmMain.con)).Fill(ds, "_TransactionDeLaPersonne");
+                    foreach(DataRow row in ds.Tables["_TransactionDeLaPersonne"].Rows)
+                        idDesTransaction.Add(Convert.ToInt32(row[0]));
 
                     new CMD(@"DELETE FROM Beneficiaires
                               WHERE codePersonne = " + i, frmMain.con).ExecuteNonQuery();
@@ -93,13 +97,12 @@ namespace miniProjet2017
                     // On vérifie si la transaction possède encore des personnes ou non !
 
                 foreach (int i in idDesTransaction)
-                    if (Convert.ToInt32(new CMD("SELECT count(*) FROM Beneficiaire WHERE codeTransaction = " + i, frmMain.con).ExecuteScalar()) == 0)
-                        new CMD(@"DE", frmMain.con).ExecuteNonQuery();
+                    if (Convert.ToInt32(new CMD("SELECT count(*) FROM Beneficiaires WHERE codeTransaction = " + i, frmMain.con).ExecuteScalar()) == 0)
+                        new CMD(@"DELETE FROM [Transaction]
+                                  WHERE codeTransaction = " + i, frmMain.con).ExecuteNonQuery();
 
                     // On ferme con et le formulaire
 
-                foreach (int i in idDesTransaction)
-                    MessageBox.Show(i.ToString());
                 frmMain.con.Close();
                 MessageBox.Show("Personne supprimée !");
                 Close();

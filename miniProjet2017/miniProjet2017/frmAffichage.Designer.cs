@@ -40,6 +40,8 @@
             this.lblTitre = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gridViewClone = new System.Windows.Forms.DataGridView();
+            this.txtRecherche = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
@@ -128,11 +130,30 @@
             this.gridViewClone.Size = new System.Drawing.Size(0, 0);
             this.gridViewClone.TabIndex = 5;
             // 
+            // txtRecherche
+            // 
+            this.txtRecherche.Location = new System.Drawing.Point(281, 76);
+            this.txtRecherche.Name = "txtRecherche";
+            this.txtRecherche.Size = new System.Drawing.Size(100, 20);
+            this.txtRecherche.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(408, 76);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmAffichage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 420);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtRecherche);
             this.Controls.Add(this.gridViewClone);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.btnPDF);
@@ -167,5 +188,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.DataGridView gridViewPDF;
         private System.Windows.Forms.DataGridView gridViewClone;
+        private System.Windows.Forms.TextBox txtRecherche;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -55,8 +55,10 @@ namespace miniProjet2017
                 gridViewClone.Columns.RemoveAt(6);
                 gridViewClone.Columns.RemoveAt(0);
             }
-            else
-                MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
+            else {
+                MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !\nFermeture du formulaire");
+                Close();
+            }
         }
 
         /* Ferme ce formulaire */
@@ -229,6 +231,12 @@ namespace miniProjet2017
             MessageBox.Show("Le document PDF à été créé !\n\n");
 
             doc.Close(); //ferme le document
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (gridViewPDF.DataSource as DataTable).DefaultView.RowFilter = string.Format("[description] = '{0}'", txtRecherche.Text);
+            (gridViewPDF.DataSource as DataTable).DefaultView.RowFilter = null;
         }
     }
 }
