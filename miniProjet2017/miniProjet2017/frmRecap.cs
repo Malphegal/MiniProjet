@@ -33,6 +33,7 @@ namespace miniProjet2017
         private void ChargementDeFrmRecap(object sender, EventArgs e)
         {
             picQuitter.Parent = picBordure;
+            lblTitre.Parent = picBordure;
         }
 
         /* Ferme le formulaire frmRecap */
@@ -46,8 +47,8 @@ namespace miniProjet2017
         {
                 // Changer le titre de la fenêtre, et changer le tab (a suppr ? si y'a plus de titre ?)
 
-            lblRecapitulatif.Text = "Récapitulatif : Transactions";
-            lblRecapitulatif.Left = Width / 2 - lblRecapitulatif.Width / 2;
+            lblTitre.Text = "Récapitulatif : Transactions";
+            lblTitre.Left = Width / 2 - lblTitre.Width / 2;
             tabControl1.SelectedTab = tabTransaction;
             btnTransaction.BackColor = Color.Red;
             btnTransaction.Font = new Font(btnTransaction.Font, FontStyle.Bold);
@@ -92,7 +93,8 @@ namespace miniProjet2017
                 lblId.DataBindings.Clear(); lblId.DataBindings.Add("Text", bs, "codeTransaction");
                 lblDate.DataBindings.Clear(); lblDate.DataBindings.Add("Text", bs, "dateTransaction");
                 lblDescription.DataBindings.Clear(); lblDescription.DataBindings.Add("Text", bs, "description");
-                lblMontant.DataBindings.Clear(); lblMontant.DataBindings.Add("Text", bs, "montant"); lblMontant.Text += " €";
+                lblMontant.DataBindings.Clear(); lblMontant.DataBindings.Add("Text", bs, "montant");
+                /**/lblMontant.Text = frmAjoutTransac.FormatDuMontant(lblMontant.Text); lblMontant.Text += " €";
                 chkRecette.DataBindings.Clear(); chkRecette.DataBindings.Add("Checked", bs, "recetteON");
                 chkPercu.DataBindings.Clear(); chkPercu.DataBindings.Add("Checked", bs, "percuON");
 
@@ -110,8 +112,8 @@ namespace miniProjet2017
         {
                 // Changer le titre de la fenêtre, et changer le tab (a suppr ? si y'a plus de titre ?)
 
-            lblRecapitulatif.Text = "Récapitulatif : Personnes";
-            lblRecapitulatif.Left = Width / 2 - lblRecapitulatif.Width / 2;
+            lblTitre.Text = "Récapitulatif : Personnes";
+            lblTitre.Left = Width / 2 - lblTitre.Width / 2;
             tabControl1.SelectedTab = tabPersonne;
             btnPersonne.BackColor = Color.Red;
             btnPersonne.Font = new Font(btnPersonne.Font, FontStyle.Bold);
