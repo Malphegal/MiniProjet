@@ -1,9 +1,5 @@
 #Base de donnée
-<<<<<<< HEAD
-C:\Users\gaëtan\Desktop\miniprojet\miniprojet\miniProjet2017\miniProjet2017\Resources\budget1.mdb
-=======
-C:\Users\cance\miniprojet\miniProjet2017\miniProjet2017\bin\Debug\budget1.mdb
->>>>>>> e7328567b0f1ccf3056296a22849c9e1b3e80649
+..\\..\\Resources\budget1.mdb
 #SMS
 10
 #Résolution
