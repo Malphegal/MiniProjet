@@ -25,7 +25,7 @@ namespace miniProjet2017
         private void txtNbPreleve_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-            if (e.KeyChar == 13)
+            if (e.KeyChar == 13 && int.Parse(txtNbPreleve.Text) > 1 )
             {
                 int i = int.Parse(txtNbPreleve.Text);
                 genererElementsPrelevements(i);
