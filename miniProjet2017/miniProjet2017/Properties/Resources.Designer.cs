@@ -63,6 +63,16 @@ namespace miniProjet2017.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bill_rain {
+            get {
+                object obj = ResourceManager.GetObject("bill_rain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bordureOption {
             get {
                 object obj = ResourceManager.GetObject("bordureOption", resourceCulture);
@@ -146,6 +156,16 @@ namespace miniProjet2017.Properties {
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minion {
+            get {
+                object obj = ResourceManager.GetObject("Minion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
