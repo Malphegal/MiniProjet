@@ -215,9 +215,11 @@
     <Content Include="logoProgram.ico" />
     <None Include="Resources\verteSeparateurPanel.png" />
     <None Include="Resources\croixFermer.png" />
+    <None Include="Resources\bill_rain.png" />
     <Content Include="Resources\flecheRetour_clair.png" />
     <None Include="Resources\lineReduire.png" />
     <None Include="Resources\lineReduire1.png" />
+    <None Include="Resources\Minion.png" />
     <Content Include="Resources\reduire.png" />
     <None Include="Resources\flecheRetour.png" />
     <None Include="Resources\boutonFondBleu.png" />
