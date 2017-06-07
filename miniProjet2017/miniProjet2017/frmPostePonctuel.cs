@@ -49,9 +49,8 @@ namespace miniProjet2017
         private void genererElementsPrelevements(int i)
         {
             int topPnl = 170;
-            int LeftPnl = 50;
             int topElem = 30;
-            int leftElem = 50;
+            int leftElem = 20;
 
           //Version Panel
             Panel pnl = new Panel();

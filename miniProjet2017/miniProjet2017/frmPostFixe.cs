@@ -130,7 +130,17 @@ namespace miniProjet2017
 
             if (toutEstOK)
             {
-
+                if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
+                    txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
+                if (DialogResult.OK == MessageBox.Show("Ajout du poste :\n\n • " + cboPoste.SelectedItem
+                    + "\n\n • " + cboPeriodicite.SelectedItem
+                    + " le " + txtJour.Text + "\n\n • Montant : " + txtMontant.Text
+                    + "€\n\n     Voulez-vous ajouter ce poste ?", "Ajout d'un poste", MessageBoxButtons.OKCancel))
+                {
+                    MessageBox.Show("COIN");
+                }
+                else
+                    MessageBox.Show("Aucune modification n'a été effectuée !");
             }
         }
 

@@ -30,10 +30,6 @@
         {
             this.btnPersonne = new System.Windows.Forms.Button();
             this.btnTransaction = new System.Windows.Forms.Button();
-            this.btnLL = new System.Windows.Forms.Button();
-            this.btnL = new System.Windows.Forms.Button();
-            this.btnR = new System.Windows.Forms.Button();
-            this.btnRR = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -49,7 +45,11 @@
             this.lblEnregistrement = new System.Windows.Forms.Label();
             this._lblType = new System.Windows.Forms.Label();
             this._lblDescription = new System.Windows.Forms.Label();
+            this.btnL = new System.Windows.Forms.Button();
             this._lblMontant = new System.Windows.Forms.Label();
+            this.btnLL = new System.Windows.Forms.Button();
+            this.btnR = new System.Windows.Forms.Button();
+            this.btnRR = new System.Windows.Forms.Button();
             this.tabPersonne = new System.Windows.Forms.TabPage();
             this.lblIdPersonne = new System.Windows.Forms.Label();
             this._lblIdPersonne = new System.Windows.Forms.Label();
@@ -64,14 +64,14 @@
             this._lblNom = new System.Windows.Forms.Label();
             this.lblPrenom = new System.Windows.Forms.Label();
             this._lblPrenom = new System.Windows.Forms.Label();
-            this.lblRecapitulatif = new System.Windows.Forms.Label();
-            this.picBordure = new System.Windows.Forms.PictureBox();
+            this.lblTitre = new System.Windows.Forms.Label();
             this.picQuitter = new System.Windows.Forms.PictureBox();
+            this.picBordure = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabTransaction.SuspendLayout();
             this.tabPersonne.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPersonne
@@ -95,50 +95,6 @@
             this.btnTransaction.Text = "Lister transaction";
             this.btnTransaction.UseVisualStyleBackColor = true;
             this.btnTransaction.Click += new System.EventHandler(this.CliquerSurLiaisonTransaction);
-            // 
-            // btnLL
-            // 
-            this.btnLL.Enabled = false;
-            this.btnLL.Location = new System.Drawing.Point(6, 299);
-            this.btnLL.Name = "btnLL";
-            this.btnLL.Size = new System.Drawing.Size(60, 47);
-            this.btnLL.TabIndex = 2;
-            this.btnLL.Text = "Shift left";
-            this.btnLL.UseVisualStyleBackColor = true;
-            this.btnLL.Click += new System.EventHandler(this.CliquerSurPremierTransaction);
-            // 
-            // btnL
-            // 
-            this.btnL.Enabled = false;
-            this.btnL.Location = new System.Drawing.Point(72, 299);
-            this.btnL.Name = "btnL";
-            this.btnL.Size = new System.Drawing.Size(60, 47);
-            this.btnL.TabIndex = 3;
-            this.btnL.Text = "LT";
-            this.btnL.UseVisualStyleBackColor = true;
-            this.btnL.Click += new System.EventHandler(this.CliquerSurPrecedentTransaction);
-            // 
-            // btnR
-            // 
-            this.btnR.Enabled = false;
-            this.btnR.Location = new System.Drawing.Point(138, 299);
-            this.btnR.Name = "btnR";
-            this.btnR.Size = new System.Drawing.Size(60, 47);
-            this.btnR.TabIndex = 4;
-            this.btnR.Text = "GT";
-            this.btnR.UseVisualStyleBackColor = true;
-            this.btnR.Click += new System.EventHandler(this.CliquerSurSuivantTransaction);
-            // 
-            // btnRR
-            // 
-            this.btnRR.Enabled = false;
-            this.btnRR.Location = new System.Drawing.Point(204, 299);
-            this.btnRR.Name = "btnRR";
-            this.btnRR.Size = new System.Drawing.Size(60, 47);
-            this.btnRR.TabIndex = 5;
-            this.btnRR.Text = "Shift right";
-            this.btnRR.UseVisualStyleBackColor = true;
-            this.btnRR.Click += new System.EventHandler(this.CliquerSurDernierTransaction);
             // 
             // lblId
             // 
@@ -200,6 +156,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
             this.listBox1.Enabled = false;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(6, 185);
@@ -233,9 +190,11 @@
             this.tabControl1.Controls.Add(this.tabPersonne);
             this.tabControl1.HotTrack = true;
             this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabControl1.Location = new System.Drawing.Point(19, 102);
+            this.tabControl1.Location = new System.Drawing.Point(25, 102);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(551, 378);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -244,7 +203,7 @@
             // 
             // tabDefaut
             // 
-            this.tabDefaut.BackColor = System.Drawing.Color.Transparent;
+            this.tabDefaut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
             this.tabDefaut.Location = new System.Drawing.Point(4, 5);
             this.tabDefaut.Name = "tabDefaut";
             this.tabDefaut.Padding = new System.Windows.Forms.Padding(3);
@@ -254,7 +213,7 @@
             // 
             // tabTransaction
             // 
-            this.tabTransaction.BackColor = System.Drawing.Color.Transparent;
+            this.tabTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
             this.tabTransaction.Controls.Add(this.lblEnregistrement);
             this.tabTransaction.Controls.Add(this._lblType);
             this.tabTransaction.Controls.Add(this._lblDescription);
@@ -306,6 +265,19 @@
             this._lblDescription.TabIndex = 16;
             this._lblDescription.Text = "Description :";
             // 
+            // btnL
+            // 
+            this.btnL.Enabled = false;
+            this.btnL.FlatAppearance.BorderSize = 0;
+            this.btnL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnL.Image = global::miniProjet2017.Properties.Resources.flecheGauche;
+            this.btnL.Location = new System.Drawing.Point(72, 299);
+            this.btnL.Name = "btnL";
+            this.btnL.Size = new System.Drawing.Size(60, 47);
+            this.btnL.TabIndex = 3;
+            this.btnL.UseVisualStyleBackColor = true;
+            this.btnL.Click += new System.EventHandler(this.CliquerSurPrecedentTransaction);
+            // 
             // _lblMontant
             // 
             this._lblMontant.AutoSize = true;
@@ -315,9 +287,48 @@
             this._lblMontant.TabIndex = 9;
             this._lblMontant.Text = "Montant :";
             // 
+            // btnLL
+            // 
+            this.btnLL.Enabled = false;
+            this.btnLL.FlatAppearance.BorderSize = 0;
+            this.btnLL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLL.Image = global::miniProjet2017.Properties.Resources.flecheDebut;
+            this.btnLL.Location = new System.Drawing.Point(6, 299);
+            this.btnLL.Name = "btnLL";
+            this.btnLL.Size = new System.Drawing.Size(60, 47);
+            this.btnLL.TabIndex = 2;
+            this.btnLL.UseVisualStyleBackColor = true;
+            this.btnLL.Click += new System.EventHandler(this.CliquerSurPremierTransaction);
+            // 
+            // btnR
+            // 
+            this.btnR.Enabled = false;
+            this.btnR.FlatAppearance.BorderSize = 0;
+            this.btnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnR.Image = global::miniProjet2017.Properties.Resources.flecheDroite;
+            this.btnR.Location = new System.Drawing.Point(138, 299);
+            this.btnR.Name = "btnR";
+            this.btnR.Size = new System.Drawing.Size(60, 47);
+            this.btnR.TabIndex = 4;
+            this.btnR.UseVisualStyleBackColor = true;
+            this.btnR.Click += new System.EventHandler(this.CliquerSurSuivantTransaction);
+            // 
+            // btnRR
+            // 
+            this.btnRR.Enabled = false;
+            this.btnRR.FlatAppearance.BorderSize = 0;
+            this.btnRR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRR.Image = global::miniProjet2017.Properties.Resources.flecheFin;
+            this.btnRR.Location = new System.Drawing.Point(204, 299);
+            this.btnRR.Name = "btnRR";
+            this.btnRR.Size = new System.Drawing.Size(60, 47);
+            this.btnRR.TabIndex = 5;
+            this.btnRR.UseVisualStyleBackColor = true;
+            this.btnRR.Click += new System.EventHandler(this.CliquerSurDernierTransaction);
+            // 
             // tabPersonne
             // 
-            this.tabPersonne.BackColor = System.Drawing.Color.Transparent;
+            this.tabPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
             this.tabPersonne.Controls.Add(this.lblIdPersonne);
             this.tabPersonne.Controls.Add(this._lblIdPersonne);
             this.tabPersonne.Controls.Add(this._lblEnregistrement);
@@ -368,44 +379,52 @@
             // _btnL
             // 
             this._btnL.Enabled = false;
+            this._btnL.FlatAppearance.BorderSize = 0;
+            this._btnL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._btnL.Image = global::miniProjet2017.Properties.Resources.flecheGauche;
             this._btnL.Location = new System.Drawing.Point(75, 316);
             this._btnL.Name = "_btnL";
             this._btnL.Size = new System.Drawing.Size(60, 47);
             this._btnL.TabIndex = 20;
-            this._btnL.Text = "LT";
             this._btnL.UseVisualStyleBackColor = true;
             this._btnL.Click += new System.EventHandler(this.CliquerSurPrecedentPersonne);
             // 
             // _btnLL
             // 
             this._btnLL.Enabled = false;
+            this._btnLL.FlatAppearance.BorderSize = 0;
+            this._btnLL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._btnLL.Image = global::miniProjet2017.Properties.Resources.flecheDebut;
             this._btnLL.Location = new System.Drawing.Point(9, 316);
             this._btnLL.Name = "_btnLL";
             this._btnLL.Size = new System.Drawing.Size(60, 47);
             this._btnLL.TabIndex = 19;
-            this._btnLL.Text = "Shift left";
             this._btnLL.UseVisualStyleBackColor = true;
             this._btnLL.Click += new System.EventHandler(this.CliquerSurPremierPersonne);
             // 
             // _btnR
             // 
             this._btnR.Enabled = false;
+            this._btnR.FlatAppearance.BorderSize = 0;
+            this._btnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._btnR.Image = global::miniProjet2017.Properties.Resources.flecheDroite;
             this._btnR.Location = new System.Drawing.Point(141, 316);
             this._btnR.Name = "_btnR";
             this._btnR.Size = new System.Drawing.Size(60, 47);
             this._btnR.TabIndex = 21;
-            this._btnR.Text = "GT";
             this._btnR.UseVisualStyleBackColor = true;
             this._btnR.Click += new System.EventHandler(this.CliquerSurSuivantPersonne);
             // 
             // _btnRR
             // 
             this._btnRR.Enabled = false;
+            this._btnRR.FlatAppearance.BorderSize = 0;
+            this._btnRR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._btnRR.Image = global::miniProjet2017.Properties.Resources.flecheFin;
             this._btnRR.Location = new System.Drawing.Point(207, 316);
             this._btnRR.Name = "_btnRR";
             this._btnRR.Size = new System.Drawing.Size(60, 47);
             this._btnRR.TabIndex = 22;
-            this._btnRR.Text = "Shift right";
             this._btnRR.UseVisualStyleBackColor = true;
             this._btnRR.Click += new System.EventHandler(this.CliquerSurDernierPersonne);
             // 
@@ -463,25 +482,16 @@
             this._lblPrenom.TabIndex = 0;
             this._lblPrenom.Text = "Prénom :";
             // 
-            // lblRecapitulatif
+            // lblTitre
             // 
-            this.lblRecapitulatif.AutoSize = true;
-            this.lblRecapitulatif.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecapitulatif.Location = new System.Drawing.Point(241, 25);
-            this.lblRecapitulatif.Name = "lblRecapitulatif";
-            this.lblRecapitulatif.Size = new System.Drawing.Size(98, 20);
-            this.lblRecapitulatif.TabIndex = 17;
-            this.lblRecapitulatif.Text = "Récapitulatif";
-            // 
-            // picBordure
-            // 
-            this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
-            this.picBordure.Location = new System.Drawing.Point(-5, 0);
-            this.picBordure.Name = "picBordure";
-            this.picBordure.Size = new System.Drawing.Size(610, 506);
-            this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBordure.TabIndex = 18;
-            this.picBordure.TabStop = false;
+            this.lblTitre.AutoSize = true;
+            this.lblTitre.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.Location = new System.Drawing.Point(241, 25);
+            this.lblTitre.Name = "lblTitre";
+            this.lblTitre.Size = new System.Drawing.Size(98, 20);
+            this.lblTitre.TabIndex = 17;
+            this.lblTitre.Text = "Récapitulatif";
             // 
             // picQuitter
             // 
@@ -495,13 +505,24 @@
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.picQuitter_Click);
             // 
+            // picBordure
+            // 
+            this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
+            this.picBordure.Location = new System.Drawing.Point(-5, 0);
+            this.picBordure.Name = "picBordure";
+            this.picBordure.Size = new System.Drawing.Size(610, 506);
+            this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBordure.TabIndex = 18;
+            this.picBordure.TabStop = false;
+            // 
             // frmRecap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(600, 500);
             this.Controls.Add(this.picQuitter);
-            this.Controls.Add(this.lblRecapitulatif);
+            this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.btnTransaction);
             this.Controls.Add(this.btnPersonne);
             this.Controls.Add(this.tabControl1);
@@ -518,8 +539,8 @@
             this.tabTransaction.PerformLayout();
             this.tabPersonne.ResumeLayout(false);
             this.tabPersonne.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,7 +584,7 @@
         private System.Windows.Forms.Button _btnRR;
         private System.Windows.Forms.Label lblIdPersonne;
         private System.Windows.Forms.Label _lblIdPersonne;
-        private System.Windows.Forms.Label lblRecapitulatif;
+        private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.PictureBox picBordure;
         private System.Windows.Forms.PictureBox picQuitter;
     }

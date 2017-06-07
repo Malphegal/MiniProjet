@@ -216,6 +216,10 @@
     <None Include="Resources\verteSeparateurPanel.png" />
     <None Include="Resources\croixFermer.png" />
     <None Include="Resources\bill_rain.png" />
+    <None Include="Resources\flecheDebut.png" />
+    <None Include="Resources\flecheGauche.png" />
+    <None Include="Resources\flecheDroite.png" />
+    <None Include="Resources\flecheFin.png" />
     <Content Include="Resources\flecheRetour_clair.png" />
     <None Include="Resources\lineReduire.png" />
     <None Include="Resources\lineReduire1.png" />
