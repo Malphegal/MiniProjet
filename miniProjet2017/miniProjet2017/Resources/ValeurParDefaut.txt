@@ -1,5 +1,5 @@
 #Base de donnée
-C:\Users\cance\miniprojet\miniProjet2017\miniProjet2017\bin\Debug\budget1.mdb
+C:\Users\Anacin\Desktop\miniprojet\miniprojet\miniProjet2017\miniProjet2017\Resources\budget1.mdb
 #SMS
 10
 #Résolution

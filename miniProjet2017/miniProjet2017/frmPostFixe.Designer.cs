@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblPoste = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboPoste = new System.Windows.Forms.ComboBox();
             this.btnAutre = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblPeriodicité = new System.Windows.Forms.Label();
@@ -50,17 +50,17 @@
             this.lblPoste.TabIndex = 0;
             this.lblPoste.Text = "Poste :";
             // 
-            // comboBox1
+            // cboPoste
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(95, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cboPoste.FormattingEnabled = true;
+            this.cboPoste.Location = new System.Drawing.Point(95, 13);
+            this.cboPoste.Name = "cboPoste";
+            this.cboPoste.Size = new System.Drawing.Size(195, 21);
+            this.cboPoste.TabIndex = 1;
             // 
             // btnAutre
             // 
-            this.btnAutre.Location = new System.Drawing.Point(245, 11);
+            this.btnAutre.Location = new System.Drawing.Point(367, 12);
             this.btnAutre.Name = "btnAutre";
             this.btnAutre.Size = new System.Drawing.Size(75, 23);
             this.btnAutre.TabIndex = 2;
@@ -148,10 +148,11 @@
             this.Controls.Add(this.lblPeriodicité);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnAutre);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboPoste);
             this.Controls.Add(this.lblPoste);
             this.Name = "frmPostFixe";
             this.Text = "Poste fixe";
+            this.Load += new System.EventHandler(this.DemarrageDeFrmPostFixe);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,7 +161,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblPoste;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboPoste;
         private System.Windows.Forms.Button btnAutre;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblPeriodicité;

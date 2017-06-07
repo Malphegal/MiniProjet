@@ -450,6 +450,7 @@ namespace miniProjet2017
         // ---------------- Event hover ----------------
         // ---------------------------------------------
 
+        #region HOVER
         private void HoverQuitter(object sender, EventArgs e)
         {
             toolTip.Show("Quitte l'application.", picQuitter, 25, 0);
@@ -469,5 +470,6 @@ namespace miniProjet2017
         {
             toolTip.Show("", picOption);
         }
+        #endregion
     }
 }
