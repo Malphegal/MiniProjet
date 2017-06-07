@@ -41,7 +41,6 @@ namespace miniProjet2017
 
             if (ds.Tables["_Transaction"].Rows.Count != 0)
             {
-
                     // Ajout du contenu du DataGridView
 
                 gridViewPDF.DataSource = ds.Tables["_Transaction"];
@@ -77,13 +76,15 @@ namespace miniProjet2017
         // TODO: Afficher la bonne transaction
         private void ContextStripModifier(object sender, EventArgs e)
         {
+            Close();
             new frmModiTransac().ShowDialog();
         }
 
         /* Ouvre le formulaire pour supprimer une transaction */
         // TODO: Afficher la bonne transaction
-        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ContextStripSupprimer(object sender, EventArgs e)
         {
+            Close();
             new frmSupprTransac().ShowDialog();
         }
 

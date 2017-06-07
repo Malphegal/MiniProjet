@@ -98,7 +98,7 @@
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
             this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer...";
-            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.ContextStripSupprimer);
             // 
             // btnPDF
             // 
