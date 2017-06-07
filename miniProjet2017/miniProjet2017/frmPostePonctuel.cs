@@ -23,7 +23,7 @@ namespace miniProjet2017
         }
 
         int ancienNbEcheance = 0;
-        int topPnl = 170;
+        int topPnl = 200;
         int topElem = 30;
         int leftElem = 20;
         Panel pnl;
@@ -63,7 +63,7 @@ namespace miniProjet2017
                 pnl.Top = topPnl;
                 pnl.Left = 30;
                 pnl.Width = 400;
-                pnl.Height = 250;
+                pnl.Height = 220;
                 pnl.AutoScroll = true;
                 picBordure.Controls.Add(pnl);
                 Label lblTitre = new Label();
@@ -83,7 +83,8 @@ namespace miniProjet2017
                     TextBox txt2 = new TextBox();
                     dtPick.Top = topElem;
                     dtPick.Left = leftElem + lbl.Width;
-                      
+                    dtPick.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month + j-1, DateTime.Today.Day);
+                                           
                     lbl.Top = topElem;
                     lbl.Left = leftElem;
                     lbl.Text = "Prélévement n°" + j;
