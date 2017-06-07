@@ -137,6 +137,12 @@ namespace miniProjet2017
                     + " le " + txtJour.Text + "\n\n • Montant : " + txtMontant.Text
                     + "€\n\n     Voulez-vous ajouter ce poste ?", "Ajout d'un poste", MessageBoxButtons.OKCancel))
                 {
+<<<<<<< HEAD
+=======
+                        // Ajout dans la base de donnée
+
+                    ///n/ew OleDbDataAdapter(new CMD("", frmMain.con))
+>>>>>>> 57d428e6eb6a6cd9ccc1756f2893fbfb920039a6
                     MessageBox.Show("COIN");
                 }
                 else
