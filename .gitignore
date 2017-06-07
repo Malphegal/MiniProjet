@@ -25,7 +25,7 @@ bld/
 # Visual Studio 2015 cache/options directory
 .vs/
 *.mdb
-*ValeurParDefaut.txt
+miniProjet2017/miniProjet2017/Resources/ValeurParDefaut.txt
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
