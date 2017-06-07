@@ -50,7 +50,7 @@
             // 
             // txtIntitule
             // 
-            this.txtIntitule.Location = new System.Drawing.Point(221, 12);
+            this.txtIntitule.Location = new System.Drawing.Point(220, 12);
             this.txtIntitule.Name = "txtIntitule";
             this.txtIntitule.Size = new System.Drawing.Size(100, 20);
             this.txtIntitule.TabIndex = 1;
@@ -75,14 +75,14 @@
             // 
             // txtDescri
             // 
-            this.txtDescri.Location = new System.Drawing.Point(221, 76);
+            this.txtDescri.Location = new System.Drawing.Point(220, 76);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(100, 20);
             this.txtDescri.TabIndex = 2;
             // 
             // txtNbPreleve
             // 
-            this.txtNbPreleve.Location = new System.Drawing.Point(221, 137);
+            this.txtNbPreleve.Location = new System.Drawing.Point(220, 137);
             this.txtNbPreleve.Name = "txtNbPreleve";
             this.txtNbPreleve.Size = new System.Drawing.Size(43, 20);
             this.txtNbPreleve.TabIndex = 3;
