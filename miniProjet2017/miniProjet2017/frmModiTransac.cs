@@ -286,5 +286,10 @@ namespace miniProjet2017
             if (DialogResult.OK == frm.ShowDialog())
                 lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s : " : " : ") + (listeParticipant = frm.listeParticipant).Count.ToString();
         }
+
+        private void picQuitter_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
