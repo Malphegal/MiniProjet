@@ -87,7 +87,6 @@
             // 
             this.btnModifier.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnModifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnModifier.Enabled = false;
             this.btnModifier.Location = new System.Drawing.Point(24, 469);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(103, 66);
@@ -121,7 +120,6 @@
             // chkPerçu
             // 
             this.chkPerçu.AutoSize = true;
-            this.chkPerçu.Enabled = false;
             this.chkPerçu.Location = new System.Drawing.Point(207, 17);
             this.chkPerçu.Name = "chkPerçu";
             this.chkPerçu.Size = new System.Drawing.Size(54, 17);
@@ -132,7 +130,6 @@
             // chkRecette
             // 
             this.chkRecette.AutoSize = true;
-            this.chkRecette.Enabled = false;
             this.chkRecette.Location = new System.Drawing.Point(95, 17);
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.Size = new System.Drawing.Size(73, 17);
@@ -143,7 +140,6 @@
             // 
             // cboType
             // 
-            this.cboType.Enabled = false;
             this.cboType.FormattingEnabled = true;
             this.cboType.Location = new System.Drawing.Point(132, 389);
             this.cboType.Name = "cboType";
@@ -153,7 +149,6 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Enabled = false;
             this.lblType.Location = new System.Drawing.Point(27, 389);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(31, 13);
@@ -163,7 +158,6 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Enabled = false;
             this.lblMontant.Location = new System.Drawing.Point(29, 304);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(46, 13);
@@ -172,7 +166,6 @@
             // 
             // txtMontant
             // 
-            this.txtMontant.Enabled = false;
             this.txtMontant.Location = new System.Drawing.Point(185, 297);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
@@ -182,7 +175,6 @@
             // lblDescTransac
             // 
             this.lblDescTransac.AutoSize = true;
-            this.lblDescTransac.Enabled = false;
             this.lblDescTransac.Location = new System.Drawing.Point(29, 245);
             this.lblDescTransac.Name = "lblDescTransac";
             this.lblDescTransac.Size = new System.Drawing.Size(141, 13);
@@ -192,7 +184,6 @@
             // lblTransac
             // 
             this.lblTransac.AutoSize = true;
-            this.lblTransac.Enabled = false;
             this.lblTransac.Location = new System.Drawing.Point(29, 52);
             this.lblTransac.Name = "lblTransac";
             this.lblTransac.Size = new System.Drawing.Size(111, 13);
@@ -201,7 +192,6 @@
             // 
             // calTransac
             // 
-            this.calTransac.Enabled = false;
             this.calTransac.Location = new System.Drawing.Point(197, 52);
             this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
@@ -229,14 +219,14 @@
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aideToolStripMenuItem.Text = "Aide...";
             this.aideToolStripMenuItem.Click += new System.EventHandler(this.CliquerSurAideModif);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitterToolStripMenuItem.Text = "Quitter...";
             // 
             // lblAideDate
@@ -382,7 +372,6 @@
             // 
             // txtDescTran
             // 
-            this.txtDescTran.Enabled = false;
             this.txtDescTran.Location = new System.Drawing.Point(185, 242);
             this.txtDescTran.Name = "txtDescTran";
             this.txtDescTran.Size = new System.Drawing.Size(145, 20);
@@ -402,7 +391,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 536);
+            this.ClientSize = new System.Drawing.Size(786, 575);
             this.Controls.Add(this.lblEuro);
             this.Controls.Add(this.lblChoixPersonne);
             this.Controls.Add(this.btnChoixPersonne);

@@ -72,6 +72,12 @@
     <Compile Include="frmAjoutTransac.Designer.cs">
       <DependentUpon>frmAjoutTransac.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBudgetRecap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBudgetRecap.Designer.cs">
+      <DependentUpon>frmBudgetRecap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChoisirPersonne.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,18 +175,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -197,9 +203,6 @@
     <None Include="Resources\engrenage.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\croixQuitter.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bordureOption.png" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +213,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logoProgram.ico" />
+    <None Include="Resources\verteSeparateurPanel.png" />
+    <None Include="Resources\croixFermer.png" />
+    <Content Include="Resources\flecheRetour_clair.png" />
+    <None Include="Resources\lineReduire.png" />
+    <None Include="Resources\lineReduire1.png" />
+    <Content Include="Resources\reduire.png" />
+    <None Include="Resources\flecheRetour.png" />
     <None Include="Resources\boutonFondBleu.png" />
     <None Include="Resources\ligneVerte.png" />
   </ItemGroup>

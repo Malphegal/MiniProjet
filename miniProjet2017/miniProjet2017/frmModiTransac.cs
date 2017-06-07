@@ -180,18 +180,33 @@ namespace miniProjet2017
                     + "\n\n     Voulez-vous valider cette modification ?", "Ajout d'une transaction", MessageBoxButtons.OKCancel))
                 {
                     frmMain.con.Open();
-                    new CMD(@"UPDATE [Transaction] set dateTransaction = "
+
+                        // Reset la table Beneficiaires
+
+                    if (ds.Tables["_Beneficiaires"].Rows.Count > 0)
+                        new CMD(@"DELETE FROM Beneficiaires WHERE codeTransaction = " + ds.Tables["_Beneficiaires"].Rows[0][0], frmMain.con).ExecuteNonQuery();
+
+                        // Update la transaction
+
+                    new CMD(@"UPDATE [Transaction] set codeTransaction = codeTransaction, dateTransaction = "
                                                             + "#" + (calTransac.SelectionStart.Day > 9
                                                             ? calTransac.SelectionStart.Day.ToString()
                                                             : "0" + calTransac.SelectionStart.Day.ToString()) + '/' + (calTransac.SelectionStart.Month > 9
                                                             ? calTransac.SelectionStart.Month.ToString()
                                                             : "0" + calTransac.SelectionStart.Month.ToString()) + '/' + calTransac.SelectionStart.Year + "#, "
                                                             + "description = '" + txtDescTran.Text + "', "
-                                                            + "montant = " + frmAjoutTransac.FormatDuMontant(txtMontant.Text).Replace(',', '.') + ", "
+                                                            + "montant = " + txtMontant.Text.Replace(',', '.') + ", "
                                                             + "recetteON = " +(chkRecette.Checked ? "True" : "False") + ", "
                                                             + "percuON = " + (chkPerçu.Checked ? "True" : "False") + ", "
                                                             + "type = " + (cboType.SelectedIndex + 1)
                                                             + " WHERE codeTransaction = " + (cboListeTransaction.SelectedIndex + 1), frmMain.con).ExecuteNonQuery();
+
+                        // Ajout des personnes dans table Beneficiaire
+
+                    foreach (uint i in listeParticipant)
+                        new CMD(@"INSERT INTO Beneficiaires VALUES (" + ds.Tables["_Beneficiaires"].Rows[cboListeTransaction.SelectedIndex][0]
+                            + ", " + i + ")", frmMain.con).ExecuteNonQuery();
+
                     MessageBox.Show("Transaction modifiée !");
                     frmMain.con.Close();
 

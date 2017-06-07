@@ -99,6 +99,12 @@ namespace miniProjet2017
         /* Initialise le label du chemin de la base de donnée */
         private void ChargementDeFrmOption(object sender, EventArgs e)
         {
+                // Parent pour transparent
+
+            picQuitter.Parent = picBordure;
+
+                // Si le fichier existe
+
             if (File.Exists(@"..\..\Resources\ValeurParDefaut.txt"))
                 try {
                     if (File.Exists(File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt")[1]))

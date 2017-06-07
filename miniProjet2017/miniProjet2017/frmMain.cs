@@ -167,6 +167,20 @@ namespace miniProjet2017
                 c.Enabled = true;
         }
 
+        private void NouveauBudgetRecap(object sender, EventArgs e)
+        {
+            if (!baseExist)
+            {
+                MessageBox.Show("La base de donnée est introuvable !\nVérifiez dans le menu option !", "Attention");
+                return;
+            }
+            foreach (Control c in Controls)
+                c.Enabled = false;
+            new frmBudgetRecap().ShowDialog();
+            foreach (Control c in Controls)
+                c.Enabled = true;
+        }
+
         /* Ferme l'application */
         private void QuitterApplication(object sender, EventArgs e)
         {
@@ -182,70 +196,127 @@ namespace miniProjet2017
             }
         }
 
+        /* Réduire cette application */
+        private void CliquerSurReduire(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
         /* Cliquer sur le bouton des transactions dans le panel de gauche */
         static bool deroulerTransaction = false;
+        static Timer timerDeroulantTransaction = new Timer();
         private void CliquerSurDeroulerTransaction(object sender, EventArgs e)
         {
             if (deroulerTransaction = !deroulerTransaction)
             {
-                foreach (Button b in pnlGauche.Controls.OfType<Button>())
-                {
-                    b.Top += Convert.ToInt32(b.Tag.ToString().Split(';')[1]) * 59;
-                    if (b.Name == "btnAjouterTransaction"
-                        || b.Name == "btnModifierTransaction"
-                        || b.Name == "btnSupprimerTransaction")
-                    {
-                        b.Left += 220;
-                        b.TabStop = true;
-                    }
-                }
-                btnDeroulerTransaction.Text = btnDeroulerTransaction.Text.Replace('↓', '↑');
+                timerDeroulantTransaction.Stop();
+                timerDeroulantTransaction.Start();
+                _btnDeroulerTransaction.Text = _btnDeroulerTransaction.Text.Replace('↓', '↑');
             }
             else {
-                foreach (Button b in pnlGauche.Controls.OfType<Button>())
-                {
-                    b.Top -= Convert.ToInt32(b.Tag.ToString().Split(';')[1]) * 59;
-                    if (b.Name == "btnAjouterTransaction"
-                        || b.Name == "btnModifierTransaction"
-                        || b.Name == "btnSupprimerTransaction")
-                    {
-                        b.Left -= 220;
-                        b.TabStop = false;
-                    }
-                }
-                btnDeroulerTransaction.Text = btnDeroulerTransaction.Text.Replace('↑', '↓');
+                timerDeroulantTransaction.Stop();
+                timerDeroulantTransaction.Start();
+                _btnDeroulerTransaction.Text = _btnDeroulerTransaction.Text.Replace('↑', '↓');
+            }
+        }
+
+        void DeroulementDeTransaction(object sender, EventArgs e)
+        {
+            btnAjouterTransaction.Height += 3;
+            btnModifierTransaction.Height += 3;
+            btnSupprimerTransaction.Height += 3;
+            if (btnAjouterTransaction.Height >= 50)
+            {
+                timerDeroulantTransaction.Stop();
+                btnAjouterTransaction.Height = 50;
+                btnModifierTransaction.Height = 50;
+                btnSupprimerTransaction.Height = 50;
+                btnAjouterTransaction.TabStop = true;
+                btnModifierTransaction.TabStop = true;
+                btnSupprimerTransaction.TabStop = true;
+                timerDeroulantTransaction.Tick -= new EventHandler(DeroulementDeTransaction);
+                timerDeroulantTransaction.Tick += new EventHandler(EnroulementDeTransaction);
+            }
+        }
+
+        void EnroulementDeTransaction(object sender, EventArgs e)
+        {
+            btnAjouterTransaction.Height -= 3;
+            btnModifierTransaction.Height -= 3;
+            btnSupprimerTransaction.Height -= 3;
+            if (btnAjouterTransaction.Height <= 0)
+            {
+                timerDeroulantTransaction.Stop();
+                btnAjouterTransaction.Height = 0;
+                btnModifierTransaction.Height = 0;
+                btnSupprimerTransaction.Height = 0;
+                btnAjouterTransaction.TabStop = false;
+                btnModifierTransaction.TabStop = false;
+                btnSupprimerTransaction.TabStop = false;
+                timerDeroulantTransaction.Tick -= new EventHandler(EnroulementDeTransaction);
+                timerDeroulantTransaction.Tick += new EventHandler(DeroulementDeTransaction);
             }
         }
 
         /* Cliquer sur le bouton des budgets dans le panel de gauche */
         static bool deroulerBudget = false;
+        static Timer timerDeroulantBudget = new Timer();
         private void CliquerSurDeroulerBudget(object sender, EventArgs e)
         {
-            if (deroulerBudget = !deroulerBudget) {
-                foreach (Button b in pnlGauche.Controls.OfType<Button>())
-                {
-                    if (b.Name == "btnPostFixe"
-                        || b.Name == "btnPostePonctuel"
-                        || b.Name == "btnFrm_3")
-                    {
-                        b.Left += 220;
-                        b.TabStop = true;
-                    }
-                }
+            if (deroulerBudget = !deroulerBudget)
+            {
+                timerDeroulantBudget.Stop();
+                timerDeroulantBudget.Start();
                 btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↓', '↑');
             }
             else {
-                foreach (Button b in pnlGauche.Controls.OfType<Button>())
-                {
-                    if (b.Name == "btnPostFixe"
-                        || b.Name == "btnPostePonctuel"
-                        || b.Name == "btnFrm_3")
-                    {
-                        b.Left -= 220;
-                        b.TabStop = false;
-                    }
-                }
+                timerDeroulantBudget.Stop();
+                timerDeroulantBudget.Start();
                 btnDeroulerBudget.Text = btnDeroulerBudget.Text.Replace('↑', '↓');
+            }
+        }
+
+        void DeroulementDeBudget(object sender, EventArgs e)
+        {
+            btnPostFixe.Height += 3;
+            btnPostePonctuel.Height += 3;
+            btnFrm_3.Height += 3;
+            btnBudgetRecap.Height += 3;
+            if (btnPostFixe.Height >= 50)
+            {
+                timerDeroulantBudget.Stop();
+                btnPostFixe.Height = 50;
+                btnPostePonctuel.Height = 50;
+                btnFrm_3.Height = 50;
+                btnBudgetRecap.Height = 50;
+                btnPostFixe.TabStop = true;
+                btnPostePonctuel.TabStop = true;
+                btnFrm_3.TabStop = true;
+                btnBudgetRecap.TabStop = true;
+                timerDeroulantBudget.Tick -= new EventHandler(DeroulementDeBudget);
+                timerDeroulantBudget.Tick += new EventHandler(EnroulementDeBudget);
+            }
+        }
+
+        void EnroulementDeBudget(object sender, EventArgs e)
+        {
+            btnPostFixe.Height -= 3;
+            btnPostePonctuel.Height -= 3;
+            btnFrm_3.Height -= 3;
+            btnBudgetRecap.Height -= 3;
+            if (btnPostFixe.Height <= 0)
+            {
+                timerDeroulantBudget.Stop();
+                btnPostFixe.Height = 0;
+                btnPostePonctuel.Height = 0;
+                btnFrm_3.Height = 0;
+                btnBudgetRecap.Height = 0;
+                btnPostFixe.TabStop = false;
+                btnPostePonctuel.TabStop = false;
+                btnFrm_3.TabStop = false;
+                btnBudgetRecap.TabStop = false;
+                timerDeroulantBudget.Tick -= new EventHandler(EnroulementDeBudget);
+                timerDeroulantBudget.Tick += new EventHandler(DeroulementDeBudget);
             }
         }
 
@@ -253,159 +324,35 @@ namespace miniProjet2017
         /* Création des boutons du menu déroulant */
         private void PremierChargementDeApplication(object sender, EventArgs e)
         {
-                // Font
+                // Les timer
+
+            timerDeroulantTransaction.Tick += new EventHandler(DeroulementDeTransaction);
+            timerDeroulantTransaction.Interval = 1;
+            timerDeroulantBudget.Tick += new EventHandler(DeroulementDeBudget);
+            timerDeroulantBudget.Interval = 1;
+
+            // Les polices d'écritures
 
             fonts.AddFontFile("..\\..\\..\\..\\Font\\Café Françoise.otf");
-
             lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
-
-                // Dérouler transaction
-
-            Button b =
-            new Button()
-            {
-                Name = "btnAjouterTransaction",
-                Text = "Ajouter une transaction",
-                Top = 140,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;0",
-                TabIndex = 1
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmAjoutTransac);
-
-            b =
-            new Button()
-            {
-                Name = "btnModifierTransaction",
-                Text = "Modifier une transaction",
-                Top = 199,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;0",
-                TabIndex = 2
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmModiTransac);
-
-            b =
-            new Button()
-            {
-                Name = "btnSupprimerTransaction",
-                Text = "Supprimer une transaction",
-                Top = 258,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;0",
-                TabIndex = 3
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmSupprTransac);
-
-                // Dérouler budget
-
-            b =
-            new Button()
-            {
-                Name = "btnPostFixe",
-                Text = "frmPostFixe",
-                Top = 258,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;3",
-                TabIndex = 6
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmPostFixe);
-
-            b =
-            new Button()
-            {
-                Name = "btnPostePonctuel",
-                Text = "frmPostePonctuel",
-                Top = 317,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;3",
-                TabIndex = 7
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrmPostePonctuel);
-
-            b =
-            new Button()
-            {
-                Name = "btnFrm_3",
-                Text = "frmFrm_3",
-                Top = 376,
-                Left = -160,
-                Size = new Size(160, 60),
-                Parent = pnlGauche,
-                FlatStyle = FlatStyle.Flat,
-                Font = btnDeroulerTransaction.Font,
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                TabStop = false,
-                Tag = "derouler;3",
-                TabIndex = 8
-            };
-            b.FlatAppearance.BorderColor = Color.Black;
-            b.FlatAppearance.BorderSize = 2;
-            b.Click += new EventHandler(NouveauFrm3);
 
                 // Pour focus le premier bouton
 
-            ActiveControl = btnDeroulerTransaction;
+            ActiveControl = _btnDeroulerTransaction;
         }
 
         /* Initialise les valeurs par défaut du formulaire des options */
         public static bool baseExist = true;
         void InitValeurOption()
         {
-                // Recherche du fichier de stockage
+            // Recherche du fichier de stockage
 
             if (!File.Exists(@"..\..\Resources\ValeurParDefaut.txt"))
             {
                 MessageBox.Show("Le fichier ValeurParDefaut est manquant ! ");
             }
             else {
-                    // Fichier de stockage
+                // Fichier de stockage
 
                 string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
 
@@ -419,7 +366,7 @@ namespace miniProjet2017
                 try { frmOption.valeurResolution = Convert.ToByte(fichier[5]); }
                 catch { MessageBox.Show("La valeur de résolution n'est pas correct !"); };
             }
-                // Mise à jour de la résolution
+            // Mise à jour de la résolution
 
             resolutionScale = (0.6F + 0.2F * frmOption.valeurResolution);
             privateResolutionScale = resolutionScale;
@@ -505,7 +452,7 @@ namespace miniProjet2017
 
         private void HoverQuitter(object sender, EventArgs e)
         {
-            toolTip.Show("Quitte l'application.", picQuitter, 20, 5);
+            toolTip.Show("Quitte l'application.", picQuitter, 25, 0);
         }
 
         private void _HoverQuitter(object sender, EventArgs e)
@@ -515,7 +462,7 @@ namespace miniProjet2017
 
         private void HoverOption(object sender, EventArgs e)
         {
-            toolTip.Show("Affiche les options.", picOption, 20, 5);
+            toolTip.Show("Affiche les options.", picOption, 25, 0);
         }
 
         private void _HoverOption(object sender, EventArgs e)
@@ -523,141 +470,4 @@ namespace miniProjet2017
             toolTip.Show("", picOption);
         }
     }
-
-    /*class PDF_TEST
-    {
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string mois = "Avril";
-
-            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
-            doc.SetPageSize(iTextSharp.text.PageSize.A4); //met le PDF en format A4 
-            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("Test omega.pdf", FileMode.Create));
-            doc.Open(); //ouvre le document
-
-
-            PdfPTable dtgw = new PdfPTable(dataGridView1.Columns.Count);
-
-            Paragraph ligne = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLUE, Element.ALIGN_LEFT, 1))); //construction d'une ligne
-
-            Paragraph titre = new Paragraph(); //créé un texte souligné
-            Chunk text = new Chunk("Récapitulatif du mois : " + mois);
-            text.SetUnderline(0.5f, -2f);
-            titre.Add(text);
-            doc.Add(titre);
-
-            doc.Add(Chunk.NEWLINE); // saute une ligne
-
-            doc.Add(ligne); //rajoute une ligne bleue
-
-            Paragraph Dep = new Paragraph("Dépenses");
-            doc.Add(Dep);
-
-            doc.Add(Chunk.NEWLINE);
-
-            PdfPTable table = new PdfPTable(6);
-            table.AddCell("Date de la transaction");
-            table.AddCell("Description");
-            table.AddCell("Montant");
-            table.AddCell("Recette ?");
-            table.AddCell("Perçu ?");
-            table.AddCell("Type de dépense");
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                {
-                    if (dataGridView1[j, i].Value != null)
-                    {
-                        table.AddCell(new Phrase(dataGridView1[j, i].Value.ToString()));
-                    }
-                }
-            }
-            doc.Add(table); //rajoute la table avec les informations de la dataGridView
-
-            double nbDepen = 0;
-            double nbRecet = 0;
-            for (int k = 0; k < dataGridView1.Rows.Count; k++)
-            {
-                if (dataGridView1[3, k].Value.ToString() == "False")
-                {
-                    nbDepen += (double)(dataGridView1[2, k].Value);
-                }
-                else
-                {
-                    nbRecet += (double)(dataGridView1[2, k].Value);
-                }
-            }
-
-            double restPerc = 0;
-            for (int l = 0; l < dataGridView1.Rows.Count; l++)
-            {
-                if (dataGridView1[4, l].Value.ToString() == "True")
-                {
-                    restPerc += (double)(dataGridView1[2, l].Value);
-                }
-            }
-
-
-
-            double sommDepen = nbRecet - nbDepen + restPerc;
-
-
-
-            int nbTransac = dataGridView1.Rows.Count;
-
-            doc.Add(Chunk.NEWLINE);
-
-            Paragraph p = new Paragraph();
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk recet = new Chunk("Recette : " + nbRecet);
-            p.Add(recet);
-
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk depen = new Chunk("Dépenses : " + nbDepen);
-            p.Add(depen);
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk perc = new Chunk("Reste à percevoir : " + restPerc);
-            p.Add(perc);
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk somm = new Chunk("Somme totale dépensée : " + sommDepen);
-            p.Add(somm);
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            Chunk trans = new Chunk("Nombre de transaction : " + nbTransac);
-            p.Add(trans);
-            p.Add(Chunk.NEWLINE);
-            p.Add(Chunk.NEWLINE);
-
-            p.Add(ligne); //rajoute une ligne bleue
-
-            doc.Add(p);
-
-
-            //rajoute, redimensionne et positionne une image
-            iTextSharp.text.Image JPG = iTextSharp.text.Image.GetInstance("phoenix.jpg");
-            JPG.ScalePercent(10f);
-            JPG.SetAbsolutePosition(doc.PageSize.Width - 36f - 36f, doc.PageSize.Height - 36f - 216.6f);
-            doc.Add(JPG);
-
-            doc.Close(); //ferme le document
-        }
-    }*/
 }

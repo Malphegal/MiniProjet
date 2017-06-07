@@ -27,8 +27,13 @@ namespace miniProjet2017
         /* Affiche toutes les personne de la table Personne et rempli la combobox pour les type de transaction */
         private void DemarrageDeAjoutTransac()
         {
+                // Initialisation des valeurs static
+
+            flecheRetour = picQuitter.Image;
+            c = Color.FromArgb(56, 69, 80);
+
                 // Initialisation des variables de connection
-            
+
             CMD cmd;
             OleDbDataAdapter da;
             DataSet ds = new DataSet();
@@ -68,7 +73,7 @@ namespace miniProjet2017
 
             errorProvider.SetIconPadding(cboType, 11);
             errorProvider.SetIconPadding(txtDescTran, 11);
-            errorProvider.SetIconPadding(txtMontant, 11);
+            errorProvider.SetIconPadding(txtMontant, 19);
             errorProvider.SetIconPadding(btnChoixPersonne, 11);
 
                 // Les vérifications au cas par cas
@@ -127,7 +132,7 @@ namespace miniProjet2017
                                                             ? calTransac.SelectionStart.Month.ToString()
                                                             : "0" + calTransac.SelectionStart.Month.ToString()) + '/' + calTransac.SelectionStart.Year + "#, '"
                                                             + txtDescTran.Text + "', "
-                                                            + FormatDuMontant(txtMontant.Text).Replace(',', '.') + ", "
+                                                            + txtMontant.Text.Replace(',', '.') + ", "
                                                             + (chkRecette.Checked ? "True" : "False") + ", "
                                                             + (chkPerçu.Checked ? "True" : "False") + ", "
                                                             + (cboType.SelectedIndex + 1) + ")", frmMain.con).ExecuteNonQuery();
@@ -166,19 +171,21 @@ namespace miniProjet2017
             CheckBox _sender = (CheckBox)sender;
             if (_sender.Checked) {
                 _sender.ForeColor = Color.Gray;
-                lblRecette.ForeColor = Color.Black;
+                lblRecette.ForeColor = Color.White;
+                chkPerçu.ForeColor = Color.Gray;
                 lblRecette.Text = "Dépense •";
                 _sender.Text = "  Recette";
                 chkPerçu.Checked = false;
-                chkPerçu.Enabled = false;
+                chkPerçu.AutoCheck = false;
             }
             else {
-                _sender.ForeColor = Color.Black;
+                _sender.ForeColor = Color.White;
                 lblRecette.ForeColor = Color.Gray;
+                chkPerçu.ForeColor = Color.White;
                 lblRecette.Text = "Dépense";
                 _sender.Text = "• Recette";
                 chkPerçu.Checked = false;
-                chkPerçu.Enabled = true;
+                chkPerçu.AutoCheck = true;
             }
         }
 
@@ -224,5 +231,27 @@ namespace miniProjet2017
             if (DialogResult.OK == frm.ShowDialog())
                 lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s :" : " :") + (listeParticipant = frm.listeParticipant).Count.ToString();
         }
+
+        static Color c;
+        /* Change la couleur des boutons quand la souris est sur l'un d'entre eux */
+        private void BoutonHover(object sender, EventArgs e)
+        {
+            (sender as Button).FlatAppearance.MouseOverBackColor = c;
+        }
+
+        static Image flecheRetour_clair = new Bitmap("..\\..\\Resources\\flecheRetour_clair.png");
+        static Image flecheRetour;
+        /* Souris sur picQuitter */
+        private void SourisSurPicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour_clair;
+        }
+
+        /* Souris sors de picQuitter */
+        private void SourisSortDePicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour;
+        }
+
     }
 }

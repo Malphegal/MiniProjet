@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAffichage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 211</value>
+    <value>790, 211</value>
   </data>
   <data name="btnAffichage.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 41</value>
@@ -151,7 +151,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnRecap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 258</value>
+    <value>790, 258</value>
   </data>
   <data name="btnRecap.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 41</value>
@@ -174,17 +174,179 @@
   <data name="&gt;&gt;btnRecap.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="pnlGauche.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnBudgetRecap.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnBudgetRecap.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnBudgetRecap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnBudgetRecap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBudgetRecap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 289</value>
+  </data>
+  <data name="btnBudgetRecap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnBudgetRecap.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnBudgetRecap.Text" xml:space="preserve">
+    <value> • Le budgets - Récapitulatif</value>
+  </data>
+  <data name="btnBudgetRecap.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnBudgetRecap.Name" xml:space="preserve">
+    <value>btnBudgetRecap</value>
+  </data>
+  <data name="&gt;&gt;btnBudgetRecap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBudgetRecap.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnBudgetRecap.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnFrm_3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnFrm_3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnFrm_3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnFrm_3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnFrm_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 289</value>
+  </data>
+  <data name="btnFrm_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnFrm_3.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnFrm_3.Text" xml:space="preserve">
+    <value> • Le frm_3 LOL</value>
+  </data>
+  <data name="btnFrm_3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnFrm_3.Name" xml:space="preserve">
+    <value>btnFrm_3</value>
+  </data>
+  <data name="&gt;&gt;btnFrm_3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFrm_3.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnFrm_3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnPostePonctuel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnPostePonctuel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnPostePonctuel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnPostePonctuel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPostePonctuel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 289</value>
+  </data>
+  <data name="btnPostePonctuel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnPostePonctuel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnPostePonctuel.Text" xml:space="preserve">
+    <value> • Les postes ponctuels</value>
+  </data>
+  <data name="btnPostePonctuel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnPostePonctuel.Name" xml:space="preserve">
+    <value>btnPostePonctuel</value>
+  </data>
+  <data name="&gt;&gt;btnPostePonctuel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPostePonctuel.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnPostePonctuel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnPostFixe.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnPostFixe.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnPostFixe.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnPostFixe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPostFixe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 289</value>
+  </data>
+  <data name="btnPostFixe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnPostFixe.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnPostFixe.Text" xml:space="preserve">
+    <value> • Les postes fixes</value>
+  </data>
+  <data name="btnPostFixe.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnPostFixe.Name" xml:space="preserve">
+    <value>btnPostFixe</value>
+  </data>
+  <data name="&gt;&gt;btnPostFixe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPostFixe.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnPostFixe.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnDeroulerBudget.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <data name="btnDeroulerBudget.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
   <data name="btnDeroulerBudget.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
   </data>
   <data name="btnDeroulerBudget.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnDeroulerBudget.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 201</value>
+    <value>0, 229</value>
   </data>
   <data name="btnDeroulerBudget.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 60</value>
@@ -205,19 +367,52 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnDeroulerBudget.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
+  </data>
+  <data name="picVertePnlGauche2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="picVertePnlGauche2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picVertePnlGauche2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 215</value>
+  </data>
+  <data name="picVertePnlGauche2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 14</value>
+  </data>
+  <data name="picVertePnlGauche2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="picVertePnlGauche2.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;picVertePnlGauche2.Name" xml:space="preserve">
+    <value>picVertePnlGauche2</value>
+  </data>
+  <data name="&gt;&gt;picVertePnlGauche2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picVertePnlGauche2.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;picVertePnlGauche2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnAjouterPersonne.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="btnAjouterPersonne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
   <data name="btnAjouterPersonne.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 13.5pt, style=Bold</value>
   </data>
   <data name="btnAjouterPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnAjouterPersonne.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 141</value>
+    <value>0, 155</value>
   </data>
   <data name="btnAjouterPersonne.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 60</value>
@@ -238,40 +433,190 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
-  <data name="btnDeroulerTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
+  <data name="picVertePnlGauche1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="btnDeroulerTransaction.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="btnDeroulerTransaction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="picVertePnlGauche1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnDeroulerTransaction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 81</value>
+  <data name="picVertePnlGauche1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 141</value>
   </data>
-  <data name="btnDeroulerTransaction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
+  <data name="picVertePnlGauche1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 14</value>
   </data>
-  <data name="btnDeroulerTransaction.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="picVertePnlGauche1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
-  <data name="btnDeroulerTransaction.Text" xml:space="preserve">
-    <value>Les transactions ↓</value>
+  <data name="picVertePnlGauche1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Name" xml:space="preserve">
-    <value>btnDeroulerTransaction</value>
+  <data name="&gt;&gt;picVertePnlGauche1.Name" xml:space="preserve">
+    <value>picVertePnlGauche1</value>
   </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;picVertePnlGauche1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.Parent" xml:space="preserve">
+  <data name="&gt;&gt;picVertePnlGauche1.Parent" xml:space="preserve">
     <value>pnlGauche</value>
   </data>
-  <data name="&gt;&gt;btnDeroulerTransaction.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;picVertePnlGauche1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnSupprimerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnSupprimerTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnSupprimerTransaction.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnSupprimerTransaction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSupprimerTransaction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 141</value>
+  </data>
+  <data name="btnSupprimerTransaction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnSupprimerTransaction.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnSupprimerTransaction.Text" xml:space="preserve">
+    <value> • Supprimer une transaction</value>
+  </data>
+  <data name="btnSupprimerTransaction.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnSupprimerTransaction.Name" xml:space="preserve">
+    <value>btnSupprimerTransaction</value>
+  </data>
+  <data name="&gt;&gt;btnSupprimerTransaction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSupprimerTransaction.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnSupprimerTransaction.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnModifierTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnModifierTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnModifierTransaction.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnModifierTransaction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnModifierTransaction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 141</value>
+  </data>
+  <data name="btnModifierTransaction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnModifierTransaction.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="btnModifierTransaction.Text" xml:space="preserve">
+    <value> • Modifier une transaction</value>
+  </data>
+  <data name="btnModifierTransaction.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnModifierTransaction.Name" xml:space="preserve">
+    <value>btnModifierTransaction</value>
+  </data>
+  <data name="&gt;&gt;btnModifierTransaction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnModifierTransaction.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnModifierTransaction.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnAjouterTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnAjouterTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnAjouterTransaction.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnAjouterTransaction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAjouterTransaction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 141</value>
+  </data>
+  <data name="btnAjouterTransaction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnAjouterTransaction.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnAjouterTransaction.Text" xml:space="preserve">
+    <value> • Ajouter une transaction</value>
+  </data>
+  <data name="btnAjouterTransaction.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnAjouterTransaction.Name" xml:space="preserve">
+    <value>btnAjouterTransaction</value>
+  </data>
+  <data name="&gt;&gt;btnAjouterTransaction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAjouterTransaction.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnAjouterTransaction.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="_btnDeroulerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="_btnDeroulerTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="_btnDeroulerTransaction.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="_btnDeroulerTransaction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnDeroulerTransaction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 81</value>
+  </data>
+  <data name="_btnDeroulerTransaction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 60</value>
+  </data>
+  <data name="_btnDeroulerTransaction.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_btnDeroulerTransaction.Text" xml:space="preserve">
+    <value>Les transactions ↓</value>
+  </data>
+  <data name="&gt;&gt;_btnDeroulerTransaction.Name" xml:space="preserve">
+    <value>_btnDeroulerTransaction</value>
+  </data>
+  <data name="&gt;&gt;_btnDeroulerTransaction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnDeroulerTransaction.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;_btnDeroulerTransaction.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="pnlLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -298,7 +643,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>12</value>
   </data>
   <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -324,6 +669,62 @@
   <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="picReduire.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAB3AAAABzCAYAAABpT5NmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAARvSURBVHhe7dkx
+        AQAgAAQhK37/MBrDGxhIwdl2AQAAAAAAAPhP4AIAAAAAAABECFwAAAAAAACACIELAAAAAAAAECFwAQAA
+        AAAAACIELgAAAAAAAECEwAUAAAAAAACIELgAAAAAAAAAEQIXAAAAAAAAIELgAgAAAAAAAEQIXAAAAAAA
+        AIAIgQsAAAAAAAAQIXABAAAAAAAAIgQuAAAAAAAAQITABQAAAAAAAIgQuAAAAAAAAAARAhcAAAAAAAAg
+        QuACAAAAAAAARAhcAAAAAAAAgAiBCwAAAAAAABAhcAEAAAAAAAAiBC4AAAAAAABAhMAFAAAAAAAAiBC4
+        AAAAAAAAABECFwAAAAAAACBC4AIAAAAAAABECFwAAAAAAACACIELAAAAAAAAECFwAQAAAAAAACIELgAA
+        AAAAAECEwAUAAAAAAACIELgAAAAAAAAAEQIXAAAAAAAAIELgAgAAAAAAAEQIXAAAAAAAAIAIgQsAAAAA
+        AAAQIXABAAAAAAAAIgQuAAAAAAAAQITABQAAAAAAAIgQuAAAAAAAAAARAhcAAAAAAAAgQuACAAAAAAAA
+        RAhcAAAAAAAAgAiBCwAAAAAAABAhcAEAAAAAAAAiBC4AAAAAAABAhMAFAAAAAAAAiBC4AAAAAAAAABEC
+        FwAAAAAAACBC4AIAAAAAAABECFwAAAAAAACACIELAAAAAAAAECFwAQAAAAAAACIELgAAAAAAAECEwAUA
+        AAAAAACIELgAAAAAAAAAEQIXAAAAAAAAIELgAgAAAAAAAEQIXAAAAAAAAIAIgQsAAAAAAAAQIXABAAAA
+        AAAAIgQuAAAAAAAAQITABQAAAAAAAIgQuAAAAAAAAAARAhcAAAAAAAAgQuACAAAAAAAARAhcAAAAAAAA
+        gAiBCwAAAAAAABAhcAEAAAAAAAAiBC4AAAAAAABAhMAFAAAAAAAAiBC4AAAAAAAAABECFwAAAAAAACBC
+        4AIAAAAAAABECFwAAAAAAACACIELAAAAAAAAECFwAQAAAAAAACIELgAAAAAAAECEwAUAAAAAAACIELgA
+        AAAAAAAAEQIXAAAAAAAAIELgAgAAAAAAAEQIXAAAAAAAAIAIgQsAAAAAAAAQIXABAAAAAAAAIgQuAAAA
+        AAAAQITABQAAAAAAAIgQuAAAAAAAAAARAhcAAAAAAAAgQuACAAAAAAAARAhcAAAAAAAAgAiBCwAAAAAA
+        ABAhcAEAAAAAAAAiBC4AAAAAAABAhMAFAAAAAAAAiBC4AAAAAAAAABECFwAAAAAAACBC4AIAAAAAAABE
+        CFwAAAAAAACACIELAAAAAAAAECFwAQAAAAAAACIELgAAAAAAAECEwAUAAAAAAACIELgAAAAAAAAAEQIX
+        AAAAAAAAIELgAgAAAAAAAEQIXAAAAAAAAIAIgQsAAAAAAAAQIXABAAAAAAAAIgQuAAAAAAAAQITABQAA
+        AAAAAIgQuAAAAAAAAAARAhcAAAAAAAAgQuACAAAAAAAARAhcAAAAAAAAgITdB0rVOyE4eBxhAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="picReduire.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picReduire.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="picReduire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 50</value>
+  </data>
+  <data name="picReduire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 10</value>
+  </data>
+  <data name="picReduire.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="picReduire.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;picReduire.Name" xml:space="preserve">
+    <value>picReduire</value>
+  </data>
+  <data name="&gt;&gt;picReduire.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picReduire.Parent" xml:space="preserve">
+    <value>pnlHaut</value>
+  </data>
+  <data name="&gt;&gt;picReduire.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblTitre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -334,7 +735,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblTitre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 12</value>
+    <value>45, 12</value>
   </data>
   <data name="lblTitre.Size" type="System.Drawing.Size, System.Drawing">
     <value>489, 51</value>
@@ -355,16 +756,16 @@
     <value>pnlHaut</value>
   </data>
   <data name="&gt;&gt;lblTitre.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="picQuitter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picQuitter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 12</value>
+    <value>688, 13</value>
   </data>
   <data name="picQuitter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 29</value>
+    <value>50, 50</value>
   </data>
   <data name="picQuitter.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -382,16 +783,16 @@
     <value>pnlHaut</value>
   </data>
   <data name="&gt;&gt;picQuitter.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="picOption.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picOption.Location" type="System.Drawing.Point, System.Drawing">
-    <value>679, 12</value>
+    <value>635, 26</value>
   </data>
   <data name="picOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 29</value>
+    <value>37, 37</value>
   </data>
   <data name="picOption.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -409,7 +810,7 @@
     <value>pnlHaut</value>
   </data>
   <data name="&gt;&gt;picOption.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pnlHaut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
