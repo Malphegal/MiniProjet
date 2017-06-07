@@ -106,7 +106,7 @@ namespace miniProjet2017
             }
             else errorProvider.SetError(btnChoixPersonne, "");
 
-            // Si aucune erreur est présente, on peut ajouter la transaction
+                // Si aucune erreur est présente, on peut ajouter la transaction
 
             if (toutEstOk)
             {
