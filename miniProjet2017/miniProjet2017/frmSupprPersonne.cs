@@ -79,7 +79,7 @@ namespace miniProjet2017
                 frmMain.con.Open();
                 foreach (uint i in idDesPersonnesASuppr)
                 {
-                    if ()
+                    //if ()
                     new CMD(@"DELETE FROM Beneficiaires
                               WHERE codePersonne = " + i, frmMain.con).ExecuteNonQuery();
 

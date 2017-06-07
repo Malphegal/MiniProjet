@@ -62,13 +62,15 @@ namespace miniProjet2017
                 pnl.Text = "Liste des prélévements";
                 pnl.Top = topPnl;
                 pnl.Left = 30;
-                pnl.Width = 480;
-                pnl.Height = 300;
+                pnl.Width = 400;
+                pnl.Height = 250;
                 pnl.AutoScroll = true;
-                Controls.Add(pnl);
+                picBordure.Controls.Add(pnl);
                 Label lblTitre = new Label();
+                lblTitre.Top = 10;
                 lblTitre.Text = "Liste des prélévements";
                 lblTitre.AutoSize = true;
+                lblTitre.ForeColor = Color.White;
                 pnl.Controls.Add(lblTitre);
             }
             if(ancienNbEcheance < i)
@@ -76,10 +78,12 @@ namespace miniProjet2017
                 for (int j = ancienNbEcheance+1; j <= i; j++)
                 {
                     Label lbl = new Label();
+                    lbl.ForeColor = Color.White;
                     DateTimePicker dtPick = new DateTimePicker();
                     TextBox txt2 = new TextBox();
                     dtPick.Top = topElem;
                     dtPick.Left = leftElem + lbl.Width;
+                      
                     lbl.Top = topElem;
                     lbl.Left = leftElem;
                     lbl.Text = "Prélévement n°" + j;
@@ -100,6 +104,11 @@ namespace miniProjet2017
                 }
             }
             ancienNbEcheance = i;
-        } 
+        }
+
+        private void picQuitter_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
