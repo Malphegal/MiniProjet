@@ -100,6 +100,6 @@ namespace miniProjet2017
                 }
             }
             ancienNbEcheance = i;
-        }
+        } 
     }
 }
