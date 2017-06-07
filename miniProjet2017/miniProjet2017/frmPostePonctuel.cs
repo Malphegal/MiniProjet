@@ -29,10 +29,16 @@ namespace miniProjet2017
             {
                 int i = int.Parse(txtNbPreleve.Text);
                 genererElementsPrelevements(i);
+                errorProvider1.SetError(txtNbPreleve, "");
             }
             else if(char.IsDigit(e.KeyChar)|| e.KeyChar == 8)
             {
                 e.Handled = false;
+            }
+            else if (e.KeyChar == 13 && int.Parse(txtNbPreleve.Text) <= 1)
+            {
+                errorProvider1.SetIconPadding(txtNbPreleve, 10);
+                errorProvider1.SetError(txtNbPreleve, "Veuillez entrer un valeur supérieure à 1");
             }
             else
             {

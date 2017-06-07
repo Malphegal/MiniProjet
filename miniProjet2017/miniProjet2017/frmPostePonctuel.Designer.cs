@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblIntitule = new System.Windows.Forms.Label();
             this.txtIntitule = new System.Windows.Forms.TextBox();
             this.lblDescri = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescri = new System.Windows.Forms.TextBox();
             this.txtNbPreleve = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIntitule
@@ -85,6 +88,10 @@
             this.txtNbPreleve.TabIndex = 3;
             this.txtNbPreleve.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNbPreleve_KeyPress);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmPostePonctuel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +106,7 @@
             this.Name = "frmPostePonctuel";
             this.Text = "Postes ponctuels";
             this.Load += new System.EventHandler(this.frmPostePonctuel_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +120,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDescri;
         private System.Windows.Forms.TextBox txtNbPreleve;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
