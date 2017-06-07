@@ -86,6 +86,7 @@
             this.txtNbPreleve.Name = "txtNbPreleve";
             this.txtNbPreleve.Size = new System.Drawing.Size(43, 20);
             this.txtNbPreleve.TabIndex = 3;
+            this.txtNbPreleve.TextChanged += new System.EventHandler(this.txtNbPreleve_TextChanged);
             this.txtNbPreleve.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNbPreleve_KeyPress);
             // 
             // errorProvider1
