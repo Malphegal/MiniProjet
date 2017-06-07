@@ -94,8 +94,7 @@ namespace miniProjet2017
 
                 foreach (int i in idDesTransaction)
                     if (Convert.ToInt32(new CMD("SELECT count(*) FROM Beneficiaire WHERE codeTransaction = " + i, frmMain.con).ExecuteScalar()) == 0)
-                        new CMD(@"SELECT count(*) FROM [Transaction]
-                                  WHERE codeTransaction = ", frmMain.con).ExecuteScalar();
+                        new CMD(@"DE", frmMain.con).ExecuteNonQuery();
 
                     // On ferme con et le formulaire
 
