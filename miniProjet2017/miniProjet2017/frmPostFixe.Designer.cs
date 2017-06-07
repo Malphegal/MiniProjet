@@ -43,8 +43,10 @@
             this.lblEuro = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.picQuitter = new System.Windows.Forms.PictureBox();
+            this.picBordure = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPoste
@@ -175,6 +177,16 @@
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.QuitterFrmPostFixe);
             // 
+            // picBordure
+            // 
+            this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
+            this.picBordure.Location = new System.Drawing.Point(-1, -2);
+            this.picBordure.Name = "picBordure";
+            this.picBordure.Size = new System.Drawing.Size(465, 449);
+            this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBordure.TabIndex = 56;
+            this.picBordure.TabStop = false;
+            // 
             // frmPostFixe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +206,7 @@
             this.Controls.Add(this.btnAutre);
             this.Controls.Add(this.cboPoste);
             this.Controls.Add(this.lblPoste);
+            this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPostFixe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -201,6 +214,7 @@
             this.Load += new System.EventHandler(this.DemarrageDeFrmPostFixe);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +236,6 @@
         private System.Windows.Forms.Label lblEuro;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox picQuitter;
+        private System.Windows.Forms.PictureBox picBordure;
     }
 }
