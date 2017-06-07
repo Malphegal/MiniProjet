@@ -22,6 +22,10 @@ namespace miniProjet2017
         /* Remplir les comboBox */
         private void DemarrageDeFrmPostFixe(object sender, EventArgs e)
         {
+                // Position de errorProvider
+
+            errorProvider1.SetIconPadding(txtJour, 25);
+
                 // On retire le text du label "/ 3"
 
             lblMois.Text = "";
@@ -40,31 +44,49 @@ namespace miniProjet2017
             foreach (DataRow row in ds.Tables["_Periodicite"].Rows)
                 cboPeriodicite.Items.Add(row[1]);
 
-            cboPeriodicite.SelectedIndex = 0;
+            if (ds.Tables["_Periodicite"].Rows.Count > 0)
+                cboPeriodicite.SelectedIndex = 0;
+            else
+            {
+                MessageBox.Show("Il n'y a pas de periodicité dans la base de donnée !\nFermuture du formulaire.");
+                Close();
+            }
+            if (ds.Tables["_Poste"].Rows.Count > 0)
+                cboPoste.SelectedIndex = 0;
+            else
+            {
+                MessageBox.Show("Il n'y a pas de type de poste dans la base de donnée !\nFermuture du formulaire.");
+                Close();
+            }
         }
 
         /* Contrôle de la saisie du jour du mois */
         private void SaisirUnJourDuMois(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) || (e.KeyChar == '0' && txtJour.Text.Length == 0))
                 e.Handled = true;
             else
             {
-                if (txtJour.Text.Length == 1 && e.KeyChar != 8)
+                if (txtJour.Text.Length == 1)
                 {
                     if (!new int[] { 1, 2, 3 }.Contains(int.Parse(txtJour.Text)))
                         e.Handled = true;
-                    if (int.Parse(txtJour.Text) == 3 && (!new int[] { 1, 2 }.Contains(e.KeyChar)))
+                    if (int.Parse(txtJour.Text) == 3 && !new char[] { '0', '1' }.Contains(e.KeyChar))
                         e.Handled = true;
                 }
+                if (txtJour.Text.Length == 2)
+                    e.Handled = true;
             }
+            if (e.KeyChar == 8)
+                e.Handled = false;
         }
         private void SaisirUnJourDeLaSemaine(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar == '1' && e.KeyChar == '2' && e.KeyChar == '3' && e.KeyChar == '4' && e.KeyChar == '5' &&
-                e.KeyChar == '6' && e.KeyChar == '7' && e.KeyChar == 8) || !(txtJour.Text.Length == 0
-                && (txtJour.Text.Length == 1 && (e.KeyChar == 8 || txtJour.SelectionLength == 1))))
+            if (!(e.KeyChar == '1' || e.KeyChar == '2' || e.KeyChar == '3' || e.KeyChar == '4' || e.KeyChar == '5' ||
+                e.KeyChar == '6' || e.KeyChar == '7') || (txtJour.Text.Length == 1 && txtJour.SelectionLength != 1))
                 e.Handled = true;
+            if (e.KeyChar == 8)
+                e.Handled = false;
         }
 
         /* Ajoute le poste fixe si tout est ok pour le faire */
@@ -76,16 +98,16 @@ namespace miniProjet2017
 
                 // Vérification au cas par cas
 
-            if (cboPoste.SelectedIndex != -1)
+            if (cboPoste.SelectedIndex == -1)
             {
                 errorProvider1.SetError(cboPoste, "Il faut choisir un type de poste !");
                 toutEstOK = false;
             }
             else errorProvider1.SetError(cboPoste, "");
 
-            if (cboPeriodicite.SelectedIndex != -1)
+            if (cboPeriodicite.SelectedIndex == -1)
             {
-                errorProvider1.SetError(cboPeriodicite, "Il faut choisir un type de poste !");
+                errorProvider1.SetError(cboPeriodicite, "Il faut choisir un type de periodicité !");
                 toutEstOK = false;
             }
             else errorProvider1.SetError(cboPeriodicite, "");
@@ -93,6 +115,13 @@ namespace miniProjet2017
             if (txtMontant.Text == "" || double.Parse(txtMontant.Text) < 0.01D)
             {
                 errorProvider1.SetError(txtMontant, "Il faut indiquer un montant non nul (ou inférieur à 1 centime) pour ce poste !");
+                toutEstOK = false;
+            }
+            else errorProvider1.SetError(txtMontant, "");
+
+            if (txtJour.Text == "")
+            {
+                errorProvider1.SetError(txtJour, "Il faut indiquer un jour du mois/de la semaine pour ce poste !");
                 toutEstOK = false;
             }
             else errorProvider1.SetError(txtMontant, "");
