@@ -1,5 +1,9 @@
 #Base de donnée
+<<<<<<< HEAD
 C:\Users\cance\miniprojet\miniProjet2017\miniProjet2017\bin\Debug\budget1.mdb
+=======
+..\\..\\Ressources\budget1.mdb
+>>>>>>> 6fb3b5c368ed3a803cacb2df5d775afebedc35ef
 #SMS
 10
 #Résolution
