@@ -92,6 +92,10 @@ namespace miniProjet2017
                     DateTimePicker dtPick = new DateTimePicker();
                     TextBox txt2 = new TextBox();
 
+                    lbl.Tag = "tag" + j;
+                    dtPick.Tag = "tag" + j;
+                    txt2.Tag = "tag" + j;
+
                     dtPick.Top = topElem;
                     dtPick.Left =lbl.Width;
                     if (m > 12) // Mois plus grand que 12 ?
@@ -164,14 +168,37 @@ namespace miniProjet2017
             {
                 if (DialogResult.OK == MessageBox.Show("AJOUTER ? • [TODO]", "Ajout d'un poste ponctuel", MessageBoxButtons.OKCancel))
                 {
-                    MessageBox.Show(cboTypePoste.SelectedIndex + " " + txtDescri.Text);
                     frmMain.con.Open();
 
                     new CMD(@"INSERT INTO PostePonctuel VALUES ("
                     + (cboTypePoste.SelectedIndex + 1) + ", '"
                     + txtDescri.Text + "')", frmMain.con).ExecuteNonQuery();
 
+                    float montantActuel;
 
+                    foreach (DateTimePicker dtp in pnl.Controls.OfType<DateTimePicker>())
+                    {
+                        montantActuel = -1;
+                        foreach (TextBox txt in pnl.Controls.OfType<TextBox>())
+                        {
+                            MessageBox.Show(txt.Tag + "\n" + dtp.Tag);
+                            if (txt.Tag.ToString() == dtp.Tag.ToString())
+                            {
+                                montantActuel = float.Parse(txt.Text.Replace('.', ','));
+                                MessageBox.Show(montantActuel.ToString());
+                                break;
+                            }
+                        }
+
+                        new CMD(@"INSERT INTO Echeances VALUES ("
+                        + (cboTypePoste.SelectedIndex + 1) + ", "
+                        + "#" + (dtp.Value.Day > 9
+                        ? dtp.Value.Day.ToString()
+                        : "0" + dtp.Value.Day.ToString()) + '/' + (dtp.Value.Month > 9
+                        ? dtp.Value.Month.ToString()
+                        : "0" + dtp.Value.Month.ToString()) + '/' + dtp.Value.Year + "#, "
+                        + montantActuel.ToString().Replace(',', '.') + ")", frmMain.con).ExecuteNonQuery();
+                    }
 
                     frmMain.con.Close();
                 }
