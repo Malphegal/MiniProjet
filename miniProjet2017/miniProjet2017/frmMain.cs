@@ -181,7 +181,7 @@ namespace miniProjet2017
             }
             foreach (Control c in Controls)
                 c.Enabled = false;
-            new Poste_Revenu().ShowDialog();
+            new frmPosteRevenu().ShowDialog();
             foreach (Control c in Controls)
                 c.Enabled = true;
         }

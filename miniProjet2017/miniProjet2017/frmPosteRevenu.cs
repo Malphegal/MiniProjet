@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace miniProjet2017
 {
-    public partial class Poste_Revenu : Form
+    public partial class frmPosteRevenu : Form
     {
-        public Poste_Revenu()
+        public frmPosteRevenu()
         {
             InitializeComponent();
         }
