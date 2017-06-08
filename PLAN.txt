@@ -64,8 +64,6 @@ troubleshooting :
 		
 	• frmAjoutTransac - Si aucune personne -> tout le monde sera impliqué ?
 	
-	• frmModiTransac -> A SURVEILLER
-	
 	• TROUBLESHOOTING -> PICSLOW-> WUT ?
 	
 	• Hover -> Très lent
@@ -74,8 +72,6 @@ troubleshooting :
 	
 	• frmMain -> HOVER_CONTEXT pnlHaut -> Souris par dessus
 		-> DONE
-		
-	• frmMain -> Supprimer les tags -> pngGauche
 	
 	• frmMain -> AutoVertScrollBar -> C'est moche ! trouver une solution ?
 	
@@ -86,8 +82,6 @@ troubleshooting :
 	
 	• frmAffichage -> MenuStrip -> modi/suppr -> Afficher la bonne transac directement
 						-> Bloqué la saisie / modification SUR le dataGridView
-						
-	• code PDF -> Booléen recette et dépense sont inversés
 	
 	• frmChoixPersonne -> Ajouter bouton tout cocher/décocher
 	

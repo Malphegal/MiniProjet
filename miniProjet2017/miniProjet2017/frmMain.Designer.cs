@@ -211,7 +211,7 @@
             this.btnDeroulerBudget.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDeroulerBudget.ForeColor = System.Drawing.Color.White;
             this.btnDeroulerBudget.Name = "btnDeroulerBudget";
-            this.btnDeroulerBudget.Tag = "derouler;3";
+            this.btnDeroulerBudget.Tag = "";
             this.btnDeroulerBudget.UseVisualStyleBackColor = false;
             this.btnDeroulerBudget.Click += new System.EventHandler(this.CliquerSurDeroulerBudget);
             // 
@@ -256,7 +256,7 @@
             this.btnDeroulerPersonne.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDeroulerPersonne.ForeColor = System.Drawing.Color.White;
             this.btnDeroulerPersonne.Name = "btnDeroulerPersonne";
-            this.btnDeroulerPersonne.Tag = "derouler;0";
+            this.btnDeroulerPersonne.Tag = "";
             this.btnDeroulerPersonne.UseVisualStyleBackColor = false;
             this.btnDeroulerPersonne.Click += new System.EventHandler(this.CliquerSurDeroulerPersonne);
             // 
@@ -276,7 +276,7 @@
             this.btnSupprimerTransaction.ForeColor = System.Drawing.Color.Salmon;
             this.btnSupprimerTransaction.Name = "btnSupprimerTransaction";
             this.btnSupprimerTransaction.TabStop = false;
-            this.btnSupprimerTransaction.Tag = "derouler;0";
+            this.btnSupprimerTransaction.Tag = "";
             this.btnSupprimerTransaction.UseVisualStyleBackColor = false;
             this.btnSupprimerTransaction.Click += new System.EventHandler(this.NouveauFrmSupprTransac);
             // 
@@ -289,7 +289,7 @@
             this.btnModifierTransaction.ForeColor = System.Drawing.Color.Salmon;
             this.btnModifierTransaction.Name = "btnModifierTransaction";
             this.btnModifierTransaction.TabStop = false;
-            this.btnModifierTransaction.Tag = "derouler;0";
+            this.btnModifierTransaction.Tag = "";
             this.btnModifierTransaction.UseVisualStyleBackColor = false;
             this.btnModifierTransaction.Click += new System.EventHandler(this.NouveauFrmModiTransac);
             // 
@@ -302,7 +302,7 @@
             this.btnAjouterTransaction.ForeColor = System.Drawing.Color.Salmon;
             this.btnAjouterTransaction.Name = "btnAjouterTransaction";
             this.btnAjouterTransaction.TabStop = false;
-            this.btnAjouterTransaction.Tag = "derouler;0";
+            this.btnAjouterTransaction.Tag = "";
             this.btnAjouterTransaction.UseVisualStyleBackColor = false;
             this.btnAjouterTransaction.Click += new System.EventHandler(this.NouveauFrmAjoutTransac);
             // 
@@ -314,7 +314,7 @@
             this._btnDeroulerTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this._btnDeroulerTransaction.ForeColor = System.Drawing.Color.White;
             this._btnDeroulerTransaction.Name = "_btnDeroulerTransaction";
-            this._btnDeroulerTransaction.Tag = "derouler;0";
+            this._btnDeroulerTransaction.Tag = "";
             this._btnDeroulerTransaction.UseVisualStyleBackColor = false;
             this._btnDeroulerTransaction.Click += new System.EventHandler(this.CliquerSurDeroulerTransaction);
             // 
