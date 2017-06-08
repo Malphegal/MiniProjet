@@ -51,7 +51,7 @@
             // 
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
-            this.picQuitter.Location = new System.Drawing.Point(912, 24);
+            this.picQuitter.Location = new System.Drawing.Point(902, 31);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(69, 68);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,12 +120,15 @@
             // 
             // btnGrosDataGridView
             // 
-            this.btnGrosDataGridView.Location = new System.Drawing.Point(808, 457);
+            this.btnGrosDataGridView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.btnGrosDataGridView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrosDataGridView.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGrosDataGridView.Location = new System.Drawing.Point(802, 453);
             this.btnGrosDataGridView.Name = "btnGrosDataGridView";
-            this.btnGrosDataGridView.Size = new System.Drawing.Size(119, 40);
+            this.btnGrosDataGridView.Size = new System.Drawing.Size(125, 44);
             this.btnGrosDataGridView.TabIndex = 9;
-            this.btnGrosDataGridView.Text = "Grand DataGridView";
-            this.btnGrosDataGridView.UseVisualStyleBackColor = true;
+            this.btnGrosDataGridView.Text = "Récapitulatif annuel";
+            this.btnGrosDataGridView.UseVisualStyleBackColor = false;
             // 
             // frmBudgetRecap
             // 

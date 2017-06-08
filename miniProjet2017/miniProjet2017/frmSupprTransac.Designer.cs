@@ -76,6 +76,8 @@
             // 
             // cboTransactions
             // 
+            this.cboTransactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.cboTransactions.ForeColor = System.Drawing.SystemColors.Control;
             this.cboTransactions.FormattingEnabled = true;
             this.cboTransactions.Location = new System.Drawing.Point(202, 143);
             this.cboTransactions.Name = "cboTransactions";

@@ -61,6 +61,7 @@
             // 
             // picBordure
             // 
+            this.picBordure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.picBordure.Image = ((System.Drawing.Image)(resources.GetObject("picBordure.Image")));
             this.picBordure.Location = new System.Drawing.Point(0, 0);
             this.picBordure.Name = "picBordure";
@@ -71,9 +72,10 @@
             // 
             // picQuitter
             // 
-            this.picQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.picQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
-            this.picQuitter.Location = new System.Drawing.Point(685, 12);
+            this.picQuitter.Location = new System.Drawing.Point(671, 25);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(69, 68);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,23 +107,28 @@
             // 
             // btnPDF
             // 
+            this.btnPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPDF.ForeColor = System.Drawing.SystemColors.Control;
             this.btnPDF.Location = new System.Drawing.Point(42, 27);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(123, 35);
             this.btnPDF.TabIndex = 3;
             this.btnPDF.Text = "Génération du PDF";
-            this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.UseVisualStyleBackColor = false;
             this.btnPDF.Click += new System.EventHandler(this.GenerationDuPDF);
             // 
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
+            this.lblTitre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitre.Location = new System.Drawing.Point(319, 27);
+            this.lblTitre.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitre.Location = new System.Drawing.Point(324, 27);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(175, 29);
+            this.lblTitre.Size = new System.Drawing.Size(112, 29);
             this.lblTitre.TabIndex = 4;
-            this.lblTitre.Text = "Affichage[OFF]";
+            this.lblTitre.Text = "Affichage";
             // 
             // gridViewClone
             // 
@@ -133,7 +140,9 @@
             // 
             // txtRecherche
             // 
-            this.txtRecherche.Location = new System.Drawing.Point(287, 96);
+            this.txtRecherche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtRecherche.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtRecherche.Location = new System.Drawing.Point(329, 100);
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.Size = new System.Drawing.Size(100, 20);
             this.txtRecherche.TabIndex = 6;
@@ -142,7 +151,9 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(269, 80);
+            this.lblDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.lblDescription.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDescription.Location = new System.Drawing.Point(311, 80);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(135, 13);
             this.lblDescription.TabIndex = 8;

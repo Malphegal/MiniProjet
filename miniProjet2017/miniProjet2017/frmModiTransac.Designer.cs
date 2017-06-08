@@ -81,7 +81,7 @@
             this.btnModifier.Location = new System.Drawing.Point(49, 466);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(103, 66);
-            this.btnModifier.TabIndex = 28;
+            this.btnModifier.TabIndex = 8;
             this.btnModifier.Text = "Modifier";
             this.btnModifier.UseVisualStyleBackColor = false;
             this.btnModifier.Click += new System.EventHandler(this.ModifierLaTransaction);
@@ -94,7 +94,7 @@
             this.grb1.Location = new System.Drawing.Point(115, 363);
             this.grb1.Name = "grb1";
             this.grb1.Size = new System.Drawing.Size(281, 43);
-            this.grb1.TabIndex = 27;
+            this.grb1.TabIndex = 3;
             this.grb1.TabStop = false;
             // 
             // lblRecette
@@ -106,7 +106,7 @@
             this.lblRecette.Location = new System.Drawing.Point(26, 18);
             this.lblRecette.Name = "lblRecette";
             this.lblRecette.Size = new System.Drawing.Size(57, 13);
-            this.lblRecette.TabIndex = 10;
+            this.lblRecette.TabIndex = 3;
             this.lblRecette.Text = "Dépense";
             // 
             // chkPerçu
@@ -116,7 +116,7 @@
             this.chkPerçu.Location = new System.Drawing.Point(190, 17);
             this.chkPerçu.Name = "chkPerçu";
             this.chkPerçu.Size = new System.Drawing.Size(54, 17);
-            this.chkPerçu.TabIndex = 9;
+            this.chkPerçu.TabIndex = 4;
             this.chkPerçu.Text = "Perçu";
             this.chkPerçu.UseVisualStyleBackColor = true;
             // 
@@ -127,18 +127,20 @@
             this.chkRecette.Location = new System.Drawing.Point(95, 17);
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.Size = new System.Drawing.Size(73, 17);
-            this.chkRecette.TabIndex = 8;
+            this.chkRecette.TabIndex = 3;
             this.chkRecette.Text = "• Recette";
             this.chkRecette.UseVisualStyleBackColor = true;
             this.chkRecette.Click += new System.EventHandler(this.CliquerSurChkRecette);
             // 
             // cboType
             // 
+            this.cboType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.cboType.ForeColor = System.Drawing.SystemColors.Control;
             this.cboType.FormattingEnabled = true;
             this.cboType.Location = new System.Drawing.Point(214, 118);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(121, 21);
-            this.cboType.TabIndex = 26;
+            this.cboType.TabIndex = 0;
             // 
             // lblType
             // 
@@ -164,10 +166,12 @@
             // 
             // txtMontant
             // 
+            this.txtMontant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtMontant.ForeColor = System.Drawing.SystemColors.Control;
             this.txtMontant.Location = new System.Drawing.Point(214, 308);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
-            this.txtMontant.TabIndex = 23;
+            this.txtMontant.TabIndex = 2;
             this.txtMontant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnMontant);
             // 
             // lblDescTransac
@@ -195,10 +199,11 @@
             // calTransac
             // 
             this.calTransac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calTransac.ForeColor = System.Drawing.SystemColors.WindowText;
             this.calTransac.Location = new System.Drawing.Point(507, 148);
             this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
-            this.calTransac.TabIndex = 19;
+            this.calTransac.TabIndex = 5;
             // 
             // lblAideDate
             // 
@@ -271,11 +276,13 @@
             // 
             // cboListeTransaction
             // 
+            this.cboListeTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.cboListeTransaction.ForeColor = System.Drawing.SystemColors.Control;
             this.cboListeTransaction.FormattingEnabled = true;
             this.cboListeTransaction.Location = new System.Drawing.Point(320, 490);
             this.cboListeTransaction.Name = "cboListeTransaction";
             this.cboListeTransaction.Size = new System.Drawing.Size(269, 21);
-            this.cboListeTransaction.TabIndex = 42;
+            this.cboListeTransaction.TabIndex = 7;
             this.cboListeTransaction.SelectedIndexChanged += new System.EventHandler(this.ChangerIndexCboListeTransaction);
             // 
             // lblListeTransaction
@@ -309,17 +316,19 @@
             this.btnChoixPersonne.Location = new System.Drawing.Point(549, 415);
             this.btnChoixPersonne.Name = "btnChoixPersonne";
             this.btnChoixPersonne.Size = new System.Drawing.Size(88, 39);
-            this.btnChoixPersonne.TabIndex = 54;
+            this.btnChoixPersonne.TabIndex = 6;
             this.btnChoixPersonne.Text = "Choisir les participants...";
             this.btnChoixPersonne.UseVisualStyleBackColor = true;
             this.btnChoixPersonne.Click += new System.EventHandler(this.AjouterPersonneATransaction);
             // 
             // txtDescTran
             // 
+            this.txtDescTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtDescTran.ForeColor = System.Drawing.SystemColors.Control;
             this.txtDescTran.Location = new System.Drawing.Point(214, 216);
             this.txtDescTran.Name = "txtDescTran";
             this.txtDescTran.Size = new System.Drawing.Size(177, 20);
-            this.txtDescTran.TabIndex = 21;
+            this.txtDescTran.TabIndex = 1;
             this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
             // 
             // lblEuro
@@ -397,7 +406,7 @@
             this.btnAide.Location = new System.Drawing.Point(38, 32);
             this.btnAide.Name = "btnAide";
             this.btnAide.Size = new System.Drawing.Size(75, 23);
-            this.btnAide.TabIndex = 64;
+            this.btnAide.TabIndex = 9;
             this.btnAide.Text = "Aide";
             this.btnAide.UseVisualStyleBackColor = true;
             this.btnAide.Click += new System.EventHandler(this.btnAide_Click);

@@ -26,12 +26,6 @@ namespace miniProjet2017
         OleDbDataAdapter da = new OleDbDataAdapter();
         DataSet ds = new DataSet();
 
-        /* Affiche ou retire l'aide du formulaire */
-        private void CliquerSurAideModif(object sender, EventArgs e)
-        {
-            new Classes.Aide().AideTransac(this);
-        }
-
         // TODO: Si il n'y a pas de transaction dans la table, MessageBox.Show ?
         /* Création de la table Transaction en local */
         private void LancementDuFormulaire(object sender, EventArgs e)
@@ -292,10 +286,9 @@ namespace miniProjet2017
         {
             Close();
         }
-
+        /* Affiche ou retire l'aide du formulaire */
         private void btnAide_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(lblTransac.Size.Width.ToString());
             new Classes.Aide().AideTransac(this);
         }
     }

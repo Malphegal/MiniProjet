@@ -39,6 +39,7 @@
             // pnlPersonne
             // 
             this.pnlPersonne.AutoScroll = true;
+            this.pnlPersonne.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pnlPersonne.Location = new System.Drawing.Point(26, 58);
             this.pnlPersonne.Name = "pnlPersonne";
             this.pnlPersonne.Size = new System.Drawing.Size(436, 198);
@@ -47,7 +48,9 @@
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
+            this.lblTitre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F, System.Drawing.FontStyle.Italic);
+            this.lblTitre.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitre.Location = new System.Drawing.Point(88, 18);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(316, 36);
@@ -56,30 +59,39 @@
             // 
             // btnQuitter
             // 
+            this.btnQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnQuitter.BackgroundImage = global::miniProjet2017.Properties.Resources.cancel;
             this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuitter.Location = new System.Drawing.Point(413, 262);
+            this.btnQuitter.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnQuitter.FlatAppearance.BorderSize = 0;
+            this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitter.Location = new System.Drawing.Point(389, 256);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(46, 46);
             this.btnQuitter.TabIndex = 6;
-            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.UseVisualStyleBackColor = false;
             this.btnQuitter.Click += new System.EventHandler(this.QuitterFrmChoisirPersonne);
             // 
             // btnValider
             // 
+            this.btnValider.AutoSize = true;
+            this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnValider.BackgroundImage = global::miniProjet2017.Properties.Resources.validate;
             this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValider.Location = new System.Drawing.Point(352, 262);
+            this.btnValider.FlatAppearance.BorderSize = 0;
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValider.Location = new System.Drawing.Point(330, 256);
             this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(46, 46);
+            this.btnValider.Size = new System.Drawing.Size(43, 46);
             this.btnValider.TabIndex = 5;
-            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.CliquerSurValider);
             // 
             // picBordure
             // 
+            this.picBordure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.picBordure.Location = new System.Drawing.Point(0, 0);
             this.picBordure.Name = "picBordure";

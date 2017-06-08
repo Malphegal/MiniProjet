@@ -50,7 +50,7 @@
             // 
             this.lblNombreSMSTransaction.AutoSize = true;
             this.lblNombreSMSTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreSMSTransaction.ForeColor = System.Drawing.Color.Maroon;
+            this.lblNombreSMSTransaction.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNombreSMSTransaction.Location = new System.Drawing.Point(26, 148);
             this.lblNombreSMSTransaction.Name = "lblNombreSMSTransaction";
             this.lblNombreSMSTransaction.Size = new System.Drawing.Size(246, 15);
@@ -59,6 +59,8 @@
             // 
             // txtPourcentageSMS
             // 
+            this.txtPourcentageSMS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtPourcentageSMS.ForeColor = System.Drawing.SystemColors.Control;
             this.txtPourcentageSMS.Location = new System.Drawing.Point(277, 147);
             this.txtPourcentageSMS.Name = "txtPourcentageSMS";
             this.txtPourcentageSMS.Size = new System.Drawing.Size(43, 20);
@@ -69,17 +71,21 @@
             // lblPourcent
             // 
             this.lblPourcent.AutoSize = true;
+            this.lblPourcent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPourcent.ForeColor = System.Drawing.SystemColors.Control;
             this.lblPourcent.Location = new System.Drawing.Point(326, 150);
             this.lblPourcent.Name = "lblPourcent";
-            this.lblPourcent.Size = new System.Drawing.Size(15, 13);
+            this.lblPourcent.Size = new System.Drawing.Size(16, 13);
             this.lblPourcent.TabIndex = 2;
             this.lblPourcent.Text = "%";
             // 
             // btnRetour
             // 
             this.btnRetour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRetour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetour.Location = new System.Drawing.Point(363, 311);
+            this.btnRetour.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRetour.Location = new System.Drawing.Point(347, 296);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(66, 41);
             this.btnRetour.TabIndex = 3;
@@ -91,7 +97,7 @@
             // 
             this.lblBaseDonnee.AutoSize = true;
             this.lblBaseDonnee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaseDonnee.ForeColor = System.Drawing.Color.Maroon;
+            this.lblBaseDonnee.ForeColor = System.Drawing.SystemColors.Control;
             this.lblBaseDonnee.Location = new System.Drawing.Point(153, 64);
             this.lblBaseDonnee.Name = "lblBaseDonnee";
             this.lblBaseDonnee.Size = new System.Drawing.Size(119, 15);
@@ -105,24 +111,29 @@
             // lblSourceBaseDonnee
             // 
             this.lblSourceBaseDonnee.AutoSize = true;
+            this.lblSourceBaseDonnee.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSourceBaseDonnee.ForeColor = System.Drawing.SystemColors.Control;
             this.lblSourceBaseDonnee.Location = new System.Drawing.Point(26, 87);
             this.lblSourceBaseDonnee.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblSourceBaseDonnee.Name = "lblSourceBaseDonnee";
-            this.lblSourceBaseDonnee.Size = new System.Drawing.Size(98, 13);
+            this.lblSourceBaseDonnee.Size = new System.Drawing.Size(115, 13);
             this.lblSourceBaseDonnee.TabIndex = 7;
             this.lblSourceBaseDonnee.Text = "budget1.mdb - OFF";
             // 
             // btnBaseDonnee
             // 
+            this.btnBaseDonnee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
             this.btnBaseDonnee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBaseDonnee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaseDonnee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaseDonnee.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBaseDonnee.Location = new System.Drawing.Point(277, 62);
             this.btnBaseDonnee.Margin = new System.Windows.Forms.Padding(0);
             this.btnBaseDonnee.Name = "btnBaseDonnee";
             this.btnBaseDonnee.Size = new System.Drawing.Size(40, 20);
             this.btnBaseDonnee.TabIndex = 0;
             this.btnBaseDonnee.Text = "•••";
-            this.btnBaseDonnee.UseVisualStyleBackColor = true;
+            this.btnBaseDonnee.UseVisualStyleBackColor = false;
             this.btnBaseDonnee.Click += new System.EventHandler(this.ChangerBaseDeDonnee);
             // 
             // lblTitre
@@ -130,7 +141,8 @@
             this.lblTitre.AutoSize = true;
             this.lblTitre.BackColor = System.Drawing.Color.Transparent;
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitre.Location = new System.Drawing.Point(163, 16);
+            this.lblTitre.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitre.Location = new System.Drawing.Point(160, 21);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(112, 25);
             this.lblTitre.TabIndex = 9;
@@ -140,7 +152,7 @@
             // 
             this.lblResolution.AutoSize = true;
             this.lblResolution.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResolution.ForeColor = System.Drawing.Color.Maroon;
+            this.lblResolution.ForeColor = System.Drawing.SystemColors.Control;
             this.lblResolution.Location = new System.Drawing.Point(112, 176);
             this.lblResolution.Name = "lblResolution";
             this.lblResolution.Size = new System.Drawing.Size(160, 15);
@@ -149,6 +161,8 @@
             // 
             // txtResolution
             // 
+            this.txtResolution.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtResolution.ForeColor = System.Drawing.SystemColors.Control;
             this.txtResolution.Location = new System.Drawing.Point(277, 175);
             this.txtResolution.Name = "txtResolution";
             this.txtResolution.Size = new System.Drawing.Size(43, 20);
@@ -159,6 +173,7 @@
             // lblResolutionMax
             // 
             this.lblResolutionMax.AutoSize = true;
+            this.lblResolutionMax.ForeColor = System.Drawing.SystemColors.Control;
             this.lblResolutionMax.Location = new System.Drawing.Point(326, 181);
             this.lblResolutionMax.Name = "lblResolutionMax";
             this.lblResolutionMax.Size = new System.Drawing.Size(21, 13);
@@ -171,7 +186,7 @@
             this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
             this.picQuitter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.picQuitter.Location = new System.Drawing.Point(377, 12);
+            this.picQuitter.Location = new System.Drawing.Point(363, 21);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(50, 50);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -193,6 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(441, 364);
             this.Controls.Add(this.lblResolutionMax);
             this.Controls.Add(this.txtResolution);
