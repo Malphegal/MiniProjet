@@ -59,6 +59,8 @@
             // 
             // txtPourcentageSMS
             // 
+            this.txtPourcentageSMS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtPourcentageSMS.ForeColor = System.Drawing.SystemColors.Control;
             this.txtPourcentageSMS.Location = new System.Drawing.Point(277, 147);
             this.txtPourcentageSMS.Name = "txtPourcentageSMS";
             this.txtPourcentageSMS.Size = new System.Drawing.Size(43, 20);
@@ -69,10 +71,11 @@
             // lblPourcent
             // 
             this.lblPourcent.AutoSize = true;
+            this.lblPourcent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPourcent.ForeColor = System.Drawing.SystemColors.Control;
             this.lblPourcent.Location = new System.Drawing.Point(326, 150);
             this.lblPourcent.Name = "lblPourcent";
-            this.lblPourcent.Size = new System.Drawing.Size(15, 13);
+            this.lblPourcent.Size = new System.Drawing.Size(16, 13);
             this.lblPourcent.TabIndex = 2;
             this.lblPourcent.Text = "%";
             // 
@@ -108,25 +111,29 @@
             // lblSourceBaseDonnee
             // 
             this.lblSourceBaseDonnee.AutoSize = true;
+            this.lblSourceBaseDonnee.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSourceBaseDonnee.ForeColor = System.Drawing.SystemColors.Control;
             this.lblSourceBaseDonnee.Location = new System.Drawing.Point(26, 87);
             this.lblSourceBaseDonnee.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblSourceBaseDonnee.Name = "lblSourceBaseDonnee";
-            this.lblSourceBaseDonnee.Size = new System.Drawing.Size(98, 13);
+            this.lblSourceBaseDonnee.Size = new System.Drawing.Size(115, 13);
             this.lblSourceBaseDonnee.TabIndex = 7;
             this.lblSourceBaseDonnee.Text = "budget1.mdb - OFF";
             // 
             // btnBaseDonnee
             // 
+            this.btnBaseDonnee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
             this.btnBaseDonnee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBaseDonnee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaseDonnee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaseDonnee.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBaseDonnee.Location = new System.Drawing.Point(277, 62);
             this.btnBaseDonnee.Margin = new System.Windows.Forms.Padding(0);
             this.btnBaseDonnee.Name = "btnBaseDonnee";
             this.btnBaseDonnee.Size = new System.Drawing.Size(40, 20);
             this.btnBaseDonnee.TabIndex = 0;
             this.btnBaseDonnee.Text = "•••";
-            this.btnBaseDonnee.UseVisualStyleBackColor = true;
+            this.btnBaseDonnee.UseVisualStyleBackColor = false;
             this.btnBaseDonnee.Click += new System.EventHandler(this.ChangerBaseDeDonnee);
             // 
             // lblTitre
@@ -154,6 +161,8 @@
             // 
             // txtResolution
             // 
+            this.txtResolution.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtResolution.ForeColor = System.Drawing.SystemColors.Control;
             this.txtResolution.Location = new System.Drawing.Point(277, 175);
             this.txtResolution.Name = "txtResolution";
             this.txtResolution.Size = new System.Drawing.Size(43, 20);

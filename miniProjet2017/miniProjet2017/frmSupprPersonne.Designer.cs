@@ -38,6 +38,7 @@
             // 
             // btnQuitter
             // 
+            this.btnQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnQuitter.BackgroundImage = global::miniProjet2017.Properties.Resources.cancel;
             this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -48,11 +49,12 @@
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(46, 46);
             this.btnQuitter.TabIndex = 11;
-            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.UseVisualStyleBackColor = false;
             this.btnQuitter.Click += new System.EventHandler(this.QuitterLeFrmSupprPersonne);
             // 
             // btnValider
             // 
+            this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnValider.BackgroundImage = global::miniProjet2017.Properties.Resources.validate;
             this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -63,17 +65,18 @@
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(46, 46);
             this.btnValider.TabIndex = 10;
-            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.SupprimerLesPersonnes);
             // 
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
-            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F, System.Drawing.FontStyle.Italic);
-            this.lblTitre.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblTitre.Location = new System.Drawing.Point(34, 22);
+            this.lblTitre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitre.Location = new System.Drawing.Point(27, 25);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(356, 36);
+            this.lblTitre.Size = new System.Drawing.Size(372, 33);
             this.lblTitre.TabIndex = 9;
             this.lblTitre.Text = "Supprimer des personnes";
             // 
@@ -87,6 +90,7 @@
             // 
             // picBordure
             // 
+            this.picBordure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.picBordure.Location = new System.Drawing.Point(0, 0);
             this.picBordure.Name = "picBordure";

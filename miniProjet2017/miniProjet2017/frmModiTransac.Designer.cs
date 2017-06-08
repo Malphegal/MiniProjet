@@ -199,6 +199,7 @@
             // calTransac
             // 
             this.calTransac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calTransac.ForeColor = System.Drawing.SystemColors.WindowText;
             this.calTransac.Location = new System.Drawing.Point(507, 148);
             this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";

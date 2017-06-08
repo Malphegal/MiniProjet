@@ -76,24 +76,28 @@
             // 
             // btnPersonne
             // 
+            this.btnPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnPersonne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold);
+            this.btnPersonne.ForeColor = System.Drawing.SystemColors.Control;
             this.btnPersonne.Location = new System.Drawing.Point(42, 53);
             this.btnPersonne.Name = "btnPersonne";
             this.btnPersonne.Size = new System.Drawing.Size(132, 48);
             this.btnPersonne.TabIndex = 0;
             this.btnPersonne.Text = "Lister personne";
-            this.btnPersonne.UseVisualStyleBackColor = true;
+            this.btnPersonne.UseVisualStyleBackColor = false;
             this.btnPersonne.Click += new System.EventHandler(this.CliquerSurLiaisonPersonne);
             // 
             // btnTransaction
             // 
+            this.btnTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaction.ForeColor = System.Drawing.SystemColors.Control;
             this.btnTransaction.Location = new System.Drawing.Point(207, 53);
             this.btnTransaction.Name = "btnTransaction";
             this.btnTransaction.Size = new System.Drawing.Size(132, 48);
             this.btnTransaction.TabIndex = 1;
             this.btnTransaction.Text = "Lister transaction";
-            this.btnTransaction.UseVisualStyleBackColor = true;
+            this.btnTransaction.UseVisualStyleBackColor = false;
             this.btnTransaction.Click += new System.EventHandler(this.CliquerSurLiaisonTransaction);
             // 
             // lblId
@@ -203,7 +207,7 @@
             // 
             // tabDefaut
             // 
-            this.tabDefaut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
+            this.tabDefaut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.tabDefaut.Location = new System.Drawing.Point(4, 5);
             this.tabDefaut.Name = "tabDefaut";
             this.tabDefaut.Padding = new System.Windows.Forms.Padding(3);
@@ -485,19 +489,20 @@
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
-            this.lblTitre.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitre.Location = new System.Drawing.Point(241, 25);
+            this.lblTitre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitre.Location = new System.Drawing.Point(241, 30);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(98, 20);
+            this.lblTitre.Size = new System.Drawing.Size(111, 20);
             this.lblTitre.TabIndex = 17;
             this.lblTitre.Text = "Récapitulatif";
             // 
             // picQuitter
             // 
-            this.picQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.picQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
-            this.picQuitter.Location = new System.Drawing.Point(499, 25);
+            this.picQuitter.Location = new System.Drawing.Point(501, 30);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(71, 64);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -507,6 +512,7 @@
             // 
             // picBordure
             // 
+            this.picBordure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.picBordure.Location = new System.Drawing.Point(-5, 0);
             this.picBordure.Name = "picBordure";
