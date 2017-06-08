@@ -47,9 +47,9 @@
             // lblPrenom
             // 
             this.lblPrenom.AutoSize = true;
-            this.lblPrenom.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrenom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.lblPrenom.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPrenom.Location = new System.Drawing.Point(57, 48);
+            this.lblPrenom.Location = new System.Drawing.Point(66, 48);
             this.lblPrenom.Name = "lblPrenom";
             this.lblPrenom.Size = new System.Drawing.Size(122, 13);
             this.lblPrenom.TabIndex = 0;
@@ -58,9 +58,9 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.BackColor = System.Drawing.Color.Transparent;
+            this.lblNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.lblNom.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNom.Location = new System.Drawing.Point(71, 83);
+            this.lblNom.Location = new System.Drawing.Point(80, 83);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(108, 13);
             this.lblNom.TabIndex = 1;
@@ -69,9 +69,9 @@
             // lblNum
             // 
             this.lblNum.AutoSize = true;
-            this.lblNum.BackColor = System.Drawing.Color.Transparent;
+            this.lblNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.lblNum.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNum.Location = new System.Drawing.Point(12, 115);
+            this.lblNum.Location = new System.Drawing.Point(21, 115);
             this.lblNum.Name = "lblNum";
             this.lblNum.Size = new System.Drawing.Size(167, 13);
             this.lblNum.TabIndex = 2;
@@ -79,7 +79,9 @@
             // 
             // txtPrenom
             // 
-            this.txtPrenom.Location = new System.Drawing.Point(186, 45);
+            this.txtPrenom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtPrenom.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtPrenom.Location = new System.Drawing.Point(195, 45);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(166, 20);
             this.txtPrenom.TabIndex = 0;
@@ -87,7 +89,9 @@
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(185, 80);
+            this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtNom.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtNom.Location = new System.Drawing.Point(194, 80);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(167, 20);
             this.txtNom.TabIndex = 1;
@@ -95,7 +99,9 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(185, 112);
+            this.txtNumero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtNumero.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtNumero.Location = new System.Drawing.Point(194, 112);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(167, 20);
             this.txtNumero.TabIndex = 2;
@@ -108,9 +114,9 @@
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
-            this.lblTitre.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitre.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblTitre.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitre.Location = new System.Drawing.Point(52, 12);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(303, 25);
@@ -119,7 +125,7 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnQuitter.BackgroundImage = global::miniProjet2017.Properties.Resources.cancel;
             this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -135,7 +141,7 @@
             // 
             // btnValider
             // 
-            this.btnValider.BackColor = System.Drawing.Color.Transparent;
+            this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnValider.BackgroundImage = global::miniProjet2017.Properties.Resources.validate;
             this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -151,6 +157,7 @@
             // 
             // picBordure
             // 
+            this.picBordure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.picBordure.Location = new System.Drawing.Point(0, 0);
             this.picBordure.Name = "picBordure";

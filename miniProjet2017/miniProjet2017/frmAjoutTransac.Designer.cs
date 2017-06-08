@@ -84,7 +84,7 @@
             this.lblDescTransac.AutoSize = true;
             this.lblDescTransac.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescTransac.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDescTransac.Location = new System.Drawing.Point(44, 199);
+            this.lblDescTransac.Location = new System.Drawing.Point(44, 189);
             this.lblDescTransac.Name = "lblDescTransac";
             this.lblDescTransac.Size = new System.Drawing.Size(170, 13);
             this.lblDescTransac.TabIndex = 1;
@@ -95,7 +95,7 @@
             this.lblMontant.AutoSize = true;
             this.lblMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMontant.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMontant.Location = new System.Drawing.Point(161, 292);
+            this.lblMontant.Location = new System.Drawing.Point(161, 281);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(53, 13);
             this.lblMontant.TabIndex = 2;
@@ -106,7 +106,7 @@
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblType.Location = new System.Drawing.Point(179, 109);
+            this.lblType.Location = new System.Drawing.Point(179, 88);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(35, 13);
             this.lblType.TabIndex = 3;
@@ -119,23 +119,27 @@
             this.calTransac.Location = new System.Drawing.Point(495, 133);
             this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
-            this.calTransac.TabIndex = 0;
+            this.calTransac.TabIndex = 6;
             // 
             // cboType
             // 
+            this.cboType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.cboType.ForeColor = System.Drawing.SystemColors.Control;
             this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(220, 106);
+            this.cboType.Location = new System.Drawing.Point(220, 84);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(121, 21);
-            this.cboType.TabIndex = 6;
+            this.cboType.TabIndex = 1;
             // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(220, 289);
+            this.txtMontant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtMontant.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtMontant.Location = new System.Drawing.Point(220, 278);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.ShortcutsEnabled = false;
             this.txtMontant.Size = new System.Drawing.Size(107, 20);
-            this.txtMontant.TabIndex = 2;
+            this.txtMontant.TabIndex = 3;
             this.txtMontant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnMontant);
             // 
             // chkRecette
@@ -168,10 +172,10 @@
             this.grb1.Controls.Add(this.lblRecette);
             this.grb1.Controls.Add(this.chkPerçu);
             this.grb1.Controls.Add(this.chkRecette);
-            this.grb1.Location = new System.Drawing.Point(66, 341);
+            this.grb1.Location = new System.Drawing.Point(105, 327);
             this.grb1.Name = "grb1";
             this.grb1.Size = new System.Drawing.Size(281, 43);
-            this.grb1.TabIndex = 3;
+            this.grb1.TabIndex = 4;
             this.grb1.TabStop = false;
             // 
             // lblRecette
@@ -215,7 +219,7 @@
             this.lblEuro.AutoSize = true;
             this.lblEuro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEuro.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEuro.Location = new System.Drawing.Point(334, 292);
+            this.lblEuro.Location = new System.Drawing.Point(334, 281);
             this.lblEuro.Name = "lblEuro";
             this.lblEuro.Size = new System.Drawing.Size(14, 13);
             this.lblEuro.TabIndex = 16;
@@ -223,67 +227,67 @@
             // 
             // lblAideType
             // 
-            this.lblAideType.AutoSize = true;
             this.lblAideType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideType.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideType.Location = new System.Drawing.Point(443, 323);
+            this.lblAideType.Location = new System.Drawing.Point(432, 322);
             this.lblAideType.Name = "lblAideType";
-            this.lblAideType.Size = new System.Drawing.Size(41, 13);
+            this.lblAideType.Size = new System.Drawing.Size(300, 13);
             this.lblAideType.TabIndex = 51;
             this.lblAideType.Tag = "Aidelbl5";
             this.lblAideType.Text = "label1";
+            this.lblAideType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideType.Visible = false;
             // 
             // lblAideRecette
             // 
             this.lblAideRecette.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideRecette.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideRecette.Location = new System.Drawing.Point(102, 230);
+            this.lblAideRecette.Location = new System.Drawing.Point(102, 213);
             this.lblAideRecette.Name = "lblAideRecette";
             this.lblAideRecette.Size = new System.Drawing.Size(300, 13);
             this.lblAideRecette.TabIndex = 50;
             this.lblAideRecette.Tag = "Aidelbl4";
             this.lblAideRecette.Text = "label1";
-            this.lblAideRecette.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAideRecette.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideRecette.Visible = false;
             // 
             // lblAideMontant
             // 
             this.lblAideMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideMontant.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideMontant.Location = new System.Drawing.Point(102, 322);
+            this.lblAideMontant.Location = new System.Drawing.Point(102, 309);
             this.lblAideMontant.Name = "lblAideMontant";
             this.lblAideMontant.Size = new System.Drawing.Size(300, 13);
             this.lblAideMontant.TabIndex = 49;
             this.lblAideMontant.Tag = "Aidelbl3";
             this.lblAideMontant.Text = "label1";
-            this.lblAideMontant.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAideMontant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideMontant.Visible = false;
             // 
             // lblAideDescri
             // 
             this.lblAideDescri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideDescri.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideDescri.Location = new System.Drawing.Point(102, 388);
+            this.lblAideDescri.Location = new System.Drawing.Point(77, 387);
             this.lblAideDescri.Name = "lblAideDescri";
-            this.lblAideDescri.Size = new System.Drawing.Size(300, 13);
+            this.lblAideDescri.Size = new System.Drawing.Size(350, 13);
             this.lblAideDescri.TabIndex = 48;
             this.lblAideDescri.Tag = "Aidelbl2";
             this.lblAideDescri.Text = "label1";
-            this.lblAideDescri.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAideDescri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideDescri.Visible = false;
             // 
             // lblAideDate
             // 
             this.lblAideDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideDate.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideDate.Location = new System.Drawing.Point(102, 140);
+            this.lblAideDate.Location = new System.Drawing.Point(102, 119);
             this.lblAideDate.Name = "lblAideDate";
             this.lblAideDate.Size = new System.Drawing.Size(300, 13);
             this.lblAideDate.TabIndex = 47;
             this.lblAideDate.Tag = "Aidelbl1";
             this.lblAideDate.Text = "label1";
-            this.lblAideDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAideDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideDate.Visible = false;
             // 
             // btnChoixPersonne
@@ -320,7 +324,7 @@
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
             this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
-            this.picQuitter.Location = new System.Drawing.Point(658, 30);
+            this.picQuitter.Location = new System.Drawing.Point(653, 30);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(79, 71);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,11 +347,13 @@
             // 
             // txtDescTran
             // 
-            this.txtDescTran.Location = new System.Drawing.Point(220, 196);
+            this.txtDescTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtDescTran.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtDescTran.Location = new System.Drawing.Point(220, 185);
             this.txtDescTran.Name = "txtDescTran";
             this.txtDescTran.ShortcutsEnabled = false;
             this.txtDescTran.Size = new System.Drawing.Size(196, 20);
-            this.txtDescTran.TabIndex = 1;
+            this.txtDescTran.TabIndex = 2;
             this.txtDescTran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisieDescription);
             // 
             // btnAide
@@ -381,9 +387,9 @@
             // picBarreVerte1
             // 
             this.picBarreVerte1.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
-            this.picBarreVerte1.Location = new System.Drawing.Point(105, 154);
+            this.picBarreVerte1.Location = new System.Drawing.Point(105, 140);
             this.picBarreVerte1.Name = "picBarreVerte1";
-            this.picBarreVerte1.Size = new System.Drawing.Size(311, 32);
+            this.picBarreVerte1.Size = new System.Drawing.Size(297, 32);
             this.picBarreVerte1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBarreVerte1.TabIndex = 57;
             this.picBarreVerte1.TabStop = false;
@@ -391,9 +397,9 @@
             // picBarreVerte2
             // 
             this.picBarreVerte2.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
-            this.picBarreVerte2.Location = new System.Drawing.Point(105, 247);
+            this.picBarreVerte2.Location = new System.Drawing.Point(105, 237);
             this.picBarreVerte2.Name = "picBarreVerte2";
-            this.picBarreVerte2.Size = new System.Drawing.Size(311, 30);
+            this.picBarreVerte2.Size = new System.Drawing.Size(297, 30);
             this.picBarreVerte2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBarreVerte2.TabIndex = 58;
             this.picBarreVerte2.TabStop = false;
@@ -401,9 +407,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 405);
+            this.pictureBox1.Location = new System.Drawing.Point(105, 403);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(311, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 59;
             this.pictureBox1.TabStop = false;

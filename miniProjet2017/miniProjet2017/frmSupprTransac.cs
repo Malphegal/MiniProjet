@@ -26,7 +26,7 @@ namespace miniProjet2017
         /* Initialise les valeurs de départ */
         private void ChargementDeFrmSupprimerTransaction(object sender, EventArgs e)
         {
-            lblTitre.Font = new Font(frmMain.fonts.Families[0], lblTitre.Font.Size);
+            //lblTitre.Font = new Font(frmMain.fonts.Families[0], lblTitre.Font.Size);
             picQuitter.Parent = picBordure;
 
                 // Création de la table locale

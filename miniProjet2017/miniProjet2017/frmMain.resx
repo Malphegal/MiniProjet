@@ -250,7 +250,7 @@
     <value>14</value>
   </data>
   <data name="btnFrm_3.Text" xml:space="preserve">
-    <value> • Le frm_3 LOL</value>
+    <value>• Les postes revenus</value>
   </data>
   <data name="btnFrm_3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -786,32 +786,6 @@
   <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="picReduire.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAB3AAAABzCAYAAABpT5NmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAARvSURBVHhe7dkx
-        AQAgAAQhK37/MBrDGxhIwdl2AQAAAAAAAPhP4AIAAAAAAABECFwAAAAAAACACIELAAAAAAAAECFwAQAA
-        AAAAACIELgAAAAAAAECEwAUAAAAAAACIELgAAAAAAAAAEQIXAAAAAAAAIELgAgAAAAAAAEQIXAAAAAAA
-        AIAIgQsAAAAAAAAQIXABAAAAAAAAIgQuAAAAAAAAQITABQAAAAAAAIgQuAAAAAAAAAARAhcAAAAAAAAg
-        QuACAAAAAAAARAhcAAAAAAAAgAiBCwAAAAAAABAhcAEAAAAAAAAiBC4AAAAAAABAhMAFAAAAAAAAiBC4
-        AAAAAAAAABECFwAAAAAAACBC4AIAAAAAAABECFwAAAAAAACACIELAAAAAAAAECFwAQAAAAAAACIELgAA
-        AAAAAECEwAUAAAAAAACIELgAAAAAAAAAEQIXAAAAAAAAIELgAgAAAAAAAEQIXAAAAAAAAIAIgQsAAAAA
-        AAAQIXABAAAAAAAAIgQuAAAAAAAAQITABQAAAAAAAIgQuAAAAAAAAAARAhcAAAAAAAAgQuACAAAAAAAA
-        RAhcAAAAAAAAgAiBCwAAAAAAABAhcAEAAAAAAAAiBC4AAAAAAABAhMAFAAAAAAAAiBC4AAAAAAAAABEC
-        FwAAAAAAACBC4AIAAAAAAABECFwAAAAAAACACIELAAAAAAAAECFwAQAAAAAAACIELgAAAAAAAECEwAUA
-        AAAAAACIELgAAAAAAAAAEQIXAAAAAAAAIELgAgAAAAAAAEQIXAAAAAAAAIAIgQsAAAAAAAAQIXABAAAA
-        AAAAIgQuAAAAAAAAQITABQAAAAAAAIgQuAAAAAAAAAARAhcAAAAAAAAgQuACAAAAAAAARAhcAAAAAAAA
-        gAiBCwAAAAAAABAhcAEAAAAAAAAiBC4AAAAAAABAhMAFAAAAAAAAiBC4AAAAAAAAABECFwAAAAAAACBC
-        4AIAAAAAAABECFwAAAAAAACACIELAAAAAAAAECFwAQAAAAAAACIELgAAAAAAAECEwAUAAAAAAACIELgA
-        AAAAAAAAEQIXAAAAAAAAIELgAgAAAAAAAEQIXAAAAAAAAIAIgQsAAAAAAAAQIXABAAAAAAAAIgQuAAAA
-        AAAAQITABQAAAAAAAIgQuAAAAAAAAAARAhcAAAAAAAAgQuACAAAAAAAARAhcAAAAAAAAgAiBCwAAAAAA
-        ABAhcAEAAAAAAAAiBC4AAAAAAABAhMAFAAAAAAAAiBC4AAAAAAAAABECFwAAAAAAACBC4AIAAAAAAABE
-        CFwAAAAAAACACIELAAAAAAAAECFwAQAAAAAAACIELgAAAAAAAECEwAUAAAAAAACIELgAAAAAAAAAEQIX
-        AAAAAAAAIELgAgAAAAAAAEQIXAAAAAAAAIAIgQsAAAAAAAAQIXABAAAAAAAAIgQuAAAAAAAAQITABQAA
-        AAAAAIgQuAAAAAAAAAARAhcAAAAAAAAgQuACAAAAAAAARAhcAAAAAAAAgITdB0rVOyE4eBxhAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
   <data name="picReduire.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -879,10 +853,10 @@
     <value>NoControl</value>
   </data>
   <data name="picQuitter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>688, 13</value>
+    <value>678, 13</value>
   </data>
   <data name="picQuitter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+    <value>69, 50</value>
   </data>
   <data name="picQuitter.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -992,6 +966,9 @@
   <data name="lblEnregistrement.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
+  <data name="lblEnregistrement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblEnregistrement.Location" type="System.Drawing.Point, System.Drawing">
     <value>340, 317</value>
   </data>
@@ -1021,6 +998,9 @@
   </data>
   <data name="_lblType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="_lblType.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="_lblType.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 81</value>
@@ -1052,6 +1032,9 @@
   <data name="_lblDescription.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
+  <data name="_lblDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="_lblDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 49</value>
   </data>
@@ -1082,6 +1065,9 @@
   <data name="_lblId.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
+  <data name="_lblId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="_lblId.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 20</value>
   </data>
@@ -1106,38 +1092,14 @@
   <data name="&gt;&gt;_lblId.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="btnL.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 299</value>
-  </data>
-  <data name="btnL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 47</value>
-  </data>
-  <data name="btnL.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;btnL.Name" xml:space="preserve">
-    <value>btnL</value>
-  </data>
-  <data name="&gt;&gt;btnL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnL.Parent" xml:space="preserve">
-    <value>tabTransaction</value>
-  </data>
-  <data name="&gt;&gt;btnL.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="_lblMontant.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="_lblMontant.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="_lblMontant.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="_lblMontant.Location" type="System.Drawing.Point, System.Drawing">
     <value>83, 111</value>
@@ -1161,13 +1123,16 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;_lblMontant.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="lblMontant.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblMontant.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="lblMontant.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblMontant.Location" type="System.Drawing.Point, System.Drawing">
     <value>147, 111</value>
@@ -1191,13 +1156,16 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblMontant.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="lblDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="lblDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>340, 20</value>
@@ -1221,13 +1189,16 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="lblDescription.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblDescription.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="lblDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>147, 49</value>
@@ -1251,13 +1222,16 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblDescription.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="lblType.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="lblType.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblType.Location" type="System.Drawing.Point, System.Drawing">
     <value>147, 81</value>
@@ -1281,40 +1255,16 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblType.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btnLL.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnLL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnLL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 299</value>
-  </data>
-  <data name="btnLL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 47</value>
-  </data>
-  <data name="btnLL.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;btnLL.Name" xml:space="preserve">
-    <value>btnLL</value>
-  </data>
-  <data name="&gt;&gt;btnLL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnLL.Parent" xml:space="preserve">
-    <value>tabTransaction</value>
-  </data>
-  <data name="&gt;&gt;btnLL.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="lblId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblId.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="lblId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblId.Location" type="System.Drawing.Point, System.Drawing">
     <value>147, 20</value>
@@ -1338,7 +1288,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblId.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="chkPercu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1348,6 +1298,9 @@
   </data>
   <data name="chkPercu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="chkPercu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="chkPercu.Location" type="System.Drawing.Point, System.Drawing">
     <value>473, 161</value>
@@ -1371,6 +1324,66 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;chkPercu.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnL.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 299</value>
+  </data>
+  <data name="btnL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 47</value>
+  </data>
+  <data name="btnL.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;btnL.Name" xml:space="preserve">
+    <value>btnL</value>
+  </data>
+  <data name="&gt;&gt;btnL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnL.Parent" xml:space="preserve">
+    <value>tabTransaction</value>
+  </data>
+  <data name="&gt;&gt;btnL.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnLL.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnLL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnLL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 299</value>
+  </data>
+  <data name="btnLL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 47</value>
+  </data>
+  <data name="btnLL.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;btnLL.Name" xml:space="preserve">
+    <value>btnLL</value>
+  </data>
+  <data name="&gt;&gt;btnLL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLL.Parent" xml:space="preserve">
+    <value>tabTransaction</value>
+  </data>
+  <data name="&gt;&gt;btnLL.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="listBox1.Enabled" type="System.Boolean, mscorlib">
@@ -1406,6 +1419,9 @@
   <data name="chkRecette.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
+  <data name="chkRecette.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="chkRecette.Location" type="System.Drawing.Point, System.Drawing">
     <value>473, 138</value>
   </data>
@@ -1436,6 +1452,9 @@
   <data name="btnR.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btnR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnR.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 299</value>
   </data>
@@ -1462,6 +1481,9 @@
   </data>
   <data name="btnRR.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="btnRR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnRR.Location" type="System.Drawing.Point, System.Drawing">
     <value>204, 299</value>
@@ -1517,6 +1539,9 @@
   <data name="lblIdPersonne.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
+  <data name="lblIdPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblIdPersonne.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 32</value>
   </data>
@@ -1546,6 +1571,9 @@
   </data>
   <data name="_lblIdPersonne.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="_lblIdPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="_lblIdPersonne.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 32</value>
@@ -1577,6 +1605,9 @@
   <data name="_lblEnregistrement.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
+  <data name="_lblEnregistrement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="_lblEnregistrement.Location" type="System.Drawing.Point, System.Drawing">
     <value>343, 334</value>
   </data>
@@ -1601,119 +1632,14 @@
   <data name="&gt;&gt;_lblEnregistrement.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="_btnL.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="_btnL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_btnL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 316</value>
-  </data>
-  <data name="_btnL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 47</value>
-  </data>
-  <data name="_btnL.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;_btnL.Name" xml:space="preserve">
-    <value>_btnL</value>
-  </data>
-  <data name="&gt;&gt;_btnL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_btnL.Parent" xml:space="preserve">
-    <value>tabPersonne</value>
-  </data>
-  <data name="&gt;&gt;_btnL.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="_btnLL.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="_btnLL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_btnLL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 316</value>
-  </data>
-  <data name="_btnLL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 47</value>
-  </data>
-  <data name="_btnLL.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;_btnLL.Name" xml:space="preserve">
-    <value>_btnLL</value>
-  </data>
-  <data name="&gt;&gt;_btnLL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_btnLL.Parent" xml:space="preserve">
-    <value>tabPersonne</value>
-  </data>
-  <data name="&gt;&gt;_btnLL.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="_btnR.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="_btnR.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_btnR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 316</value>
-  </data>
-  <data name="_btnR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 47</value>
-  </data>
-  <data name="_btnR.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;_btnR.Name" xml:space="preserve">
-    <value>_btnR</value>
-  </data>
-  <data name="&gt;&gt;_btnR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_btnR.Parent" xml:space="preserve">
-    <value>tabPersonne</value>
-  </data>
-  <data name="&gt;&gt;_btnR.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="_btnRR.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="_btnRR.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="_btnRR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 316</value>
-  </data>
-  <data name="_btnRR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 47</value>
-  </data>
-  <data name="_btnRR.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;_btnRR.Name" xml:space="preserve">
-    <value>_btnRR</value>
-  </data>
-  <data name="&gt;&gt;_btnRR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_btnRR.Parent" xml:space="preserve">
-    <value>tabPersonne</value>
-  </data>
-  <data name="&gt;&gt;_btnRR.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="lblTelephone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblTelephone.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="lblTelephone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblTelephone.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 149</value>
@@ -1737,13 +1663,16 @@
     <value>tabPersonne</value>
   </data>
   <data name="&gt;&gt;lblTelephone.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="lblNom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblNom.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="lblNom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblNom.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 107</value>
@@ -1767,13 +1696,16 @@
     <value>tabPersonne</value>
   </data>
   <data name="&gt;&gt;lblNom.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>4</value>
   </data>
   <data name="_lblTelephone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="_lblTelephone.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="_lblTelephone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="_lblTelephone.Location" type="System.Drawing.Point, System.Drawing">
     <value>51, 149</value>
@@ -1797,13 +1729,16 @@
     <value>tabPersonne</value>
   </data>
   <data name="&gt;&gt;_lblTelephone.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>5</value>
   </data>
   <data name="_lblNom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="_lblNom.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="_lblNom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="_lblNom.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 107</value>
@@ -1827,13 +1762,16 @@
     <value>tabPersonne</value>
   </data>
   <data name="&gt;&gt;_lblNom.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>6</value>
   </data>
   <data name="lblPrenom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblPrenom.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="lblPrenom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblPrenom.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 69</value>
@@ -1857,13 +1795,16 @@
     <value>tabPersonne</value>
   </data>
   <data name="&gt;&gt;lblPrenom.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>7</value>
   </data>
   <data name="_lblPrenom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="_lblPrenom.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="_lblPrenom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="_lblPrenom.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 69</value>
@@ -1887,6 +1828,126 @@
     <value>tabPersonne</value>
   </data>
   <data name="&gt;&gt;_lblPrenom.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="_btnL.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="_btnL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_btnL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 316</value>
+  </data>
+  <data name="_btnL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 47</value>
+  </data>
+  <data name="_btnL.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;_btnL.Name" xml:space="preserve">
+    <value>_btnL</value>
+  </data>
+  <data name="&gt;&gt;_btnL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnL.Parent" xml:space="preserve">
+    <value>tabPersonne</value>
+  </data>
+  <data name="&gt;&gt;_btnL.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="_btnLL.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="_btnLL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_btnLL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnLL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 316</value>
+  </data>
+  <data name="_btnLL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 47</value>
+  </data>
+  <data name="_btnLL.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;_btnLL.Name" xml:space="preserve">
+    <value>_btnLL</value>
+  </data>
+  <data name="&gt;&gt;_btnLL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnLL.Parent" xml:space="preserve">
+    <value>tabPersonne</value>
+  </data>
+  <data name="&gt;&gt;_btnLL.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="_btnR.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="_btnR.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_btnR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 316</value>
+  </data>
+  <data name="_btnR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 47</value>
+  </data>
+  <data name="_btnR.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;_btnR.Name" xml:space="preserve">
+    <value>_btnR</value>
+  </data>
+  <data name="&gt;&gt;_btnR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnR.Parent" xml:space="preserve">
+    <value>tabPersonne</value>
+  </data>
+  <data name="&gt;&gt;_btnR.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="_btnRR.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="_btnRR.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="_btnRR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_btnRR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 316</value>
+  </data>
+  <data name="_btnRR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 47</value>
+  </data>
+  <data name="_btnRR.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;_btnRR.Name" xml:space="preserve">
+    <value>_btnRR</value>
+  </data>
+  <data name="&gt;&gt;_btnRR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_btnRR.Parent" xml:space="preserve">
+    <value>tabPersonne</value>
+  </data>
+  <data name="&gt;&gt;_btnRR.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="tabPersonne.Location" type="System.Drawing.Point, System.Drawing">
@@ -1984,6 +2045,9 @@
   </data>
   <data name="btnListerPersonne.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.25pt, style=Bold</value>
+  </data>
+  <data name="btnListerPersonne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnListerPersonne.Location" type="System.Drawing.Point, System.Drawing">
     <value>711, 107</value>

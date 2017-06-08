@@ -103,6 +103,16 @@ namespace miniProjet2017.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap croix_blanche {
+            get {
+                object obj = ResourceManager.GetObject("croix-blanche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap croixFermer {
             get {
                 object obj = ResourceManager.GetObject("croixFermer", resourceCulture);
@@ -226,6 +236,16 @@ namespace miniProjet2017.Properties {
         internal static System.Drawing.Bitmap reduire1 {
             get {
                 object obj = ResourceManager.GetObject("reduire1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RéduireFenêtre {
+            get {
+                object obj = ResourceManager.GetObject("RéduireFenêtre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
