@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace miniProjet2017
 {
-    public partial class frm_3 : Form
+    public partial class Poste_Revenu : Form
     {
-        public frm_3()
+        public Poste_Revenu()
         {
             InitializeComponent();
+        }
+
+        private void picQuitter_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
