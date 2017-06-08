@@ -132,11 +132,11 @@
     <Compile Include="frmPostePonctuel.Designer.cs">
       <DependentUpon>frmPostePonctuel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_3.cs">
+    <Compile Include="frmPosteRevenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_3.Designer.cs">
-      <DependentUpon>frm_3.cs</DependentUpon>
+    <Compile Include="frmPosteRevenu.Designer.cs">
+      <DependentUpon>frmPosteRevenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,8 +179,8 @@
     <EmbeddedResource Include="frmPostePonctuel.resx">
       <DependentUpon>frmPostePonctuel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_3.resx">
-      <DependentUpon>frm_3.cs</DependentUpon>
+    <EmbeddedResource Include="frmPosteRevenu.resx">
+      <DependentUpon>frmPosteRevenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

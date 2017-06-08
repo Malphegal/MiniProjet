@@ -1,6 +1,6 @@
 ﻿namespace miniProjet2017
 {
-    partial class Poste_Revenu
+    partial class frmPosteRevenu
     {
         /// <summary>
         /// Required designer variable.
@@ -170,7 +170,7 @@
             this.comboBox1.Size = new System.Drawing.Size(120, 21);
             this.comboBox1.TabIndex = 71;
             // 
-            // Poste_Revenu
+            // frmPosteRevenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -192,7 +192,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(466, 448);
             this.MinimumSize = new System.Drawing.Size(466, 448);
-            this.Name = "Poste_Revenu";
+            this.Name = "frmPosteRevenu";
             this.Text = "Poste Revenu";
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
