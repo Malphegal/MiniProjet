@@ -496,10 +496,7 @@ namespace miniProjet2017
         private void DeplacementSouris(object sender, MouseEventArgs e)
         {
             if (EnClique)
-            {
                 Location = new Point(Location.X + (e.X - SourisX), Location.Y + (e.Y - SourisY));
-                //lblTitre.Text = Location.ToString();
-            }
         }
 
         private void LacherCliqueSouris(object sender, MouseEventArgs e)
@@ -515,8 +512,6 @@ namespace miniProjet2017
                 EnClique = true;
                 SourisX = e.X;
                 SourisY = e.Y;
-            
-
             }
         }
 
