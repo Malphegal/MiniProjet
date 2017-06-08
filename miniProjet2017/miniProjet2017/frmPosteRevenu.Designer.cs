@@ -39,8 +39,8 @@
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblTitre = new System.Windows.Forms.Label();
-            this.btnValider = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnAjouter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +62,7 @@
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
             this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
-            this.picQuitter.Location = new System.Drawing.Point(364, 78);
+            this.picQuitter.Location = new System.Drawing.Point(355, 78);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(79, 71);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,16 +152,6 @@
             this.lblTitre.TabIndex = 69;
             this.lblTitre.Text = "Poste Revenu";
             // 
-            // btnValider
-            // 
-            this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValider.Location = new System.Drawing.Point(368, 268);
-            this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(75, 20);
-            this.btnValider.TabIndex = 70;
-            this.btnValider.Text = "Valider";
-            this.btnValider.UseVisualStyleBackColor = true;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -170,14 +160,33 @@
             this.comboBox1.Size = new System.Drawing.Size(120, 21);
             this.comboBox1.TabIndex = 71;
             // 
+            // btnAjouter
+            // 
+            this.btnAjouter.BackColor = System.Drawing.Color.Transparent;
+            this.btnAjouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAjouter.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAjouter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjouter.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAjouter.Location = new System.Drawing.Point(289, 260);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAjouter.Size = new System.Drawing.Size(145, 28);
+            this.btnAjouter.TabIndex = 72;
+            this.btnAjouter.Text = "Ajouter le revenu";
+            this.btnAjouter.UseVisualStyleBackColor = false;
+            // 
             // frmPosteRevenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(466, 448);
+            this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnValider);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtMontant);
@@ -214,7 +223,7 @@
         private System.Windows.Forms.TextBox txtMontant;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblTitre;
-        private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnAjouter;
     }
 }
