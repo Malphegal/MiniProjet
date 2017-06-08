@@ -230,7 +230,7 @@ namespace miniProjet2017
         {
             frmChoisirPersonne frm = new frmChoisirPersonne(listeParticipant);
             if (DialogResult.OK == frm.ShowDialog())
-                lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s :" : " :") + (listeParticipant = frm.listeParticipant).Count.ToString();
+                lblChoixPersonne.Text = "Participant" + (frm.listeParticipant.Count > 1 ? "s : " : " : ") + (listeParticipant = frm.listeParticipant).Count.ToString();
         }
 
         static Color c;
@@ -253,6 +253,5 @@ namespace miniProjet2017
         {
             (sender as PictureBox).Image = flecheRetour;
         }
-
     }
 }

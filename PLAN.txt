@@ -1,4 +1,4 @@
-
+﻿
 Izaya : Chef de l'équipe
 - Maître du design
 
@@ -17,6 +17,9 @@ Mettre des commentaires (au moins un par fonction) /*Au dessus de la fonction*/ 
 // au dessus d'un bloc d'une fonction
 
 troubleshooting :
+
+	Gérer le gras dans modif / ajouter transac
+
 	• MessageBox.Show pour quitter le formulaire frmMain
 		-> Si on annule, le formulaire passe en arrière plan
 			-> DONE(PAS VRAIMENT) (TODO: Améliorer le code ?)

@@ -35,7 +35,8 @@ namespace miniProjet2017
         /* Création de la table Transaction en local */
         private void LancementDuFormulaire(object sender, EventArgs e)
         {
-                // Remplir la table locale
+            MessageBox.Show(lblType.Font.ToString());
+                                    // Remplir la table locale
 
             frmMain.con.Open();
             da = new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", frmMain.con));
@@ -284,12 +285,18 @@ namespace miniProjet2017
         {
             frmChoisirPersonne frm = new frmChoisirPersonne(listeParticipant);
             if (DialogResult.OK == frm.ShowDialog())
-                lblChoixPersonne.Text = "participant" + (frm.listeParticipant.Count > 1 ? "s : " : " : ") + (listeParticipant = frm.listeParticipant).Count.ToString();
+                lblChoixPersonne.Text = "Participant" + (frm.listeParticipant.Count > 1 ? "s : " : " : ") + (listeParticipant = frm.listeParticipant).Count.ToString();
         }
 
         private void picQuitter_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(lblType.Font.ToString());
             Close();
+        }
+
+        private void btnAide_Click(object sender, EventArgs e)
+        {
+            new Classes.Aide().AideTransac(this);
         }
     }
 }
