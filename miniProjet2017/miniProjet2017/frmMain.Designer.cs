@@ -140,7 +140,7 @@
             this.btnAffichage.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAffichage.ForeColor = System.Drawing.Color.White;
             this.btnAffichage.Name = "btnAffichage";
-            this.btnAffichage.Tag = "derouler;3";
+            this.btnAffichage.Tag = "";
             this.btnAffichage.UseVisualStyleBackColor = false;
             this.btnAffichage.Click += new System.EventHandler(this.NouveauFrmAffichage);
             // 

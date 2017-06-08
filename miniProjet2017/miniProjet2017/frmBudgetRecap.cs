@@ -98,7 +98,23 @@ namespace miniProjet2017
             dg.DataSource = dt;
         }
 
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void ToolStripModifier(object sender, EventArgs e)
+        {
+            dgv.MultiSelect = false;
+            dgv.Rows[dc].Cells[1].Selected = true;
+            dgv.BeginEdit(true);
+        }
+
+        private void ToolStripSupprimer(object sender, EventArgs e)
+        {
+            frmMain.con.Open();
+            OleDbCommand command = new OleDbCommand("delete from PostePeriodique where codePoste =" + dataGridView1.Rows[dc].Cells[0].Value.ToString(), frmMain.con);
+            command.ExecuteNonQuery();
+            frmMain.con.Close();
+            dgv.Rows.RemoveAt(dc);
+        }
+
+        private void CliqueDroitSurDataGridView1(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -117,23 +133,7 @@ namespace miniProjet2017
             }
         }
 
-        private void modifierToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            dgv.MultiSelect = false;
-            dgv.Rows[dc].Cells[1].Selected = true;
-            dgv.BeginEdit(true);
-        }
-
-        private void supprimerToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            frmMain.con.Open();
-            OleDbCommand command = new OleDbCommand("delete from PostePeriodique where codePoste =" + dataGridView1.Rows[dc].Cells[0].Value.ToString(), frmMain.con);
-            command.ExecuteNonQuery();
-            frmMain.con.Close();
-            dgv.Rows.RemoveAt(dc);
-        }
-
-        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void CliqueDroitSurDataGridView2(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -164,6 +164,24 @@ namespace miniProjet2017
             }
         }
 
+        private void CliqueDroitSurDataGridView3(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                int position_xy_mouse_row = dataGridView3.HitTest(e.X, e.Y).RowIndex;
+                if (e.Button == MouseButtons.Right)
+                {
+                    dgv = sender as DataGridView;
+                    dc = e.RowIndex;
+                    contextMenuStrip1.Show(Cursor.Position);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "fonction mouseclick datagridview3");
+            }
+        }
+
         /* PAS DE REF */
         private void buttoncal_Click(object sender, EventArgs e)
         {
@@ -187,24 +205,6 @@ namespace miniProjet2017
 
 
             //this.dataGridView.Columns("AddToCartButton").Frozen = true;
-        }
-
-        private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            try
-            {
-                int position_xy_mouse_row = dataGridView3.HitTest(e.X, e.Y).RowIndex;
-                if (e.Button == MouseButtons.Right)
-                {
-                    dgv = sender as DataGridView;
-                    dc = e.RowIndex;
-                    contextMenuStrip1.Show(Cursor.Position);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "fonction mouseclick datagridview3");
-            }
         }
     }
 }
