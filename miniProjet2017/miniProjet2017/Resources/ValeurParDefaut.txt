@@ -1,4 +1,4 @@
-﻿#Base de donnée
+#Base de donnée
 ..\\..\\Resources\\budget1.mdb
 #SMS
 10
