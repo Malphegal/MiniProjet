@@ -241,6 +241,5 @@ namespace miniProjet2017
             else
                 (gridViewPDF.DataSource as DataTable).DefaultView.RowFilter = null;
         }
-        
     }
 }
