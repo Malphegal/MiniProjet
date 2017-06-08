@@ -54,6 +54,7 @@
             this.gridViewPDF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewPDF.Location = new System.Drawing.Point(26, 131);
             this.gridViewPDF.Name = "gridViewPDF";
+            this.gridViewPDF.ReadOnly = true;
             this.gridViewPDF.Size = new System.Drawing.Size(728, 264);
             this.gridViewPDF.TabIndex = 0;
             this.gridViewPDF.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CliqueDroitSurUneCaseDuDataGridView);

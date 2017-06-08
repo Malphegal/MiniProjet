@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlGauche = new System.Windows.Forms.Panel();
-            this.btnRecap = new System.Windows.Forms.Button();
             this.btnAffichage = new System.Windows.Forms.Button();
             this.picVertePnlGauche3 = new System.Windows.Forms.PictureBox();
             this.btnBudgetRecap = new System.Windows.Forms.Button();
@@ -111,7 +110,6 @@
             // 
             resources.ApplyResources(this.pnlGauche, "pnlGauche");
             this.pnlGauche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.pnlGauche.Controls.Add(this.btnRecap);
             this.pnlGauche.Controls.Add(this.btnAffichage);
             this.pnlGauche.Controls.Add(this.picVertePnlGauche3);
             this.pnlGauche.Controls.Add(this.btnBudgetRecap);
@@ -133,18 +131,6 @@
             this.pnlGauche.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
             this.pnlGauche.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
             this.pnlGauche.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
-            // 
-            // btnRecap
-            // 
-            this.btnRecap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnRecap.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnRecap, "btnRecap");
-            this.btnRecap.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRecap.ForeColor = System.Drawing.Color.White;
-            this.btnRecap.Name = "btnRecap";
-            this.btnRecap.Tag = "";
-            this.btnRecap.UseVisualStyleBackColor = false;
-            this.btnRecap.Click += new System.EventHandler(this.NouveauFrmRecap);
             // 
             // btnAffichage
             // 
@@ -784,7 +770,6 @@
         private System.Windows.Forms.PictureBox picMinion;
         private System.Windows.Forms.Button btnDeroulerPersonne;
         private System.Windows.Forms.Button btnSupprimerPersonne;
-        private System.Windows.Forms.Button btnRecap;
         private System.Windows.Forms.Button btnAffichage;
         private System.Windows.Forms.PictureBox picVertePnlGauche3;
         private System.Windows.Forms.TabControl tabControl1;

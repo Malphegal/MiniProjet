@@ -149,6 +149,9 @@
     <EmbeddedResource Include="frmAjoutTransac.resx">
       <DependentUpon>frmAjoutTransac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBudgetRecap.resx">
+      <DependentUpon>frmBudgetRecap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChoisirPersonne.resx">
       <DependentUpon>frmChoisirPersonne.cs</DependentUpon>
     </EmbeddedResource>
