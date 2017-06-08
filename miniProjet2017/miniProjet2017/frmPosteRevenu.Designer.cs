@@ -68,7 +68,9 @@
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picQuitter.TabIndex = 59;
             this.picQuitter.TabStop = false;
-            this.picQuitter.Click += new System.EventHandler(this.picQuitter_Click);
+            this.picQuitter.Click += new System.EventHandler(this.QuitterFrmPosteRevenu);
+            this.picQuitter.MouseEnter += new System.EventHandler(this.SourisSurPicQuitter);
+            this.picQuitter.MouseLeave += new System.EventHandler(this.SourisSortDePicQuitter);
             // 
             // lblIntitule
             // 
@@ -167,7 +169,7 @@
             this.btnAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAjouter.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnAjouter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(69)))), ((int)(((byte)(80)))));
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.ForeColor = System.Drawing.SystemColors.Control;
@@ -178,6 +180,7 @@
             this.btnAjouter.TabIndex = 72;
             this.btnAjouter.Text = "Ajouter le revenu";
             this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.AjouterLePosteRevenu);
             // 
             // frmPosteRevenu
             // 
