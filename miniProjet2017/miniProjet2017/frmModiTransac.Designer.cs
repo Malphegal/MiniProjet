@@ -84,6 +84,7 @@
             // 
             this.btnModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.btnModifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnModifier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModifier.ForeColor = System.Drawing.SystemColors.Control;
             this.btnModifier.Location = new System.Drawing.Point(49, 476);
@@ -195,6 +196,7 @@
             // 
             // calTransac
             // 
+            this.calTransac.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calTransac.Location = new System.Drawing.Point(197, 52);
             this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
@@ -288,6 +290,7 @@
             // 
             // btnChoixPersonne
             // 
+            this.btnChoixPersonne.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChoixPersonne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChoixPersonne.ForeColor = System.Drawing.SystemColors.Control;
             this.btnChoixPersonne.Location = new System.Drawing.Point(611, 175);
@@ -404,6 +407,7 @@
             // picQuitter
             // 
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
             this.picQuitter.Location = new System.Drawing.Point(611, 452);
             this.picQuitter.Name = "picQuitter";
@@ -415,6 +419,7 @@
             // 
             // btnAide
             // 
+            this.btnAide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

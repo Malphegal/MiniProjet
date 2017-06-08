@@ -118,6 +118,7 @@
             // 
             // calTransac
             // 
+            this.calTransac.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calTransac.Location = new System.Drawing.Point(495, 133);
             this.calTransac.MaxSelectionCount = 1;
             this.calTransac.Name = "calTransac";
@@ -188,6 +189,7 @@
             // 
             this.btnAjouter.BackColor = System.Drawing.Color.Transparent;
             this.btnAjouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAjouter.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnAjouter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -330,6 +332,7 @@
             // 
             // btnChoixPersonne
             // 
+            this.btnChoixPersonne.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChoixPersonne.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnChoixPersonne.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnChoixPersonne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -359,6 +362,7 @@
             // picQuitter
             // 
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
             this.picQuitter.Location = new System.Drawing.Point(658, 30);
             this.picQuitter.Name = "picQuitter";
@@ -391,6 +395,7 @@
             // 
             // btnAide
             // 
+            this.btnAide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

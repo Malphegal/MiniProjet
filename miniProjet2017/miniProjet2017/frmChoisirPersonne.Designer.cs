@@ -58,6 +58,7 @@
             // 
             this.btnQuitter.BackgroundImage = global::miniProjet2017.Properties.Resources.cancel;
             this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuitter.Location = new System.Drawing.Point(413, 262);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(46, 46);
@@ -69,6 +70,7 @@
             // 
             this.btnValider.BackgroundImage = global::miniProjet2017.Properties.Resources.validate;
             this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.Location = new System.Drawing.Point(352, 262);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(46, 46);

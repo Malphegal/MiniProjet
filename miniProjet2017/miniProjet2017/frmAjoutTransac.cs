@@ -133,7 +133,8 @@ namespace miniProjet2017
                                                             : "0" + calTransac.SelectionStart.Month.ToString()) + '/' + calTransac.SelectionStart.Year + "#, '"
                                                             + txtDescTran.Text + "', "
                                                             + txtMontant.Text.Replace(',', '.') + ", "
-                                                            + (chkRecette.Checked ? "True" : "False") + ", "
+                                                            //+ (chkRecette.Checked ? "True" : "False") + ", "
+                                                            + (chkRecette.Checked ? "False" : "True") + ", "
                                                             + (chkPerçu.Checked ? "True" : "False") + ", "
                                                             + (cboType.SelectedIndex + 1) + ")", frmMain.con).ExecuteNonQuery();
 

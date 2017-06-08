@@ -233,10 +233,14 @@ namespace miniProjet2017
             doc.Close(); //ferme le document
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void RechercheSurDescrition(object sender, EventArgs e)
         {
-            (gridViewPDF.DataSource as DataTable).DefaultView.RowFilter = string.Format("[description] = '{0}'", txtRecherche.Text);
-            (gridViewPDF.DataSource as DataTable).DefaultView.RowFilter = null;
+            if (txtRecherche.Text.Length > 0)
+                (gridViewPDF.DataSource as DataTable).DefaultView.RowFilter = string.Format("[description] like '%{0}%'",
+                    txtRecherche.Text.Trim().Replace("'", "''"));
+            else
+                (gridViewPDF.DataSource as DataTable).DefaultView.RowFilter = null;
         }
+        
     }
 }

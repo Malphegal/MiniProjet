@@ -69,6 +69,7 @@
             // 
             // btnAutre
             // 
+            this.btnAutre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAutre.Location = new System.Drawing.Point(304, 335);
             this.btnAutre.Name = "btnAutre";
             this.btnAutre.Size = new System.Drawing.Size(127, 23);
@@ -114,6 +115,7 @@
             // 
             // btnValider
             // 
+            this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.Location = new System.Drawing.Point(356, 386);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
@@ -168,6 +170,7 @@
             // picQuitter
             // 
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
             this.picQuitter.Location = new System.Drawing.Point(356, 35);
             this.picQuitter.Name = "picQuitter";

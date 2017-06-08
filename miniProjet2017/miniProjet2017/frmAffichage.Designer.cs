@@ -41,7 +41,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gridViewClone = new System.Windows.Forms.DataGridView();
             this.txtRecherche = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblDescription = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
@@ -52,9 +52,9 @@
             // gridViewPDF
             // 
             this.gridViewPDF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewPDF.Location = new System.Drawing.Point(26, 102);
+            this.gridViewPDF.Location = new System.Drawing.Point(26, 131);
             this.gridViewPDF.Name = "gridViewPDF";
-            this.gridViewPDF.Size = new System.Drawing.Size(728, 293);
+            this.gridViewPDF.Size = new System.Drawing.Size(728, 264);
             this.gridViewPDF.TabIndex = 0;
             this.gridViewPDF.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CliqueDroitSurUneCaseDuDataGridView);
             // 
@@ -132,27 +132,27 @@
             // 
             // txtRecherche
             // 
-            this.txtRecherche.Location = new System.Drawing.Point(281, 76);
+            this.txtRecherche.Location = new System.Drawing.Point(287, 96);
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.Size = new System.Drawing.Size(100, 20);
             this.txtRecherche.TabIndex = 6;
+            this.txtRecherche.TextChanged += new System.EventHandler(this.RechercheSurDescrition);
             // 
-            // button1
+            // lblDescription
             // 
-            this.button1.Location = new System.Drawing.Point(408, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(269, 80);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(135, 13);
+            this.lblDescription.TabIndex = 8;
+            this.lblDescription.Text = "Rechercher par description";
             // 
             // frmAffichage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 420);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.txtRecherche);
             this.Controls.Add(this.gridViewClone);
             this.Controls.Add(this.lblTitre);
@@ -189,6 +189,6 @@
         private System.Windows.Forms.DataGridView gridViewPDF;
         private System.Windows.Forms.DataGridView gridViewClone;
         private System.Windows.Forms.TextBox txtRecherche;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblDescription;
     }
 }

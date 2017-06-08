@@ -77,6 +77,7 @@
             // 
             // btnRetour
             // 
+            this.btnRetour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetour.Location = new System.Drawing.Point(363, 311);
             this.btnRetour.Name = "btnRetour";
@@ -113,6 +114,7 @@
             // 
             // btnBaseDonnee
             // 
+            this.btnBaseDonnee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBaseDonnee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaseDonnee.Location = new System.Drawing.Point(277, 62);
             this.btnBaseDonnee.Margin = new System.Windows.Forms.Padding(0);
@@ -126,6 +128,7 @@
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
+            this.lblTitre.BackColor = System.Drawing.Color.Transparent;
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.Location = new System.Drawing.Point(163, 16);
             this.lblTitre.Name = "lblTitre";
@@ -165,6 +168,7 @@
             // picQuitter
             // 
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
             this.picQuitter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.picQuitter.Location = new System.Drawing.Point(377, 12);

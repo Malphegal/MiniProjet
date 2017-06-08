@@ -69,7 +69,7 @@ troubleshooting :
 	
 	• Resources à nettoyer
 	
-	• frmMain -> HOVER pnlHaut -> Souris par dessus
+	• frmMain -> HOVER_CONTEXT pnlHaut -> Souris par dessus
 		-> DONE
 		
 	• frmMain -> Supprimer les tags -> pngGauche
@@ -87,6 +87,13 @@ troubleshooting :
 	• code PDF -> Booléen recette et dépense sont inversés
 	
 	• frmChoixPersonne -> Ajouter bouton tout cocher/décocher
+	
+	• ALL - Ajouter les hover partout
+	
+	• frmMain -> Si VerticalScrollBar du pngGauche -> Alors picMinion ne se déplace pas correctement (on voit la supercherie du calque !)
+	
+	• ALL -> Ajouter Cursor Hand sur les cliquable !
+		-> frmMain -> DONE
 	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)

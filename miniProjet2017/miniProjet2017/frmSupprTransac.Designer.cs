@@ -231,6 +231,7 @@
             this.btnSupprimer.BackColor = System.Drawing.Color.Transparent;
             this.btnSupprimer.BackgroundImage = global::miniProjet2017.Properties.Resources.boutonFondBleu;
             this.btnSupprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSupprimer.FlatAppearance.BorderSize = 0;
             this.btnSupprimer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSupprimer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -306,6 +307,7 @@
             // picQuitter
             // 
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = ((System.Drawing.Image)(resources.GetObject("picQuitter.Image")));
             this.picQuitter.Location = new System.Drawing.Point(621, 25);
             this.picQuitter.Name = "picQuitter";
