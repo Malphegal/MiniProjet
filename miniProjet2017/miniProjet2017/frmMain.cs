@@ -44,6 +44,7 @@ namespace miniProjet2017
             new frmAjoutTransac().ShowDialog();
             foreach (Control c in Controls)
                 c.Enabled = true;
+            btnListerTransaction.PerformClick();
         }
 
         private void NouveauFrmAffichage(object sender, EventArgs e)
@@ -72,6 +73,7 @@ namespace miniProjet2017
             new frmModiTransac().ShowDialog();
             foreach (Control c in Controls)
                 c.Enabled = true;
+            btnListerTransaction.PerformClick();
         }
 
         private void NouveauFrmRecap(object sender, EventArgs e)
@@ -100,6 +102,7 @@ namespace miniProjet2017
             new frmSupprTransac().ShowDialog();
             foreach (Control c in Controls)
                 c.Enabled = true;
+            btnListerTransaction.PerformClick();
         }
 
         private void NouveauFrmOption(object sender, EventArgs e)
@@ -372,9 +375,9 @@ namespace miniProjet2017
             {
                 timerDeroulantPersonne.Stop();
                 btnSupprimerPersonne.Height = 0;
-                btnPostePonctuel.Height = 0;
+                btnAjouterPersonne.Height = 0;
                 btnSupprimerPersonne.TabStop = false;
-                btnBudgetRecap.TabStop = false;
+                btnAjouterPersonne.TabStop = false;
                 timerDeroulantPersonne.Tick -= new EventHandler(EnroulementDePersonne);
                 timerDeroulantPersonne.Tick += new EventHandler(DeroulementDePersonne);
             }
@@ -410,14 +413,14 @@ namespace miniProjet2017
         public static bool baseExist = true;
         void InitValeurOption()
         {
-            // Recherche du fichier de stockage
+                // Recherche du fichier de stockage
 
             if (!File.Exists(@"..\..\Resources\ValeurParDefaut.txt"))
             {
                 MessageBox.Show("Le fichier ValeurParDefaut est manquant ! ");
             }
             else {
-                // Fichier de stockage
+                    // Fichier de stockage
 
                 string[] fichier = System.IO.File.ReadAllLines(@"..\..\Resources\ValeurParDefaut.txt");
 
@@ -431,7 +434,7 @@ namespace miniProjet2017
                 try { frmOption.valeurResolution = Convert.ToByte(fichier[5]); }
                 catch { MessageBox.Show("La valeur de résolution n'est pas correct !"); };
             }
-            // Mise à jour de la résolution
+                // Mise à jour de la résolution
 
             resolutionScale = (0.6F + 0.2F * frmOption.valeurResolution);
             privateResolutionScale = resolutionScale;
@@ -564,27 +567,32 @@ namespace miniProjet2017
             lblPrenom.DataBindings.Clear();
             lblTelephone.DataBindings.Clear();
 
-            if (premierTransaction)
-            {
-                premierTransaction = false;
-
                     // Création de la source de donnée pour les transactions
 
-                new OleDbDataAdapter(new CMD(@"SELECT * FROM [Transaction]", con)).Fill(ds, "_Transaction");
-
-                typeTranscation = new Dictionary<int, string>();
-
-                new OleDbDataAdapter(new CMD(@"SELECT * FROM TypeTransaction", con)).Fill(ds, "_TypeTransaction");
-                foreach (DataRow row in ds.Tables["_TypeTransaction"].Rows)
-                    typeTranscation.Add((int)row[0], (string)row[1]);
-
-                    // Activation des boutons de navigation
-
-                btnLL.Enabled = true;
-                btnL.Enabled = true;
-                btnR.Enabled = true;
-                btnRR.Enabled = true;
+            // Si c'est pas la première fois, on refresh les tables locales
+            if (!premierTransaction)
+            {
+                typeTranscation.Clear();
+                ds.Tables["_Transaction"].Clear();
             }
+            else
+                new OleDbDataAdapter(new CMD(@"SELECT * FROM TypeTransaction", con)).Fill(ds, "_TypeTransaction");
+
+                // Recharger les transaction existantes
+
+            new OleDbDataAdapter(new CMD(@"SELECT * FROM [Transaction]", con)).Fill(ds, "_Transaction");
+            typeTranscation = new Dictionary<int, string>();
+
+            foreach (DataRow row in ds.Tables["_TypeTransaction"].Rows)
+                typeTranscation.Add((int)row[0], (string)row[1]);
+            premierTransaction = false;
+
+                // Activation des boutons de navigation
+
+            btnLL.Enabled = true;
+            btnL.Enabled = true;
+            btnR.Enabled = true;
+            btnRR.Enabled = true;
 
             if (ds.Tables["_Transaction"].Rows.Count != 0)
             {
@@ -606,8 +614,14 @@ namespace miniProjet2017
 
                 bs.MoveFirst();
             }
-            else
-                MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
+            else {
+                lblId.Text = "";
+                lblDate.Text = "";
+                lblDescription.Text = "";
+                lblMontant.Text = "";
+                lblType.Text = "";
+                lblEnregistrement.Text = "Il n'y a pas de transaction !";
+            }
         }
 
         /* Lance la liaison de donnée vers les personnes*/
