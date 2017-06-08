@@ -1,5 +1,5 @@
 #Base de donnée
-C:\Users\gaëtan\Desktop\miniprojet\miniprojet\miniProjet2017\miniProjet2017\Resources\budget1.mdb
+..\\..\\Resources\budget1.mdb
 #SMS
 10
 #Résolution
