@@ -78,7 +78,7 @@
             this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifier.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModifier.Location = new System.Drawing.Point(49, 476);
+            this.btnModifier.Location = new System.Drawing.Point(49, 466);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(103, 66);
             this.btnModifier.TabIndex = 28;
@@ -91,7 +91,7 @@
             this.grb1.Controls.Add(this.lblRecette);
             this.grb1.Controls.Add(this.chkPerçu);
             this.grb1.Controls.Add(this.chkRecette);
-            this.grb1.Location = new System.Drawing.Point(69, 343);
+            this.grb1.Location = new System.Drawing.Point(115, 363);
             this.grb1.Name = "grb1";
             this.grb1.Size = new System.Drawing.Size(281, 43);
             this.grb1.TabIndex = 27;
@@ -156,7 +156,7 @@
             this.lblMontant.AutoSize = true;
             this.lblMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMontant.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMontant.Location = new System.Drawing.Point(133, 300);
+            this.lblMontant.Location = new System.Drawing.Point(130, 311);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(53, 13);
             this.lblMontant.TabIndex = 24;
@@ -164,7 +164,7 @@
             // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(214, 297);
+            this.txtMontant.Location = new System.Drawing.Point(214, 308);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
             this.txtMontant.TabIndex = 23;
@@ -175,11 +175,11 @@
             this.lblDescTransac.AutoSize = true;
             this.lblDescTransac.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescTransac.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDescTransac.Location = new System.Drawing.Point(38, 213);
+            this.lblDescTransac.Location = new System.Drawing.Point(112, 219);
             this.lblDescTransac.Name = "lblDescTransac";
-            this.lblDescTransac.Size = new System.Drawing.Size(170, 13);
+            this.lblDescTransac.Size = new System.Drawing.Size(71, 13);
             this.lblDescTransac.TabIndex = 22;
-            this.lblDescTransac.Text = "Description de la transaction";
+            this.lblDescTransac.Text = "Description";
             // 
             // lblTransac
             // 
@@ -202,67 +202,67 @@
             // 
             // lblAideDate
             // 
-            this.lblAideDate.AutoSize = true;
             this.lblAideDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideDate.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideDate.Location = new System.Drawing.Point(177, 148);
+            this.lblAideDate.Location = new System.Drawing.Point(102, 156);
             this.lblAideDate.Name = "lblAideDate";
-            this.lblAideDate.Size = new System.Drawing.Size(41, 13);
+            this.lblAideDate.Size = new System.Drawing.Size(320, 13);
             this.lblAideDate.TabIndex = 37;
             this.lblAideDate.Tag = "Aidelbl1";
             this.lblAideDate.Text = "label1";
+            this.lblAideDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideDate.Visible = false;
             // 
             // lblAideDescri
             // 
-            this.lblAideDescri.AutoSize = true;
             this.lblAideDescri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideDescri.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideDescri.Location = new System.Drawing.Point(177, 236);
+            this.lblAideDescri.Location = new System.Drawing.Point(102, 248);
             this.lblAideDescri.Name = "lblAideDescri";
-            this.lblAideDescri.Size = new System.Drawing.Size(41, 13);
+            this.lblAideDescri.Size = new System.Drawing.Size(320, 13);
             this.lblAideDescri.TabIndex = 38;
             this.lblAideDescri.Tag = "Aidelbl2";
             this.lblAideDescri.Text = "label1";
+            this.lblAideDescri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideDescri.Visible = false;
             // 
             // lblAideMontant
             // 
-            this.lblAideMontant.AutoSize = true;
             this.lblAideMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideMontant.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideMontant.Location = new System.Drawing.Point(177, 327);
+            this.lblAideMontant.Location = new System.Drawing.Point(102, 342);
             this.lblAideMontant.Name = "lblAideMontant";
-            this.lblAideMontant.Size = new System.Drawing.Size(41, 13);
+            this.lblAideMontant.Size = new System.Drawing.Size(320, 13);
             this.lblAideMontant.TabIndex = 39;
             this.lblAideMontant.Tag = "Aidelbl3";
             this.lblAideMontant.Text = "label1";
+            this.lblAideMontant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideMontant.Visible = false;
             // 
             // lblAideRecette
             // 
-            this.lblAideRecette.AutoSize = true;
             this.lblAideRecette.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideRecette.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideRecette.Location = new System.Drawing.Point(177, 403);
+            this.lblAideRecette.Location = new System.Drawing.Point(102, 414);
             this.lblAideRecette.Name = "lblAideRecette";
-            this.lblAideRecette.Size = new System.Drawing.Size(41, 13);
+            this.lblAideRecette.Size = new System.Drawing.Size(320, 13);
             this.lblAideRecette.TabIndex = 40;
             this.lblAideRecette.Tag = "Aidelbl4";
             this.lblAideRecette.Text = "label1";
+            this.lblAideRecette.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideRecette.Visible = false;
             // 
             // lblAideType
             // 
-            this.lblAideType.AutoSize = true;
             this.lblAideType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideType.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideType.Location = new System.Drawing.Point(504, 327);
+            this.lblAideType.Location = new System.Drawing.Point(445, 360);
             this.lblAideType.Name = "lblAideType";
-            this.lblAideType.Size = new System.Drawing.Size(41, 13);
+            this.lblAideType.Size = new System.Drawing.Size(300, 13);
             this.lblAideType.TabIndex = 41;
             this.lblAideType.Tag = "Aidelbl5";
             this.lblAideType.Text = "label1";
+            this.lblAideType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAideType.Visible = false;
             // 
             // errorProvider
@@ -272,7 +272,7 @@
             // cboListeTransaction
             // 
             this.cboListeTransaction.FormattingEnabled = true;
-            this.cboListeTransaction.Location = new System.Drawing.Point(315, 476);
+            this.cboListeTransaction.Location = new System.Drawing.Point(320, 490);
             this.cboListeTransaction.Name = "cboListeTransaction";
             this.cboListeTransaction.Size = new System.Drawing.Size(269, 21);
             this.cboListeTransaction.TabIndex = 42;
@@ -283,7 +283,7 @@
             this.lblListeTransaction.AutoSize = true;
             this.lblListeTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListeTransaction.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblListeTransaction.Location = new System.Drawing.Point(158, 479);
+            this.lblListeTransaction.Location = new System.Drawing.Point(175, 493);
             this.lblListeTransaction.Name = "lblListeTransaction";
             this.lblListeTransaction.Size = new System.Drawing.Size(139, 13);
             this.lblListeTransaction.TabIndex = 43;
@@ -316,7 +316,7 @@
             // 
             // txtDescTran
             // 
-            this.txtDescTran.Location = new System.Drawing.Point(214, 210);
+            this.txtDescTran.Location = new System.Drawing.Point(214, 216);
             this.txtDescTran.Name = "txtDescTran";
             this.txtDescTran.Size = new System.Drawing.Size(177, 20);
             this.txtDescTran.TabIndex = 21;
@@ -326,7 +326,7 @@
             // 
             this.lblEuro.AutoSize = true;
             this.lblEuro.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEuro.Location = new System.Drawing.Point(321, 300);
+            this.lblEuro.Location = new System.Drawing.Point(320, 311);
             this.lblEuro.Name = "lblEuro";
             this.lblEuro.Size = new System.Drawing.Size(13, 13);
             this.lblEuro.TabIndex = 56;
@@ -335,9 +335,9 @@
             // picBarreVerte2
             // 
             this.picBarreVerte2.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
-            this.picBarreVerte2.Location = new System.Drawing.Point(153, 179);
+            this.picBarreVerte2.Location = new System.Drawing.Point(105, 176);
             this.picBarreVerte2.Name = "picBarreVerte2";
-            this.picBarreVerte2.Size = new System.Drawing.Size(206, 25);
+            this.picBarreVerte2.Size = new System.Drawing.Size(317, 25);
             this.picBarreVerte2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBarreVerte2.TabIndex = 59;
             this.picBarreVerte2.TabStop = false;
@@ -345,9 +345,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
-            this.pictureBox1.Location = new System.Drawing.Point(153, 252);
+            this.pictureBox1.Location = new System.Drawing.Point(105, 268);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(317, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
@@ -355,9 +355,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
-            this.pictureBox2.Location = new System.Drawing.Point(153, 428);
+            this.pictureBox2.Location = new System.Drawing.Point(105, 439);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(206, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(317, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 61;
             this.pictureBox2.TabStop = false;
@@ -394,7 +394,7 @@
             this.btnAide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAide.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAide.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAide.Location = new System.Drawing.Point(41, 42);
+            this.btnAide.Location = new System.Drawing.Point(38, 32);
             this.btnAide.Name = "btnAide";
             this.btnAide.Size = new System.Drawing.Size(75, 23);
             this.btnAide.TabIndex = 64;

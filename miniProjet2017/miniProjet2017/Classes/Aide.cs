@@ -31,52 +31,32 @@ namespace miniProjet2017.Classes
         {
             if (test = !test)
             {
-                foreach (PictureBox pic in form.Controls.OfType<PictureBox>())
-                {
-                    if ((string)pic.Tag == "Aide")
-                    {
-                        pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                        pic.Image = imgFlecheCourbee;
-                        pic.Visible = true;
-                    }
-                    if ((string)pic.Tag == "Aide2")
-                    {
-                        pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                        pic.Image = imgFlecheHori;
-                        pic.Visible = true;
-                    }
-                }
                 byte k = 0;
                 foreach (Label lbl in form.Controls.OfType<Label>())
                 {
                     if ((string)lbl.Tag == "Aidelbl1")
                     {
                         lbl.Text = texte[Convert.ToByte(form.Tag)][k++];
-                        lbl.AutoSize = true;
                         lbl.Visible = true;
                     }
                     else if ((string)lbl.Tag == "Aidelbl2")
                     {
                         lbl.Text = texte[Convert.ToByte(form.Tag)][k++];
-                        lbl.AutoSize = true;
                         lbl.Visible = true;
                     }
                     else if ((string)lbl.Tag == "Aidelbl3")
                     {
                         lbl.Text = texte[Convert.ToByte(form.Tag)][k++];
-                        lbl.AutoSize = true;
                         lbl.Visible = true;
                     }
                     else if ((string)lbl.Tag == "Aidelbl4")
                     {
                         lbl.Text = texte[Convert.ToByte(form.Tag)][k++];
-                        lbl.AutoSize = true;
                         lbl.Visible = true;
                     }
                     else if ((string)lbl.Tag == "Aidelbl5")
                     {
                         lbl.Text = texte[Convert.ToByte(form.Tag)][k++];
-                        lbl.AutoSize = true;
                         lbl.Visible = true;
                     }
                 }

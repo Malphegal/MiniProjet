@@ -402,7 +402,7 @@ namespace miniProjet2017
                 // Les polices d'écritures
 
             fonts.AddFontFile("..\\..\\..\\..\\Font\\Café Françoise.otf");
-            lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
+           //lblTitre.Font = new System.Drawing.Font(fonts.Families[0], lblTitre.Font.Size);
 
                 // Pour focus le premier bouton
 

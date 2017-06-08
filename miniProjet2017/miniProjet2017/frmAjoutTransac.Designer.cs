@@ -58,12 +58,14 @@
             this.lblTitre = new System.Windows.Forms.Label();
             this.picBarreVerte1 = new System.Windows.Forms.PictureBox();
             this.picBarreVerte2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarreVerte1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarreVerte2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTransac
@@ -93,7 +95,7 @@
             this.lblMontant.AutoSize = true;
             this.lblMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMontant.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMontant.Location = new System.Drawing.Point(154, 292);
+            this.lblMontant.Location = new System.Drawing.Point(161, 292);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(53, 13);
             this.lblMontant.TabIndex = 2;
@@ -104,7 +106,7 @@
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblType.Location = new System.Drawing.Point(154, 109);
+            this.lblType.Location = new System.Drawing.Point(179, 109);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(35, 13);
             this.lblType.TabIndex = 3;
@@ -224,7 +226,7 @@
             this.lblAideType.AutoSize = true;
             this.lblAideType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideType.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideType.Location = new System.Drawing.Point(443, 325);
+            this.lblAideType.Location = new System.Drawing.Point(443, 323);
             this.lblAideType.Name = "lblAideType";
             this.lblAideType.Size = new System.Drawing.Size(41, 13);
             this.lblAideType.TabIndex = 51;
@@ -234,54 +236,54 @@
             // 
             // lblAideRecette
             // 
-            this.lblAideRecette.AutoSize = true;
             this.lblAideRecette.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideRecette.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideRecette.Location = new System.Drawing.Point(201, 232);
+            this.lblAideRecette.Location = new System.Drawing.Point(102, 230);
             this.lblAideRecette.Name = "lblAideRecette";
-            this.lblAideRecette.Size = new System.Drawing.Size(41, 13);
+            this.lblAideRecette.Size = new System.Drawing.Size(300, 13);
             this.lblAideRecette.TabIndex = 50;
             this.lblAideRecette.Tag = "Aidelbl4";
             this.lblAideRecette.Text = "label1";
+            this.lblAideRecette.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblAideRecette.Visible = false;
             // 
             // lblAideMontant
             // 
-            this.lblAideMontant.AutoSize = true;
             this.lblAideMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideMontant.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideMontant.Location = new System.Drawing.Point(200, 325);
+            this.lblAideMontant.Location = new System.Drawing.Point(102, 322);
             this.lblAideMontant.Name = "lblAideMontant";
-            this.lblAideMontant.Size = new System.Drawing.Size(41, 13);
+            this.lblAideMontant.Size = new System.Drawing.Size(300, 13);
             this.lblAideMontant.TabIndex = 49;
             this.lblAideMontant.Tag = "Aidelbl3";
             this.lblAideMontant.Text = "label1";
+            this.lblAideMontant.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblAideMontant.Visible = false;
             // 
             // lblAideDescri
             // 
-            this.lblAideDescri.AutoSize = true;
             this.lblAideDescri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideDescri.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideDescri.Location = new System.Drawing.Point(200, 397);
+            this.lblAideDescri.Location = new System.Drawing.Point(102, 388);
             this.lblAideDescri.Name = "lblAideDescri";
-            this.lblAideDescri.Size = new System.Drawing.Size(41, 13);
+            this.lblAideDescri.Size = new System.Drawing.Size(300, 13);
             this.lblAideDescri.TabIndex = 48;
             this.lblAideDescri.Tag = "Aidelbl2";
             this.lblAideDescri.Text = "label1";
+            this.lblAideDescri.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblAideDescri.Visible = false;
             // 
             // lblAideDate
             // 
-            this.lblAideDate.AutoSize = true;
             this.lblAideDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAideDate.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblAideDate.Location = new System.Drawing.Point(201, 133);
+            this.lblAideDate.Location = new System.Drawing.Point(102, 140);
             this.lblAideDate.Name = "lblAideDate";
-            this.lblAideDate.Size = new System.Drawing.Size(41, 13);
+            this.lblAideDate.Size = new System.Drawing.Size(300, 13);
             this.lblAideDate.TabIndex = 47;
             this.lblAideDate.Tag = "Aidelbl1";
             this.lblAideDate.Text = "label1";
+            this.lblAideDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblAideDate.Visible = false;
             // 
             // btnChoixPersonne
@@ -307,7 +309,7 @@
             this.lblChoixPersonne.AutoSize = true;
             this.lblChoixPersonne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChoixPersonne.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblChoixPersonne.Location = new System.Drawing.Point(627, 459);
+            this.lblChoixPersonne.Location = new System.Drawing.Point(626, 459);
             this.lblChoixPersonne.Name = "lblChoixPersonne";
             this.lblChoixPersonne.Size = new System.Drawing.Size(96, 15);
             this.lblChoixPersonne.TabIndex = 53;
@@ -379,9 +381,9 @@
             // picBarreVerte1
             // 
             this.picBarreVerte1.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
-            this.picBarreVerte1.Location = new System.Drawing.Point(141, 155);
+            this.picBarreVerte1.Location = new System.Drawing.Point(105, 154);
             this.picBarreVerte1.Name = "picBarreVerte1";
-            this.picBarreVerte1.Size = new System.Drawing.Size(206, 35);
+            this.picBarreVerte1.Size = new System.Drawing.Size(311, 32);
             this.picBarreVerte1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBarreVerte1.TabIndex = 57;
             this.picBarreVerte1.TabStop = false;
@@ -389,12 +391,22 @@
             // picBarreVerte2
             // 
             this.picBarreVerte2.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
-            this.picBarreVerte2.Location = new System.Drawing.Point(141, 248);
+            this.picBarreVerte2.Location = new System.Drawing.Point(105, 247);
             this.picBarreVerte2.Name = "picBarreVerte2";
-            this.picBarreVerte2.Size = new System.Drawing.Size(206, 35);
+            this.picBarreVerte2.Size = new System.Drawing.Size(311, 30);
             this.picBarreVerte2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBarreVerte2.TabIndex = 58;
             this.picBarreVerte2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::miniProjet2017.Properties.Resources.ligneVerte;
+            this.pictureBox1.Location = new System.Drawing.Point(105, 405);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(311, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
             // 
             // frmAjoutTransac
             // 
@@ -402,6 +414,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(768, 547);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picBarreVerte2);
             this.Controls.Add(this.picBarreVerte1);
             this.Controls.Add(this.lblTitre);
@@ -440,6 +453,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarreVerte1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarreVerte2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,5 +489,6 @@
         private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.PictureBox picBarreVerte2;
         private System.Windows.Forms.PictureBox picBarreVerte1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

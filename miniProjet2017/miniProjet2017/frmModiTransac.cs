@@ -17,6 +17,7 @@ namespace miniProjet2017
         Tuple<string, string, float, bool, bool, string, List<uint>, Tuple<string>> tuple;
         public frmModiTransac()
         {
+            
             InitializeComponent();
             Scale(new SizeF(frmMain.resolutionScale, frmMain.resolutionScale));
             frmMain.RedimensionnerLesControls(this, frmMain.resolutionScale);
@@ -35,7 +36,6 @@ namespace miniProjet2017
         /* Création de la table Transaction en local */
         private void LancementDuFormulaire(object sender, EventArgs e)
         {
-            MessageBox.Show(lblType.Font.ToString());
                                     // Remplir la table locale
 
             frmMain.con.Open();
@@ -290,12 +290,12 @@ namespace miniProjet2017
 
         private void picQuitter_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(lblType.Font.ToString());
             Close();
         }
 
         private void btnAide_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(lblTransac.Size.Width.ToString());
             new Classes.Aide().AideTransac(this);
         }
     }
