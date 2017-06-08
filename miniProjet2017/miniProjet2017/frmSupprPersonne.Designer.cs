@@ -41,6 +41,9 @@
             this.btnQuitter.BackgroundImage = global::miniProjet2017.Properties.Resources.cancel;
             this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitter.FlatAppearance.BorderSize = 0;
+            this.btnQuitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitter.Location = new System.Drawing.Point(353, 265);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(46, 46);
@@ -53,6 +56,9 @@
             this.btnValider.BackgroundImage = global::miniProjet2017.Properties.Resources.validate;
             this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnValider.FlatAppearance.BorderSize = 0;
+            this.btnValider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValider.Location = new System.Drawing.Point(301, 265);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(46, 46);
@@ -64,6 +70,7 @@
             // 
             this.lblTitre.AutoSize = true;
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F, System.Drawing.FontStyle.Italic);
+            this.lblTitre.ForeColor = System.Drawing.Color.Firebrick;
             this.lblTitre.Location = new System.Drawing.Point(34, 22);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(356, 36);
@@ -92,6 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(425, 335);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.lblTitre);
@@ -100,6 +108,7 @@
             this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSupprPersonne";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmSupprPersonne";
             this.Load += new System.EventHandler(this.ChangementDuFormulaire);
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
