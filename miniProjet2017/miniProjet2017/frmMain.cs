@@ -128,6 +128,8 @@ namespace miniProjet2017
             new frmAjouterPersonne().ShowDialog();
             foreach (Control c in Controls)
                 c.Enabled = true;
+            if (estDansPersonne)
+                btnListerPersonne.PerformClick();
         }
 
         private void NouveauFrmSupprPersonne(object sender, EventArgs e)
@@ -142,6 +144,8 @@ namespace miniProjet2017
             new frmSupprPersonne().ShowDialog();
             foreach (Control c in Controls)
                 c.Enabled = true;
+            if (estDansPersonne)
+                btnListerPersonne.PerformClick();
         }
 
         private void NouveauFrmPostFixe(object sender, EventArgs e)
@@ -491,8 +495,12 @@ namespace miniProjet2017
 
         private void DeplacementSouris(object sender, MouseEventArgs e)
         {
+            lblTitre.Text = Location.ToString();
             if (EnClique)
+            {
                 Location = new Point(Location.X + (e.X - SourisX), Location.Y + (e.Y - SourisY));
+                //lblTitre.Text = Location.ToString();
+            }
         }
 
         private void LacherCliqueSouris(object sender, MouseEventArgs e)
@@ -547,11 +555,17 @@ namespace miniProjet2017
         IDictionary<int, string> typeTranscation; // Relation typeTransaction -> nomTypeTransaction
 
         bool premierTransaction = true,
-             premierPersonne = true;
+             premierPersonne = true,
+            estDansPersonne = false;
 
         /* Lance la liaison de donnée vers les transactions */
         private void CliquerSurLiaisonTransaction(object sender, EventArgs e)
         {
+                // Initialisation
+
+            estDansPersonne = false;
+
+
                 // Changer le titre de la fenêtre, et changer le tab (a suppr ? si y'a plus de titre ?)
 
             tabControl1.SelectedTab = tabTransaction;
@@ -627,6 +641,8 @@ namespace miniProjet2017
         /* Lance la liaison de donnée vers les personnes*/
         private void CliquerSurLiaisonPersonne(object sender, EventArgs e)
         {
+            estDansPersonne = true;
+
                 // Changer le titre de la fenêtre, et changer le tab (a suppr ? si y'a plus de titre ?)
 
             tabControl1.SelectedTab = tabPersonne;
@@ -645,13 +661,13 @@ namespace miniProjet2017
             chkPercu.DataBindings.Clear();
             lblType.DataBindings.Clear();
 
-            if (premierPersonne)
+            if (!premierPersonne)
+            {
+                ds.Tables["_Personne"].Clear();
+            }
+            else
             {
                 premierPersonne = false;
-
-                    // Création de la source de donnée pour les personnes
-
-                new OleDbDataAdapter(new CMD(@"SELECT * FROM Personne", con)).Fill(ds, "_Personne");
 
                     // Activation des boutons de navigation
 
@@ -660,6 +676,10 @@ namespace miniProjet2017
                 _btnR.Enabled = true;
                 _btnRR.Enabled = true;
             }
+
+                // Création de la source de donnée pour les personnes
+
+            new OleDbDataAdapter(new CMD(@"SELECT * FROM Personne", con)).Fill(ds, "_Personne");
 
             if (ds.Tables["_Personne"].Rows.Count != 0)
             {
@@ -676,8 +696,13 @@ namespace miniProjet2017
 
                 bs.MoveFirst();
             }
-            else
-                MessageBox.Show("Il n'y a pas de transaction dans la base de donnée !");
+            else {
+                _lblId.Text = "";
+                _lblNom.Text = "";
+                _lblPrenom.Text = "";
+                _lblTelephone.Text = "";
+                _lblEnregistrement.Text = "Il n'y a pas de personne !";
+            }
         }
 
         // ----------------------------------

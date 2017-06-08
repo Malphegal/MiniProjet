@@ -103,5 +103,14 @@ namespace miniProjet2017
             if (char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == '-' || e.KeyChar == ' ')
                 e.Handled = false;
         }
+
+        /* Met en place les parent, pour les fonds transparents */
+        private void ChargementDeFrmAjouterPersonne(object sender, EventArgs e)
+        {
+            lblNom.Parent = picBordure;
+            lblPrenom.Parent = picBordure;
+            lblNum.Parent = picBordure;
+            lblTitre.Parent = picBordure;
+        }
     }
 }
