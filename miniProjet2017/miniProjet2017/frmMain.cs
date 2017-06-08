@@ -548,7 +548,7 @@ namespace miniProjet2017
         BindingSource bs = new BindingSource();
         DataSet ds = new DataSet();
 
-        IDictionary<int, string> typeTranscation; // Relation typeTransaction -> nomTypeTransaction
+        IDictionary<int, string> typeTransaction; // Relation typeTransaction -> nomTypeTransaction
 
         bool premierTransaction = true,
              premierPersonne = true,
@@ -582,7 +582,7 @@ namespace miniProjet2017
             // Si c'est pas la première fois, on refresh les tables locales
             if (!premierTransaction)
             {
-                typeTranscation.Clear();
+                typeTransaction.Clear();
                 ds.Tables["_Transaction"].Clear();
             }
             else
@@ -591,10 +591,10 @@ namespace miniProjet2017
                 // Recharger les transaction existantes
 
             new OleDbDataAdapter(new CMD(@"SELECT * FROM [Transaction]", con)).Fill(ds, "_Transaction");
-            typeTranscation = new Dictionary<int, string>();
+            typeTransaction = new Dictionary<int, string>();
 
             foreach (DataRow row in ds.Tables["_TypeTransaction"].Rows)
-                typeTranscation.Add((int)row[0], (string)row[1]);
+                typeTransaction.Add((int)row[0], (string)row[1]);
             premierTransaction = false;
 
                 // Activation des boutons de navigation
@@ -619,7 +619,7 @@ namespace miniProjet2017
                 chkRecette.DataBindings.Clear(); chkRecette.DataBindings.Add("Checked", bs, "recetteON");
                 chkPercu.DataBindings.Clear(); chkPercu.DataBindings.Add("Checked", bs, "percuON");
 
-                lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[0][6]];
+                lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[0][6]];
                 lblEnregistrement.Text = "Enregistrement " + 1 + " / " + bs.Count;
 
                 bs.MoveFirst();
@@ -708,7 +708,7 @@ namespace miniProjet2017
         private void CliquerSurPremierTransaction(object sender, EventArgs e)
         {
             bs.MoveFirst();
-            lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[0][6]];
+            lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[0][6]];
             lblMontant.Text += !lblMontant.Text.Contains('€') ? " €" : "";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
         }
@@ -716,7 +716,7 @@ namespace miniProjet2017
         private void CliquerSurPrecedentTransaction(object sender, EventArgs e)
         {
             bs.MovePrevious();
-            lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
+            lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
             lblMontant.Text += " €";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
         }
@@ -724,7 +724,7 @@ namespace miniProjet2017
         private void CliquerSurSuivantTransaction(object sender, EventArgs e)
         {
             bs.MoveNext();
-            lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
+            lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
             lblMontant.Text += " €";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
         }
@@ -732,7 +732,7 @@ namespace miniProjet2017
         private void CliquerSurDernierTransaction(object sender, EventArgs e)
         {
             bs.MoveLast();
-            lblType.Text = typeTranscation[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
+            lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
             lblMontant.Text += !lblMontant.Text.Contains('€') ? " €" : "";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
         }

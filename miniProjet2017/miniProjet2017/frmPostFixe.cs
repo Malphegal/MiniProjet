@@ -137,11 +137,19 @@ namespace miniProjet2017
                     + " le " + txtJour.Text + "\n\n • Montant : " + txtMontant.Text
                     + "€\n\n     Voulez-vous ajouter ce poste ?", "Ajout d'un poste", MessageBoxButtons.OKCancel))
                 {
+                    frmMain.con.Open();
 
                         // Ajout dans la base de donnée
 
-                    ///n/ew OleDbDataAdapter(new CMD("", frmMain.con))
-                    MessageBox.Show("COIN");
+                    new CMD(@"INSERT INTO PostePeriodique VALUES ("
+                        + (cboPoste.SelectedIndex + 1) + ", "
+                        + txtMontant.Text + ", "
+                        + (cboPeriodicite.SelectedIndex + 1) + ", '"
+                        + txtJour.Text + "')", frmMain.con).ExecuteNonQuery();
+
+                    frmMain.con.Close();
+
+                    MessageBox.Show("Ce poste périodique à été ajouté !");
                 }
                 else
                     MessageBox.Show("Aucune modification n'a été effectuée !");
@@ -176,6 +184,21 @@ namespace miniProjet2017
         private void QuitterFrmPostFixe(object sender, EventArgs e)
         {
             Close();
+        }
+
+        /* Saisir un montant */
+        private void SaisirUnMontant(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == 8)
+                e.Handled = false;
+            else if (e.KeyChar == ',' && !txtMontant.Text.Contains(","))
+                e.Handled = false;
+            else if (e.KeyChar == '.' && !txtMontant.Text.Contains(","))
+            {
+                e.KeyChar = ',';
+                e.Handled = false;
+            }
         }
     }
 }

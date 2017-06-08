@@ -233,7 +233,7 @@ namespace miniProjet2017
             doc.Close(); //ferme le document
         }
 
-        private void RechercheSurDescrition(object sender, EventArgs e)
+        private void RechercheSurDescription(object sender, EventArgs e)
         {
             if (txtRecherche.Text.Length > 0)
                 (gridViewPDF.DataSource as DataTable).DefaultView.RowFilter = string.Format("[description] like '%{0}%'",

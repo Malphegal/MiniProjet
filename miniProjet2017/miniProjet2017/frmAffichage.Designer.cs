@@ -137,7 +137,7 @@
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.Size = new System.Drawing.Size(100, 20);
             this.txtRecherche.TabIndex = 6;
-            this.txtRecherche.TextChanged += new System.EventHandler(this.RechercheSurDescrition);
+            this.txtRecherche.TextChanged += new System.EventHandler(this.RechercheSurDescription);
             // 
             // lblDescription
             // 

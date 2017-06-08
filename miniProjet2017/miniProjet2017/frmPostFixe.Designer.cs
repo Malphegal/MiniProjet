@@ -62,7 +62,7 @@
             // cboPoste
             // 
             this.cboPoste.FormattingEnabled = true;
-            this.cboPoste.Location = new System.Drawing.Point(129, 49);
+            this.cboPoste.Location = new System.Drawing.Point(129, 48);
             this.cboPoste.Name = "cboPoste";
             this.cboPoste.Size = new System.Drawing.Size(195, 21);
             this.cboPoste.TabIndex = 0;
@@ -70,7 +70,7 @@
             // btnAutre
             // 
             this.btnAutre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAutre.Location = new System.Drawing.Point(304, 335);
+            this.btnAutre.Location = new System.Drawing.Point(304, 270);
             this.btnAutre.Name = "btnAutre";
             this.btnAutre.Size = new System.Drawing.Size(127, 23);
             this.btnAutre.TabIndex = 4;
@@ -79,7 +79,7 @@
             // 
             // txtJour
             // 
-            this.txtJour.Location = new System.Drawing.Point(159, 128);
+            this.txtJour.Location = new System.Drawing.Point(129, 146);
             this.txtJour.Name = "txtJour";
             this.txtJour.Size = new System.Drawing.Size(28, 20);
             this.txtJour.TabIndex = 2;
@@ -99,7 +99,7 @@
             // 
             this.lblJour.AutoSize = true;
             this.lblJour.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblJour.Location = new System.Drawing.Point(46, 131);
+            this.lblJour.Location = new System.Drawing.Point(47, 149);
             this.lblJour.Name = "lblJour";
             this.lblJour.Size = new System.Drawing.Size(72, 13);
             this.lblJour.TabIndex = 5;
@@ -111,12 +111,12 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(195, 20);
             this.txtMontant.TabIndex = 3;
-            this.txtMontant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnJourDuMois);
+            this.txtMontant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnMontant);
             // 
             // btnValider
             // 
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValider.Location = new System.Drawing.Point(356, 386);
+            this.btnValider.Location = new System.Drawing.Point(356, 321);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
             this.btnValider.TabIndex = 5;
@@ -147,7 +147,7 @@
             // 
             this.lblMois.AutoSize = true;
             this.lblMois.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMois.Location = new System.Drawing.Point(193, 131);
+            this.lblMois.Location = new System.Drawing.Point(163, 149);
             this.lblMois.Name = "lblMois";
             this.lblMois.Size = new System.Drawing.Size(43, 13);
             this.lblMois.TabIndex = 10;
@@ -183,9 +183,9 @@
             // picBordure
             // 
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
-            this.picBordure.Location = new System.Drawing.Point(-1, -2);
+            this.picBordure.Location = new System.Drawing.Point(0, 0);
             this.picBordure.Name = "picBordure";
-            this.picBordure.Size = new System.Drawing.Size(465, 449);
+            this.picBordure.Size = new System.Drawing.Size(466, 375);
             this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBordure.TabIndex = 56;
             this.picBordure.TabStop = false;
@@ -195,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(466, 448);
+            this.ClientSize = new System.Drawing.Size(466, 375);
             this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.lblEuro);
             this.Controls.Add(this.lblMois);
@@ -211,6 +211,8 @@
             this.Controls.Add(this.lblPoste);
             this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(466, 375);
+            this.MinimumSize = new System.Drawing.Size(466, 375);
             this.Name = "frmPostFixe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Poste fixe";
