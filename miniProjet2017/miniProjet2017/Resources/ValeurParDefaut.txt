@@ -1,5 +1,5 @@
-#Base de donnée
-..\\..\\Resources\budget1.mdb
+﻿#Base de donnée
+..\\..\\Resources\\budget1.mdb
 #SMS
 10
 #Résolution

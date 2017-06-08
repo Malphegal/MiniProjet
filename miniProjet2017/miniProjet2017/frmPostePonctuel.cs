@@ -83,8 +83,16 @@ namespace miniProjet2017
                     TextBox txt2 = new TextBox();
                     dtPick.Top = topElem;
                     dtPick.Left = leftElem + lbl.Width;
-                    dtPick.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month + j-1, DateTime.Today.Day);
-                                           
+                    MessageBox.Show(DateTime.Today.Month.ToString());
+                    MessageBox.Show(j.ToString());
+                    if (DateTime.Today.Month < 12)
+                    {
+                        dtPick.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month + j - 1, DateTime.Today.Day);
+                    }
+                    else if(DateTime.Today.Month >= 12)
+                    {
+                        dtPick.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month + j - 12, DateTime.Today.Day);
+                    }                       
                     lbl.Top = topElem;
                     lbl.Left = leftElem;
                     lbl.Text = "Prélévement n°" + j;
