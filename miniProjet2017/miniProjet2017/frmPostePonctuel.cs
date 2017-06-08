@@ -62,7 +62,7 @@ namespace miniProjet2017
                 pnl.Text = "Liste des prélévements";
                 pnl.Top = topPnl;
                 pnl.Left = 30;
-                pnl.Width = 400;
+                pnl.Width = 430;
                 pnl.Height = 220;
                 pnl.AutoScroll = true;
                 picBordure.Controls.Add(pnl);
@@ -75,33 +75,38 @@ namespace miniProjet2017
             }
             if(ancienNbEcheance < i)
             {
+                int m = DateTime.Today.Month;
+                int y = DateTime.Today.Year;
                 for (int j = ancienNbEcheance+1; j <= i; j++)
                 {
                     Label lbl = new Label();
                     lbl.ForeColor = Color.White;
                     DateTimePicker dtPick = new DateTimePicker();
                     TextBox txt2 = new TextBox();
+
                     dtPick.Top = topElem;
-                    dtPick.Left = leftElem + lbl.Width;
-                    MessageBox.Show(DateTime.Today.Month.ToString());
-                    MessageBox.Show(j.ToString());
-                    if (DateTime.Today.Month < 12)
+                    dtPick.Left =lbl.Width;
+                    if (m > 12) // Mois plus grand que 12 ?
                     {
-                        dtPick.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month + j - 1, DateTime.Today.Day);
+                        m = 1; y++; //On réinitialise le nombre de mois à 1, et on augmente l'année de 1.
+                        dtPick.Value = new DateTime(y, m, DateTime.Today.Day);
                     }
-                    else if(DateTime.Today.Month >= 12)
+                    else if (m <= 12)
                     {
-                        dtPick.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month + j - 12, DateTime.Today.Day);
-                    }                       
+                        dtPick.Value = new DateTime(y, m, DateTime.Today.Day); // Situation normale 
+                    }
+                                        
                     lbl.Top = topElem;
-                    lbl.Left = leftElem;
                     lbl.Text = "Prélévement n°" + j;
+                    txt2.Top = topElem;
+                    txt2.Left = lbl.Width + dtPick.Width;
                     pnl.Controls.Add(lbl);
                     pnl.Controls.Add(dtPick);
-
+                    pnl.Controls.Add(txt2);
+                    MessageBox.Show(lbl.Top.ToString());
                     //On incrémente les valeurs
                     topElem += 30;
-
+                    m++;
                 }
             }
             else if(ancienNbEcheance > i){

@@ -39,6 +39,7 @@
             this.btnValider = new System.Windows.Forms.Button();
             this.picQuitter = new System.Windows.Forms.PictureBox();
             this.picBordure = new System.Windows.Forms.PictureBox();
+            this.lblTitre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
@@ -48,7 +49,7 @@
             // 
             this.lblIntitule.AutoSize = true;
             this.lblIntitule.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblIntitule.Location = new System.Drawing.Point(28, 25);
+            this.lblIntitule.Location = new System.Drawing.Point(26, 71);
             this.lblIntitule.Name = "lblIntitule";
             this.lblIntitule.Size = new System.Drawing.Size(44, 13);
             this.lblIntitule.TabIndex = 0;
@@ -56,7 +57,7 @@
             // 
             // txtIntitule
             // 
-            this.txtIntitule.Location = new System.Drawing.Point(220, 25);
+            this.txtIntitule.Location = new System.Drawing.Point(218, 71);
             this.txtIntitule.Name = "txtIntitule";
             this.txtIntitule.Size = new System.Drawing.Size(100, 20);
             this.txtIntitule.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             this.lblDescri.AutoSize = true;
             this.lblDescri.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDescri.Location = new System.Drawing.Point(28, 79);
+            this.lblDescri.Location = new System.Drawing.Point(26, 125);
             this.lblDescri.Name = "lblDescri";
             this.lblDescri.Size = new System.Drawing.Size(66, 13);
             this.lblDescri.TabIndex = 5;
@@ -75,7 +76,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(28, 155);
+            this.label3.Location = new System.Drawing.Point(26, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 13);
             this.label3.TabIndex = 6;
@@ -83,14 +84,14 @@
             // 
             // txtDescri
             // 
-            this.txtDescri.Location = new System.Drawing.Point(220, 76);
+            this.txtDescri.Location = new System.Drawing.Point(218, 122);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(100, 20);
             this.txtDescri.TabIndex = 2;
             // 
             // txtNbPreleve
             // 
-            this.txtNbPreleve.Location = new System.Drawing.Point(220, 148);
+            this.txtNbPreleve.Location = new System.Drawing.Point(218, 176);
             this.txtNbPreleve.Name = "txtNbPreleve";
             this.txtNbPreleve.Size = new System.Drawing.Size(43, 20);
             this.txtNbPreleve.TabIndex = 3;
@@ -102,12 +103,15 @@
             // 
             // btnValider
             // 
+            this.btnValider.BackgroundImage = global::miniProjet2017.Properties.Resources.validate;
+            this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValider.Location = new System.Drawing.Point(363, 148);
+            this.btnValider.FlatAppearance.BorderSize = 0;
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValider.Location = new System.Drawing.Point(361, 161);
             this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(75, 20);
+            this.btnValider.Size = new System.Drawing.Size(63, 35);
             this.btnValider.TabIndex = 7;
-            this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
@@ -116,9 +120,9 @@
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
             this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
-            this.picQuitter.Location = new System.Drawing.Point(363, 25);
+            this.picQuitter.Location = new System.Drawing.Point(361, 71);
             this.picQuitter.Name = "picQuitter";
-            this.picQuitter.Size = new System.Drawing.Size(79, 71);
+            this.picQuitter.Size = new System.Drawing.Size(63, 67);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picQuitter.TabIndex = 56;
             this.picQuitter.TabStop = false;
@@ -131,17 +135,29 @@
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.picBordure.Location = new System.Drawing.Point(0, 0);
             this.picBordure.Name = "picBordure";
-            this.picBordure.Size = new System.Drawing.Size(466, 448);
+            this.picBordure.Size = new System.Drawing.Size(490, 460);
             this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBordure.TabIndex = 57;
             this.picBordure.TabStop = false;
+            // 
+            // lblTitre
+            // 
+            this.lblTitre.AutoSize = true;
+            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTitre.Location = new System.Drawing.Point(131, 24);
+            this.lblTitre.Name = "lblTitre";
+            this.lblTitre.Size = new System.Drawing.Size(231, 37);
+            this.lblTitre.TabIndex = 70;
+            this.lblTitre.Text = "Poste Ponctuel";
             // 
             // frmPostePonctuel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(466, 448);
+            this.ClientSize = new System.Drawing.Size(490, 460);
+            this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.txtNbPreleve);
@@ -152,6 +168,8 @@
             this.Controls.Add(this.lblIntitule);
             this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(490, 460);
+            this.MinimumSize = new System.Drawing.Size(490, 460);
             this.Name = "frmPostePonctuel";
             this.Text = "Postes ponctuels";
             this.Load += new System.EventHandler(this.frmPostePonctuel_Load);
@@ -175,5 +193,6 @@
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.PictureBox picQuitter;
         private System.Windows.Forms.PictureBox picBordure;
+        private System.Windows.Forms.Label lblTitre;
     }
 }
