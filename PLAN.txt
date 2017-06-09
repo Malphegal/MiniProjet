@@ -74,11 +74,11 @@ troubleshooting :
 	• frmAffichage -> MenuStrip -> modi/suppr -> Afficher la bonne transac directement
 						-> Bloqué la saisie / modification SUR le dataGridView
 	
-	• frmChoixPersonne -> Ajouter bouton tout cocher/décocher
-	
 	• frmMain -> Si VerticalScrollBar du pngGauche -> Alors picMinion ne se déplace pas correctement (on voit la supercherie du calque !)
 	
 	• Try / Catch
+	
+	• Supprimer budget dans dataGridView -> Il ne le sont pas dans toutes les tables !
 	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)
