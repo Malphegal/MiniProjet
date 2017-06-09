@@ -743,6 +743,11 @@ namespace miniProjet2017
             _lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmSupprPoste().ShowDialog();
+        }
+
         private void CliquerSurPrecedentPersonne(object sender, EventArgs e)
         {
             bs.MovePrevious();
