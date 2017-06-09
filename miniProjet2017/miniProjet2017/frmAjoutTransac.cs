@@ -282,7 +282,7 @@ namespace miniProjet2017
             var message = MessageResource.Create(
                 to,
                 from: new PhoneNumber("+33644607049"),
-                body: "Test numero 1, tu reçois? signé Nico");
+                body: "Une transaction supérieur à " + frmOption.pourcentageSMS + "% du revenu total a été effectuée !\n-> " + txtDescTran.Text + "\n-> " + txtMontant.Text + "€");
 
             Console.WriteLine(message.Sid);
         }
