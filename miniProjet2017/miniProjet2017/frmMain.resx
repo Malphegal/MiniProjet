@@ -999,6 +999,27 @@
   <data name="&gt;&gt;tabDefaut.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 161</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>447, 132</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>tabTransaction</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblEnregistrement.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1030,7 +1051,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblEnregistrement.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="_lblType.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1063,7 +1084,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;_lblType.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="_lblDescription.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1096,7 +1117,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;_lblDescription.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="_lblId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1129,7 +1150,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;_lblId.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="_lblMontant.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1162,7 +1183,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;_lblMontant.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblMontant.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1195,7 +1216,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblMontant.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lblDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1228,7 +1249,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblDescription.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1261,7 +1282,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblDescription.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lblType.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1294,7 +1315,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblType.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lblId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1327,7 +1348,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;lblId.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="chkPercu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1363,7 +1384,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;chkPercu.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="btnL.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1393,7 +1414,7 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;btnL.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="btnLL.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1423,30 +1444,6 @@
     <value>tabTransaction</value>
   </data>
   <data name="&gt;&gt;btnLL.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="listBox1.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 185</value>
-  </data>
-  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 108</value>
-  </data>
-  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
-    <value>listBox1</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
-    <value>tabTransaction</value>
-  </data>
-  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="chkRecette.AutoSize" type="System.Boolean, mscorlib">

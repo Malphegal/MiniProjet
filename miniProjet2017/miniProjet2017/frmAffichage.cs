@@ -237,9 +237,9 @@ namespace miniProjet2017
 
 
             //rajoute, redimensionne et positionne une image
-            iTextSharp.text.Image JPG = iTextSharp.text.Image.GetInstance("..\\..\\Resources\\logo.jpg");
-            JPG.ScalePercent(10f);
-            JPG.SetAbsolutePosition(doc.PageSize.Width - 36f - 36f, doc.PageSize.Height - 36f - 216.6f);
+            iTextSharp.text.Image JPG = iTextSharp.text.Image.GetInstance("..\\..\\Resources\\minion2.png");
+            JPG.ScalePercent(35f);
+            JPG.SetAbsolutePosition(doc.PageSize.Width - 66f - 66f, doc.PageSize.Height - 65f - 65f);
             doc.Add(JPG);
 
             MessageBox.Show("Le document PDF à été créé !\n\n");

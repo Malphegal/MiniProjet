@@ -33,6 +33,7 @@
             this.pnlGauche = new System.Windows.Forms.Panel();
             this.btnAffichage = new System.Windows.Forms.Button();
             this.picVertePnlGauche3 = new System.Windows.Forms.PictureBox();
+            this.btnSuppressionBudget = new System.Windows.Forms.Button();
             this.btnAfficherRecap = new System.Windows.Forms.Button();
             this.btnFrm_3 = new System.Windows.Forms.Button();
             this.btnPostePonctuel = new System.Windows.Forms.Button();
@@ -71,7 +72,6 @@
             this.chkPercu = new System.Windows.Forms.CheckBox();
             this.btnL = new System.Windows.Forms.Button();
             this.btnLL = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.chkRecette = new System.Windows.Forms.CheckBox();
             this.btnR = new System.Windows.Forms.Button();
             this.btnRR = new System.Windows.Forms.Button();
@@ -91,7 +91,7 @@
             this._btnRR = new System.Windows.Forms.Button();
             this.btnListerTransaction = new System.Windows.Forms.Button();
             this.btnListerPersonne = new System.Windows.Forms.Button();
-            this.btnSuppressionBudget = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlGauche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche2)).BeginInit();
@@ -105,6 +105,7 @@
             this.tabControl1.SuspendLayout();
             this.tabTransaction.SuspendLayout();
             this.tabPersonne.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGauche
@@ -152,6 +153,19 @@
             this.picVertePnlGauche3.Image = global::miniProjet2017.Properties.Resources.verteSeparateurPanel;
             this.picVertePnlGauche3.Name = "picVertePnlGauche3";
             this.picVertePnlGauche3.TabStop = false;
+            // 
+            // btnSuppressionBudget
+            // 
+            this.btnSuppressionBudget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnSuppressionBudget.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnSuppressionBudget, "btnSuppressionBudget");
+            this.btnSuppressionBudget.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSuppressionBudget.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSuppressionBudget.Name = "btnSuppressionBudget";
+            this.btnSuppressionBudget.TabStop = false;
+            this.btnSuppressionBudget.Tag = "";
+            this.btnSuppressionBudget.UseVisualStyleBackColor = false;
+            this.btnSuppressionBudget.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAfficherRecap
             // 
@@ -420,6 +434,7 @@
             // tabTransaction
             // 
             this.tabTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.tabTransaction.Controls.Add(this.dataGridView1);
             this.tabTransaction.Controls.Add(this.lblEnregistrement);
             this.tabTransaction.Controls.Add(this._lblType);
             this.tabTransaction.Controls.Add(this._lblDescription);
@@ -433,7 +448,6 @@
             this.tabTransaction.Controls.Add(this.chkPercu);
             this.tabTransaction.Controls.Add(this.btnL);
             this.tabTransaction.Controls.Add(this.btnLL);
-            this.tabTransaction.Controls.Add(this.listBox1);
             this.tabTransaction.Controls.Add(this.chkRecette);
             this.tabTransaction.Controls.Add(this.btnR);
             this.tabTransaction.Controls.Add(this.btnRR);
@@ -532,14 +546,6 @@
             this.btnLL.TabStop = false;
             this.btnLL.UseVisualStyleBackColor = true;
             this.btnLL.Click += new System.EventHandler(this.CliquerSurPremierTransaction);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Name = "listBox1";
             // 
             // chkRecette
             // 
@@ -713,18 +719,11 @@
             this.btnListerPersonne.UseVisualStyleBackColor = true;
             this.btnListerPersonne.Click += new System.EventHandler(this.CliquerSurLiaisonPersonne);
             // 
-            // btnSuppressionBudget
+            // dataGridView1
             // 
-            this.btnSuppressionBudget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnSuppressionBudget.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnSuppressionBudget, "btnSuppressionBudget");
-            this.btnSuppressionBudget.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSuppressionBudget.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSuppressionBudget.Name = "btnSuppressionBudget";
-            this.btnSuppressionBudget.TabStop = false;
-            this.btnSuppressionBudget.Tag = "";
-            this.btnSuppressionBudget.UseVisualStyleBackColor = false;
-            this.btnSuppressionBudget.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
             // 
             // frmMain
             // 
@@ -758,6 +757,7 @@
             this.tabTransaction.PerformLayout();
             this.tabPersonne.ResumeLayout(false);
             this.tabPersonne.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -804,7 +804,6 @@
         private System.Windows.Forms.Button btnLL;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.CheckBox chkPercu;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.CheckBox chkRecette;
         private System.Windows.Forms.Button btnR;
         private System.Windows.Forms.Button btnRR;
@@ -825,6 +824,7 @@
         private System.Windows.Forms.Button btnListerTransaction;
         private System.Windows.Forms.Button btnListerPersonne;
         private System.Windows.Forms.Button btnSuppressionBudget;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

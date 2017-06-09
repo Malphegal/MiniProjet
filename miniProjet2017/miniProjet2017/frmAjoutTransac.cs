@@ -155,11 +155,8 @@ namespace miniProjet2017
                     foreach (DataRow row in ds.Tables["_PosteRevenu"].Rows)
                         valeurRevenu += Convert.ToDouble(row[1]);
 
-                    MessageBox.Show(txtMontant.Text + ">" + (valeurRevenu * frmOption.pourcentageSMS / 100).ToString());
-                    if (double.Parse(txtMontant.Text) > (valeurRevenu * (frmOption.pourcentageSMS / 100)))
-                        MessageBox.Show("Test");
-
-                    EnvoyerUnSms();
+                    if (double.Parse(txtMontant.Text) > (valeurRevenu * (frmOption.pourcentageSMS / (double)100)))
+                        EnvoyerUnSms();
 
                     MessageBox.Show("Transaction ajoutée !");
                     frmMain.con.Close();
@@ -285,7 +282,7 @@ namespace miniProjet2017
             var message = MessageResource.Create(
                 to,
                 from: new PhoneNumber("+33644607049"),
-                body: "Test numero 1, tu reçois? signé Nico");
+                body: "Une transaction supérieur à " + frmOption.pourcentageSMS + "% du revenu total a été effectuée !\n-> " + txtDescTran.Text + "\n-> " + txtMontant.Text + "€");
 
             Console.WriteLine(message.Sid);
         }
