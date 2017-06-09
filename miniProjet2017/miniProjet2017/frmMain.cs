@@ -705,7 +705,7 @@ namespace miniProjet2017
 
                 _lblEnregistrement.Text = "Enregistrement " + 1 + " / " + bs.Count;
 
-                bs.MoveFirst();
+                CliquerSurPremierTransaction(sender, e);
             }
             else {
                 _lblId.Text = "";
@@ -732,7 +732,7 @@ namespace miniProjet2017
             }
             new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
                 WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
-
+            dataGridView1.DataSource = ds.Tables["_Beneficiaires"];
         }
 
         private void CliquerSurPrecedentTransaction(object sender, EventArgs e)
@@ -747,6 +747,7 @@ namespace miniProjet2017
             }
             new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
                 WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
+            dataGridView1.DataSource = ds.Tables["_Beneficiaires"];
         }
 
         private void CliquerSurSuivantTransaction(object sender, EventArgs e)
@@ -761,6 +762,7 @@ namespace miniProjet2017
             }
             new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
                 WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
+            dataGridView1.DataSource = ds.Tables["_Beneficiaires"];
         }
 
         private void CliquerSurDernierTransaction(object sender, EventArgs e)
@@ -775,6 +777,7 @@ namespace miniProjet2017
             }
             new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
                 WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
+            dataGridView1.DataSource = ds.Tables["_Beneficiaires"];
         }
 
         private void CliquerSurPremierPersonne(object sender, EventArgs e)

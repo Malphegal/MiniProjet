@@ -140,7 +140,7 @@ namespace miniProjet2017
                                                             ? calTransac.SelectionStart.Month.ToString()
                                                             : "0" + calTransac.SelectionStart.Month.ToString()) + '/' + calTransac.SelectionStart.Year + "#, '"
                                                             + txtDescTran.Text + "', "
-                                                            + FormatDuMontant(txtMontant.Text).Replace(',', '.') + ", "
+                                                            + txtMontant.Text.Replace(',', '.') + ", "
                                                             //+ (chkRecette.Checked ? "True" : "False") + ", "
                                                             + (chkRecette.Checked ? "False" : "True") + ", "
                                                             + (chkPerçu.Checked ? "True" : "False") + ", "
@@ -155,8 +155,9 @@ namespace miniProjet2017
                     foreach (DataRow row in ds.Tables["_PosteRevenu"].Rows)
                         valeurRevenu += Convert.ToDouble(row[1]);
 
-                    if (double.Parse(txtMontant.Text) > (valeurRevenu * (frmOption.pourcentageSMS / (double)100)))
-                        EnvoyerUnSms();
+                    if (valeurRevenu != 0)
+                        if (double.Parse(txtMontant.Text) > (valeurRevenu * (frmOption.pourcentageSMS / (double)100)))
+                            EnvoyerUnSms();
 
                     MessageBox.Show("Transaction ajoutée !");
                     frmMain.con.Close();
@@ -282,7 +283,7 @@ namespace miniProjet2017
             var message = MessageResource.Create(
                 to,
                 from: new PhoneNumber("+33644607049"),
-                body: "Une transaction supérieur à " + frmOption.pourcentageSMS + "% du revenu total a été effectuée !\n-> " + txtDescTran.Text + "\n-> " + txtMontant.Text + "€");
+                body: "Une transaction supérieur à " + frmOption.pourcentageSMS + "% du revenu total a été effectuée !\n-> " + txtDescTran.Text + "\n-> " + txtMontant.Text + " euros");
 
             Console.WriteLine(message.Sid);
         }

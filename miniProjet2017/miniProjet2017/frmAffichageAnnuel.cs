@@ -32,6 +32,9 @@ namespace miniProjet2017
             rempliDataTable(reqRevenu, Tablerevenu);
             rempliDataTable(reqPeriodique, Tableperiodique);
 
+            MessageBox.Show(Tablerevenu.Rows.Count.ToString());
+            MessageBox.Show(Tableperiodique.Rows.Count.ToString());
+
             DataTable table = new DataTable();
             // creer les colonnes de la datatable
             table.Columns.Add("Poste", typeof(string));
