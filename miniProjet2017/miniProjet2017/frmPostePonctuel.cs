@@ -110,7 +110,6 @@ namespace miniProjet2017
                     pnl.Controls.Add(lbl);
                     pnl.Controls.Add(dtPick);
                     pnl.Controls.Add(txt2);
-                    MessageBox.Show(lbl.Top.ToString());
                     //On incrémente les valeurs
                     topElem += 30;
                     m++;
@@ -153,13 +152,18 @@ namespace miniProjet2017
 
             if (txtIntitule.Text.Length > 30 || txtIntitule.Text == "")
             {
-                errorProvider1.SetError(txtIntitule, "La decription doit être non vide, et ne doit pas dépasser 30 caractères !");
+                errorProvider1.SetError(txtIntitule, "L'intitulé doit être non vide, et ne doit pas dépasser 30 caractères !");
                 toutEstOK = false;
             }
             else
                 errorProvider1.SetError(txtIntitule, "");
 
             if (txtNbPreleve.Text.Length == 0)
+            {
+                errorProvider1.SetError(txtNbPreleve, "Il doit y avoir au moins 2 échéances !");
+                toutEstOK = false;
+            }
+            else if (Convert.ToInt32(txtNbPreleve.Text) < 2)
             {
                 errorProvider1.SetError(txtNbPreleve, "Il doit y avoir au moins 2 échéances !");
                 toutEstOK = false;
@@ -182,7 +186,10 @@ namespace miniProjet2017
 
             if (toutEstOK)
             {
-                if (DialogResult.OK == MessageBox.Show("AJOUTER ? • [TODO]", "Ajout d'un poste ponctuel", MessageBoxButtons.OKCancel))
+                if (DialogResult.OK == MessageBox.Show("Ajout du poste :\n\n • " + txtIntitule.Text
+                    + " €\n\n • Description : " + txtDescri.Text
+                    + "\n\n • Elle concerne " + ancienNbEcheance + " échéance" + (ancienNbEcheance > 1 ? "s." : ".")
+                    + "\n\n     Voulez-vous ajouter ce poste ?", "Ajout d'un poste", MessageBoxButtons.OKCancel))
                 {
                     frmMain.con.Open();
 
@@ -243,15 +250,11 @@ namespace miniProjet2017
         {
             (sender as PictureBox).Image = flecheRetour;
         }
-
+        
+        /* Saisie contrôlé du montant */
         private void EntrerMontant(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
-            if ((sender as TextBox).Text == "" || double.Parse((sender as TextBox).Text) < 0.01D)
-            {
-                errorProvider1.SetError((sender as TextBox), "Il faut indiquer un montant non nul (ou inférieur à 1 centime) pour cette transaction !");
-            }
-            else errorProvider1.SetError((sender as TextBox), "");
             
             if (char.IsDigit(e.KeyChar) || e.KeyChar == 8)
                 e.Handled = false;

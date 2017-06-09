@@ -69,7 +69,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(26, 191);
+            this.label3.Location = new System.Drawing.Point(26, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 13);
             this.label3.TabIndex = 6;
@@ -84,7 +84,7 @@
             // 
             // txtNbPreleve
             // 
-            this.txtNbPreleve.Location = new System.Drawing.Point(175, 188);
+            this.txtNbPreleve.Location = new System.Drawing.Point(175, 182);
             this.txtNbPreleve.Name = "txtNbPreleve";
             this.txtNbPreleve.Size = new System.Drawing.Size(43, 20);
             this.txtNbPreleve.TabIndex = 2;

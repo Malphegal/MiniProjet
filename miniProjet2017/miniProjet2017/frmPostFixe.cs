@@ -23,6 +23,7 @@ namespace miniProjet2017
         private void DemarrageDeFrmPostFixe(object sender, EventArgs e)
         {
             flecheRetour = picQuitter.Image;
+
                 // Position de errorProvider
 
             errorProvider1.SetIconPadding(txtJour, 25);
