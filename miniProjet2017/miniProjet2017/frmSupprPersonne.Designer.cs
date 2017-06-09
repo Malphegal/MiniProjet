@@ -33,6 +33,8 @@
             this.lblTitre = new System.Windows.Forms.Label();
             this.pnlPersonne = new System.Windows.Forms.Panel();
             this.picBordure = new System.Windows.Forms.PictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pnlPersonne.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +47,7 @@
             this.btnQuitter.FlatAppearance.BorderSize = 0;
             this.btnQuitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitter.Location = new System.Drawing.Point(353, 265);
+            this.btnQuitter.Location = new System.Drawing.Point(397, 255);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(46, 46);
             this.btnQuitter.TabIndex = 11;
@@ -61,7 +63,7 @@
             this.btnValider.FlatAppearance.BorderSize = 0;
             this.btnValider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnValider.Location = new System.Drawing.Point(301, 265);
+            this.btnValider.Location = new System.Drawing.Point(331, 255);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(46, 46);
             this.btnValider.TabIndex = 10;
@@ -74,7 +76,7 @@
             this.lblTitre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTitre.Location = new System.Drawing.Point(27, 25);
+            this.lblTitre.Location = new System.Drawing.Point(61, 17);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(372, 33);
             this.lblTitre.TabIndex = 9;
@@ -83,28 +85,42 @@
             // pnlPersonne
             // 
             this.pnlPersonne.AutoScroll = true;
-            this.pnlPersonne.Location = new System.Drawing.Point(27, 61);
+            this.pnlPersonne.Controls.Add(this.checkBox1);
+            this.pnlPersonne.Location = new System.Drawing.Point(27, 54);
             this.pnlPersonne.Name = "pnlPersonne";
-            this.pnlPersonne.Size = new System.Drawing.Size(372, 198);
+            this.pnlPersonne.Size = new System.Drawing.Size(437, 198);
             this.pnlPersonne.TabIndex = 8;
             // 
             // picBordure
             // 
             this.picBordure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.picBordure.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.picBordure.Location = new System.Drawing.Point(0, 0);
             this.picBordure.Name = "picBordure";
-            this.picBordure.Size = new System.Drawing.Size(425, 335);
+            this.picBordure.Size = new System.Drawing.Size(490, 320);
             this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBordure.TabIndex = 12;
             this.picBordure.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(304, 88);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 22);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "• Tout cocher";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // frmSupprPersonne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
-            this.ClientSize = new System.Drawing.Size(425, 335);
+            this.ClientSize = new System.Drawing.Size(490, 320);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.btnValider);
@@ -115,6 +131,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmSupprPersonne";
             this.Load += new System.EventHandler(this.ChangementDuFormulaire);
+            this.pnlPersonne.ResumeLayout(false);
+            this.pnlPersonne.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,5 +146,6 @@
         private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.Panel pnlPersonne;
         private System.Windows.Forms.PictureBox picBordure;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

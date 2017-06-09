@@ -26,7 +26,7 @@ namespace miniProjet2017
         /* Initialise les valeurs de départ */
         private void ChargementDeFrmSupprimerTransaction(object sender, EventArgs e)
         {
-            //lblTitre.Font = new Font(frmMain.fonts.Families[0], lblTitre.Font.Size);
+            flecheRetour = picQuitter.Image;
             picQuitter.Parent = picBordure;
 
                 // Création de la table locale
@@ -98,6 +98,21 @@ namespace miniProjet2017
                     Close();
                 }
             }
+        }
+        //Atribution de valeurs static pour les hovers
+
+        static Image flecheRetour_clair = new Bitmap("..\\..\\Resources\\flecheRetour_clair.png");
+        static Image flecheRetour;
+        /* Souris sur picQuitter */
+        private void SourisSurPicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour_clair;
+        }
+
+        /* Souris sors de picQuitter */
+        private void SourisSortDePicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour;
         }
     }
 }

@@ -30,7 +30,11 @@ namespace miniProjet2017
         /* Création de la table Transaction en local */
         private void LancementDuFormulaire(object sender, EventArgs e)
         {
-                                    // Remplir la table locale
+            // Initialisation des valeurs locales
+
+            flecheRetour = picQuitter.Image;
+
+            // Remplir la table locale
 
             frmMain.con.Open();
             da = new OleDbDataAdapter(new CMD("SELECT * FROM [Transaction]", frmMain.con));
@@ -290,6 +294,22 @@ namespace miniProjet2017
         private void btnAide_Click(object sender, EventArgs e)
         {
             new Classes.Aide().AideTransac(this);
+        }
+
+        //Atribution de valeurs static pour les hovers
+
+        static Image flecheRetour_clair = new Bitmap("..\\..\\Resources\\flecheRetour_clair.png");
+        static Image flecheRetour;
+        /* Souris sur picQuitter */
+        private void SourisSurPicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour_clair;
+        }
+
+        /* Souris sors de picQuitter */
+        private void SourisSortDePicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour;
         }
     }
 }
