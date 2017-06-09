@@ -138,6 +138,7 @@
             this.btnGrosDataGridView.TabIndex = 9;
             this.btnGrosDataGridView.Text = "Récapitulatif annuel";
             this.btnGrosDataGridView.UseVisualStyleBackColor = false;
+            this.btnGrosDataGridView.Click += new System.EventHandler(this.btnGrosDataGridView_Click);
             // 
             // label1
             // 

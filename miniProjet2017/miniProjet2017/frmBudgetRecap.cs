@@ -219,5 +219,10 @@ namespace miniProjet2017
         {
             (sender as PictureBox).Image = flecheRetour;
         }
+
+        private void btnGrosDataGridView_Click(object sender, EventArgs e)
+        {
+            new frmGeant().ShowDialog();
+        }
     }
 }

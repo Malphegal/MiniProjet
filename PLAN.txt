@@ -48,10 +48,7 @@ troubleshooting :
 	
 	• Load font -> ralenti toutes l'appli
 		-> A supprimer du code
-	
-	• frmAjouterTransac - prix > 999 : crash
-		-> DONE -> CHECK ModiTransac
-	
+		
 	• ALL - ajouter le déplacement avec la souris sur chaque formulaire
 		-> frmMain
 			-> DONE
