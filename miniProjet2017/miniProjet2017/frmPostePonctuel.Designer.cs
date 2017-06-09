@@ -39,7 +39,7 @@
             this.picQuitter = new System.Windows.Forms.PictureBox();
             this.picBordure = new System.Windows.Forms.PictureBox();
             this.lblTitre = new System.Windows.Forms.Label();
-            this.cboTypePoste = new System.Windows.Forms.ComboBox();
+            this.txtIntitule = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
@@ -77,14 +77,14 @@
             // 
             // txtDescri
             // 
-            this.txtDescri.Location = new System.Drawing.Point(218, 134);
+            this.txtDescri.Location = new System.Drawing.Point(175, 134);
             this.txtDescri.Name = "txtDescri";
-            this.txtDescri.Size = new System.Drawing.Size(100, 20);
+            this.txtDescri.Size = new System.Drawing.Size(173, 20);
             this.txtDescri.TabIndex = 2;
             // 
             // txtNbPreleve
             // 
-            this.txtNbPreleve.Location = new System.Drawing.Point(218, 188);
+            this.txtNbPreleve.Location = new System.Drawing.Point(175, 188);
             this.txtNbPreleve.Name = "txtNbPreleve";
             this.txtNbPreleve.Size = new System.Drawing.Size(43, 20);
             this.txtNbPreleve.TabIndex = 3;
@@ -146,13 +146,12 @@
             this.lblTitre.TabIndex = 70;
             this.lblTitre.Text = "Poste Ponctuel";
             // 
-            // cboTypePoste
+            // txtIntitule
             // 
-            this.cboTypePoste.FormattingEnabled = true;
-            this.cboTypePoste.Location = new System.Drawing.Point(218, 83);
-            this.cboTypePoste.Name = "cboTypePoste";
-            this.cboTypePoste.Size = new System.Drawing.Size(121, 21);
-            this.cboTypePoste.TabIndex = 71;
+            this.txtIntitule.Location = new System.Drawing.Point(175, 83);
+            this.txtIntitule.Name = "txtIntitule";
+            this.txtIntitule.Size = new System.Drawing.Size(173, 20);
+            this.txtIntitule.TabIndex = 71;
             // 
             // frmPostePonctuel
             // 
@@ -160,7 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(490, 460);
-            this.Controls.Add(this.cboTypePoste);
+            this.Controls.Add(this.txtIntitule);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.btnValider);
@@ -196,6 +195,6 @@
         private System.Windows.Forms.PictureBox picQuitter;
         private System.Windows.Forms.PictureBox picBordure;
         private System.Windows.Forms.Label lblTitre;
-        private System.Windows.Forms.ComboBox cboTypePoste;
+        private System.Windows.Forms.TextBox txtIntitule;
     }
 }

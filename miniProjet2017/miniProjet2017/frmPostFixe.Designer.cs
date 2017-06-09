@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblPoste = new System.Windows.Forms.Label();
-            this.cboPoste = new System.Windows.Forms.ComboBox();
             this.btnAutre = new System.Windows.Forms.Button();
             this.txtJour = new System.Windows.Forms.TextBox();
             this.lblPeriodicite = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.picQuitter = new System.Windows.Forms.PictureBox();
             this.picBordure = new System.Windows.Forms.PictureBox();
+            this.txtPoste = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
@@ -58,14 +58,6 @@
             this.lblPoste.Size = new System.Drawing.Size(40, 13);
             this.lblPoste.TabIndex = 0;
             this.lblPoste.Text = "Poste :";
-            // 
-            // cboPoste
-            // 
-            this.cboPoste.FormattingEnabled = true;
-            this.cboPoste.Location = new System.Drawing.Point(129, 48);
-            this.cboPoste.Name = "cboPoste";
-            this.cboPoste.Size = new System.Drawing.Size(195, 21);
-            this.cboPoste.TabIndex = 0;
             // 
             // btnAutre
             // 
@@ -190,12 +182,20 @@
             this.picBordure.TabIndex = 56;
             this.picBordure.TabStop = false;
             // 
+            // txtPoste
+            // 
+            this.txtPoste.Location = new System.Drawing.Point(129, 48);
+            this.txtPoste.Name = "txtPoste";
+            this.txtPoste.Size = new System.Drawing.Size(195, 20);
+            this.txtPoste.TabIndex = 57;
+            // 
             // frmPostFixe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(466, 375);
+            this.Controls.Add(this.txtPoste);
             this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.lblEuro);
             this.Controls.Add(this.lblMois);
@@ -207,7 +207,6 @@
             this.Controls.Add(this.lblPeriodicite);
             this.Controls.Add(this.txtJour);
             this.Controls.Add(this.btnAutre);
-            this.Controls.Add(this.cboPoste);
             this.Controls.Add(this.lblPoste);
             this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -228,7 +227,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblPoste;
-        private System.Windows.Forms.ComboBox cboPoste;
         private System.Windows.Forms.Button btnAutre;
         private System.Windows.Forms.TextBox txtJour;
         private System.Windows.Forms.Label lblPeriodicite;
@@ -242,5 +240,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox picQuitter;
         private System.Windows.Forms.PictureBox picBordure;
+        private System.Windows.Forms.TextBox txtPoste;
     }
 }

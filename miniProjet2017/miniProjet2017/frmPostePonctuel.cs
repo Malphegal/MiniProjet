@@ -26,14 +26,6 @@ namespace miniProjet2017
         {
             flecheRetour = picQuitter.Image;
 
-                // Remplissage cbo type
-
-            DataSet ds = new DataSet();
-            new OleDbDataAdapter(new CMD(@"SELECT * FROM Poste", frmMain.con)).Fill(ds, "_Poste");
-
-            foreach (DataRow row in ds.Tables["_Poste"].Rows)
-                cboTypePoste.Items.Add(row[1]);
-
                 // Création du panel
                 
             pnl = new Panel();
@@ -156,6 +148,14 @@ namespace miniProjet2017
             else
                 errorProvider1.SetError(txtDescri, "");
 
+            if (txtIntitule.Text.Length > 30 || txtIntitule.Text == "")
+            {
+                errorProvider1.SetError(txtIntitule, "La decription doit être non vide, et ne doit pas dépasser 30 caractères !");
+                toutEstOK = false;
+            }
+            else
+                errorProvider1.SetError(txtIntitule, "");
+
             if (txtNbPreleve.Text.Length == 0)
             {
                 errorProvider1.SetError(txtNbPreleve, "Il doit y avoir au moins 2 échéances !");
@@ -172,8 +172,17 @@ namespace miniProjet2017
                 {
                     frmMain.con.Open();
 
+                    int idMax = -1;
+                    idMax = Convert.ToInt32(new CMD(@"SELECT IIF(max(codePoste) IS NULL, 1, max(codePoste) + 1)
+                                                          FROM Poste", frmMain.con).ExecuteScalar());
+
+                    new CMD(@"INSERT INTO Poste VALUES ("
+                    + idMax + ", '"
+                    + txtDescri.Text + "')", frmMain.con).ExecuteNonQuery();
+
                     new CMD(@"INSERT INTO PostePonctuel VALUES ("
-                    + (cboTypePoste.SelectedIndex + 1) + ", '"
+                    //+ (cboTypePoste.SelectedIndex + 1) + ", '"
+                    + idMax + ", '"
                     + txtDescri.Text + "')", frmMain.con).ExecuteNonQuery();
 
                     float montantActuel;
@@ -182,18 +191,14 @@ namespace miniProjet2017
                     {
                         montantActuel = -1;
                         foreach (TextBox txt in pnl.Controls.OfType<TextBox>())
-                        {
-                            MessageBox.Show(txt.Tag + "\n" + dtp.Tag);
                             if (txt.Tag.ToString() == dtp.Tag.ToString())
                             {
                                 montantActuel = float.Parse(txt.Text.Replace('.', ','));
-                                MessageBox.Show(montantActuel.ToString());
                                 break;
                             }
-                        }
-
+                        
                         new CMD(@"INSERT INTO Echeances VALUES ("
-                        + (cboTypePoste.SelectedIndex + 1) + ", "
+                        + idMax + ", "
                         + "#" + (dtp.Value.Day > 9
                         ? dtp.Value.Day.ToString()
                         : "0" + dtp.Value.Day.ToString()) + '/' + (dtp.Value.Month > 9
@@ -201,6 +206,8 @@ namespace miniProjet2017
                         : "0" + dtp.Value.Month.ToString()) + '/' + dtp.Value.Year + "#, "
                         + montantActuel.ToString().Replace(',', '.') + ")", frmMain.con).ExecuteNonQuery();
                     }
+
+                    MessageBox.Show("Ce poste a été ajouté dans la base de donnée !");
 
                     frmMain.con.Close();
                 }

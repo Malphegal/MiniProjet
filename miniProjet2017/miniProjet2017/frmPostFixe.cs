@@ -33,13 +33,9 @@ namespace miniProjet2017
                 // Création de la base de donnée
 
             DataSet ds = new DataSet();
-            new OleDbDataAdapter(@"SELECT * FROM Poste", frmMain.con).Fill(ds, "_Poste");
             new OleDbDataAdapter(@"SELECT * FROM Periodicite", frmMain.con).Fill(ds, "_Periodicite");
 
-                // Remplissage de la cboPoste
-
-            foreach (DataRow row in ds.Tables["_Poste"].Rows)
-                cboPoste.Items.Add(row[1]);
+                // Remplissage de la cboPeriodicite
 
             foreach (DataRow row in ds.Tables["_Periodicite"].Rows)
                 cboPeriodicite.Items.Add(row[1]);
@@ -49,13 +45,6 @@ namespace miniProjet2017
             else
             {
                 MessageBox.Show("Il n'y a pas de periodicité dans la base de donnée !\nFermuture du formulaire.");
-                Close();
-            }
-            if (ds.Tables["_Poste"].Rows.Count > 0)
-                cboPoste.SelectedIndex = 0;
-            else
-            {
-                MessageBox.Show("Il n'y a pas de type de poste dans la base de donnée !\nFermuture du formulaire.");
                 Close();
             }
         }
@@ -98,12 +87,12 @@ namespace miniProjet2017
 
                 // Vérification au cas par cas
 
-            if (cboPoste.SelectedIndex == -1)
+            if (txtPoste.Text == "")
             {
-                errorProvider1.SetError(cboPoste, "Il faut choisir un type de poste !");
+                errorProvider1.SetError(txtPoste, "Il faut choisir un libellé de poste !");
                 toutEstOK = false;
             }
-            else errorProvider1.SetError(cboPoste, "");
+            else errorProvider1.SetError(txtPoste, "");
 
             if (cboPeriodicite.SelectedIndex == -1)
             {
@@ -124,7 +113,7 @@ namespace miniProjet2017
                 errorProvider1.SetError(txtJour, "Il faut indiquer un jour du mois/de la semaine pour ce poste !");
                 toutEstOK = false;
             }
-            else errorProvider1.SetError(txtMontant, "");
+            else errorProvider1.SetError(txtJour, "");
 
                 // Si oui, alors ajouter le poste
 
@@ -132,7 +121,7 @@ namespace miniProjet2017
             {
                 if (txtMontant.Text[txtMontant.Text.Length - 1] == ',')
                     txtMontant.Text.Substring(0, txtMontant.Text.Length - 1);
-                if (DialogResult.OK == MessageBox.Show("Ajout du poste :\n\n • " + cboPoste.SelectedItem
+                if (DialogResult.OK == MessageBox.Show("Ajout du poste :\n\n • " + txtPoste.Text
                     + "\n\n • " + cboPeriodicite.SelectedItem
                     + " le " + txtJour.Text + "\n\n • Montant : " + txtMontant.Text
                     + "€\n\n     Voulez-vous ajouter ce poste ?", "Ajout d'un poste", MessageBoxButtons.OKCancel))
@@ -141,12 +130,17 @@ namespace miniProjet2017
 
                         // Ajout dans la base de donnée
 
+                    int idMax = Convert.ToInt32(new CMD(@"SELECT IIF(max(codePoste) IS NULL, 1, max(codePoste) + 1) FROM Poste", frmMain.con).ExecuteScalar());
+
+                    new CMD(@"INSERT INTO Poste VALUES ("
+                        + idMax + ", '"
+                        + txtPoste.Text + "')", frmMain.con).ExecuteNonQuery();
+
                     new CMD(@"INSERT INTO PostePeriodique VALUES ("
-                        //+ (cboPoste.SelectedIndex + 1) + ", "
-                        + new CMD(@"SELECT IIF(max(codeTransaction) IS NULL, 1, max(codeTransaction) + 1) FROM", frmMain.con).ExecuteScalar()
+                        + idMax + ", "
                         + txtMontant.Text.Replace(',', '.') + ", "
-                        + (cboPeriodicite.SelectedIndex + 1) + ", '"
-                        + txtJour.Text + "')", frmMain.con).ExecuteNonQuery();
+                        + (cboPeriodicite.SelectedIndex + 1) + ", "
+                        + txtJour.Text + ")", frmMain.con).ExecuteNonQuery();
 
                     frmMain.con.Close();
 
