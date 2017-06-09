@@ -416,7 +416,7 @@ namespace miniProjet2017
 
                 // On Affiche la liste des transaction par défaut, dès le début
 
-            btnListerTransaction.PerformClick();
+            CliquerSurLiaisonTransaction(sender, e);
         }
 
         /* Initialise les valeurs par défaut du formulaire des options */
@@ -567,7 +567,6 @@ namespace miniProjet2017
 
             estDansPersonne = false;
 
-
                 // Changer le titre de la fenêtre, et changer le tab (a suppr ? si y'a plus de titre ?)
 
             tabControl1.SelectedTab = tabTransaction;
@@ -647,6 +646,9 @@ namespace miniProjet2017
                 lblType.Text = "";
                 lblEnregistrement.Text = "Il n'y a pas de transaction !";
             }
+
+            if (premierTransaction)
+                btnLL.PerformClick();
         }
 
         /* Lance la liaison de donnée vers les personnes*/

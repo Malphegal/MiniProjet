@@ -21,6 +21,8 @@ namespace miniProjet2017
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            picQuitter.Parent = picBordure;
+
             CMD cmd = new CMD();
 
             DataTable Tablerevenu = new DataTable();
@@ -132,6 +134,12 @@ namespace miniProjet2017
         {
             OleDbDataAdapter da = new OleDbDataAdapter(requete, frmMain.con);
             da.Fill(dt);
+        }
+
+        /* Ferme le frmAffichageAnnuel */
+        private void QuitterFrmAffichageAnnuel(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
