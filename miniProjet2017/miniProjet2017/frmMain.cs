@@ -610,10 +610,6 @@ namespace miniProjet2017
             btnR.Enabled = true;
             btnRR.Enabled = true;
 
-
-
-
-
             if (ds.Tables["_Transaction"].Rows.Count != 0)
             {
                 bs.DataSource = ds.Tables["_Transaction"];
@@ -632,11 +628,14 @@ namespace miniProjet2017
                 lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[0][6]];
                 lblEnregistrement.Text = "Enregistrement " + 1 + " / " + bs.Count;
 
-                
-                new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
-                WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
-                dataGridView1.DataSource = ds.Tables["_Beneficiaires"];
 
+                //if (ds.Tables["_Beneficiaires"] != null)
+                //{
+                //    ds.Tables["_Beneficiaires"].Clear();
+                //}
+                //    new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
+                //WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
+                //dataGridView1.DataSource = ds.Tables["_Beneficiaires"];
 
                 bs.MoveFirst();
             }
@@ -727,6 +726,13 @@ namespace miniProjet2017
             lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[0][6]];
             lblMontant.Text += !lblMontant.Text.Contains('€') ? " €" : "";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
+            if (ds.Tables["_Beneficiaires"] != null)
+            {
+                ds.Tables["_Beneficiaires"].Clear();
+            }
+            new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
+                WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
+
         }
 
         private void CliquerSurPrecedentTransaction(object sender, EventArgs e)
@@ -735,6 +741,12 @@ namespace miniProjet2017
             lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
             lblMontant.Text += " €";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
+            if (ds.Tables["_Beneficiaires"] != null)
+            {
+                ds.Tables["_Beneficiaires"].Clear();
+            }
+            new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
+                WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
         }
 
         private void CliquerSurSuivantTransaction(object sender, EventArgs e)
@@ -743,6 +755,12 @@ namespace miniProjet2017
             lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
             lblMontant.Text += " €";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
+            if (ds.Tables["_Beneficiaires"] != null)
+            {
+                ds.Tables["_Beneficiaires"].Clear();
+            }
+            new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
+                WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
         }
 
         private void CliquerSurDernierTransaction(object sender, EventArgs e)
@@ -751,6 +769,12 @@ namespace miniProjet2017
             lblType.Text = typeTransaction[(int)ds.Tables["_Transaction"].Rows[bs.Position][6]];
             lblMontant.Text += !lblMontant.Text.Contains('€') ? " €" : "";
             lblEnregistrement.Text = "Enregistrement " + (bs.Position + 1) + " / " + bs.Count;
+            if (ds.Tables["_Beneficiaires"] != null)
+            {
+                ds.Tables["_Beneficiaires"].Clear();
+            }
+            new OleDbDataAdapter(new CMD(@"SELECT p.codePersonne, p.nomPersonne, p.pnPersonne FROM Personne p, Beneficiaires b
+                WHERE b.codePersonne = p.codePersonne AND b.codeTransaction = " + lblId.Text, con)).Fill(ds, "_Beneficiaires");
         }
 
         private void CliquerSurPremierPersonne(object sender, EventArgs e)
