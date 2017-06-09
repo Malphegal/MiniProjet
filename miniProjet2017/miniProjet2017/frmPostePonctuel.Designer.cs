@@ -40,6 +40,7 @@
             this.picBordure = new System.Windows.Forms.PictureBox();
             this.lblTitre = new System.Windows.Forms.Label();
             this.txtIntitule = new System.Windows.Forms.TextBox();
+            this.lblValider = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
@@ -101,7 +102,7 @@
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.FlatAppearance.BorderSize = 0;
             this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnValider.Location = new System.Drawing.Point(400, 146);
+            this.btnValider.Location = new System.Drawing.Point(400, 136);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(50, 50);
             this.btnValider.TabIndex = 7;
@@ -153,12 +154,25 @@
             this.txtIntitule.Size = new System.Drawing.Size(173, 20);
             this.txtIntitule.TabIndex = 0;
             // 
+            // lblValider
+            // 
+            this.lblValider.AutoSize = true;
+            this.lblValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValider.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblValider.Location = new System.Drawing.Point(224, 185);
+            this.lblValider.Name = "lblValider";
+            this.lblValider.Size = new System.Drawing.Size(183, 13);
+            this.lblValider.TabIndex = 71;
+            this.lblValider.Text = "Appuyer sur Entrer pour valider";
+            this.lblValider.Visible = false;
+            // 
             // frmPostePonctuel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(490, 460);
+            this.Controls.Add(this.lblValider);
             this.Controls.Add(this.txtIntitule);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.picQuitter);
@@ -197,5 +211,6 @@
         private System.Windows.Forms.PictureBox picBordure;
         private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.TextBox txtIntitule;
+        private System.Windows.Forms.Label lblValider;
     }
 }

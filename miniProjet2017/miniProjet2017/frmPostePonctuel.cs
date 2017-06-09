@@ -64,6 +64,7 @@ namespace miniProjet2017
             }
             else
                 e.Handled = true;
+            lblValider.Visible = true;
         }
 
         int ancienNbEcheance = 0;

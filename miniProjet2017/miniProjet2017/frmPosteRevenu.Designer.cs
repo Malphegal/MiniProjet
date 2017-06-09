@@ -117,7 +117,7 @@
             this.txtDescri.Location = new System.Drawing.Point(196, 140);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(147, 20);
-            this.txtDescri.TabIndex = 65;
+            this.txtDescri.TabIndex = 1;
             // 
             // txtMontant
             // 
@@ -126,7 +126,7 @@
             this.txtMontant.Location = new System.Drawing.Point(196, 270);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(147, 20);
-            this.txtMontant.TabIndex = 67;
+            this.txtMontant.TabIndex = 3;
             // 
             // txtJourMois
             // 
@@ -135,7 +135,7 @@
             this.txtJourMois.Location = new System.Drawing.Point(196, 327);
             this.txtJourMois.Name = "txtJourMois";
             this.txtJourMois.Size = new System.Drawing.Size(36, 20);
-            this.txtJourMois.TabIndex = 68;
+            this.txtJourMois.TabIndex = 4;
             // 
             // lblTitre
             // 
@@ -156,7 +156,7 @@
             this.cboPersonne.Location = new System.Drawing.Point(196, 198);
             this.cboPersonne.Name = "cboPersonne";
             this.cboPersonne.Size = new System.Drawing.Size(147, 21);
-            this.cboPersonne.TabIndex = 71;
+            this.cboPersonne.TabIndex = 2;
             // 
             // btnAjouter
             // 
@@ -173,7 +173,7 @@
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnAjouter.Size = new System.Drawing.Size(145, 28);
-            this.btnAjouter.TabIndex = 72;
+            this.btnAjouter.TabIndex = 5;
             this.btnAjouter.Text = "Ajouter le revenu";
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.AjouterLePosteRevenu);

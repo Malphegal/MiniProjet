@@ -820,7 +820,7 @@
     <value>True</value>
   </data>
   <data name="lblTitre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 32.25pt, style=Italic</value>
+    <value>Microsoft Sans Serif, 32.25pt</value>
   </data>
   <data name="lblTitre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2073,28 +2073,31 @@
   <data name="&gt;&gt;btnListerPersonne.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 107</value>
+  <data name="btnSuppressionBudget.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="btnSuppressionBudget.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 241</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnSuppressionBudget.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 48</value>
+  </data>
+  <data name="btnSuppressionBudget.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>button1</value>
+  <data name="btnSuppressionBudget.Text" xml:space="preserve">
+    <value>Suppression de budget</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;btnSuppressionBudget.Name" xml:space="preserve">
+    <value>btnSuppressionBudget</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnSuppressionBudget.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnSuppressionBudget.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnSuppressionBudget.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

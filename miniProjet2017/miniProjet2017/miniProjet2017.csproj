@@ -104,11 +104,11 @@
     <Compile Include="frmChoisirPersonne.Designer.cs">
       <DependentUpon>frmChoisirPersonne.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGeant.cs">
+    <Compile Include="frmAffichageAnnuel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGeant.Designer.cs">
-      <DependentUpon>frmGeant.cs</DependentUpon>
+    <Compile Include="frmAffichageAnnuel.Designer.cs">
+      <DependentUpon>frmAffichageAnnuel.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -187,8 +187,8 @@
     <EmbeddedResource Include="frmChoisirPersonne.resx">
       <DependentUpon>frmChoisirPersonne.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGeant.resx">
-      <DependentUpon>frmGeant.cs</DependentUpon>
+    <EmbeddedResource Include="frmAffichageAnnuel.resx">
+      <DependentUpon>frmAffichageAnnuel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.fr.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
