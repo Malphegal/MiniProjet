@@ -24,6 +24,8 @@ namespace miniProjet2017
         /* Création du panel et de son label, zone pour mettre les lignes échéances */
         private void ChargementDuFormulaire(object sender, EventArgs e)
         {
+            flecheRetour = picQuitter.Image;
+
                 // Remplissage cbo type
 
             DataSet ds = new DataSet();

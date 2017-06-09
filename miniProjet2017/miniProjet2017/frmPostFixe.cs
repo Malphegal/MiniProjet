@@ -143,7 +143,7 @@ namespace miniProjet2017
 
                     new CMD(@"INSERT INTO PostePeriodique VALUES ("
                         + (cboPoste.SelectedIndex + 1) + ", "
-                        + txtMontant.Text + ", "
+                        + txtMontant.Text.Replace(',', '.') + ", "
                         + (cboPeriodicite.SelectedIndex + 1) + ", '"
                         + txtJour.Text + "')", frmMain.con).ExecuteNonQuery();
 

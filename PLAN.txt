@@ -47,6 +47,7 @@ troubleshooting :
 	• ALL - vérif' les scales dans chaque formulaire appelé
 	
 	• Load font -> ralenti toutes l'appli
+		-> A supprimer du code
 	
 	• frmAjouterTransac - prix > 999 : crash
 		-> DONE -> CHECK ModiTransac
@@ -54,21 +55,11 @@ troubleshooting :
 	• ALL - ajouter le déplacement avec la souris sur chaque formulaire
 		-> frmMain
 			-> DONE
-			
-	• ALL - pas de bouton Minimize !!
 	
 	• ALL - problème de scall avec une valeur autre que 2/3
 	
-	• frmAjouterPersonne -> Doit il exister ?
-		-> Si oui, doit on ajouter frmSupprimerPersonne ?
-		
-	• frmAjoutTransac - Si aucune personne -> tout le monde sera impliqué ?
-	
-	• TROUBLESHOOTING -> PICSLOW-> WUT ?
-	
-	• Hover -> Très lent
-	
 	• Resources à nettoyer
+		-> A faire après l'oral
 	
 	• frmMain -> HOVER_CONTEXT pnlHaut -> Souris par dessus
 		-> DONE
@@ -85,12 +76,9 @@ troubleshooting :
 	
 	• frmChoixPersonne -> Ajouter bouton tout cocher/décocher
 	
-	• ALL - Ajouter les hover partout
-	
 	• frmMain -> Si VerticalScrollBar du pngGauche -> Alors picMinion ne se déplace pas correctement (on voit la supercherie du calque !)
 	
-	• ALL -> Ajouter Cursor Hand sur les cliquable !
-		-> frmMain -> DONE
+	• Try / Catch
 	
 Budget prévisionnel :
 Double déroulé sur le main (Transactions // ADD ) + les boutons randoms (Ajouter personne + modifer/supprimer + récapAnnée)
