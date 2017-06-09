@@ -37,9 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescri = new System.Windows.Forms.TextBox();
             this.txtMontant = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtJourMois = new System.Windows.Forms.TextBox();
             this.lblTitre = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboPersonne = new System.Windows.Forms.ComboBox();
             this.btnAjouter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
@@ -128,7 +128,7 @@
             this.txtDescri.ForeColor = System.Drawing.SystemColors.Control;
             this.txtDescri.Location = new System.Drawing.Point(142, 78);
             this.txtDescri.Name = "txtDescri";
-            this.txtDescri.Size = new System.Drawing.Size(100, 20);
+            this.txtDescri.Size = new System.Drawing.Size(147, 20);
             this.txtDescri.TabIndex = 65;
             // 
             // txtMontant
@@ -137,17 +137,17 @@
             this.txtMontant.ForeColor = System.Drawing.SystemColors.Control;
             this.txtMontant.Location = new System.Drawing.Point(142, 208);
             this.txtMontant.Name = "txtMontant";
-            this.txtMontant.Size = new System.Drawing.Size(100, 20);
+            this.txtMontant.Size = new System.Drawing.Size(147, 20);
             this.txtMontant.TabIndex = 67;
             // 
-            // textBox1
+            // txtJourMois
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(142, 265);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(36, 20);
-            this.textBox1.TabIndex = 68;
+            this.txtJourMois.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtJourMois.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtJourMois.Location = new System.Drawing.Point(142, 265);
+            this.txtJourMois.Name = "txtJourMois";
+            this.txtJourMois.Size = new System.Drawing.Size(36, 20);
+            this.txtJourMois.TabIndex = 68;
             // 
             // lblTitre
             // 
@@ -160,15 +160,15 @@
             this.lblTitre.TabIndex = 69;
             this.lblTitre.Text = "Poste Revenu";
             // 
-            // comboBox1
+            // cboPersonne
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 21);
-            this.comboBox1.TabIndex = 71;
+            this.cboPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.cboPersonne.ForeColor = System.Drawing.SystemColors.Control;
+            this.cboPersonne.FormattingEnabled = true;
+            this.cboPersonne.Location = new System.Drawing.Point(142, 136);
+            this.cboPersonne.Name = "cboPersonne";
+            this.cboPersonne.Size = new System.Drawing.Size(147, 21);
+            this.cboPersonne.TabIndex = 71;
             // 
             // btnAjouter
             // 
@@ -197,9 +197,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(466, 448);
             this.Controls.Add(this.btnAjouter);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboPersonne);
             this.Controls.Add(this.lblTitre);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtJourMois);
             this.Controls.Add(this.txtMontant);
             this.Controls.Add(this.txtDescri);
             this.Controls.Add(this.label1);
@@ -214,6 +214,7 @@
             this.MinimumSize = new System.Drawing.Size(466, 448);
             this.Name = "frmPosteRevenu";
             this.Text = "Poste Revenu";
+            this.Load += new System.EventHandler(this.ChargementDeFrmPosteRevenu);
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
             this.ResumeLayout(false);
@@ -232,9 +233,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescri;
         private System.Windows.Forms.TextBox txtMontant;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtJourMois;
         private System.Windows.Forms.Label lblTitre;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboPersonne;
         private System.Windows.Forms.Button btnAjouter;
     }
 }
