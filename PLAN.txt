@@ -29,14 +29,6 @@ troubleshooting :
 			-> DONE
 		-> Bloquer WIN + UP
 		
-	• TabIndex pas cohérent
-		-> frmMain
-			-> DONE
-		-> frmAjouterTransac
-			-> A FAIRE
-		-> les autres
-			-> PAREIL
-		
 	• frmOption - valeurSMS : on ne peut pas mettre 100%
 		-> Changer la fonction de KeyPress du textBox pour le 100
 	
@@ -45,9 +37,6 @@ troubleshooting :
 		-> dataGridView ->
 	
 	• ALL - vérif' les scales dans chaque formulaire appelé
-	
-	• Load font -> ralenti toutes l'appli
-		-> A supprimer du code
 		
 	• ALL - ajouter le déplacement avec la souris sur chaque formulaire
 		-> frmMain
@@ -57,9 +46,6 @@ troubleshooting :
 	
 	• Resources à nettoyer
 		-> A faire après l'oral
-	
-	• frmMain -> HOVER_CONTEXT pnlHaut -> Souris par dessus
-		-> DONE
 	
 	• frmMain -> AutoVertScrollBar -> C'est moche ! trouver une solution ?
 	
