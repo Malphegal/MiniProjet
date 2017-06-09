@@ -107,7 +107,7 @@
             this.btnValider.Location = new System.Drawing.Point(356, 377);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
-            this.btnValider.TabIndex = 5;
+            this.btnValider.TabIndex = 4;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.AjouterLePoste);
@@ -190,7 +190,7 @@
             this.txtPoste.Location = new System.Drawing.Point(190, 154);
             this.txtPoste.Name = "txtPoste";
             this.txtPoste.Size = new System.Drawing.Size(195, 20);
-            this.txtPoste.TabIndex = 57;
+            this.txtPoste.TabIndex = 0;
             // 
             // label1
             // 
