@@ -124,6 +124,8 @@
             // 
             // txtDescri
             // 
+            this.txtDescri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtDescri.ForeColor = System.Drawing.SystemColors.Control;
             this.txtDescri.Location = new System.Drawing.Point(142, 78);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(100, 20);
@@ -131,6 +133,8 @@
             // 
             // txtMontant
             // 
+            this.txtMontant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtMontant.ForeColor = System.Drawing.SystemColors.Control;
             this.txtMontant.Location = new System.Drawing.Point(142, 208);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(100, 20);
@@ -138,6 +142,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.textBox1.Location = new System.Drawing.Point(142, 265);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(36, 20);
@@ -156,6 +162,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(142, 136);
             this.comboBox1.Name = "comboBox1";

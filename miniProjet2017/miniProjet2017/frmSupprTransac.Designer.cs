@@ -318,6 +318,8 @@
             this.picQuitter.TabIndex = 4;
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.QuitterFrmSupprTransac);
+            this.picQuitter.MouseEnter += new System.EventHandler(this.SourisSurPicQuitter);
+            this.picQuitter.MouseLeave += new System.EventHandler(this.SourisSortDePicQuitter);
             // 
             // picBordure
             // 
