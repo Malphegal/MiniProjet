@@ -32,20 +32,28 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlGauche = new System.Windows.Forms.Panel();
             this.btnAffichage = new System.Windows.Forms.Button();
+            this.picVertePnlGauche3 = new System.Windows.Forms.PictureBox();
             this.btnBudgetRecap = new System.Windows.Forms.Button();
             this.btnFrm_3 = new System.Windows.Forms.Button();
             this.btnPostePonctuel = new System.Windows.Forms.Button();
             this.btnPostFixe = new System.Windows.Forms.Button();
             this.btnDeroulerBudget = new System.Windows.Forms.Button();
+            this.picVertePnlGauche2 = new System.Windows.Forms.PictureBox();
             this.btnSupprimerPersonne = new System.Windows.Forms.Button();
             this.btnAjouterPersonne = new System.Windows.Forms.Button();
             this.btnDeroulerPersonne = new System.Windows.Forms.Button();
+            this.picVertePnlGauche1 = new System.Windows.Forms.PictureBox();
             this.btnSupprimerTransaction = new System.Windows.Forms.Button();
             this.btnModifierTransaction = new System.Windows.Forms.Button();
             this.btnAjouterTransaction = new System.Windows.Forms.Button();
             this._btnDeroulerTransaction = new System.Windows.Forms.Button();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.picMinion = new System.Windows.Forms.PictureBox();
             this.pnlHaut = new System.Windows.Forms.Panel();
+            this.picReduire = new System.Windows.Forms.PictureBox();
             this.lblTitre = new System.Windows.Forms.Label();
+            this.picQuitter = new System.Windows.Forms.PictureBox();
+            this.picOption = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDefaut = new System.Windows.Forms.TabPage();
@@ -61,8 +69,12 @@
             this.lblType = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.chkPercu = new System.Windows.Forms.CheckBox();
+            this.btnL = new System.Windows.Forms.Button();
+            this.btnLL = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.chkRecette = new System.Windows.Forms.CheckBox();
+            this.btnR = new System.Windows.Forms.Button();
+            this.btnRR = new System.Windows.Forms.Button();
             this.tabPersonne = new System.Windows.Forms.TabPage();
             this.lblIdPersonne = new System.Windows.Forms.Label();
             this._lblIdPersonne = new System.Windows.Forms.Label();
@@ -73,37 +85,25 @@
             this._lblNom = new System.Windows.Forms.Label();
             this.lblPrenom = new System.Windows.Forms.Label();
             this._lblPrenom = new System.Windows.Forms.Label();
-            this.btnListerTransaction = new System.Windows.Forms.Button();
-            this.btnListerPersonne = new System.Windows.Forms.Button();
-            this.btnL = new System.Windows.Forms.Button();
-            this.btnLL = new System.Windows.Forms.Button();
-            this.btnR = new System.Windows.Forms.Button();
-            this.btnRR = new System.Windows.Forms.Button();
             this._btnL = new System.Windows.Forms.Button();
             this._btnLL = new System.Windows.Forms.Button();
             this._btnR = new System.Windows.Forms.Button();
             this._btnRR = new System.Windows.Forms.Button();
-            this.picReduire = new System.Windows.Forms.PictureBox();
-            this.picQuitter = new System.Windows.Forms.PictureBox();
-            this.picOption = new System.Windows.Forms.PictureBox();
-            this.picVertePnlGauche3 = new System.Windows.Forms.PictureBox();
-            this.picVertePnlGauche2 = new System.Windows.Forms.PictureBox();
-            this.picVertePnlGauche1 = new System.Windows.Forms.PictureBox();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.picMinion = new System.Windows.Forms.PictureBox();
+            this.btnListerTransaction = new System.Windows.Forms.Button();
+            this.btnListerPersonne = new System.Windows.Forms.Button();
             this.pnlGauche.SuspendLayout();
-            this.pnlHaut.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabTransaction.SuspendLayout();
-            this.tabPersonne.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picReduire)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picOption)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche1)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinion)).BeginInit();
+            this.pnlHaut.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picReduire)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOption)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabTransaction.SuspendLayout();
+            this.tabPersonne.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlGauche
@@ -143,6 +143,13 @@
             this.btnAffichage.Tag = "";
             this.btnAffichage.UseVisualStyleBackColor = false;
             this.btnAffichage.Click += new System.EventHandler(this.NouveauFrmAffichage);
+            // 
+            // picVertePnlGauche3
+            // 
+            resources.ApplyResources(this.picVertePnlGauche3, "picVertePnlGauche3");
+            this.picVertePnlGauche3.Image = global::miniProjet2017.Properties.Resources.verteSeparateurPanel;
+            this.picVertePnlGauche3.Name = "picVertePnlGauche3";
+            this.picVertePnlGauche3.TabStop = false;
             // 
             // btnBudgetRecap
             // 
@@ -208,6 +215,13 @@
             this.btnDeroulerBudget.UseVisualStyleBackColor = false;
             this.btnDeroulerBudget.Click += new System.EventHandler(this.CliquerSurDeroulerBudget);
             // 
+            // picVertePnlGauche2
+            // 
+            resources.ApplyResources(this.picVertePnlGauche2, "picVertePnlGauche2");
+            this.picVertePnlGauche2.Image = global::miniProjet2017.Properties.Resources.verteSeparateurPanel;
+            this.picVertePnlGauche2.Name = "picVertePnlGauche2";
+            this.picVertePnlGauche2.TabStop = false;
+            // 
             // btnSupprimerPersonne
             // 
             this.btnSupprimerPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
@@ -245,6 +259,13 @@
             this.btnDeroulerPersonne.Tag = "";
             this.btnDeroulerPersonne.UseVisualStyleBackColor = false;
             this.btnDeroulerPersonne.Click += new System.EventHandler(this.CliquerSurDeroulerPersonne);
+            // 
+            // picVertePnlGauche1
+            // 
+            resources.ApplyResources(this.picVertePnlGauche1, "picVertePnlGauche1");
+            this.picVertePnlGauche1.Image = global::miniProjet2017.Properties.Resources.verteSeparateurPanel;
+            this.picVertePnlGauche1.Name = "picVertePnlGauche1";
+            this.picVertePnlGauche1.TabStop = false;
             // 
             // btnSupprimerTransaction
             // 
@@ -297,6 +318,25 @@
             this._btnDeroulerTransaction.UseVisualStyleBackColor = false;
             this._btnDeroulerTransaction.Click += new System.EventHandler(this.CliquerSurDeroulerTransaction);
             // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackgroundImage = global::miniProjet2017.Properties.Resources.bill_rain;
+            resources.ApplyResources(this.pnlLogo, "pnlLogo");
+            this.pnlLogo.Controls.Add(this.picMinion);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
+            this.pnlLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
+            this.pnlLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
+            // 
+            // picMinion
+            // 
+            this.picMinion.BackColor = System.Drawing.Color.Transparent;
+            this.picMinion.Image = global::miniProjet2017.Properties.Resources.Minion;
+            resources.ApplyResources(this.picMinion, "picMinion");
+            this.picMinion.InitialImage = global::miniProjet2017.Properties.Resources.Minion;
+            this.picMinion.Name = "picMinion";
+            this.picMinion.TabStop = false;
+            // 
             // pnlHaut
             // 
             this.pnlHaut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
@@ -310,6 +350,15 @@
             this.pnlHaut.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
             this.pnlHaut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
             // 
+            // picReduire
+            // 
+            this.picReduire.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picReduire.Image = global::miniProjet2017.Properties.Resources.RéduireFenêtre;
+            resources.ApplyResources(this.picReduire, "picReduire");
+            this.picReduire.Name = "picReduire";
+            this.picReduire.TabStop = false;
+            this.picReduire.Click += new System.EventHandler(this.CliquerSurReduire);
+            // 
             // lblTitre
             // 
             resources.ApplyResources(this.lblTitre, "lblTitre");
@@ -318,6 +367,28 @@
             this.lblTitre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
             this.lblTitre.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
             this.lblTitre.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
+            // 
+            // picQuitter
+            // 
+            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picQuitter.Image = global::miniProjet2017.Properties.Resources.croix_blanche;
+            resources.ApplyResources(this.picQuitter, "picQuitter");
+            this.picQuitter.Name = "picQuitter";
+            this.picQuitter.TabStop = false;
+            this.picQuitter.Click += new System.EventHandler(this.QuitterApplication);
+            this.picQuitter.MouseLeave += new System.EventHandler(this._HoverQuitter);
+            this.picQuitter.MouseHover += new System.EventHandler(this.HoverQuitter);
+            // 
+            // picOption
+            // 
+            this.picOption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picOption.Image = global::miniProjet2017.Properties.Resources.engrenage;
+            resources.ApplyResources(this.picOption, "picOption");
+            this.picOption.Name = "picOption";
+            this.picOption.TabStop = false;
+            this.picOption.Click += new System.EventHandler(this.NouveauFrmOption);
+            this.picOption.MouseLeave += new System.EventHandler(this._HoverOption);
+            this.picOption.MouseHover += new System.EventHandler(this.HoverOption);
             // 
             // tabControl1
             // 
@@ -438,6 +509,28 @@
             this.chkPercu.TabStop = false;
             this.chkPercu.UseVisualStyleBackColor = true;
             // 
+            // btnL
+            // 
+            this.btnL.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnL, "btnL");
+            this.btnL.FlatAppearance.BorderSize = 0;
+            this.btnL.Image = global::miniProjet2017.Properties.Resources.flecheGauche;
+            this.btnL.Name = "btnL";
+            this.btnL.TabStop = false;
+            this.btnL.UseVisualStyleBackColor = true;
+            this.btnL.Click += new System.EventHandler(this.CliquerSurPrecedentTransaction);
+            // 
+            // btnLL
+            // 
+            this.btnLL.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnLL, "btnLL");
+            this.btnLL.FlatAppearance.BorderSize = 0;
+            this.btnLL.Image = global::miniProjet2017.Properties.Resources.flecheDebut;
+            this.btnLL.Name = "btnLL";
+            this.btnLL.TabStop = false;
+            this.btnLL.UseVisualStyleBackColor = true;
+            this.btnLL.Click += new System.EventHandler(this.CliquerSurPremierTransaction);
+            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
@@ -453,6 +546,28 @@
             this.chkRecette.Name = "chkRecette";
             this.chkRecette.TabStop = false;
             this.chkRecette.UseVisualStyleBackColor = true;
+            // 
+            // btnR
+            // 
+            this.btnR.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnR, "btnR");
+            this.btnR.FlatAppearance.BorderSize = 0;
+            this.btnR.Image = global::miniProjet2017.Properties.Resources.flecheDroite;
+            this.btnR.Name = "btnR";
+            this.btnR.TabStop = false;
+            this.btnR.UseVisualStyleBackColor = true;
+            this.btnR.Click += new System.EventHandler(this.CliquerSurSuivantTransaction);
+            // 
+            // btnRR
+            // 
+            this.btnRR.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnRR, "btnRR");
+            this.btnRR.FlatAppearance.BorderSize = 0;
+            this.btnRR.Image = global::miniProjet2017.Properties.Resources.flecheFin;
+            this.btnRR.Name = "btnRR";
+            this.btnRR.TabStop = false;
+            this.btnRR.UseVisualStyleBackColor = true;
+            this.btnRR.Click += new System.EventHandler(this.CliquerSurDernierTransaction);
             // 
             // tabPersonne
             // 
@@ -530,72 +645,6 @@
             this._lblPrenom.ForeColor = System.Drawing.SystemColors.Control;
             this._lblPrenom.Name = "_lblPrenom";
             // 
-            // btnListerTransaction
-            // 
-            this.btnListerTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListerTransaction.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnListerTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(103)))), ((int)(((byte)(115)))));
-            resources.ApplyResources(this.btnListerTransaction, "btnListerTransaction");
-            this.btnListerTransaction.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnListerTransaction.Name = "btnListerTransaction";
-            this.btnListerTransaction.UseVisualStyleBackColor = true;
-            this.btnListerTransaction.Click += new System.EventHandler(this.CliquerSurLiaisonTransaction);
-            // 
-            // btnListerPersonne
-            // 
-            this.btnListerPersonne.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListerPersonne.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnListerPersonne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(103)))), ((int)(((byte)(115)))));
-            resources.ApplyResources(this.btnListerPersonne, "btnListerPersonne");
-            this.btnListerPersonne.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnListerPersonne.Name = "btnListerPersonne";
-            this.btnListerPersonne.UseVisualStyleBackColor = true;
-            this.btnListerPersonne.Click += new System.EventHandler(this.CliquerSurLiaisonPersonne);
-            // 
-            // btnL
-            // 
-            this.btnL.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnL, "btnL");
-            this.btnL.FlatAppearance.BorderSize = 0;
-            this.btnL.Image = global::miniProjet2017.Properties.Resources.flecheGauche;
-            this.btnL.Name = "btnL";
-            this.btnL.TabStop = false;
-            this.btnL.UseVisualStyleBackColor = true;
-            this.btnL.Click += new System.EventHandler(this.CliquerSurPrecedentTransaction);
-            // 
-            // btnLL
-            // 
-            this.btnLL.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnLL, "btnLL");
-            this.btnLL.FlatAppearance.BorderSize = 0;
-            this.btnLL.Image = global::miniProjet2017.Properties.Resources.flecheDebut;
-            this.btnLL.Name = "btnLL";
-            this.btnLL.TabStop = false;
-            this.btnLL.UseVisualStyleBackColor = true;
-            this.btnLL.Click += new System.EventHandler(this.CliquerSurPremierTransaction);
-            // 
-            // btnR
-            // 
-            this.btnR.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnR, "btnR");
-            this.btnR.FlatAppearance.BorderSize = 0;
-            this.btnR.Image = global::miniProjet2017.Properties.Resources.flecheDroite;
-            this.btnR.Name = "btnR";
-            this.btnR.TabStop = false;
-            this.btnR.UseVisualStyleBackColor = true;
-            this.btnR.Click += new System.EventHandler(this.CliquerSurSuivantTransaction);
-            // 
-            // btnRR
-            // 
-            this.btnRR.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnRR, "btnRR");
-            this.btnRR.FlatAppearance.BorderSize = 0;
-            this.btnRR.Image = global::miniProjet2017.Properties.Resources.flecheFin;
-            this.btnRR.Name = "btnRR";
-            this.btnRR.TabStop = false;
-            this.btnRR.UseVisualStyleBackColor = true;
-            this.btnRR.Click += new System.EventHandler(this.CliquerSurDernierTransaction);
-            // 
             // _btnL
             // 
             this._btnL.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -640,76 +689,27 @@
             this._btnRR.UseVisualStyleBackColor = true;
             this._btnRR.Click += new System.EventHandler(this.CliquerSurDernierPersonne);
             // 
-            // picReduire
+            // btnListerTransaction
             // 
-            this.picReduire.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picReduire.Image = global::miniProjet2017.Properties.Resources.RéduireFenêtre;
-            resources.ApplyResources(this.picReduire, "picReduire");
-            this.picReduire.Name = "picReduire";
-            this.picReduire.TabStop = false;
-            this.picReduire.Click += new System.EventHandler(this.CliquerSurReduire);
+            this.btnListerTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListerTransaction.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnListerTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(103)))), ((int)(((byte)(115)))));
+            resources.ApplyResources(this.btnListerTransaction, "btnListerTransaction");
+            this.btnListerTransaction.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnListerTransaction.Name = "btnListerTransaction";
+            this.btnListerTransaction.UseVisualStyleBackColor = true;
+            this.btnListerTransaction.Click += new System.EventHandler(this.CliquerSurLiaisonTransaction);
             // 
-            // picQuitter
+            // btnListerPersonne
             // 
-            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picQuitter.Image = global::miniProjet2017.Properties.Resources.croix_blanche;
-            resources.ApplyResources(this.picQuitter, "picQuitter");
-            this.picQuitter.Name = "picQuitter";
-            this.picQuitter.TabStop = false;
-            this.picQuitter.Click += new System.EventHandler(this.QuitterApplication);
-            this.picQuitter.MouseLeave += new System.EventHandler(this._HoverQuitter);
-            this.picQuitter.MouseHover += new System.EventHandler(this.HoverQuitter);
-            // 
-            // picOption
-            // 
-            this.picOption.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picOption.Image = global::miniProjet2017.Properties.Resources.engrenage;
-            resources.ApplyResources(this.picOption, "picOption");
-            this.picOption.Name = "picOption";
-            this.picOption.TabStop = false;
-            this.picOption.Click += new System.EventHandler(this.NouveauFrmOption);
-            this.picOption.MouseLeave += new System.EventHandler(this._HoverOption);
-            this.picOption.MouseHover += new System.EventHandler(this.HoverOption);
-            // 
-            // picVertePnlGauche3
-            // 
-            resources.ApplyResources(this.picVertePnlGauche3, "picVertePnlGauche3");
-            this.picVertePnlGauche3.Image = global::miniProjet2017.Properties.Resources.verteSeparateurPanel;
-            this.picVertePnlGauche3.Name = "picVertePnlGauche3";
-            this.picVertePnlGauche3.TabStop = false;
-            // 
-            // picVertePnlGauche2
-            // 
-            resources.ApplyResources(this.picVertePnlGauche2, "picVertePnlGauche2");
-            this.picVertePnlGauche2.Image = global::miniProjet2017.Properties.Resources.verteSeparateurPanel;
-            this.picVertePnlGauche2.Name = "picVertePnlGauche2";
-            this.picVertePnlGauche2.TabStop = false;
-            // 
-            // picVertePnlGauche1
-            // 
-            resources.ApplyResources(this.picVertePnlGauche1, "picVertePnlGauche1");
-            this.picVertePnlGauche1.Image = global::miniProjet2017.Properties.Resources.verteSeparateurPanel;
-            this.picVertePnlGauche1.Name = "picVertePnlGauche1";
-            this.picVertePnlGauche1.TabStop = false;
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackgroundImage = global::miniProjet2017.Properties.Resources.bill_rain;
-            resources.ApplyResources(this.pnlLogo, "pnlLogo");
-            this.pnlLogo.Controls.Add(this.picMinion);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CliqueSouris);
-            this.pnlLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
-            this.pnlLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
-            // 
-            // picMinion
-            // 
-            this.picMinion.BackColor = System.Drawing.Color.Transparent;
-            this.picMinion.Image = global::miniProjet2017.Properties.Resources.Minion;
-            resources.ApplyResources(this.picMinion, "picMinion");
-            this.picMinion.InitialImage = global::miniProjet2017.Properties.Resources.Minion;
-            this.picMinion.Name = "picMinion";
-            this.picMinion.TabStop = false;
+            this.btnListerPersonne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListerPersonne.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnListerPersonne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(103)))), ((int)(((byte)(115)))));
+            resources.ApplyResources(this.btnListerPersonne, "btnListerPersonne");
+            this.btnListerPersonne.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnListerPersonne.Name = "btnListerPersonne";
+            this.btnListerPersonne.UseVisualStyleBackColor = true;
+            this.btnListerPersonne.Click += new System.EventHandler(this.CliquerSurLiaisonPersonne);
             // 
             // frmMain
             // 
@@ -728,21 +728,21 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeplacementSouris);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LacherCliqueSouris);
             this.pnlGauche.ResumeLayout(false);
-            this.pnlHaut.ResumeLayout(false);
-            this.pnlHaut.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabTransaction.ResumeLayout(false);
-            this.tabTransaction.PerformLayout();
-            this.tabPersonne.ResumeLayout(false);
-            this.tabPersonne.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picReduire)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picOption)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche1)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picMinion)).EndInit();
+            this.pnlHaut.ResumeLayout(false);
+            this.pnlHaut.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picReduire)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOption)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabTransaction.ResumeLayout(false);
+            this.tabTransaction.PerformLayout();
+            this.tabPersonne.ResumeLayout(false);
+            this.tabPersonne.PerformLayout();
             this.ResumeLayout(false);
 
         }

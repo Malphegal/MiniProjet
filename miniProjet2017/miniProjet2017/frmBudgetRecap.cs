@@ -33,8 +33,8 @@ namespace miniProjet2017
                 // Initialisation
 
             picQuitter.Parent = picBordure;
-
-                // Création des tables locales
+            flecheRetour = picQuitter.Image;
+            // Création des tables locales
 
             OleDbCommand cmd = new OleDbCommand();
 
@@ -205,6 +205,19 @@ namespace miniProjet2017
 
 
             //this.dataGridView.Columns("AddToCartButton").Frozen = true;
+        }
+        static Image flecheRetour_clair = new Bitmap("..\\..\\Resources\\flecheRetour_clair.png");
+        static Image flecheRetour;
+        /* Souris sur picQuitter */
+        private void SourisSurPicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour_clair;
+        }
+
+        /* Souris sors de picQuitter */
+        private void SourisSortDePicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour;
         }
     }
 }

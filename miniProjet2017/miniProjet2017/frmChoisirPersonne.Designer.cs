@@ -49,11 +49,11 @@
             // 
             this.lblTitre.AutoSize = true;
             this.lblTitre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F, System.Drawing.FontStyle.Italic);
+            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTitre.Location = new System.Drawing.Point(88, 18);
+            this.lblTitre.Location = new System.Drawing.Point(70, 20);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(316, 36);
+            this.lblTitre.Size = new System.Drawing.Size(350, 35);
             this.lblTitre.TabIndex = 1;
             this.lblTitre.Text = "Choisir les participants";
             // 
