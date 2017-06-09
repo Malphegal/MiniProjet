@@ -142,7 +142,8 @@ namespace miniProjet2017
                         // Ajout dans la base de donnée
 
                     new CMD(@"INSERT INTO PostePeriodique VALUES ("
-                        + (cboPoste.SelectedIndex + 1) + ", "
+                        //+ (cboPoste.SelectedIndex + 1) + ", "
+                        + new CMD(@"SELECT IIF(max(codeTransaction) IS NULL, 1, max(codeTransaction) + 1) FROM", frmMain.con).ExecuteScalar()
                         + txtMontant.Text.Replace(',', '.') + ", "
                         + (cboPeriodicite.SelectedIndex + 1) + ", '"
                         + txtJour.Text + "')", frmMain.con).ExecuteNonQuery();
