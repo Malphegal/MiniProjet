@@ -24,13 +24,12 @@ namespace miniProjet2017
         /* Ferme le frmBudgetRecap */
 
         private void QuitterFrmBudgetRecap(object sender, EventArgs e)
-<<<<<<< HEAD
         {            
-            Close();
-=======
-        {              /* Ferme le frmBudgetRecap */
+            Close();           
+               
         }
 
+        /* Ferme le frmBudgetRecap */
         private void frmSupprPoste_Load(object sender, EventArgs e)
         {
             new OleDbDataAdapter(new CMD(@"SELECT pp.*, p.libPoste FROM PostePeriodique pp, Poste p
@@ -111,7 +110,6 @@ namespace miniProjet2017
             }
             else
                 MessageBox.Show("Aucune modification n'a été effectuée !");
->>>>>>> da9053fcf4adf4ce726c1505ab89bad3b10977a7
         }
     }
 }

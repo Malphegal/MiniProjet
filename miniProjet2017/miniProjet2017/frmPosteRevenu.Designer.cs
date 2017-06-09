@@ -40,7 +40,9 @@
             this.lblTitre = new System.Windows.Forms.Label();
             this.cboPersonne = new System.Windows.Forms.ComboBox();
             this.btnAjouter = new System.Windows.Forms.Button();
+            this.picQuitter = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             this.SuspendLayout();
             // 
             // picBordure
@@ -173,12 +175,25 @@
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.AjouterLePosteRevenu);
             // 
+            // picQuitter
+            // 
+            this.picQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
+            this.picQuitter.Location = new System.Drawing.Point(365, 34);
+            this.picQuitter.Name = "picQuitter";
+            this.picQuitter.Size = new System.Drawing.Size(69, 68);
+            this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picQuitter.TabIndex = 73;
+            this.picQuitter.TabStop = false;
+            // 
             // frmPosteRevenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(466, 448);
+            this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.cboPersonne);
             this.Controls.Add(this.lblTitre);
@@ -199,6 +214,7 @@
             this.Text = "Poste Revenu";
             this.Load += new System.EventHandler(this.ChargementDeFrmPosteRevenu);
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +234,6 @@
         private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.ComboBox cboPersonne;
         private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.PictureBox picQuitter;
     }
 }
