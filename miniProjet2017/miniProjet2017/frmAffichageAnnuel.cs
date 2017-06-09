@@ -12,9 +12,9 @@ using CMD = System.Data.OleDb.OleDbCommand;
 
 namespace miniProjet2017
 {
-    public partial class frmGeant : Form
+    public partial class frmAffichageAnnuel : Form
     {
-        public frmGeant()
+        public frmAffichageAnnuel()
         {
             InitializeComponent();
         }

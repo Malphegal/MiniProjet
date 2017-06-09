@@ -223,7 +223,7 @@ namespace miniProjet2017
 
         private void btnGrosDataGridView_Click(object sender, EventArgs e)
         {
-            new frmGeant().ShowDialog();
+            new frmAffichageAnnuel().ShowDialog();
         }
     }
 }

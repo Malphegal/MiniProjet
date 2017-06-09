@@ -91,7 +91,7 @@
             this._btnRR = new System.Windows.Forms.Button();
             this.btnListerTransaction = new System.Windows.Forms.Button();
             this.btnListerPersonne = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSuppressionBudget = new System.Windows.Forms.Button();
             this.pnlGauche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVertePnlGauche2)).BeginInit();
@@ -712,19 +712,20 @@
             this.btnListerPersonne.UseVisualStyleBackColor = true;
             this.btnListerPersonne.Click += new System.EventHandler(this.CliquerSurLiaisonPersonne);
             // 
-            // button1
+            // btnSuppressionBudget
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.btnSuppressionBudget, "btnSuppressionBudget");
+            this.btnSuppressionBudget.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSuppressionBudget.Name = "btnSuppressionBudget";
+            this.btnSuppressionBudget.UseVisualStyleBackColor = true;
+            this.btnSuppressionBudget.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSuppressionBudget);
             this.Controls.Add(this.btnListerTransaction);
             this.Controls.Add(this.btnListerPersonne);
             this.Controls.Add(this.tabControl1);
@@ -818,7 +819,7 @@
         private System.Windows.Forms.Label _lblPrenom;
         private System.Windows.Forms.Button btnListerTransaction;
         private System.Windows.Forms.Button btnListerPersonne;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSuppressionBudget;
     }
 }
 
