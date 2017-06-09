@@ -155,11 +155,8 @@ namespace miniProjet2017
                     foreach (DataRow row in ds.Tables["_PosteRevenu"].Rows)
                         valeurRevenu += Convert.ToDouble(row[1]);
 
-                    MessageBox.Show(txtMontant.Text + ">" + (valeurRevenu * frmOption.pourcentageSMS / 100).ToString());
-                    if (double.Parse(txtMontant.Text) > (valeurRevenu * (frmOption.pourcentageSMS / 100)))
-                        MessageBox.Show("Test");
-
-                    EnvoyerUnSms();
+                    if (double.Parse(txtMontant.Text) > (valeurRevenu * (frmOption.pourcentageSMS / (double)100)))
+                        EnvoyerUnSms();
 
                     MessageBox.Show("Transaction ajoutée !");
                     frmMain.con.Close();
