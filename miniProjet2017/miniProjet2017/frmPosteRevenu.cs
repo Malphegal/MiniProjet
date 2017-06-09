@@ -52,7 +52,7 @@ namespace miniProjet2017
                     new CMD(@"INSERT INTO PosteRevenu VALUES ("
                               + idMax + ", "
                               + txtMontant.Text + ", "
-                              + cboPersonne.ValueMember + ", "
+                              + cboPersonne.SelectedValue + ", "
                               + txtJourMois.Text + ")", frmMain.con).ExecuteNonQuery();
 
                     MessageBox.Show("Ce poste de revenu a été ajouté !");

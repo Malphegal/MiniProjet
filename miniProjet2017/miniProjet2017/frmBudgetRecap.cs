@@ -109,6 +109,7 @@ namespace miniProjet2017
         {
             frmMain.con.Open();
             OleDbCommand command = new OleDbCommand("delete from PostePeriodique where codePoste =" + dataGridView1.Rows[dc].Cells[0].Value.ToString(), frmMain.con);
+            new OleDbCommand("delete from Poste where codePoste =" + dataGridView1.Rows[dc].Cells[0].Value.ToString(), frmMain.con).ExecuteNonQuery();
             command.ExecuteNonQuery();
             frmMain.con.Close();
             dgv.Rows.RemoveAt(dc);
