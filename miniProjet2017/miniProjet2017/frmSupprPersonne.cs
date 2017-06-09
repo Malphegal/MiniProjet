@@ -110,5 +110,13 @@ namespace miniProjet2017
             else
                 MessageBox.Show("Aucune modification n'a été effectuée !");
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (CheckBox chk in pnlPersonne.Controls.OfType<CheckBox>())
+            {
+                chk.Checked = (sender as CheckBox).Checked;
+            }
+        }
     }
 }

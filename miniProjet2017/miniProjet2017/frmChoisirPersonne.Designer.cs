@@ -33,16 +33,19 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnValider = new System.Windows.Forms.Button();
             this.picBordure = new System.Windows.Forms.PictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pnlPersonne.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPersonne
             // 
             this.pnlPersonne.AutoScroll = true;
-            this.pnlPersonne.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnlPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
+            this.pnlPersonne.Controls.Add(this.checkBox1);
             this.pnlPersonne.Location = new System.Drawing.Point(26, 58);
             this.pnlPersonne.Name = "pnlPersonne";
-            this.pnlPersonne.Size = new System.Drawing.Size(436, 198);
+            this.pnlPersonne.Size = new System.Drawing.Size(439, 198);
             this.pnlPersonne.TabIndex = 0;
             // 
             // lblTitre
@@ -66,7 +69,7 @@
             this.btnQuitter.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnQuitter.FlatAppearance.BorderSize = 0;
             this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitter.Location = new System.Drawing.Point(389, 256);
+            this.btnQuitter.Location = new System.Drawing.Point(396, 256);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(46, 46);
             this.btnQuitter.TabIndex = 6;
@@ -84,7 +87,7 @@
             this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValider.Location = new System.Drawing.Point(330, 256);
             this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(43, 46);
+            this.btnValider.Size = new System.Drawing.Size(48, 46);
             this.btnValider.TabIndex = 5;
             this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.CliquerSurValider);
@@ -99,6 +102,18 @@
             this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBordure.TabIndex = 7;
             this.picBordure.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(305, 85);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 22);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "• Tout cocher";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // frmChoisirPersonne
             // 
@@ -115,6 +130,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Choisir les personnes";
             this.Load += new System.EventHandler(this.RemplirLePanelDesPersonnes);
+            this.pnlPersonne.ResumeLayout(false);
+            this.pnlPersonne.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,5 +145,6 @@
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.PictureBox picBordure;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
