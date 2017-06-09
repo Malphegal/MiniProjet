@@ -189,44 +189,83 @@
   <data name="&gt;&gt;picVertePnlGauche3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnBudgetRecap.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="btnSuppressionBudget.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="btnBudgetRecap.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnSuppressionBudget.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="btnBudgetRecap.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnSuppressionBudget.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
-  <data name="btnBudgetRecap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnSuppressionBudget.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnBudgetRecap.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnSuppressionBudget.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 289</value>
   </data>
-  <data name="btnBudgetRecap.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnSuppressionBudget.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 0</value>
   </data>
-  <data name="btnBudgetRecap.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="btnSuppressionBudget.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="btnBudgetRecap.Text" xml:space="preserve">
-    <value> • Le budgets - Récapitulatif</value>
+  <data name="btnSuppressionBudget.Text" xml:space="preserve">
+    <value> • Suppression de poste</value>
   </data>
-  <data name="btnBudgetRecap.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnSuppressionBudget.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;btnBudgetRecap.Name" xml:space="preserve">
-    <value>btnBudgetRecap</value>
+  <data name="&gt;&gt;btnSuppressionBudget.Name" xml:space="preserve">
+    <value>btnSuppressionBudget</value>
   </data>
-  <data name="&gt;&gt;btnBudgetRecap.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnSuppressionBudget.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnBudgetRecap.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnSuppressionBudget.Parent" xml:space="preserve">
     <value>pnlGauche</value>
   </data>
-  <data name="&gt;&gt;btnBudgetRecap.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnSuppressionBudget.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="btnAfficherRecap.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnAfficherRecap.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnAfficherRecap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnAfficherRecap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAfficherRecap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 289</value>
+  </data>
+  <data name="btnAfficherRecap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="btnAfficherRecap.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnAfficherRecap.Text" xml:space="preserve">
+    <value> • Le budgets - Récapitulatif</value>
+  </data>
+  <data name="btnAfficherRecap.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnAfficherRecap.Name" xml:space="preserve">
+    <value>btnAfficherRecap</value>
+  </data>
+  <data name="&gt;&gt;btnAfficherRecap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAfficherRecap.Parent" xml:space="preserve">
+    <value>pnlGauche</value>
+  </data>
+  <data name="&gt;&gt;btnAfficherRecap.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnFrm_3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -265,7 +304,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnFrm_3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnPostePonctuel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -304,7 +343,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnPostePonctuel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnPostFixe.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -343,7 +382,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnPostFixe.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnDeroulerBudget.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -379,7 +418,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnDeroulerBudget.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="picVertePnlGauche2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -409,7 +448,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;picVertePnlGauche2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnSupprimerPersonne.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -448,7 +487,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnSupprimerPersonne.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnAjouterPersonne.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -487,7 +526,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnAjouterPersonne.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnDeroulerPersonne.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -523,7 +562,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnDeroulerPersonne.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="picVertePnlGauche1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -553,7 +592,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;picVertePnlGauche1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="btnSupprimerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -592,7 +631,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnSupprimerTransaction.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="btnModifierTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -631,7 +670,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnModifierTransaction.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="btnAjouterTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -670,7 +709,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;btnAjouterTransaction.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="_btnDeroulerTransaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -706,7 +745,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;_btnDeroulerTransaction.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="pnlLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -760,7 +799,7 @@
     <value>pnlGauche</value>
   </data>
   <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="pnlGauche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -784,7 +823,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlGauche.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="picReduire.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -925,7 +964,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlHaut.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -2005,7 +2044,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btnListerTransaction.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2038,7 +2077,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnListerTransaction.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="btnListerPersonne.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2071,34 +2110,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnListerPersonne.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnSuppressionBudget.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnSuppressionBudget.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 241</value>
-  </data>
-  <data name="btnSuppressionBudget.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 48</value>
-  </data>
-  <data name="btnSuppressionBudget.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="btnSuppressionBudget.Text" xml:space="preserve">
-    <value>Suppression de budget</value>
-  </data>
-  <data name="&gt;&gt;btnSuppressionBudget.Name" xml:space="preserve">
-    <value>btnSuppressionBudget</value>
-  </data>
-  <data name="&gt;&gt;btnSuppressionBudget.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSuppressionBudget.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnSuppressionBudget.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

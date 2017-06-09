@@ -301,18 +301,21 @@ namespace miniProjet2017
             btnPostFixe.Height += 3;
             btnPostePonctuel.Height += 3;
             btnFrm_3.Height += 3;
-            btnBudgetRecap.Height += 3;
+            btnAfficherRecap.Height += 3;
+            btnSuppressionBudget.Height += 3;
             if (btnPostFixe.Height >= 50)
             {
                 timerDeroulantBudget.Stop();
                 btnPostFixe.Height = 50;
                 btnPostePonctuel.Height = 50;
                 btnFrm_3.Height = 50;
-                btnBudgetRecap.Height = 50;
+                btnAfficherRecap.Height = 50;
+                btnSuppressionBudget.Height = 50;
                 btnPostFixe.TabStop = true;
                 btnPostePonctuel.TabStop = true;
                 btnFrm_3.TabStop = true;
-                btnBudgetRecap.TabStop = true;
+                btnAfficherRecap.TabStop = true;
+                btnSuppressionBudget.TabStop = true;
                 timerDeroulantBudget.Tick -= new EventHandler(DeroulementDeBudget);
                 timerDeroulantBudget.Tick += new EventHandler(EnroulementDeBudget);
             }
@@ -322,18 +325,21 @@ namespace miniProjet2017
             btnPostFixe.Height -= 3;
             btnPostePonctuel.Height -= 3;
             btnFrm_3.Height -= 3;
-            btnBudgetRecap.Height -= 3;
+            btnAfficherRecap.Height -= 3;
+            btnSuppressionBudget.Height -= 3;
             if (btnPostFixe.Height <= 0)
             {
                 timerDeroulantBudget.Stop();
                 btnPostFixe.Height = 0;
                 btnPostePonctuel.Height = 0;
                 btnFrm_3.Height = 0;
-                btnBudgetRecap.Height = 0;
+                btnAfficherRecap.Height = 0;
+                btnSuppressionBudget.Height = 0;
                 btnPostFixe.TabStop = false;
                 btnPostePonctuel.TabStop = false;
                 btnFrm_3.TabStop = false;
-                btnBudgetRecap.TabStop = false;
+                btnAfficherRecap.TabStop = false;
+                btnSuppressionBudget.TabStop = false;
                 timerDeroulantBudget.Tick -= new EventHandler(EnroulementDeBudget);
                 timerDeroulantBudget.Tick += new EventHandler(DeroulementDeBudget);
             }
