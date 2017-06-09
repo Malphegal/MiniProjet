@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.picBordure = new System.Windows.Forms.PictureBox();
             this.picQuitter = new System.Windows.Forms.PictureBox();
-            this.txtDescTran = new System.Windows.Forms.TextBox();
             this.cboListeBudget = new System.Windows.Forms.ComboBox();
             this.cboListeType = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTitre = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // picBordure
             // 
             this.picBordure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.picBordure.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBordure.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.picBordure.Location = new System.Drawing.Point(0, 0);
@@ -52,6 +55,7 @@
             this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBordure.TabIndex = 12;
             this.picBordure.TabStop = false;
+            this.picBordure.Click += new System.EventHandler(this.picBordure_Click);
             // 
             // picQuitter
             // 
@@ -65,16 +69,8 @@
             this.picQuitter.TabIndex = 13;
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.QuitterFrmBudgetRecap);
-            // 
-            // txtDescTran
-            // 
-            this.txtDescTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
-            this.txtDescTran.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtDescTran.Location = new System.Drawing.Point(58, 190);
-            this.txtDescTran.Name = "txtDescTran";
-            this.txtDescTran.ShortcutsEnabled = false;
-            this.txtDescTran.Size = new System.Drawing.Size(196, 20);
-            this.txtDescTran.TabIndex = 14;
+            this.picQuitter.MouseEnter += new System.EventHandler(this.SourisSurPicQuitter);
+            this.picQuitter.MouseLeave += new System.EventHandler(this.SourisSortDePicQuitter);
             // 
             // cboListeBudget
             // 
@@ -151,6 +147,10 @@
             this.lblTitre.TabIndex = 20;
             this.lblTitre.Text = "Suppression de Poste";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmSupprPoste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +162,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cboListeType);
             this.Controls.Add(this.cboListeBudget);
-            this.Controls.Add(this.txtDescTran);
             this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -172,6 +171,7 @@
             this.Load += new System.EventHandler(this.frmSupprPoste_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,12 +181,12 @@
 
         private System.Windows.Forms.PictureBox picBordure;
         private System.Windows.Forms.PictureBox picQuitter;
-        private System.Windows.Forms.TextBox txtDescTran;
         private System.Windows.Forms.ComboBox cboListeBudget;
         private System.Windows.Forms.ComboBox cboListeType;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitre;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
