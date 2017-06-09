@@ -83,33 +83,31 @@ namespace miniProjet2017
 
                 frmMain.con.Open();
 
+                int id = -1;
+
                 if (cboListeType.SelectedIndex == 0)
                 {
+                    id = Convert.ToInt32(ds.Tables["_PostePeriodique"].Rows[cboListeBudget.SelectedIndex][0]);
                     new CMD(@"DELETE FROM PostePeriodique WHERE codePoste = "
-                        + ds.Tables["_PostePeriodique"].Rows[cboListeBudget.SelectedIndex][0], frmMain.con).ExecuteScalar();
-                    // Puis supprimer dans le Poste
-                    new CMD(@"DELETE FROM Poste WHERE codePoste = "
                         + ds.Tables["_PostePeriodique"].Rows[cboListeBudget.SelectedIndex][0], frmMain.con).ExecuteScalar();
                 }
                 else if (cboListeType.SelectedIndex == 1)
                 {
+                    id = Convert.ToInt32(ds.Tables["_PostePonctuel"].Rows[cboListeBudget.SelectedIndex][0]);
                     new CMD(@"DELETE FROM Echeances WHERE codePoste = "
                         + ds.Tables["_PostePonctuel"].Rows[cboListeBudget.SelectedIndex][0], frmMain.con).ExecuteScalar();
                     new CMD(@"DELETE FROM PostePonctuel WHERE codePoste = "
                         + ds.Tables["_PostePonctuel"].Rows[cboListeBudget.SelectedIndex][0], frmMain.con).ExecuteScalar();
-                    // Puis supprimer dans le Poste
-                    new CMD(@"DELETE FROM Poste WHERE codePoste = "
-                        + ds.Tables["_PostePonctuel"].Rows[cboListeBudget.SelectedIndex][0], frmMain.con).ExecuteScalar();
                 }
                 else if (cboListeType.SelectedIndex == 2)
                 {
+                    id = Convert.ToInt32(ds.Tables["_PosteRevenu"].Rows[cboListeBudget.SelectedIndex][0]);
                     new CMD(@"DELETE FROM PosteRevenu WHERE codePoste = "
                         + ds.Tables["_PosteRevenu"].Rows[cboListeBudget.SelectedIndex][0], frmMain.con).ExecuteScalar();
-                    // Puis supprimer dans le Poste
-                    new CMD(@"DELETE FROM Poste WHERE codePoste = "
-                        + ds.Tables["_PosteRevenu"].Rows[cboListeBudget.SelectedIndex][0], frmMain.con).ExecuteScalar();
                 }
+                    // Puis supprimer dans le Poste
                     
+                new CMD(@"DELETE FROM Poste WHERE codePoste = " + id, frmMain.con).ExecuteNonQuery();
 
                 frmMain.con.Close();
 
