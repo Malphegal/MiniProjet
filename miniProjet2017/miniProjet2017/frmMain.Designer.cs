@@ -33,7 +33,7 @@
             this.pnlGauche = new System.Windows.Forms.Panel();
             this.btnAffichage = new System.Windows.Forms.Button();
             this.picVertePnlGauche3 = new System.Windows.Forms.PictureBox();
-            this.btnBudgetRecap = new System.Windows.Forms.Button();
+            this.btnAfficherRecap = new System.Windows.Forms.Button();
             this.btnFrm_3 = new System.Windows.Forms.Button();
             this.btnPostePonctuel = new System.Windows.Forms.Button();
             this.btnPostFixe = new System.Windows.Forms.Button();
@@ -113,7 +113,8 @@
             this.pnlGauche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.pnlGauche.Controls.Add(this.btnAffichage);
             this.pnlGauche.Controls.Add(this.picVertePnlGauche3);
-            this.pnlGauche.Controls.Add(this.btnBudgetRecap);
+            this.pnlGauche.Controls.Add(this.btnSuppressionBudget);
+            this.pnlGauche.Controls.Add(this.btnAfficherRecap);
             this.pnlGauche.Controls.Add(this.btnFrm_3);
             this.pnlGauche.Controls.Add(this.btnPostePonctuel);
             this.pnlGauche.Controls.Add(this.btnPostFixe);
@@ -152,18 +153,18 @@
             this.picVertePnlGauche3.Name = "picVertePnlGauche3";
             this.picVertePnlGauche3.TabStop = false;
             // 
-            // btnBudgetRecap
+            // btnAfficherRecap
             // 
-            this.btnBudgetRecap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnBudgetRecap.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnBudgetRecap, "btnBudgetRecap");
-            this.btnBudgetRecap.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnBudgetRecap.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBudgetRecap.Name = "btnBudgetRecap";
-            this.btnBudgetRecap.TabStop = false;
-            this.btnBudgetRecap.Tag = "";
-            this.btnBudgetRecap.UseVisualStyleBackColor = false;
-            this.btnBudgetRecap.Click += new System.EventHandler(this.NouveauBudgetRecap);
+            this.btnAfficherRecap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnAfficherRecap.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnAfficherRecap, "btnAfficherRecap");
+            this.btnAfficherRecap.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAfficherRecap.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAfficherRecap.Name = "btnAfficherRecap";
+            this.btnAfficherRecap.TabStop = false;
+            this.btnAfficherRecap.Tag = "";
+            this.btnAfficherRecap.UseVisualStyleBackColor = false;
+            this.btnAfficherRecap.Click += new System.EventHandler(this.NouveauBudgetRecap);
             // 
             // btnFrm_3
             // 
@@ -714,10 +715,15 @@
             // 
             // btnSuppressionBudget
             // 
+            this.btnSuppressionBudget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnSuppressionBudget.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnSuppressionBudget, "btnSuppressionBudget");
+            this.btnSuppressionBudget.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSuppressionBudget.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSuppressionBudget.Name = "btnSuppressionBudget";
-            this.btnSuppressionBudget.UseVisualStyleBackColor = true;
+            this.btnSuppressionBudget.TabStop = false;
+            this.btnSuppressionBudget.Tag = "";
+            this.btnSuppressionBudget.UseVisualStyleBackColor = false;
             this.btnSuppressionBudget.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmMain
@@ -725,7 +731,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.btnSuppressionBudget);
             this.Controls.Add(this.btnListerTransaction);
             this.Controls.Add(this.btnListerPersonne);
             this.Controls.Add(this.tabControl1);
@@ -776,7 +781,7 @@
         private System.Windows.Forms.Button btnPostFixe;
         private System.Windows.Forms.Button btnFrm_3;
         private System.Windows.Forms.Button btnPostePonctuel;
-        private System.Windows.Forms.Button btnBudgetRecap;
+        private System.Windows.Forms.Button btnAfficherRecap;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox picMinion;
         private System.Windows.Forms.Button btnDeroulerPersonne;
