@@ -23,7 +23,7 @@ namespace miniProjet2017
         private void AjouterLePosteRevenu(object sender, EventArgs e)
         {
                 //Initialiser la flèche retour
-
+            flecheRetour = picQuitter.Image;
                 // Sera faux s'il y a une erreur
 
             bool toutEstOK = true;
@@ -80,6 +80,11 @@ namespace miniProjet2017
             cboPersonne.DataSource = ds.Tables["_Personne"];
             cboPersonne.ValueMember = "codePersonne";
             cboPersonne.DisplayMember = "NomPrenom";
+        }
+        /* Ferme ce formulaire */
+        private void QuitterFrmAffichage(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
