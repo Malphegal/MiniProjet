@@ -114,6 +114,12 @@
     <Compile Include="frmSupprPersonne.Designer.cs">
       <DependentUpon>frmSupprPersonne.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSupprPoste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupprPoste.Designer.cs">
+      <DependentUpon>frmSupprPoste.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSupprTransac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupprPersonne.resx">
       <DependentUpon>frmSupprPersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupprPoste.resx">
+      <DependentUpon>frmSupprPoste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupprTransac.resx">
       <DependentUpon>frmSupprTransac.cs</DependentUpon>
