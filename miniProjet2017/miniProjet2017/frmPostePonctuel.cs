@@ -69,7 +69,6 @@ namespace miniProjet2017
         int ancienNbEcheance = 0;
         int topPnl = 200;
         int topElem = 30;
-        int leftElem = 20;
 
         /* Création ou suppression des lignes des échéances */
         private void GenererElementsPrelevements(int i)
@@ -81,11 +80,12 @@ namespace miniProjet2017
                 int y = DateTime.Today.Year;
                 for (int j = ancienNbEcheance+1; j <= i; j++)
                 {
+                        //Création des différents items
                     Label lbl = new Label();
                     lbl.ForeColor = Color.White;
                     DateTimePicker dtPick = new DateTimePicker();
                     TextBox txt2 = new TextBox();
-
+                    
                     lbl.Tag = "tag" + j;
                     dtPick.Tag = "tag" + j;
                     txt2.Tag = "tag" + j;
@@ -106,6 +106,7 @@ namespace miniProjet2017
                     lbl.Text = "Prélévement n°" + j;
                     txt2.Top = topElem;
                     txt2.Left = lbl.Width + dtPick.Width;
+                    txt2.KeyPress += new KeyPressEventHandler(EntrerMontant);
                     pnl.Controls.Add(lbl);
                     pnl.Controls.Add(dtPick);
                     pnl.Controls.Add(txt2);
@@ -116,8 +117,10 @@ namespace miniProjet2017
                 }
             }
             else if(ancienNbEcheance > i){
-                for(int j = 0; j < (ancienNbEcheance - i) * 2; j+= 2)
+                for(int j = 0; j < (ancienNbEcheance - i) * 3; j+= 3)
                 {
+                        // Suppression des éléments
+                    pnl.Controls.RemoveAt(pnl.Controls.Count - 1);
                     pnl.Controls.RemoveAt(pnl.Controls.Count - 1);
                     pnl.Controls.RemoveAt(pnl.Controls.Count - 1);
                     topElem -= 30;
@@ -163,6 +166,17 @@ namespace miniProjet2017
             }
             else
                 errorProvider1.SetError(txtNbPreleve, "");
+
+            foreach(TextBox txt in pnl.Controls.OfType<TextBox>())
+            {
+                if(txt.Text == "")
+                {
+                    errorProvider1.SetError(txt, "Il doit y avoir une valeur entrée");
+                    toutEstOK = false;
+                }
+                else
+                    errorProvider1.SetError(txt, "");
+            }
 
                 // S'il n'y a pas d'erreur, ajout dans la base de donnée
 
@@ -228,6 +242,26 @@ namespace miniProjet2017
         private void SourisSortDePicQuitter(object sender, EventArgs e)
         {
             (sender as PictureBox).Image = flecheRetour;
+        }
+
+        private void EntrerMontant(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if ((sender as TextBox).Text == "" || double.Parse((sender as TextBox).Text) < 0.01D)
+            {
+                errorProvider1.SetError((sender as TextBox), "Il faut indiquer un montant non nul (ou inférieur à 1 centime) pour cette transaction !");
+            }
+            else errorProvider1.SetError((sender as TextBox), "");
+            
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == 8)
+                e.Handled = false;
+            else if (e.KeyChar == ',' && !(sender as TextBox).Text.Contains(","))
+                e.Handled = false;
+            else if (e.KeyChar == '.' && !(sender as TextBox).Text.Contains(","))
+            {
+                e.KeyChar = ',';
+                e.Handled = false;
+            }
         }
     }
 }

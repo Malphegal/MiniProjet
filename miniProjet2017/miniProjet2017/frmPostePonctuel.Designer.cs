@@ -80,14 +80,14 @@
             this.txtDescri.Location = new System.Drawing.Point(175, 134);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(173, 20);
-            this.txtDescri.TabIndex = 2;
+            this.txtDescri.TabIndex = 1;
             // 
             // txtNbPreleve
             // 
             this.txtNbPreleve.Location = new System.Drawing.Point(175, 188);
             this.txtNbPreleve.Name = "txtNbPreleve";
             this.txtNbPreleve.Size = new System.Drawing.Size(43, 20);
-            this.txtNbPreleve.TabIndex = 3;
+            this.txtNbPreleve.TabIndex = 2;
             this.txtNbPreleve.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaisirUnNombreDePrelevement);
             // 
             // errorProvider1
@@ -140,7 +140,7 @@
             this.lblTitre.AutoSize = true;
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTitre.Location = new System.Drawing.Point(131, 24);
+            this.lblTitre.Location = new System.Drawing.Point(131, 28);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(231, 37);
             this.lblTitre.TabIndex = 70;
@@ -151,7 +151,7 @@
             this.txtIntitule.Location = new System.Drawing.Point(175, 83);
             this.txtIntitule.Name = "txtIntitule";
             this.txtIntitule.Size = new System.Drawing.Size(173, 20);
-            this.txtIntitule.TabIndex = 71;
+            this.txtIntitule.TabIndex = 0;
             // 
             // frmPostePonctuel
             // 
@@ -173,6 +173,7 @@
             this.MaximumSize = new System.Drawing.Size(490, 460);
             this.MinimumSize = new System.Drawing.Size(490, 460);
             this.Name = "frmPostePonctuel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Postes ponctuels";
             this.Load += new System.EventHandler(this.ChargementDuFormulaire);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

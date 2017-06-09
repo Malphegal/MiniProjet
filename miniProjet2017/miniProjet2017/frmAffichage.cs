@@ -31,8 +31,8 @@ namespace miniProjet2017
         private void DebutDuFormulaire(object sender, EventArgs e)
         {
             picQuitter.Parent = picBordure;
-
-                // Création de la table en local
+            flecheRetour = picQuitter.Image;
+            // Création de la table en local
 
             DataSet ds = new DataSet();
             new OleDbDataAdapter(new CMD(@"SELECT t.*, t2.libType
@@ -65,6 +65,20 @@ namespace miniProjet2017
         private void QuitterFrmAffichage(object sender, EventArgs e)
         {
             Close();
+        }
+
+        static System.Drawing.Image flecheRetour_clair = new Bitmap("..\\..\\Resources\\flecheRetour_clair.png");
+        static System.Drawing.Image flecheRetour;
+        /* Souris sur picQuitter */
+        private void SourisSurPicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour_clair;
+        }
+
+        /* Souris sors de picQuitter */
+        private void SourisSortDePicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour;
         }
 
         /* Effectuer un clique droit sur une des cellules du dataGridView */

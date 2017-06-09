@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblPoste = new System.Windows.Forms.Label();
-            this.btnAutre = new System.Windows.Forms.Button();
             this.txtJour = new System.Windows.Forms.TextBox();
             this.lblPeriodicite = new System.Windows.Forms.Label();
             this.lblJour = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.picQuitter = new System.Windows.Forms.PictureBox();
             this.picBordure = new System.Windows.Forms.PictureBox();
             this.txtPoste = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
@@ -53,25 +53,17 @@
             // 
             this.lblPoste.AutoSize = true;
             this.lblPoste.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPoste.Location = new System.Drawing.Point(47, 51);
+            this.lblPoste.Location = new System.Drawing.Point(65, 157);
             this.lblPoste.Name = "lblPoste";
             this.lblPoste.Size = new System.Drawing.Size(40, 13);
             this.lblPoste.TabIndex = 0;
             this.lblPoste.Text = "Poste :";
             // 
-            // btnAutre
-            // 
-            this.btnAutre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAutre.Location = new System.Drawing.Point(304, 270);
-            this.btnAutre.Name = "btnAutre";
-            this.btnAutre.Size = new System.Drawing.Size(127, 23);
-            this.btnAutre.TabIndex = 4;
-            this.btnAutre.Text = "Autre[SERT A QUOI]";
-            this.btnAutre.UseVisualStyleBackColor = true;
-            // 
             // txtJour
             // 
-            this.txtJour.Location = new System.Drawing.Point(129, 146);
+            this.txtJour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtJour.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtJour.Location = new System.Drawing.Point(190, 259);
             this.txtJour.Name = "txtJour";
             this.txtJour.Size = new System.Drawing.Size(28, 20);
             this.txtJour.TabIndex = 2;
@@ -81,7 +73,7 @@
             // 
             this.lblPeriodicite.AutoSize = true;
             this.lblPeriodicite.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPeriodicite.Location = new System.Drawing.Point(47, 93);
+            this.lblPeriodicite.Location = new System.Drawing.Point(65, 209);
             this.lblPeriodicite.Name = "lblPeriodicite";
             this.lblPeriodicite.Size = new System.Drawing.Size(62, 13);
             this.lblPeriodicite.TabIndex = 4;
@@ -91,7 +83,7 @@
             // 
             this.lblJour.AutoSize = true;
             this.lblJour.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblJour.Location = new System.Drawing.Point(47, 149);
+            this.lblJour.Location = new System.Drawing.Point(65, 262);
             this.lblJour.Name = "lblJour";
             this.lblJour.Size = new System.Drawing.Size(72, 13);
             this.lblJour.TabIndex = 5;
@@ -99,7 +91,9 @@
             // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(129, 202);
+            this.txtMontant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtMontant.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtMontant.Location = new System.Drawing.Point(190, 319);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(195, 20);
             this.txtMontant.TabIndex = 3;
@@ -108,7 +102,9 @@
             // btnValider
             // 
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValider.Location = new System.Drawing.Point(356, 321);
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValider.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnValider.Location = new System.Drawing.Point(356, 377);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
             this.btnValider.TabIndex = 5;
@@ -118,8 +114,10 @@
             // 
             // cboPeriodicite
             // 
+            this.cboPeriodicite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.cboPeriodicite.ForeColor = System.Drawing.SystemColors.Control;
             this.cboPeriodicite.FormattingEnabled = true;
-            this.cboPeriodicite.Location = new System.Drawing.Point(129, 90);
+            this.cboPeriodicite.Location = new System.Drawing.Point(190, 206);
             this.cboPeriodicite.Name = "cboPeriodicite";
             this.cboPeriodicite.Size = new System.Drawing.Size(195, 21);
             this.cboPeriodicite.TabIndex = 1;
@@ -129,7 +127,7 @@
             // 
             this.lblMontant.AutoSize = true;
             this.lblMontant.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMontant.Location = new System.Drawing.Point(47, 205);
+            this.lblMontant.Location = new System.Drawing.Point(65, 322);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(52, 13);
             this.lblMontant.TabIndex = 9;
@@ -139,7 +137,7 @@
             // 
             this.lblMois.AutoSize = true;
             this.lblMois.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMois.Location = new System.Drawing.Point(163, 149);
+            this.lblMois.Location = new System.Drawing.Point(224, 262);
             this.lblMois.Name = "lblMois";
             this.lblMois.Size = new System.Drawing.Size(43, 13);
             this.lblMois.TabIndex = 10;
@@ -149,7 +147,7 @@
             // 
             this.lblEuro.AutoSize = true;
             this.lblEuro.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEuro.Location = new System.Drawing.Point(330, 205);
+            this.lblEuro.Location = new System.Drawing.Point(391, 322);
             this.lblEuro.Name = "lblEuro";
             this.lblEuro.Size = new System.Drawing.Size(13, 13);
             this.lblEuro.TabIndex = 11;
@@ -164,37 +162,54 @@
             this.picQuitter.BackColor = System.Drawing.Color.Transparent;
             this.picQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picQuitter.Image = global::miniProjet2017.Properties.Resources.flecheRetour;
-            this.picQuitter.Location = new System.Drawing.Point(356, 35);
+            this.picQuitter.Location = new System.Drawing.Point(358, 28);
             this.picQuitter.Name = "picQuitter";
             this.picQuitter.Size = new System.Drawing.Size(79, 71);
             this.picQuitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picQuitter.TabIndex = 55;
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.QuitterFrmPostFixe);
+            this.picQuitter.MouseEnter += new System.EventHandler(this.SourisSurPicQuitter);
+            this.picQuitter.MouseLeave += new System.EventHandler(this.SourisSortDePicQuitter);
             // 
             // picBordure
             // 
+            this.picBordure.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBordure.Image = global::miniProjet2017.Properties.Resources.bordureOption;
             this.picBordure.Location = new System.Drawing.Point(0, 0);
             this.picBordure.Name = "picBordure";
-            this.picBordure.Size = new System.Drawing.Size(466, 375);
+            this.picBordure.Size = new System.Drawing.Size(466, 448);
             this.picBordure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBordure.TabIndex = 56;
             this.picBordure.TabStop = false;
             // 
             // txtPoste
             // 
-            this.txtPoste.Location = new System.Drawing.Point(129, 48);
+            this.txtPoste.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(66)))));
+            this.txtPoste.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtPoste.Location = new System.Drawing.Point(190, 154);
             this.txtPoste.Name = "txtPoste";
             this.txtPoste.Size = new System.Drawing.Size(195, 20);
             this.txtPoste.TabIndex = 57;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(153, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 36);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Poste fixe";
             // 
             // frmPostFixe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(466, 375);
+            this.ClientSize = new System.Drawing.Size(466, 448);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPoste);
             this.Controls.Add(this.picQuitter);
             this.Controls.Add(this.lblEuro);
@@ -206,12 +221,11 @@
             this.Controls.Add(this.lblJour);
             this.Controls.Add(this.lblPeriodicite);
             this.Controls.Add(this.txtJour);
-            this.Controls.Add(this.btnAutre);
             this.Controls.Add(this.lblPoste);
             this.Controls.Add(this.picBordure);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(466, 375);
-            this.MinimumSize = new System.Drawing.Size(466, 375);
+            this.MaximumSize = new System.Drawing.Size(466, 448);
+            this.MinimumSize = new System.Drawing.Size(466, 448);
             this.Name = "frmPostFixe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Poste fixe";
@@ -227,7 +241,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblPoste;
-        private System.Windows.Forms.Button btnAutre;
         private System.Windows.Forms.TextBox txtJour;
         private System.Windows.Forms.Label lblPeriodicite;
         private System.Windows.Forms.Label lblJour;
@@ -241,5 +254,6 @@
         private System.Windows.Forms.PictureBox picQuitter;
         private System.Windows.Forms.PictureBox picBordure;
         private System.Windows.Forms.TextBox txtPoste;
+        private System.Windows.Forms.Label label1;
     }
 }

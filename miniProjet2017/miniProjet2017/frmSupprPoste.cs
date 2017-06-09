@@ -17,13 +17,11 @@ namespace miniProjet2017
             InitializeComponent();
         }
 
+        /* Ferme le frmBudgetRecap */
+
         private void QuitterFrmBudgetRecap(object sender, EventArgs e)
-        {   QuitterFrmBudgetRecap
-            /* Ferme le frmBudgetRecap */
-        private void (object sender, EventArgs e)
-        {
+        {            
             Close();
         }
-    }
     }
 }

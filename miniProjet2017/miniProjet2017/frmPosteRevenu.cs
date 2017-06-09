@@ -19,15 +19,11 @@ namespace miniProjet2017
             InitializeComponent();
         }
 
-        /* Ferme le formulaire frmPosteRevenu */
-        private void QuitterFrmPosteRevenu(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         /* Ajouter le poste de revenu dans la base de donnée */
         private void AjouterLePosteRevenu(object sender, EventArgs e)
         {
+                //Initialiser la flèche retour
+
                 // Sera faux s'il y a une erreur
 
             bool toutEstOK = true;
@@ -70,19 +66,6 @@ namespace miniProjet2017
                 MessageBox.Show("Aucune modification n'a été effectuée !");
         }
 
-        static Image flecheRetour_clair = new Bitmap("..\\..\\Resources\\flecheRetour_clair.png");
-        static Image flecheRetour;
-        /* Souris sur picQuitter */
-        private void SourisSurPicQuitter(object sender, EventArgs e)
-        {
-            (sender as PictureBox).Image = flecheRetour_clair;
-        }
-
-        /* Souris sors de picQuitter */
-        private void SourisSortDePicQuitter(object sender, EventArgs e)
-        {
-            (sender as PictureBox).Image = flecheRetour;
-        }
 
         /* Remplir la combobox des personnes */
         private void ChargementDeFrmPosteRevenu(object sender, EventArgs e)

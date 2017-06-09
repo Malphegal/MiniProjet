@@ -82,6 +82,8 @@
             this.picQuitter.TabIndex = 2;
             this.picQuitter.TabStop = false;
             this.picQuitter.Click += new System.EventHandler(this.QuitterFrmAffichage);
+            this.picQuitter.MouseEnter += new System.EventHandler(this.SourisSurPicQuitter);
+            this.picQuitter.MouseLeave += new System.EventHandler(this.SourisSortDePicQuitter);
             // 
             // contextMenuStrip1
             // 

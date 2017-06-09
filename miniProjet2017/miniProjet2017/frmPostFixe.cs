@@ -22,6 +22,7 @@ namespace miniProjet2017
         /* Remplir les comboBox */
         private void DemarrageDeFrmPostFixe(object sender, EventArgs e)
         {
+            flecheRetour = picQuitter.Image;
                 // Position de errorProvider
 
             errorProvider1.SetIconPadding(txtJour, 25);
@@ -194,6 +195,20 @@ namespace miniProjet2017
                 e.KeyChar = ',';
                 e.Handled = false;
             }
+        }
+
+        static Image flecheRetour_clair = new Bitmap("..\\..\\Resources\\flecheRetour_clair.png");
+        static Image flecheRetour;
+        /* Souris sur picQuitter */
+        private void SourisSurPicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour_clair;
+        }
+
+        /* Souris sors de picQuitter */
+        private void SourisSortDePicQuitter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).Image = flecheRetour;
         }
     }
 }
