@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.picBordure = new System.Windows.Forms.PictureBox();
             this.lblIntitule = new System.Windows.Forms.Label();
             this.lblBenef = new System.Windows.Forms.Label();
@@ -41,8 +42,10 @@
             this.cboPersonne = new System.Windows.Forms.ComboBox();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.picQuitter = new System.Windows.Forms.PictureBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // picBordure
@@ -190,6 +193,10 @@
             this.picQuitter.MouseEnter += new System.EventHandler(this.SourisSurPicQuitter);
             this.picQuitter.MouseLeave += new System.EventHandler(this.SourisSortDePicQuitter);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmPosteRevenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +225,7 @@
             this.Load += new System.EventHandler(this.ChargementDeFrmPosteRevenu);
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +246,6 @@
         private System.Windows.Forms.ComboBox cboPersonne;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.PictureBox picQuitter;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

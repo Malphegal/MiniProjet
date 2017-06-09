@@ -27,15 +27,49 @@ namespace miniProjet2017
             picQuitter.Parent = picBordure;
                 // Sera faux s'il y a une erreur
 
-            bool toutEstOK = true;
+            bool toutEstOk = true;
 
                 // Tester au cas par cas
+          
+           
+
+            if (txtDescri.Text == "")
+            {
+                errorProvider.SetError(txtDescri, "Il faut décrire cette transaction !");
+                toutEstOk = false;
+            }
+            else errorProvider.SetError(txtDescri, "");
+
+            if (cboPersonne.SelectedIndex == -1)
+            {
+                errorProvider.SetError(cboPersonne, "Il faut séléctionner un type pour cette transaction !");
+                toutEstOk = false;
+            }
+            else errorProvider.SetError(cboPersonne, "");
+
+            if (txtMontant.Text == "")
+            {
+                errorProvider.SetError(txtMontant, "Il faut indiquer un montant non nul (ou inférieur à 1 centime) pour cette transaction !");
+                toutEstOk = false;
+            }
+            else if (double.Parse(txtMontant.Text) < 0.01D)
+            {
+                errorProvider.SetError(txtMontant, "Il faut indiquer un montant non nul (ou inférieur à 1 centime) pour cette transaction !");
+                toutEstOk = false;
+            }
+            else errorProvider.SetError(txtMontant, "");
+
+            if (txtJourMois.Text == "")
+            {
+                errorProvider.SetError(txtJourMois, "Il faut décrire une valeur non nulle !");
+                toutEstOk = false;
+            }
+            else errorProvider.SetError(txtJourMois, "");
 
 
+            // Si tout est ok, alors ajouter dans la base de donnée
 
-                // Si tout est ok, alors ajouter dans la base de donnée
-
-            if (toutEstOK)
+            if (toutEstOk)
             {
                 if (DialogResult.OK == MessageBox.Show("Test", "TESTT", MessageBoxButtons.OKCancel))
                 {
