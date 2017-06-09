@@ -32,9 +32,8 @@
             this.btnValider = new System.Windows.Forms.Button();
             this.lblTitre = new System.Windows.Forms.Label();
             this.pnlPersonne = new System.Windows.Forms.Panel();
-            this.picBordure = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.pnlPersonne.SuspendLayout();
+            this.picBordure = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +84,22 @@
             // pnlPersonne
             // 
             this.pnlPersonne.AutoScroll = true;
-            this.pnlPersonne.Controls.Add(this.checkBox1);
             this.pnlPersonne.Location = new System.Drawing.Point(27, 54);
             this.pnlPersonne.Name = "pnlPersonne";
             this.pnlPersonne.Size = new System.Drawing.Size(437, 198);
             this.pnlPersonne.TabIndex = 8;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(181, 267);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 22);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "• Tout cocher";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // picBordure
             // 
@@ -103,24 +113,13 @@
             this.picBordure.TabIndex = 12;
             this.picBordure.TabStop = false;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(304, 88);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 22);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "• Tout cocher";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // frmSupprPersonne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(83)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(490, 320);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.btnValider);
@@ -131,8 +130,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmSupprPersonne";
             this.Load += new System.EventHandler(this.ChangementDuFormulaire);
-            this.pnlPersonne.ResumeLayout(false);
-            this.pnlPersonne.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBordure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

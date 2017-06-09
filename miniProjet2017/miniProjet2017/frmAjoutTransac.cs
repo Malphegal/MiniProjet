@@ -8,12 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 using CMD = System.Data.OleDb.OleDbCommand;
 
 namespace miniProjet2017
 {
     public partial class frmAjoutTransac : Form
     {
+        DataSet ds = new DataSet();
+
         // TODO: s'il n'y a pas de typeTransaction, on ne peut pas ajouter !
         public frmAjoutTransac()
         {
@@ -36,7 +41,6 @@ namespace miniProjet2017
 
             CMD cmd;
             OleDbDataAdapter da;
-            DataSet ds = new DataSet();
             frmMain.con.Open();
 
                 // Ajout des tables locales
@@ -48,6 +52,10 @@ namespace miniProjet2017
             cmd = new CMD("SELECT * FROM TypeTransaction", frmMain.con);
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "_TypeTransaction");
+
+            cmd = new CMD("SELECT * FROM PosteRevenu", frmMain.con);
+            da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "_PosteRevenu");
 
                 // Initialisaton de la liste des participants
 
@@ -142,6 +150,16 @@ namespace miniProjet2017
 
                     foreach (uint i in listeParticipant)
                         new CMD(@"INSERT INTO Beneficiaires VALUES (" + idCetteTransaction + ", " + i + ")", frmMain.con).ExecuteNonQuery();
+
+                    double valeurRevenu = 0;
+                    foreach (DataRow row in ds.Tables["_PosteRevenu"].Rows)
+                        valeurRevenu += Convert.ToDouble(row[1]);
+
+                    MessageBox.Show(txtMontant.Text + ">" + (valeurRevenu * frmOption.pourcentageSMS / 100).ToString());
+                    if (double.Parse(txtMontant.Text) > (valeurRevenu * (frmOption.pourcentageSMS / 100)))
+                        MessageBox.Show("Test");
+
+                    EnvoyerUnSms();
 
                     MessageBox.Show("Transaction ajoutée !");
                     frmMain.con.Close();
@@ -252,6 +270,24 @@ namespace miniProjet2017
         private void SourisSortDePicQuitter(object sender, EventArgs e)
         {
             (sender as PictureBox).Image = flecheRetour;
+        }
+
+        private void EnvoyerUnSms()
+        {
+            // Set our Account SID and Auth Token
+            const string accountSid = "ACbf9afe8d46981502186044e121a88f29";
+            const string authToken = "71c48700d3df81053e5cf7e7420063a8";
+
+            // Initialize the Twilio client
+            TwilioClient.Init(accountSid, authToken);
+
+            var to = new PhoneNumber("+33695427782");
+            var message = MessageResource.Create(
+                to,
+                from: new PhoneNumber("+33644607049"),
+                body: "Test numero 1, tu reçois? signé Nico");
+
+            Console.WriteLine(message.Sid);
         }
     }
 }
